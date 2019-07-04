@@ -42,7 +42,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-4 col-sm-6 col-xs-8">
-            <h1 class="logo"> <a href="index.html"><img src="images/logo.png" alt="Logo"></a> </h1>
+            <h1 class="logo"> <a href="index.html"><img src="{{asset('assets/images/logo.png')}}" alt="Logo"></a> </h1>
           </div>
           <div class="col-md-8 col-sm-6 col-xs-4">
             <div class="top-search hidden-sm hidden-xs">
@@ -63,8 +63,8 @@
           <div class="col-md-12">
             <nav class="navigation">
               <ul class="sf-menu">
-                <li><a href="index.html">Home</a>
-                  <ul class="dropdown">
+                <li><a href="{{url('/')}}">Home</a>
+                  <!-- <ul class="dropdown">
                     <li><a href="index.html">Sliders</a>
                     		<ul class="dropdown">
                     			<li><a href="index.html">Flex Slider</a></li>
@@ -86,13 +86,13 @@
                     <li><a href="index3.html">Home version 4</a></li>
                     <li><a href="index4.html">Home version 5</a></li>
                     <li><a href="index5.html">Home version 6 <span class="label label-danger">New</span></a></li>
-                  </ul>
+                  </ul> -->
                 </li>
-                <li><a href="about.html">About Us</a>
+                <li><a href="{{url('/about-us')}}">About Us</a>
                   <ul class="dropdown">
                     <li><a href="about.html">Overview</a></li>
-                    <li><a href="contact.html">Where we meet</a></li>
-                    <li><a href="our-staff.html">Our Staff</a></li>
+                    <!-- <li><a href="contact.html">Where we meet</a></li>
+                    <li><a href="our-staff.html">Our Staff</a></li> -->
                 	<li><a href="contact.html">Contact</a></li>
                   </ul>
                 </li>
