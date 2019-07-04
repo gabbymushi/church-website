@@ -15,6 +15,10 @@ class HomeController extends Controller
     {
         return view('home.home');
     }
+    public function aboutUs()
+    {
+        return view('home.about-us');
+    }
 
     /**
      * Show the form for creating a new resource.
