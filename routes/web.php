@@ -12,8 +12,11 @@ use App\Http\Controllers\HomeController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::resource('/','HomeController');
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+Route::get('/','HomeController@index')->name('home');
 Route::get('/about-us','HomeController@aboutUs');
+// Auth::routes();
+
+// Route::get('/home', 'HomeController@index')->name('home');
