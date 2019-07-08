@@ -173,14 +173,14 @@
                     <li><a href="gallery-masonry.html">Masonry Grid</a></li>
                   </ul>
                 </li>
-                <li><a href="blog-masonry.html">Blog</a>
-                  <ul class="dropdown">
+                <li><a href="{{url('/blog')}}">Blog</a>
+                  <!-- <ul class="dropdown">
                     <li><a href="blog-masonry.html">Masonry Blog</a></li>
                     <li><a href="blog-full-width.html">Full Width Blog</a></li>
                     <li><a href="blog-timeline.html">Timeline Blog</a></li>
                     <li><a href="blog-medium-thumbnails.html">Medium Thumbnails</a></li>
                     <li><a href="blog-post.html">Single Blog Post</a></li>
-                  </ul>
+                  </ul> -->
                 </li>
                 <li><a href="causes.html">Causes</a>
                   <ul class="dropdown">
