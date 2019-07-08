@@ -93,7 +93,7 @@
                       <div class="col-md-4"> <a href="#" class="media-box"> <img src="http://placehold.it/600x400&amp;text=IMAGE+PLACEHOLDER" alt="" class="img-thumbnail"> </a></div>
                       <div class="col-md-8">
                         <div class="post-title">
-                          <h2><a href="blog-post.html">{{$news->title}}</a></h2>
+                          <h2><a href="{{url('/blog/'.$news->id)}}">{{$news->title}}</a></h2>
                           <span class="meta-data"><i class="fa fa-calendar"></i> on {{date('jS F,Y',strtotime($news->created_at))}}</span></div>
                         <p>{{$news->content}}.</p>
                       </div>
