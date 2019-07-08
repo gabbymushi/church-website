@@ -47,7 +47,8 @@ class BlogController extends Controller
      */
     public function show($id)
     {
-        return view('blog.post');
+        $data['post']=News::find($id);
+        return view('blog.post',$data);
     }
 
     /**
