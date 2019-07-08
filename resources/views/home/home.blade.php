@@ -94,7 +94,7 @@
                       <div class="col-md-8">
                         <div class="post-title">
                           <h2><a href="blog-post.html">{{$news->title}}</a></h2>
-                          <span class="meta-data"><i class="fa fa-calendar"></i> on 17th Dec, 2013</span></div>
+                          <span class="meta-data"><i class="fa fa-calendar"></i> on {{date('jS F,Y',strtotime($news->created_at))}}</span></div>
                         <p>{{$news->content}}.</p>
                       </div>
                     </div>
