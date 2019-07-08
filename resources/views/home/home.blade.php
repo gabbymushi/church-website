@@ -87,17 +87,19 @@
               </header>
               <section class="listing-cont">
                 <ul>
+                  @foreach($news as $news)
                   <li class="item post">
                     <div class="row">
                       <div class="col-md-4"> <a href="#" class="media-box"> <img src="http://placehold.it/600x400&amp;text=IMAGE+PLACEHOLDER" alt="" class="img-thumbnail"> </a></div>
                       <div class="col-md-8">
                         <div class="post-title">
-                          <h2><a href="blog-post.html">Voluptatum deleniti atque corrupti</a></h2>
+                          <h2><a href="blog-post.html">{{$news->title}}</a></h2>
                           <span class="meta-data"><i class="fa fa-calendar"></i> on 17th Dec, 2013</span></div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis fermentum sem, ac viverra ante luctus vel. Donec vel mauris quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus.</p>
+                        <p>{{$news->content}}.</p>
                       </div>
                     </div>
                   </li>
+                  @endforeach
                   <li class="item post">
                     <div class="row">
                       <div class="col-md-4"> <a href="blog-post.html" class="media-box"> <img src="http://placehold.it/600x400&amp;text=IMAGE+PLACEHOLDER" alt="" class="img-thumbnail"> </a></div>
