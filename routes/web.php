@@ -20,3 +20,6 @@ Route::get('/about-us','HomeController@aboutUs');
 // Auth::routes();
 
 // Route::get('/home', 'HomeController@index')->name('home');
+// Blog routes;
+Route::resource('/blog','BlogController');
+Route::get('/blog/{id}','BlogController@index')->name('post');
