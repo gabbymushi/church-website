@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\News;
 
 class HomeController extends Controller
 {
@@ -28,7 +29,8 @@ class HomeController extends Controller
 
     public function index()
     {
-        return view('home.home');
+        $data['news']=News::all();
+        return view('home.home',$data);
     }
     public function aboutUs()
     {
