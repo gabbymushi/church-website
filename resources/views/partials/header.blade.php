@@ -42,7 +42,10 @@
       <div class="container">
         <div class="row">
           <div class="col-md-4 col-sm-6 col-xs-8">
-            <h1 class="logo"> <a href="index.html"><img src="{{asset('assets/images/logo.png')}}" alt="Logo"></a> </h1>
+            <h1 class="logo"> <a href="index.html">
+              <img style="max-height:70px;margin-top:-10px;width:70px" src="{{asset('assets/images/logo.png')}}" alt="Logo"></a> 
+            <!-- DIOCESE OF MERU -->
+            </h1>
           </div>
           <div class="col-md-8 col-sm-6 col-xs-4">
             <div class="top-search hidden-sm hidden-xs">
