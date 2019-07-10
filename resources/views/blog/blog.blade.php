@@ -39,7 +39,7 @@
                   <h3><a href="single-event.html">{{$news->title}}</a></h3>
                   <span class="post-meta meta-data"> <span><i class="fa fa-calendar"></i> 28th Jan, 2014</span><span><i class="fa fa-archive"></i> <a href="#">Uncategorized</a></span> <span><a href="#"><i class="fa fa-comment"></i> 12</a></span></span>
                   <p>{{$news->content}}</p>
-                  <p><a href="#" class="btn btn-primary">Continue reading <i class="fa fa-long-arrow-right"></i></a></p>
+                  <p><a href="{{url('/blog/'.$news->id)}}" class="btn btn-primary">Continue reading <i class="fa fa-long-arrow-right"></i></a></p>
                 </div>
               </div>
             </article>
