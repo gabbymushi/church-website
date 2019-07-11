@@ -25,6 +25,14 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    public function dashboard(){
+        return view('dashboard.home');
+    }
+
+    public function users(){
+        return view('users.index');
+    }
     public function create()
     {
         //

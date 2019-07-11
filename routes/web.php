@@ -12,8 +12,20 @@ use App\Http\Controllers\HomeController;
 |
 */
 
-Route::get('/', function () {
+Route::get('/', function (){
     return view('welcome');
 });
+
+
 Route::resource('/','HomeController');
 Route::get('/about-us','HomeController@aboutUs');
+
+Route::get('/dashboard',[
+'uses'=>'HomeController@dashboard',
+'as'=>'dashboard.home'
+]);
+
+Route::get('/users',[
+'uses'=>'HomeController@users',
+'as'=>'users'
+]);
