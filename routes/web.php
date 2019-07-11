@@ -23,3 +23,12 @@ Route::get('/about-us','HomeController@aboutUs');
 // Blog routes;
 Route::resource('/blog','BlogController');
 Route::get('/blog/{id}','BlogController@index')->name('post');
+Route::get('/dashboard',[
+    'uses'=>'HomeController@dashboard',
+    'as'=>'dashboard.home'
+    ]);
+    
+    Route::get('/users',[
+    'uses'=>'HomeController@users',
+    'as'=>'users'
+    ]);

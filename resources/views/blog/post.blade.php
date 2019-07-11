@@ -51,7 +51,7 @@
               </blockquote> -->
               <div class="post-meta"> <i class="fa fa-tags"></i> <a href="#">Faith</a>, <a href="#">Heart</a>, <a href="#">Love</a>, <a href="#">Praise</a>, <a href="#">Sin</a>, <a href="#">Soul</a> </div>
             </article>
-            <section class="post-comments" id="comments">
+            <!-- <section class="post-comments" id="comments">
               <h3><i class="fa fa-comment"></i> Comments (4)</h3>
               <ol class="comments">
                 <li>
@@ -102,8 +102,8 @@
                   </div>
                 </li>
               </ol>
-            </section>
-            <section class="post-comment-form">
+            </section> -->
+            <!-- <section class="post-comment-form">
               <h3><i class="fa fa-share"></i> Post a comment</h3>
               <form>
                 <div class="row">
@@ -134,7 +134,7 @@
                   </div>
                 </div>
               </form>
-            </section>
+            </section> -->
           </div>
           <!-- Start Sidebar -->
           <div class="col-md-3 sidebar">
@@ -160,7 +160,9 @@
               <div class="sidebar-widget-title">
                 <h3>Post Tags</h3>
               </div>
-              <div class="tag-cloud"> <a href="#">Faith</a> <a href="#">Heart</a> <a href="#">Love</a> <a href="#">Praise</a> <a href="#">Sin</a> <a href="#">Soul</a> <a href="#">Missions</a> <a href="#">Worship</a> <a href="#">Faith</a> <a href="#">Heart</a> <a href="#">Love</a> <a href="#">Praise</a> <a href="#">Sin</a> <a href="#">Soul</a> <a href="#">Missions</a> <a href="#">Worship</a> </div>
+              <div class="tag-cloud"> 
+              <a href="#">Faith</a>
+               </div>
             </div>
           </div>
         </div>

@@ -672,7 +672,7 @@ body.boxed .body .site-header, body.boxed .body .main-menu-wrapper{
 }
 .site-header .topbar{
 	background-color:rgba(255,255,255,.8);
-	height:80px;
+	height:100px;
 	position:relative;
 	z-index:3;
 	-webkit-box-shadow:0 2px 0 rgba(0,0,0,.1);
@@ -688,6 +688,7 @@ body.boxed .body .site-header, body.boxed .body .main-menu-wrapper{
 	height:65px;
 	vertical-align: middle;
 	line-height: 0;
+	
 }
 .logo a{
 	display:table-cell;
@@ -1145,7 +1146,7 @@ body.boxed .body .site-header, body.boxed .body .main-menu-wrapper{
 	max-width:250px;
 	display:block;
 	margin:0;
-	padding-top:25px;
+	padding-top:1000px;
 }
 .header-style4 h1.logo a{
 	display:block;
