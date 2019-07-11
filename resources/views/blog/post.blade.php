@@ -160,7 +160,9 @@
               <div class="sidebar-widget-title">
                 <h3>Post Tags</h3>
               </div>
-              <div class="tag-cloud"> <a href="#">Faith</a> <a href="#">Heart</a> <a href="#">Love</a> <a href="#">Praise</a> <a href="#">Sin</a> <a href="#">Soul</a> <a href="#">Missions</a> <a href="#">Worship</a> <a href="#">Faith</a> <a href="#">Heart</a> <a href="#">Love</a> <a href="#">Praise</a> <a href="#">Sin</a> <a href="#">Soul</a> <a href="#">Missions</a> <a href="#">Worship</a> </div>
+              <div class="tag-cloud"> 
+              <a href="#">Faith</a>
+               </div>
             </div>
           </div>
         </div>
