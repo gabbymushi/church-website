@@ -88,7 +88,8 @@
                                         <div class="main-card mb-3 card">
                                             <div class="card-body">
                                                 <!-- <h5 class="card-title">Controls Types</h5> -->
-                                                <form class="">
+                                                <form method="POST" action="/blog" class="">
+                                                @csrf
                                                     <div class="position-relative form-group">
                                                         <label for="title" class="">Title</label>
                                                         <input name="title" id="title" placeholder="News Title" type="text" class="form-control">
