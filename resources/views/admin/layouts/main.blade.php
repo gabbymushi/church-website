@@ -155,7 +155,7 @@
                             </button>
                         </span>
                     </div>    
-                    @include('dashboard.includes.menu')
+                    @include('admin.includes.menu')
 
                 </div>    
                 <div class="app-main__outer">
@@ -167,7 +167,7 @@
                    
                         
                     </div>
-                    @include('dashboard/includes/footer')   
+                    @include('admin/includes/footer')   
                 </div>
               
         </div>

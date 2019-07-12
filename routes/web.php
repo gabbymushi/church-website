@@ -22,6 +22,7 @@ Route::get('/about-us','HomeController@aboutUs');
 // Route::get('/home', 'HomeController@index')->name('home');
 // Blog routes;
 Route::resource('/blog','BlogController');
+Route::get('/post/blog','BlogController@create');
 Route::get('/blog/{id}','BlogController@index')->name('post');
 Route::get('/dashboard',[
     'uses'=>'HomeController@dashboard',

@@ -26,7 +26,7 @@ class BlogController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.blog.create-post');
     }
 
     /**
@@ -37,7 +37,7 @@ class BlogController extends Controller
      */
     public function store(Request $request)
     {
-        //
+      News::create($request->all());
     }
 
     /**

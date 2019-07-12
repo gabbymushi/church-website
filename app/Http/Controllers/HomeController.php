@@ -25,7 +25,7 @@ class HomeController extends Controller
 
     public function dashboard()
     {
-        return view('dashboard.home');
+        return view('admin.home');
     }
 
     public function users()
