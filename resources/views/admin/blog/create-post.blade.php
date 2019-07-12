@@ -110,8 +110,8 @@
                                                         <option>5</option>
                                                     </select></div> -->
                                                     <div class="position-relative form-group">
-                                                        <label for="exampleText" class="">Content </label>
-                                                        <textarea name="content" id="exampleText" class="form-control"></textarea>
+                                                        <label for="content" class="">Content </label>
+                                                        <textarea name="content" id="content" class="form-control"></textarea>
                                                     </div>
                                                     <!-- <div class="position-relative form-group"><label for="exampleFile" class="">File</label><input name="file" id="exampleFile" type="file" class="form-control-file">
                                                         <small class="form-text text-muted">This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.</small>
