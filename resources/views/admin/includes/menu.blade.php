@@ -32,6 +32,21 @@
             <li>
                 <a href="#">
                     <i class="metismenu-icon pe-7s-diamond"></i>
+                   Events
+                    <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                </a>
+                <ul>
+                    <li>
+                        <a href="{{route('events')}}">
+                            <i class="metismenu-icon"></i>
+                            Manage Events
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="metismenu-icon pe-7s-diamond"></i>
                     News & Blog
                     <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
                 </a>
