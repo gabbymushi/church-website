@@ -173,6 +173,7 @@
         </div>
     </div>
     <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+<script type="text/javascript" src="{{asset('assets/plugins/ckeditor5-build-classic/ckeditor.js')}}"></script>
 <script type="text/javascript" src="{{asset('dashboard_panel/assets/scripts/main.js')}}"></script>
 </body>
 </html>
