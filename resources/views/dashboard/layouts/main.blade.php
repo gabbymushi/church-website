@@ -21,7 +21,9 @@
     =========================================================
     * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
     -->
-<link href="{{asset('dashboard_panel/main.css')}}" rel="stylesheet"></head>
+<link href="{{asset('dashboard_panel/main.css')}}" rel="stylesheet">
+<link href="{{asset('css/toastr.min.css')}}" rel="stylesheet">
+</head>
 <body>
     <div class="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
         <div class="app-header header-shadow">
@@ -174,5 +176,18 @@
     </div>
     <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
 <script type="text/javascript" src="{{asset('dashboard_panel/assets/scripts/main.js')}}"></script>
+<script type="text/javascript" src="{{asset('js/jquery.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('js/toastr.min.js')}}"></script>
+    <script type="text/javascript">
+        @if(Session::has('success')){
+          
+          toastr.success("{{Session::get('success')}}");
+
+        }@elseif(Session::has('warning')){
+          toastr.warning("{{Session::get('warning')}}");  
+        }
+
+        @endif
+</script>
 </body>
 </html>
