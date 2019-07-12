@@ -7,8 +7,8 @@
                                         <i class="pe-7s-display1 icon-gradient bg-premium-dark">
                                         </i>
                                     </div>
-                                    <div>Form Controls
-                                        <div class="page-title-subheading">Wide selection of forms controls, using the Bootstrap 4 code base, but built with React.
+                                    <div>News & Blog
+                                        <div class="page-title-subheading">Post news & blog...
                                         </div>
                                     </div>
                                 </div>
@@ -63,7 +63,8 @@
                                         </div>
                                     </div>
                                 </div>    </div>
-                        </div>            <ul class="body-tabs body-tabs-layout tabs-animated body-tabs-animated nav">
+                        </div> 
+                         <!-- <ul class="body-tabs body-tabs-layout tabs-animated body-tabs-animated nav">
                             <li class="nav-item">
                                 <a role="tab" class="nav-link active" id="tab-0" data-toggle="tab" href="#tab-content-0">
                                     <span>Basic</span>
@@ -79,18 +80,22 @@
                                     <span>Custom Controls</span>
                                 </a>
                             </li>
-                        </ul>
+                        </ul> -->
                         <div class="tab-content">
                             <div class="tab-pane tabs-animation fade show active" id="tab-content-0" role="tabpanel">
                                 <div class="row">
-                                    <div class="col-md-6">
+                                    <div class="col-md-8">
                                         <div class="main-card mb-3 card">
-                                            <div class="card-body"><h5 class="card-title">Controls Types</h5>
+                                            <div class="card-body">
+                                                <!-- <h5 class="card-title">Controls Types</h5> -->
                                                 <form class="">
-                                                    <div class="position-relative form-group"><label for="exampleEmail" class="">Email</label><input name="email" id="exampleEmail" placeholder="with a placeholder" type="email" class="form-control"></div>
-                                                    <div class="position-relative form-group"><label for="examplePassword" class="">Password</label><input name="password" id="examplePassword" placeholder="password placeholder" type="password"
-                                                                                                                                                           class="form-control"></div>
-                                                    <div class="position-relative form-group"><label for="exampleSelect" class="">Select</label><select name="select" id="exampleSelect" class="form-control">
+                                                    <div class="position-relative form-group">
+                                                        <label for="title" class="">Title</label>
+                                                        <input name="title" id="title" placeholder="News Title" type="text" class="form-control">
+                                                    </div>
+                                                    <!-- <div class="position-relative form-group"><label for="examplePassword" class="">Conet</label><input name="password" id="examplePassword" placeholder="password placeholder" type="password"
+                                                                                                                                                           class="form-control"></div> -->
+                                                    <!-- <div class="position-relative form-group"><label for="exampleSelect" class="">Select</label><select name="select" id="exampleSelect" class="form-control">
                                                         <option>1</option>
                                                         <option>2</option>
                                                         <option>3</option>
@@ -103,17 +108,20 @@
                                                         <option>3</option>
                                                         <option>4</option>
                                                         <option>5</option>
-                                                    </select></div>
-                                                    <div class="position-relative form-group"><label for="exampleText" class="">Text Area</label><textarea name="text" id="exampleText" class="form-control"></textarea></div>
-                                                    <div class="position-relative form-group"><label for="exampleFile" class="">File</label><input name="file" id="exampleFile" type="file" class="form-control-file">
-                                                        <small class="form-text text-muted">This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.</small>
+                                                    </select></div> -->
+                                                    <div class="position-relative form-group">
+                                                        <label for="exampleText" class="">Content </label>
+                                                        <textarea name="content" id="exampleText" class="form-control"></textarea>
                                                     </div>
-                                                    <button class="mt-1 btn btn-primary">Submit</button>
+                                                    <!-- <div class="position-relative form-group"><label for="exampleFile" class="">File</label><input name="file" id="exampleFile" type="file" class="form-control-file">
+                                                        <small class="form-text text-muted">This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.</small>
+                                                    </div> -->
+                                                    <button class="mt-1 btn btn-primary">Post news</button>
                                                 </form>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-6">
+                                    <!-- <div class="col-md-6">
                                         <div class="main-card mb-3 card">
                                             <div class="card-body"><h5 class="card-title">Sizing</h5>
                                                 <form class=""><input placeholder="lg" type="text" class="mb-2 form-control-lg form-control"><input placeholder="default" type="text" class="mb-2 form-control"><input placeholder="sm" type="text"
@@ -142,10 +150,10 @@
                                                 </form>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
-                            <div class="tab-pane tabs-animation fade" id="tab-content-1" role="tabpanel">
+                            <!-- <div class="tab-pane tabs-animation fade" id="tab-content-1" role="tabpanel">
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="main-card mb-3 card">
@@ -300,8 +308,8 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="tab-pane tabs-animation fade" id="tab-content-2" role="tabpanel">
+                            </div> -->
+                            <!-- <div class="tab-pane tabs-animation fade" id="tab-content-2" role="tabpanel">
                                 <form class="">
                                     <div class="row">
                                         <div class="col-md-6">
@@ -398,6 +406,6 @@
                                         </div>
                                     </div>
                                 </form>
-                            </div>
+                            </div> -->
                         </div>
 @endsection
