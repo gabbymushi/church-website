@@ -37,7 +37,7 @@
                 </a>
                 <ul>
                     <li>
-                        <a href="{{route('users')}}">
+                        <a href="{{url('/blog')}}">
                             <i class="metismenu-icon"></i>
                             Post news
                         </a>
