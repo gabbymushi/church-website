@@ -38,6 +38,18 @@ class BlogController extends Controller
     public function store(Request $request)
     {
       News::create($request->all());
+      $model = new News();
+      $destinationPath = 'assets/images/blog';
+      $model->title = $request->input('title');
+      $model->content =$request->input('content');
+    //   $model->user_id = Auth::user()->user_id;
+      if ($request->hasFile('picture')) {
+          $file = $request->file('picture');
+          if ($file->move($destinationPath, $file->getClientOriginalName())) {
+              $model->picture = $file->getClientOriginalName();
+          }
+      }
+      $model->save();
       return redirect('/post/blog');
     }
 
