@@ -33,3 +33,30 @@ Route::get('/dashboard',[
     'uses'=>'HomeController@users',
     'as'=>'users'
     ]);
+
+//Events Routes
+Route::get('/events',[
+'uses'=>'EventsController@index',
+'as'=>'events'
+]);
+Route::get('/events/create',[
+ 'uses'=>'EventsController@create',
+ 'as'=>'event.create'
+]);
+Route::post('/events/store',[
+'uses'=>'EventsController@store',
+'as'=>'event.store'
+]);
+Route::get('/events/edit/{id}',[
+'uses'=>'EventsController@edit',
+'as'=>'event.edit'
+]);
+
+Route::post('/events/update/{id}',[
+'uses'=>'EventsController@update',
+'as'=>'event.update'
+]);
+Route::get('/events/destroy/{id}',[
+'uses'=>'EventsController@destroy',
+'as'=>'event.delete'
+]);
