@@ -49,33 +49,19 @@
               </header>
               <section class="listing-cont">
                 <ul>
+                  @foreach($events as $event)
+      <?php $date =date('jS F,Y',strtotime($event->start_date)) ;?>
                   <li class="item event-item">
                     <div class="event-date"> <span class="date">06</span> <span class="month">Aug</span> </div>
                     <div class="event-detail">
-                      <h4><a href="single-event.html">Monday Prayer</a></h4>
-                      <span class="event-dayntime meta-data">Monday | 07:00 AM</span> </div>
+                      <h4><a href="single-event.html">{{$event->title}}</a></h4>
+                      <span class="event-dayntime meta-data">{{$date}}</span> </div>
                     <div class="to-event-url">
                       <div><a href="single-event.html" class="btn btn-default btn-sm">Details</a></div>
                     </div>
                   </li>
-                  <li class="item event-item">
-                    <div class="event-date"> <span class="date">28</span> <span class="month">Aug</span> </div>
-                    <div class="event-detail">
-                      <h4><a href="single-event.html">Staff members meet</a></h4>
-                      <span class="event-dayntime meta-data">Monday | 01:00 PM</span> </div>
-                    <div class="to-event-url">
-                      <div><a href="single-event.html" class="btn btn-default btn-sm">Details</a></div>
-                    </div>
-                  </li>
-                  <li class="item event-item">
-                    <div class="event-date"> <span class="date">25</span> <span class="month">Sep</span> </div>
-                    <div class="event-detail">
-                      <h4><a href="single-event.html">Evening Prayer</a></h4>
-                      <span class="event-dayntime meta-data">Friday | 06:00 PM</span> </div>
-                    <div class="to-event-url">
-                      <div><a href="single-event.html" class="btn btn-default btn-sm">Details</a></div>
-                    </div>
-                  </li>
+                  @endforeach
+        
                 </ul>
               </section>
             </div>

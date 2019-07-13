@@ -38,6 +38,7 @@ class BlogController extends Controller
     public function store(Request $request)
     {
       News::create($request->all());
+      return redirect('/post/blog');
     }
 
     /**
