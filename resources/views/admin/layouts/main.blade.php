@@ -178,9 +178,9 @@
     </div>
     <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
     <script type="text/javascript" src="{{asset('js/jquery.min.js')}}"></script>
+    <script type="text/javascript" src="{{asset('dashboard_panel/assets/scripts/main.js')}}"></script>
     <script type="text/javascript" src="{{asset('js/toastr.min.js')}}"></script>
     <script type="text/javascript" src="{{asset('assets/plugins/ckeditor5-build-classic/ckeditor.js')}}"></script>
-    <script type="text/javascript" src="{{asset('dashboard_panel/assets/scripts/main.js')}}"></script>
     <script type="text/javascript">
         @if(Session::has('success')) {
 
@@ -192,15 +192,16 @@
         }
 
         @endif
-        
+
         ClassicEditor.create(document.querySelector('#newsEditor'))
             .then(editor => {
-                editor.config.height='600px';
                 console.log(editor);
             })
             .catch(error => {
                 console.error(error);
             });
+        var ck = CKEDITOR.replace('box');
+        ck.config.height = 600;
     </script>
 </body>
 
