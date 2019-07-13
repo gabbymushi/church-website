@@ -71,11 +71,15 @@
                                         <div class="main-card mb-3 card">
                                             <div class="card-body">
                                                 <!-- <h5 class="card-title">Controls Types</h5> -->
-                                                <form method="POST" action="/blog" class="">
+                                                <form method="POST" action="/blog" class="" enctype="multipart/form-data">
                                                 @csrf
                                                     <div class="position-relative form-group">
                                                         <label for="title" class="">Title</label>
                                                         <input name="title" id="title" placeholder="News Title" type="text" class="form-control">
+                                                    </div>
+                                                    <div class="position-relative form-group">
+                                                        <label for="title" class="">Cover Photo</label>
+                                                        <input name="picture" id="picture" placeholder="Cover Photo" type="file" class="form-control">
                                                     </div>
                                                     <!-- <div class="position-relative form-group"><label for="examplePassword" class="">Conet</label><input name="password" id="examplePassword" placeholder="password placeholder" type="password"
                                                                                                                                                            class="form-control"></div> -->
