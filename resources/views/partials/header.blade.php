@@ -90,12 +90,6 @@
                   </ul> -->
                 </li>
                 <li><a href="{{url('/about-us')}}">About Us</a>
-                  <!-- <ul class="dropdown"> -->
-                    <!-- <li><a href="about.html">Overview</a></li> -->
-                    <!-- <li><a href="contact.html">Where we meet</a></li>
-                    <li><a href="our-staff.html">Our Staff</a></li> -->
-                	<!-- <li><a href="contact.html">Contact</a></li> -->
-                  <!-- </ul> -->
                 </li>
                 <li class="megamenu"><a href="shortcodes.html">Mega Menu</a>
                   <ul class="dropdown">
