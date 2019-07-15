@@ -50,6 +50,7 @@ class BlogController extends Controller
             if ($file->move($destinationPath, $file->getClientOriginalName())) {
                 $fileModel = new File();
                 $fileModel->name = $file->getClientOriginalName();
+                $fileModel->mime_type = $file->getClientMimeType();
                 $fileModel->name = $saved->id;
                 $fileModel->save();
             }
