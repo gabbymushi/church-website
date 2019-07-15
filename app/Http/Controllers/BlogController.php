@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\News;
 use App\NewsTag;
+use App\File;
 
 class BlogController extends Controller
 {
@@ -43,13 +44,14 @@ class BlogController extends Controller
       $model->title = $request->input('title');
       $model->content =$request->input('content');
     //   $model->user_id = Auth::user()->user_id;
-      if ($request->hasFile('picture')) {
-          $file = $request->file('picture');
-          if ($file->move($destinationPath, $file->getClientOriginalName())) {
-              $model->name = $file->getClientOriginalName();
-          }
-      }
       $model->save();
+      if ($request->hasFile('picture')) {
+        $file = $request->file('picture');
+        if ($file->move($destinationPath, $file->getClientOriginalName())) {
+            $model = new File();
+            $model->name = $file->getClientOriginalName();
+        }
+    }
       return redirect('/post/blog');
     }
 
