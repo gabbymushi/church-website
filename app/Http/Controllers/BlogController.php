@@ -37,7 +37,7 @@ class BlogController extends Controller
      */
     public function store(Request $request)
     {
-      News::create($request->all());
+    //   News::create($request->all());
       $model = new News();
       $destinationPath = 'assets/images/blog';
       $model->title = $request->input('title');
@@ -46,7 +46,7 @@ class BlogController extends Controller
       if ($request->hasFile('picture')) {
           $file = $request->file('picture');
           if ($file->move($destinationPath, $file->getClientOriginalName())) {
-              $model->picture = $file->getClientOriginalName();
+              $model->name = $file->getClientOriginalName();
           }
       }
       $model->save();
