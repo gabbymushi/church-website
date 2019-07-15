@@ -38,7 +38,6 @@ class BlogController extends Controller
      */
     public function store(Request $request)
     {
-        //   News::create($request->all());
         $model = new News();
         $destinationPath = 'assets/images/blog';
         $model->title = $request->input('title');
