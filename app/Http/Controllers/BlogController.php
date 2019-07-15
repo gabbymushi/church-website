@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\News;
 use App\NewsTag;
+use App\File;
 
 class BlogController extends Controller
 {
@@ -15,8 +16,8 @@ class BlogController extends Controller
      */
     public function index()
     {
-        $data['news']=News::all();
-        return view('blog.blog',$data);
+        $data['news'] = News::all();
+        return view('blog.blog', $data);
     }
 
     /**
@@ -37,20 +38,23 @@ class BlogController extends Controller
      */
     public function store(Request $request)
     {
-      News::create($request->all());
-      $model = new News();
-      $destinationPath = 'assets/images/blog';
-      $model->title = $request->input('title');
-      $model->content =$request->input('content');
-    //   $model->user_id = Auth::user()->user_id;
-      if ($request->hasFile('picture')) {
-          $file = $request->file('picture');
-          if ($file->move($destinationPath, $file->getClientOriginalName())) {
-              $model->picture = $file->getClientOriginalName();
-          }
-      }
-      $model->save();
-      return redirect('/post/blog');
+        $model = new News();
+        $destinationPath = 'assets/images/blog';
+        $model->title = $request->input('title');
+        $model->content = $request->input('content');
+        //   $model->user_id = Auth::user()->user_id;
+        $model->save();
+        if ($request->hasFile('picture')) {
+            $file = $request->file('picture');
+            if ($file->move($destinationPath, $file->getClientOriginalName())) {
+                $fileModel = new File();
+                $fileModel->name = $file->getClientOriginalName();
+                $fileModel->mime_type = $file->getClientMimeType();
+                $fileModel->news_id = $model->id;
+                $fileModel->save();
+            }
+        }
+        return redirect('/post/blog');
     }
 
     /**
@@ -62,9 +66,9 @@ class BlogController extends Controller
     public function show($id)
     {
         // $data['tags']=NewsTag::where(['news_id'=>$id])->with();
-        $data['post']=News::find($id);
+        $data['post'] = News::find($id);
         //  dd($data['post']);
-        return view('blog.post',$data);
+        return view('blog.post', $data);
     }
 
     /**
