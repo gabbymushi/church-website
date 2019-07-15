@@ -81,7 +81,7 @@
                         <div class="post-title">
                           <h2><a href="{{url('/blog/'.$news->id)}}">{{$news->title}}</a></h2>
                           <span class="meta-data"><i class="fa fa-calendar"></i> on {{date('jS F,Y',strtotime($news->created_at))}}</span></div>
-                        <p>{{$news->content}}.</p>
+                        <p>{!!$news->content!!}.</p>
                       </div>
                     </div>
                   </li>
