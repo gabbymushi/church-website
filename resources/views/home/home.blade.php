@@ -58,7 +58,7 @@
                       <h4><a href="single-event.html">{{$event->title}}</a></h4>
                       <span class="event-dayntime meta-data">{{$date}}</span> </div>
                     <div class="to-event-url">
-                      <div><a href="single-event.html" class="btn btn-default btn-sm">Details</a></div>
+                      <div><a href="{{route('single_event',['id'=>$event->id])}}" class="btn btn-default btn-sm">Details</a></div>
                     </div>
                   </li>
                   @endforeach
