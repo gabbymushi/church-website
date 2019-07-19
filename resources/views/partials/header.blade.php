@@ -41,8 +41,8 @@
     <div class="topbar">
       <div class="container">
         <div class="row">
-          <div class="col-md-4 col-sm-6 col-xs-8" style="">
-            <h1 class="logo"> <a href="index.html"><img style="max-width:600px;" src="{{asset('assets/images/logo.png')}}" alt="Logo"></a> </h1>
+          <div class="col-md-4 col-sm-6 col-xs-8">
+            <h1 class="logo"> <a href="index.html"><img style="max-width:500px;" src="{{asset('assets/images/logo.png')}}" alt="Logo"></a> </h1>
             
           </div>
           <div class="col-md-8 col-sm-6 col-xs-4">

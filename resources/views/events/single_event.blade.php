@@ -7,7 +7,7 @@
       <div class="row">
         <div class="col-md-12">
           <ol class="breadcrumb">
-            <li><a href="index.html">Home</a></li>
+            <li><a href="{{route('home')}}">Home</a></li>
             <li><a href="{{route('all_events')}}">Events</a></li>
             <li class="active">{{$event->title}}</li>
           </ol>

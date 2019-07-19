@@ -66,7 +66,7 @@ Route::get('all_events',[
 'uses'=>'EventsController@all_events',
 'as'=>'all_events'
 ]);
-Route::get('/single_event/{id}',[
+Route::get('/single_event/{slug}',[
 'uses'=>'EventsController@show',
 'as'=>'single_event'
 

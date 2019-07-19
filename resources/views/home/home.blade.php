@@ -1,7 +1,7 @@
 @extends('layouts.main')
 @section('content')
   <!-- Start Hero Slider -->
-  <div class="hero-slider flexslider clearfix" data-autoplay="yes" data-pagination="yes" data-arrows="yes" data-style="fade" data-pause="yes">
+  <div  style="margin-top: 80px;" class="hero-slider flexslider clearfix" data-autoplay="yes" data-pagination="yes" data-arrows="yes" data-style="fade" data-pause="yes">
     <ul class="slides">
       <li class=" parallax" style="background-image:url('{{asset('assets/images/slider/slide_kkkt.PNG')}}');"></li>
       <li class="parallax" style="background-image:url({{asset('assets/images/slider/slide_kkkt2.PNG')}});"></li>
@@ -51,14 +51,23 @@
               <section class="listing-cont">
                 <ul>
                   @foreach($events as $event)
-      <?php $date =date('jS F,Y',strtotime($event->start_date)) ;?>
+                  <?php 
+                  $date =date('jS F,Y',strtotime($event->start_date)) ;
+                  $new_event_date = date('Y-m-d',strtotime($date));
+                  $date2 = explode('-',$new_event_date);
+                  //Get month name
+                  $monthNum  =  $date2[1];
+                  $dateObj   = DateTime::createFromFormat('!m', $monthNum);
+                  $monthName = $dateObj->format('F'); // March
+                  $monthName = mb_strimwidth($monthName, 0, 5);
+                  ?>
                   <li class="item event-item">
-                    <div class="event-date"> <span class="date">06</span> <span class="month">Aug</span> </div>
+                    <div class="event-date"> <span class="date">{{$date2[2]}}</span> <span class="month">{{$monthName}}</span> </div>
                     <div class="event-detail">
-                      <h4><a href="single-event.html">{{$event->title}}</a></h4>
+                      <h4><a href="{{route('single_event',['id'=>$event->slug])}}">{{$event->title}}</a></h4>
                       <span class="event-dayntime meta-data">{{$date}}</span> </div>
                     <div class="to-event-url">
-                      <div><a href="{{route('single_event',['id'=>$event->id])}}" class="btn btn-default btn-sm">Details</a></div>
+                      <div><a href="{{route('single_event',['id'=>$event->slug])}}" class="btn btn-default btn-sm">Details</a></div>
                     </div>
                   </li>
                   @endforeach

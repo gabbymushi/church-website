@@ -4,12 +4,13 @@
   <!-- Start Site Header -->
   <!-- End Site Header --> 
   <!-- Start Nav Backed Header -->
-  <div class="nav-backed-header parallax" style="background-image:url(http://placehold.it/1280x635&amp;text=IMAGE+PLACEHOLDER);">
+  <div class="nav-backed-header parallax" style="background-image:url({{asset('assets/images/events_all.png')}});">
     <div class="container">
+      upcaming_events
       <div class="row">
         <div class="col-md-12">
           <ol class="breadcrumb">
-            <li><a href="index.html">Home</a></li>
+            <li><a href="{{route('home')}}">Home</a></li>
             <li class="active">Events</li>
           </ol>
         </div>
@@ -50,13 +51,21 @@
               <section class="listing-cont">
                 <ul>
                   @foreach($events as $event)
+                  <?php
+                   $date = explode('-', $event->start_date);
+                   //Get month name
+                  $monthNum  =  $date[1];
+                  $dateObj   = DateTime::createFromFormat('!m', $monthNum);
+                  $monthName = $dateObj->format('F'); // March
+                  $monthName = mb_strimwidth($monthName, 0, 5);
+                   ?>
                   <li class="item event-item">
-                    <div class="event-date"> <span class="date">06</span> <span class="month">Feb</span> </div>
+                    <div class="event-date"> <span class="date">{{$date[2]}}</span> <span class="month">{{$monthName}}</span> </div>
                     <div class="event-detail">
-                      <h4><a href="single-event.html">{{$event->title}}</a></h4>
+                      <h4><a href="{{route('single_event',['id'=>$event->slug])}}">{{$event->title}}</a></h4>
                       <span class="event-dayntime meta-data">Monday | 07:00 AM</span> </div>
                     <div class="to-event-url">
-                      <div><a href="{{route('single_event',['id'=>$event->id])}}" class="btn btn-default btn-sm">Details</a></div>
+                      <div><a href="{{route('single_event',['id'=>$event->slug])}}" class="btn btn-default btn-sm">Details</a></div>
                     </div>
                   </li>
                   @endforeach
@@ -71,15 +80,23 @@
               <div class="sidebar-widget-title">
                 <h3>Featured Event</h3>
               </div>
-              <img src="http://placehold.it/600x400&amp;text=IMAGE+PLACEHOLDER" alt="" class="featured-event-image">
+              <img src="{{$latest_event->featured_img}}" alt="" class="featured-event-image">
               <div class="featured-event-container">
                 <label class="label label-danger">Upcoming</label> <!-- Replace class label-danger to label-default for passed events -->
+                <?php
+                   $date = explode('-', $latest_event->start_date);
+                   //Get month name
+                  $monthNum  =  $date[1];
+                  $dateObj   = DateTime::createFromFormat('!m', $monthNum);
+                  $monthName = $dateObj->format('F'); // March
+                  $monthName = mb_strimwidth($monthName, 0, 5);
+                   ?>
                 <div class="featured-event-time">
-                    <span class="date">21</span>
-                    <span class="month">Aug, 14</span>
+                    <span class="date">{{$date[2]}}</span>
+                    <span class="month">{{$monthName}}, {{$date[0]}}</span>
                 </div>
-                <h4 class="featured-event-title"><a href="#">A nice event title</a></h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis consectetur adipiscing elit. Nulla convallis egestas rhoncus</p>
+                <h4 class="featured-event-title"><a href="#">{{$latest_event->title}}</a></h4>
+                <p>{{$latest_event->content}}</p>
               </div>
             </div>
             <div class="widget sidebar-widget">
@@ -87,11 +104,11 @@
                 <h3>Events Categories</h3>
               </div>
               <ul>
-                <li><a href="#">Church Home</a> (9)</li>
-                <li><a href="#">About Us</a> (24)</li>
-                <li><a href="#">All Events</a> (13)</li>
-                <li><a href="#">Sermons Archive</a> (23)</li>
-                <li><a href="#">Our Ministries</a> (65)</li>
+                @foreach($categories as $category)
+              
+                <li><a href="#">{{$category->name}}</a> ({{App\Event::where("event_category_id",$category->id)->get()->count()}})</li>
+                @endforeach
+                
               </ul>
             </div>
             <!-- Recent Posts Widget -->

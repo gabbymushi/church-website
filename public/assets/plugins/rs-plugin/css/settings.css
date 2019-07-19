@@ -1185,7 +1185,7 @@ img.tp-slider-alternative-image	{	width:100%; height:auto;}
 
 .fullwidthbanner-container{
 	width:100%;
-	position:relative;
+	position:absolute;
 	padding:0;
 	overflow:hidden;
 }
