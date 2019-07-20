@@ -46,7 +46,10 @@
                 <span class="post-meta meta-data"> 
                   <span><i class="fa fa-calendar"></i> {{date('jS F,Y',strtotime($news->created_at))}}</span>
                   <span><i class="fa fa-edit"></i> 
-                  <a href="{{url('/blog/edit/'.$news->id)}}">Edit</a></span> <span><a href="#"><i class="fa fa-comment"></i> 12</a></span></span>
+                  <a href="{{url('/blog/edit/'.$news->id)}}">Edit</a></span>
+                   <span><a href="{{url('/blog/delete/'.$news->id)}}""><i class="fa fa-trash"></i> Delete</a></span>
+                   <span><a href="#"><i class="fa fa-comment"></i> 12</a></span>
+                  </span>
                 {!!$news->content!!}
                 <p><a href="{{url('/blog/'.$news->id)}}" class="btn btn-primary">Continue reading <i class="fa fa-long-arrow-right"></i></a></p>
               </div>
