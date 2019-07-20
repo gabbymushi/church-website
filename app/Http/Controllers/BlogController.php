@@ -66,7 +66,7 @@ class BlogController extends Controller
     public function show($id)
     {
         // $data['tags']=NewsTag::where(['news_id'=>$id])->with();
-        $data['post'] = News::find($id);
+        $data['post'] = News::where(['id'=>$id])->with(['files'])->first();
         //  dd($data['post']);
         return view('blog.post', $data);
     }
