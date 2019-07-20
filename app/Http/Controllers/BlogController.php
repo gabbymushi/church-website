@@ -79,7 +79,10 @@ class BlogController extends Controller
      */
     public function edit($id)
     {
-        //
+       // $data['tags']=NewsTag::where(['news_id'=>$id])->with();
+        $data['post'] = News::where(['id'=>$id])->with(['files'])->first();
+        //  dd($data['post']);
+        return view('admin.blog.edit-post', $data);
     }
 
     /**
@@ -91,7 +94,11 @@ class BlogController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $news= News::find($id);
+        $news->title=$request->input('title');
+        $news->content=$request->input('content');
+        $news->save();
+        return redirect('blog');
     }
 
     /**
@@ -102,6 +109,8 @@ class BlogController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $news= News::find($id);
+        $news->delete();
+        return redirect('blog');
     }
 }
