@@ -40,7 +40,8 @@ class HomeController extends Controller
 
     public function index()
     {
-        $data['news'] = News::all();
+        $data['news'] = News::with(['files'])->orderBy('created_at', 'desc')->limit(2)->get();
+        // dd($data['news']->files);
         $data['events'] =Event::all();
         return view('home.home', $data);
     }
