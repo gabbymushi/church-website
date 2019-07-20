@@ -22,7 +22,7 @@ Route::get('/about-us', 'HomeController@aboutUs');
 
 // Route::get('/home', 'HomeController@index')->name('home');
 // Blog routes;
-Route::resource('/blog', 'BlogController');
+Route::get('/blog', 'BlogController@index');
 Route::get('/post/blog', 'BlogController@create');
 Route::get('/blog/{id}', 'BlogController@index')->name('post');
 Route::get('/dashboard', [
@@ -41,6 +41,10 @@ Route::get('/blog/edit/{id}', [
 Route::post('/blog/update/{id}', [
     'uses' => 'BlogController@update',
     'as' => 'blog.update'
+]);
+Route::get('/blog/delete/{id}', [
+    'uses' => 'BlogController@destroy',
+    'as' => 'blog.delete'
 ]);
 //Events Routes
 Route::get('/events', [
