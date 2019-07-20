@@ -111,5 +111,6 @@ class BlogController extends Controller
     {
         $news= News::find($id);
         $news->delete();
+        return redirect('blog');
     }
 }
