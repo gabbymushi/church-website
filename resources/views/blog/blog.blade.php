@@ -43,7 +43,10 @@
                 </a> </div>
               <div class="col-md-8 col-sm-8">
                 <h3><a href="single-event.html">{{$news->title}}</a></h3>
-                <span class="post-meta meta-data"> <span><i class="fa fa-calendar"></i> {{date('jS F,Y',strtotime($news->created_at))}}</span><span><i class="fa fa-archive"></i> <a href="#">Uncategorized</a></span> <span><a href="#"><i class="fa fa-comment"></i> 12</a></span></span>
+                <span class="post-meta meta-data"> 
+                  <span><i class="fa fa-calendar"></i> {{date('jS F,Y',strtotime($news->created_at))}}</span>
+                  <span><i class="fa fa-edit"></i> 
+                  <a href="{{url('/blog/edit/'.$news->id)}}">Edit</a></span> <span><a href="#"><i class="fa fa-comment"></i> 12</a></span></span>
                 {!!$news->content!!}
                 <p><a href="{{url('/blog/'.$news->id)}}" class="btn btn-primary">Continue reading <i class="fa fa-long-arrow-right"></i></a></p>
               </div>
