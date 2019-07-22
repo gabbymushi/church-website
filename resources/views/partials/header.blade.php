@@ -21,7 +21,7 @@
             	<nav class="top-menus pull-right">
                 	<ul>
                     	<li>
-                        	<a href="{{route('dashboard.home')}}">Login</a>
+                        	<a target="_blank"href="{{url('/login')}}">Login</a>
                      	</li>
                     	<li>
                         	<a href="events-calendar.html">Calendar</a>
