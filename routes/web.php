@@ -50,7 +50,6 @@ Route::get('/events/edit/{id}',[
 'uses'=>'EventsController@edit',
 'as'=>'event.edit'
 ]);
-
 Route::post('/events/update/{id}',[
 'uses'=>'EventsController@update',
 'as'=>'event.update'
@@ -58,4 +57,10 @@ Route::post('/events/update/{id}',[
 Route::get('/events/destroy/{id}',[
 'uses'=>'EventsController@destroy',
 'as'=>'event.delete'
+]);
+
+//Contact Us Routes
+Route::get('/contactus',[
+'uses'=>'ContactUsController@index',
+'as'=>'contactus'
 ]);

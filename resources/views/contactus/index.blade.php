@@ -1,59 +1,22 @@
-  <!-- Start Top Row -->
-  <div class="toprow">
-  	<div class="container">
-    	<div class="row">
-          	<div class="col-md-6 col-sm-6">
-            	<nav class="top-menus">
-                	<ul>
-                    	<li>
-                        	<a href="#"><i class="fa fa-facebook-square"></i></a>
-                     	</li>
-                    	<li>
-                        	<a href="#"><i class="fa fa-twitter-square"></i></a>
-                     	</li>
-                    	<li>
-                        	<a href="#"><i class="fa fa-instagram"></i></a>
-                     	</li>
-                 	</ul>
-              	</nav>
-         	</div>
-          	<div class="col-md-6 col-sm-6">
-            	<nav class="top-menus pull-right">
-                	<ul>
-                    	<li>
-                        	<a href="{{route('dashboard.home')}}">Plan your visit</a>
-                     	</li>
-                    	<li>
-                        	<a href="events-calendar.html">Calendar</a>
-                     	</li>
-                    	<li>
-                        	<a href="donate.html">Donate Now</a>
-                     	</li>
-                 	</ul>
-              	</nav>
-         	</div>
-      	</div>
-   	</div>
-  </div>
-  <!-- End Top Row -->
+
+@extends('dashboard.layouts.main')
+
+@section('content')
+<div class="body"> 
   <!-- Start Site Header -->
   <header class="site-header">
     <div class="topbar">
       <div class="container">
         <div class="row">
-          <div class="col-md-4 col-sm-6 col-xs-8" style="">
-            <h1 class="logo"> <a href="index.html"><img style="max-width:600px;margin-top:-10px;" src="{{asset('assets/images/logo.png')}}" alt="Logo"></a> </h1>
-            
+          <div class="col-md-4 col-sm-6 col-xs-8">
+            <h1 class="logo"> <a href="index.html"><img src="images/logo.png" alt="Logo"></a> </h1>
           </div>
           <div class="col-md-8 col-sm-6 col-xs-4">
-            <div class="top-search hidden-sm hidden-xs">
-            	<form>
-                	<div class="input-group">
-                 		<span class="input-group-addon"><i class="fa fa-search"></i></span>
-                		<input type="text" class="form-control" placeholder="Type your keywords...">
-                 	</div>
-              	</form>
-            </div>
+            <ul class="top-navigation hidden-sm hidden-xs">
+              <li><a href="plan-visit.html">Plan your visit</a></li>
+              <li><a href="events-calendar.html">Calendar</a></li>
+              <li><a href="donate.html">Donate Now</a></li>
+            </ul>
             <a href="#" class="visible-sm visible-xs menu-toggle"><i class="fa fa-bars"></i></a> </div>
         </div>
       </div>
@@ -64,8 +27,8 @@
           <div class="col-md-12">
             <nav class="navigation">
               <ul class="sf-menu">
-                <li><a href="{{url('/')}}">Home</a>
-                  <!-- <ul class="dropdown">
+                <li><a href="index.html">Home</a>
+                  <ul class="dropdown">
                     <li><a href="index.html">Sliders</a>
                     		<ul class="dropdown">
                     			<li><a href="index.html">Flex Slider</a></li>
@@ -87,12 +50,14 @@
                     <li><a href="index3.html">Home version 4</a></li>
                     <li><a href="index4.html">Home version 5</a></li>
                     <li><a href="index5.html">Home version 6 <span class="label label-danger">New</span></a></li>
-                  </ul> -->
+                  </ul>
                 </li>
-                <li><a href="{{url('/about-us')}}">About Us</a>
+                <li><a href="about.html">About Us</a>
                   <ul class="dropdown">
+                    <li><a href="about.html">Overview</a></li>
+                    <li><a href="contact.html">Where we meet</a></li>
                     <li><a href="our-staff.html">Our Staff</a></li>
-                	<li><a href="{{route('contactus')}}">Contact</a></li>
+                	<li><a href="contact.html">Contact</a></li>
                   </ul>
                 </li>
                 <li class="megamenu"><a href="shortcodes.html">Mega Menu</a>
@@ -169,14 +134,14 @@
                     <li><a href="gallery-masonry.html">Masonry Grid</a></li>
                   </ul>
                 </li>
-                <li><a href="{{url('/blog')}}">Blog</a>
-                  <!-- <ul class="dropdown">
+                <li><a href="blog-masonry.html">Blog</a>
+                  <ul class="dropdown">
                     <li><a href="blog-masonry.html">Masonry Blog</a></li>
                     <li><a href="blog-full-width.html">Full Width Blog</a></li>
                     <li><a href="blog-timeline.html">Timeline Blog</a></li>
                     <li><a href="blog-medium-thumbnails.html">Medium Thumbnails</a></li>
                     <li><a href="blog-post.html">Single Blog Post</a></li>
-                  </ul> -->
+                  </ul>
                 </li>
                 <li><a href="causes.html">Causes</a>
                   <ul class="dropdown">
@@ -192,3 +157,140 @@
       </div>
     </div>
   </header>
+  <!-- End Site Header --> 
+  <!-- Start Nav Backed Header -->
+  <div class="nav-backed-header parallax">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <ol class="breadcrumb">
+            <li><a href="index.html">Home</a></li>
+            <li class="active">Contact</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Nav Backed Header --> 
+  <!-- Start Page Header -->
+  <div class="page-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1>Contact</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Page Header --> 
+  <!-- Start Content -->
+  <div class="main" role="main">
+    <div id="content" class="content full">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-9">
+            <header class="single-post-header clearfix">
+              <h2 class="post-title">Our Location</h2>
+            </header>
+            <div class="post-content">
+              <div id="gmap">
+                <iframe src="https://maps.google.com/?ie=UTF8&amp;ll=40.717989,-74.002705&amp;spn=0.043846,0.077162&amp;t=m&amp;z=14&amp;output=embed"></iframe>
+              </div>
+              <div class="row">
+                <form method="post" id="contactform" name="contactform" class="contact-form" action="mail/contact.php">
+                  <div class="col-md-6 margin-15">
+                    <div class="form-group">
+                      <input type="text" id="name" name="name"  class="form-control input-lg" placeholder="Name*">
+                    </div>
+                    <div class="form-group">
+                      <input type="email" id="email" name="email"  class="form-control input-lg" placeholder="Email*">
+                    </div>
+                    <div class="form-group">
+                      <input type="text" id="phone" name="phone" class="form-control input-lg" placeholder="Phone">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <textarea cols="6" rows="7" id="comments" name="comments" class="form-control input-lg" placeholder="Message"></textarea>
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <input id="submit" name="submit" type="submit" class="btn btn-primary btn-lg pull-right" value="Submit now!">
+                  </div>
+                </form>
+                <div class="clearfix"></div>
+                <div class="col-md-12">
+                  <div id="message"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Start Sidebar -->
+          <div class="col-md-3 sidebar"> 
+            <!-- Recent Posts Widget -->
+            <div class="widget-recent-posts widget">
+              <div class="sidebar-widget-title">
+                <h3>Recent Posts</h3>
+              </div>
+              <ul>
+                <li class="clearfix"> <a href="#" class="media-box post-image"> <img src="http://placehold.it/800x600&amp;text=IMAGE+PLACEHOLDER" alt="" class="img-thumbnail"> </a>
+                  <div class="widget-blog-content"><a href="#">Voluptatum deleniti atque corrupti voluptatum deleniti atque corrupti</a> <span class="meta-data"><i class="fa fa-calendar"></i> on 17th Dec, 2013</span> </div>
+                </li>
+                <li class="clearfix"> <a href="#" class="media-box post-image"> <img src="http://placehold.it/800x600&amp;text=IMAGE+PLACEHOLDER" alt="" class="img-thumbnail"> </a>
+                  <div class="widget-blog-content"><a href="#">Voluptatum deleniti atque corrupti</a> <span class="meta-data"><i class="fa fa-calendar"></i> on 17th Dec, 2013</span> </div>
+                </li>
+                <li class="clearfix"> <a href="#" class="media-box post-image"> <img src="http://placehold.it/800x600&amp;text=IMAGE+PLACEHOLDER" alt="" class="img-thumbnail"> </a>
+                  <div class="widget-blog-content"><a href="#">Voluptatum deleniti atque corrupti voluptatum deleniti atque corrupti</a> <span class="meta-data"><i class="fa fa-calendar"></i> on 17th Dec, 2013</span> </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Start Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row"> 
+        <!-- Start Footer Widgets -->
+        <div class="col-md-4 col-sm-4 widget footer-widget">
+          <h4 class="footer-widget-title">About our Church</h4>
+          <img src="images/logo.png" alt="Logo">
+          <div class="spacer-20"></div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis consectetur adipiscing elit. Nulla convallis egestas rhoncus</p>
+        </div>
+        <div class="col-md-4 col-sm-4 widget footer-widget">
+          <h4 class="footer-widget-title">Blogroll</h4>
+          <ul>
+            <li><a href="index.html">Church Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="events.html">All Events</a></li>
+            <li><a href="sermons.html">Sermons Archive</a></li>
+            <li><a href="blog-masonry.html">Our Blog</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 col-sm-4 widget footer-widget">
+          <h4 class="footer-widget-title">Our Church on twitter</h4>
+          <ul class="twitter-widget">
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <footer class="site-footer-bottom">
+    <div class="container">
+      <div class="row">
+        <div class="copyrights-col-left col-md-6 col-sm-6">
+          <p>&copy; 2014 NativeChurch. All Rights Reserved</p>
+        </div>
+        <div class="copyrights-col-right col-md-6 col-sm-6">
+          <div class="social-icons"> <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a> <a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter"></i></a> <a href="http://www.pinterest.com/" target="_blank"><i class="fa fa-pinterest"></i></a> <a href="https://plus.google.com/" target="_blank"><i class="fa fa-google-plus"></i></a> <a href="http://www.pinterest.com/" target="_blank"><i class="fa fa-youtube"></i></a> <a href="#"><i class="fa fa-rss"></i></a> </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- End Footer --> 
+  <a id="back-to-top"><i class="fa fa-angle-double-up"></i></a>
+</div>
+@endsection
