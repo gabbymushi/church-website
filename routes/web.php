@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\Auth\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -71,4 +72,13 @@ Route::post('/events/update/{id}', [
 Route::get('/events/destroy/{id}', [
     'uses' => 'EventsController@destroy',
     'as' => 'event.delete'
+]);
+//Authorization
+Route::get('/login', [
+    'uses' => 'Auth\LoginController@index',
+    'as' => 'user.login'
+]);
+Route::post('/login', [
+    'uses' => 'Auth\LoginController@login',
+    'as' => 'login'
 ]);
