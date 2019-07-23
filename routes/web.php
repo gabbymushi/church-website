@@ -28,10 +28,15 @@ Route::get('/dashboard',[
     'as'=>'dashboard.home'
     ]);
     
-    Route::get('/users',[
-    'uses'=>'HomeController@users',
-    'as'=>'users'
-    ]);
+Route::get('/users',[
+'uses'=>'HomeController@users',
+'as'=>'users'
+]);
+
+Route::get('/users',[
+'uses'=>'HomeController@allGallery',
+'as'=>'gallery.all'
+]);
 
 //Events Routes
 Route::get('/events',[

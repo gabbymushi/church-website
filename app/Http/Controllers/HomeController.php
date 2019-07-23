@@ -48,4 +48,8 @@ class HomeController extends Controller
     {
         return view('home.about-us');
     }
+
+    public function allGallery(){
+        return view('home.all-gallery');
+    }
 }
