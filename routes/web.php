@@ -58,6 +58,10 @@ Route::get('/events/destroy/{id}',[
 'uses'=>'EventsController@destroy',
 'as'=>'event.delete'
 ]);
+Route::get('/events/calender',[
+'uses'=>'EventsController@eventsCalender',
+'as'=>'events.calender'
+]);
 
 //Contact Us Routes
 Route::get('/contactus',[

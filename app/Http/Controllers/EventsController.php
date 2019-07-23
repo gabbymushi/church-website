@@ -119,4 +119,8 @@ class EventsController extends Controller
         return redirect()->route('events'); 
 
     }
+
+    public function eventsCalender(){
+        return view('events.events-calender');
+    }
 }
