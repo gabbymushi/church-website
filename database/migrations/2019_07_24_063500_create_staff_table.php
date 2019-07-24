@@ -26,7 +26,7 @@ class CreateStaffTable extends Migration
             $table->string('instagram_link')->nullable();
             $table->string('other_link')->nullable();
             $table->string('description')->nullable();
-            $table->string('photo');
+            $table->string('photo')->nullable();
             $table->timestamps();
         });
     }
