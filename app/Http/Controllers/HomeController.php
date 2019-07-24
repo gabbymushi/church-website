@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Event;
 use App\News;
+use DB;
 
 class HomeController extends Controller
 {
@@ -40,9 +41,9 @@ class HomeController extends Controller
 
     public function index()
     {
-        $data['news'] = News::with(['files'])->orderBy('created_at', 'desc')->limit(2)->get();
-        // dd($data['news']->files);
-        $data['events'] =Event::all();
+        $data['news'] = News::all();
+        $data['events'] =Event::orderBy('created_at','desc')->take(5)->get();
+        $data['last_record'] = DB::table('events')->latest()->first();
         return view('home.home', $data);
     }
     public function aboutUs()

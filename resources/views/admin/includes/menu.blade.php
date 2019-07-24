@@ -42,6 +42,13 @@
                             Manage Events
                         </a>
                     </li>
+
+                    <li>
+                        <a href="{{route('event_categories')}}">
+                            <i class="metismenu-icon"></i>
+                            Events Category
+                        </a>
+                    </li>
                 </ul>
             </li>
             <li>
