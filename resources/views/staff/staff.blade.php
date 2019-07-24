@@ -31,42 +31,20 @@
     <div id="content" class="content full">
       <div class="container">
         <div class="row">
+          @foreach($staffs as $staff)
           <div class="col-md-4 col-sm-4">
             <div class="grid-item staff-item">
               <div class="grid-item-inner">
-                <div class="media-box"> <img src="http://placehold.it/500x300&amp;text=IMAGE+PLACEHOLDER" alt=""> </div>
+                <div class="media-box"> <img src="{{$staff->photo}}" alt=""> </div>
                 <div class="grid-content">
-                  <h3>Melina Mironescu</h3>
+                  <h3>{{$staff->fname.' '.$staff->lname}}</h3>
                   <nav class="social-icons"> <a href="#"><i class="fa fa-facebook"></i></a> <a href="#"><i class="fa fa-twitter"></i></a> <a href="#"><i class="fa fa-google-plus"></i></a> <a href="#"><i class="fa fa-pinterest"></i></a> </nav>
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis fermentum sem, ac viverra ante luctus vel. Donec vel mauris quam.</p>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col-md-4 col-sm-4">
-            <div class="grid-item staff-item">
-              <div class="grid-item-inner">
-                <div class="media-box"> <img src="http://placehold.it/500x300&amp;text=IMAGE+PLACEHOLDER" alt=""> </div>
-                <div class="grid-content">
-                  <h3>Francisc Cazan</h3>
-                  <nav class="social-icons"> <a href="#"><i class="fa fa-facebook"></i></a> <a href="#"><i class="fa fa-twitter"></i></a> <a href="#"><i class="fa fa-google-plus"></i></a> <a href="#"><i class="fa fa-pinterest"></i></a> </nav>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis fermentum sem, ac viverra ante luctus vel. Donec vel mauris quam.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-4">
-            <div class="grid-item staff-item">
-              <div class="grid-item-inner">
-                <div class="media-box"> <img src="http://placehold.it/500x300&amp;text=IMAGE+PLACEHOLDER" alt=""> </div>
-                <div class="grid-content">
-                  <h3>Ethan Kay</h3>
-                  <nav class="social-icons"> <a href="#"><i class="fa fa-facebook"></i></a> <a href="#"><i class="fa fa-twitter"></i></a> <a href="#"><i class="fa fa-google-plus"></i></a> <a href="#"><i class="fa fa-pinterest"></i></a> </nav>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis fermentum sem, ac viverra ante luctus vel. Donec vel mauris quam.</p>
-                </div>
-              </div>
-            </div>
-          </div>
+         @endforeach
         </div>
       </div>
     </div>

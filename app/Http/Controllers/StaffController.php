@@ -14,8 +14,9 @@ class StaffController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        return view('staff.staff');
+    {  $staffs = Staff::all();
+        return view('staff.staff')
+            ->with('staffs',$staffs);
     }
 
 
