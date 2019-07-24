@@ -15,7 +15,7 @@
                 </a>
                 <ul>
                     <li>
-                        <a href="{{route('users')}}">
+                        <a href="#">
                             <i class="metismenu-icon"></i>
                             Manage Users
                         </a>
@@ -42,6 +42,13 @@
                             Manage Events
                         </a>
                     </li>
+
+                    <li>
+                        <a href="{{route('event_categories')}}">
+                            <i class="metismenu-icon"></i>
+                            Events Category
+                        </a>
+                    </li>
                 </ul>
             </li>
             <li>
@@ -61,6 +68,22 @@
                         <a href="elements-dropdowns.html">
                             <i class="metismenu-icon">
                             </i>Manage News
+                        </a>
+                    </li>
+               
+                </ul>
+            </li>
+              <li>
+                <a href="#">
+                    <i class="metismenu-icon pe-7s-diamond"></i>
+                    Staff
+                    <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                </a>
+                <ul>
+                    <li>
+                        <a href="{{route('manage.staff')}}">
+                            <i class="metismenu-icon"></i>
+                            Manage Staff
                         </a>
                     </li>
                

@@ -3,11 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\News;
-use App\NewsTag;
-use App\File;
+use App\EventCategory;
+use Session;
 
-class BlogController extends Controller
+class EventsCategoryController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,8 +15,8 @@ class BlogController extends Controller
      */
     public function index()
     {
-        $data['news'] = News::all();
-        return view('blog.blog', $data);
+        $categories = EventCategory::paginate(10);
+        return view('events.category.all_category')->with('categories',$categories);
     }
 
     /**
@@ -27,7 +26,7 @@ class BlogController extends Controller
      */
     public function create()
     {
-        return view('admin.blog.create-post');
+       return view('events.category.create');
     }
 
     /**
@@ -38,23 +37,19 @@ class BlogController extends Controller
      */
     public function store(Request $request)
     {
-        $model = new News();
-        $destinationPath = 'assets/images/blog';
-        $model->title = $request->input('title');
-        $model->content = $request->input('content');
-        //   $model->user_id = Auth::user()->user_id;
-        $model->save();
-        if ($request->hasFile('picture')) {
-            $file = $request->file('picture');
-            if ($file->move($destinationPath, $file->getClientOriginalName())) {
-                $fileModel = new File();
-                $fileModel->name = $file->getClientOriginalName();
-                $fileModel->mime_type = $file->getClientMimeType();
-                $fileModel->news_id = $model->id;
-                $fileModel->save();
-            }
-        }
-        return redirect('/post/blog');
+       
+
+        $this->validate($request,[
+         'name'=>'required',
+        ]);
+        
+        $event_category = new EventCategory;
+
+        $event_category->name = $request->name;
+        $event_category->save();
+        Session::flash('success','Event Category created successfull');
+        return redirect()->route('event_categories');
+
     }
 
     /**
@@ -65,10 +60,7 @@ class BlogController extends Controller
      */
     public function show($id)
     {
-        // $data['tags']=NewsTag::where(['news_id'=>$id])->with();
-        $data['post'] = News::find($id);
-        //  dd($data['post']);
-        return view('blog.post', $data);
+        //
     }
 
     /**
@@ -102,6 +94,11 @@ class BlogController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $category = EventCategory::find($id);
+
+        $category->delete();
+
+        Session::flash('success','Category deleted successfully');
+        return redirect()->route('event_categories');
     }
 }

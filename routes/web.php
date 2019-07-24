@@ -1,7 +1,5 @@
 <?php
-
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\Auth\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,75 +12,129 @@ use App\Http\Controllers\Auth\LoginController;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
+// Route::get('/single_event1/', function () {
+//     return view('events.single_event');
 // });
-Route::get('/', 'HomeController@index')->name('home');
-Route::get('/about-us', 'HomeController@aboutUs');
+Route::get('/','HomeController@index')->name('home');
+Route::get('/about-us','HomeController@aboutUs');
 // Auth::routes();
 
 // Route::get('/home', 'HomeController@index')->name('home');
 // Blog routes;
-Route::get('/blog', 'BlogController@index');
-Route::get('/post/blog', 'BlogController@create');
-Route::get('/blog/{id}', 'BlogController@index')->name('post');
-Route::get('/dashboard', [
-    'uses' => 'HomeController@dashboard',
-    'as' => 'dashboard.home'
+Route::resource('/blog','BlogController');
+Route::get('/post/blog','BlogController@create');
+Route::get('/blog/{id}','BlogController@index')->name('post');
+Route::get('/dashboard',[
+    'uses'=>'HomeController@dashboard',
+    'as'=>'dashboard.home'
+    ]);
+    
+Route::get('/users',[
+'uses'=>'HomeController@users',
+'as'=>'users'
 ]);
 
-Route::get('/users', [
-    'uses' => 'HomeController@users',
-    'as' => 'users'
+Route::get('/users',[
+'uses'=>'HomeController@allGallery',
+'as'=>'gallery.all'
 ]);
-Route::get('/blog/edit/{id}', [
-    'uses' => 'BlogController@edit',
-    'as' => 'blog.edit'
-]);
-Route::post('/blog/update/{id}', [
-    'uses' => 'BlogController@update',
-    'as' => 'blog.update'
-]);
-Route::get('/blog/delete/{id}', [
-    'uses' => 'BlogController@destroy',
-    'as' => 'blog.delete'
-]);
+
 //Events Routes
-Route::get('/events', [
-    'uses' => 'EventsController@index',
-    'as' => 'events'
+Route::get('/events',[
+'uses'=>'EventsController@index',
+'as'=>'events'
 ]);
-Route::get('/events/create', [
-    'uses' => 'EventsController@create',
-    'as' => 'event.create'
+Route::get('/events/create',[
+ 'uses'=>'EventsController@create',
+ 'as'=>'event.create'
 ]);
-Route::post('/events/store', [
-    'uses' => 'EventsController@store',
-    'as' => 'event.store'
+Route::post('/events/store',[
+'uses'=>'EventsController@store',
+'as'=>'event.store'
 ]);
-Route::get('/events/edit/{id}', [
-    'uses' => 'EventsController@edit',
-    'as' => 'event.edit'
+Route::get('/events/edit/{id}',[
+'uses'=>'EventsController@edit',
+'as'=>'event.edit'
+]);
+Route::post('/events/update/{id}',[
+'uses'=>'EventsController@update',
+'as'=>'event.update'
+]);
+Route::get('/events/destroy/{id}',[
+'uses'=>'EventsController@destroy',
+'as'=>'event.delete'
 ]);
 
-Route::post('/events/update/{id}', [
-    'uses' => 'EventsController@update',
-    'as' => 'event.update'
+//Events front View controller
+Route::get('all_events',[
+'uses'=>'EventsController@all_events',
+'as'=>'all_events'
 ]);
-Route::get('/events/destroy/{id}', [
-    'uses' => 'EventsController@destroy',
-    'as' => 'event.delete'
+Route::get('/single_event/{slug}',[
+'uses'=>'EventsController@show',
+'as'=>'single_event'
+
 ]);
-//Authorization
-Route::get('/login', [
-    'uses' => 'Auth\LoginController@index',
-    'as' => 'user.login'
+
+//route Event category
+Route::get('/events/category',[
+'uses'=>'EventsCategoryController@index',
+'as'=>'event_categories'
 ]);
-Route::post('/login', [
-    'uses' => 'Auth\LoginController@login',
-    'as' => 'login'
+Route::get('/events/category_create',[
+'uses'=>'EventsCategoryController@create',
+'as'=>'event_category.create'
 ]);
+Route::post('/events/category_store',[
+'uses'=>'EventsCategoryController@store',
+'as'=>'events_category.store'
+]);
+
+Route::get('/events/category_delete/{id}',[
+'uses'=>'EventsCategoryController@destroy',
+'as'=>'event_category.delete']);
+Route::get('/events/calender',[
+'uses'=>'EventsController@eventsCalender',
+'as'=>'events.calender'
+]);
+
+//Contact Us Routes
+Route::get('/contactus',[
+'uses'=>'ContactUsController@index',
+'as'=>'contactus'
+]);
+
+//Staff routes
+Route::get('all/staff',[
+'uses'=>'StaffController@index',
+'as'=>'all.staff'
+]);
+Route::get('create/staff',[
+'uses'=>'StaffController@create',
+'as'=>'create.staff'
+]);
+Route::post('store/staff',[
+'uses'=>'StaffController@store',
+'as'=>'store.staff'
+]);
+Route::get('manage/staff',[
+'uses'=>'StaffController@manage',
+'as'=>'manage.staff'
+]);
+Route::get('/staff/edit/{id}',[
+'uses'=>'StaffController@edit',
+'as'=>'staff.edit'
+]);
+Route::get('/staff/destroy/{id}',[
+'uses'=>'StaffController@destroy',
+'as'=>'staff.destroy'
+]);
+
 Route::post('/logout', [
     'uses' => 'Auth\LoginController@logout',
     'as' => 'logout'
+]);
+Route::post('staff/update/{id}',[
+'uses'=>'StaffController@update',
+'as'=>'update.staff'
 ]);
