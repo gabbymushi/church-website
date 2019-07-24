@@ -42,7 +42,7 @@ class LoginController extends Controller
             'email' => $request->email,
             'password' => $request->password,
         ], $request->remember)) {
-            return redirect('/');
+            return redirect('/dashboard');
         } else {
             return redirect()->back();
         }
