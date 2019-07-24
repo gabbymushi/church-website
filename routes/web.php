@@ -26,7 +26,7 @@ Route::get('/post/blog','BlogController@create');
 Route::get('/blog/{id}','BlogController@index')->name('post');
 Route::get('/dashboard',[
     'uses'=>'HomeController@dashboard',
-    'as'=>'dashboard.home'
+    'as'=>'dashboard'
     ]);
     
 Route::get('/users',[
