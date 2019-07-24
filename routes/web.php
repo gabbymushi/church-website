@@ -129,6 +129,11 @@ Route::get('/staff/destroy/{id}',[
 'uses'=>'StaffController@destroy',
 'as'=>'staff.destroy'
 ]);
+
+Route::post('/logout', [
+    'uses' => 'Auth\LoginController@logout',
+    'as' => 'logout'
+]);
 Route::post('staff/update/{id}',[
 'uses'=>'StaffController@update',
 'as'=>'update.staff'
