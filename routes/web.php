@@ -134,6 +134,14 @@ Route::post('/logout', [
     'uses' => 'Auth\LoginController@logout',
     'as' => 'logout'
 ]);
+Route::get('/login', [
+    'uses' => 'Auth\LoginController@index',
+    'as' => 'user.login'
+]);
+Route::post('/login', [
+    'uses' => 'Auth\LoginController@login',
+    'as' => 'login'
+]);
 Route::post('staff/update/{id}',[
 'uses'=>'StaffController@update',
 'as'=>'update.staff'
