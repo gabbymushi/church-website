@@ -26,7 +26,7 @@ Route::get('/post/blog','BlogController@create');
 Route::get('/blog/{id}','BlogController@index')->name('post');
 Route::get('/dashboard',[
     'uses'=>'HomeController@dashboard',
-    'as'=>'dashboard.home'
+    'as'=>'dashboard'
     ]);
     
 Route::get('/users',[
@@ -133,6 +133,14 @@ Route::get('/staff/destroy/{id}',[
 Route::post('/logout', [
     'uses' => 'Auth\LoginController@logout',
     'as' => 'logout'
+]);
+Route::get('/login', [
+    'uses' => 'Auth\LoginController@index',
+    'as' => 'user.login'
+]);
+Route::post('/login', [
+    'uses' => 'Auth\LoginController@login',
+    'as' => 'login'
 ]);
 Route::post('staff/update/{id}',[
 'uses'=>'StaffController@update',
