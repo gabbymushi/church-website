@@ -162,4 +162,7 @@ class EventsController extends Controller
 
         return view('events.all_events',$events);
     }
+    public function eventsCalender(){
+        return view('events.events-calender');
+    }
 }

@@ -90,8 +90,12 @@
                   </ul> -->
                 </li>
                 <li><a href="{{url('/about-us')}}">About Us</a>
+                  <ul class="dropdown">
+                    <li><a href="{{route('all.staff')}}">Our Staff</a></li>
+                	<li><a href="{{route('contactus')}}">Contact</a></li>
+                  </ul>
                 </li>
-                <li class="megamenu"><a href="shortcodes.html">Mega Menu</a>
+                <li class="megamenu"><a href="#">Our Work</a>
                   <ul class="dropdown">
                     <li>
                       <div class="megamenu-container container">
@@ -132,9 +136,7 @@
                 <li><a href="events.html">Events</a>
                   <ul class="dropdown">
                     <li><a href="events.html">Events Listing</a></li>
-                    <li><a href="events-timeline.html">Events Timeline</a></li>
-                    <li><a href="google-calendar.html">Google Calender</a></li>
-                    <li><a href="events-calendar.html">Events Calender</a></li>
+                    <li><a href="{{route('events.calender')}}">Events Calender</a></li>
                     <li><a href="events-grid.html">Events Masonry Grid</a></li>
                     <li><a href="single-event.html">Single Event</a></li>
                   </ul>

@@ -23,3 +23,6 @@
 <!-- SCRIPTS
   ================================================== -->
 <script src="{{asset('assets/js/modernizr.js')}}"></script><!-- Modernizr -->
+<link href="{{asset('assets/plugins/fullcalendar/fullcalendar.css')}}" rel='stylesheet' />
+
+<link href="{{asset('assets/plugins/fullcalendar/fullcalendar.print.css')}}" rel='stylesheet' media='print' />
