@@ -16,6 +16,8 @@
 <link href="{{asset('assets/css/style.css')}}" rel="stylesheet" type="text/css">
 <link href="{{asset('assets/plugins/prettyphoto/css/prettyPhoto.css')}}" rel="stylesheet" type="text/css">
 <!--[if lte IE 8]><link rel="stylesheet" type="text/css" href="css/ie8.css" media="screen" /><![endif]-->
+<!-- SLIDER REVOLUTION 4.x CSS SETTINGS -->
+<link rel="stylesheet" type="text/css" href="{{asset('assets/plugins/rs-plugin/css/settings.css')}}" media="screen" />
 <!-- Color Style -->
 <link href="{{asset('assets/colors/color1.css')}}" rel="stylesheet" type="text/css">
 <!-- SCRIPTS

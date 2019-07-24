@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\EventCategory;
 use App\Event;
 use Session;
+use DB;
 
 class EventsController extends Controller
 {
@@ -25,8 +27,9 @@ class EventsController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create()
-    {
-        return view('events.create');
+    {   
+        $categories = EventCategory::all();
+        return view('events.create')->with('categories',$categories);
     }
 
     /**
@@ -40,12 +43,23 @@ class EventsController extends Controller
         $this->validate($request,[
          'title'=>'required',
         ]);
+
+        if($request->hasFile('featured_image')){
+            $image = $request->featured_image;
+            $new_image = time().$image->getClientOriginalName();
+            $image->move('assets/uploads/events',$new_image);
+            $new_image = 'assets/uploads/events/'.$new_image;
+
+        }
         
         $event = new Event;
 
         $event->title = $request->title;
         $event->start_date = $request->start_date;
+        $event->slug = str_slug($request->title);
         $event->end_date = $request->end_date;
+        $event->event_category_id = $request->category_id;
+        $event->featured_img = $new_image;
         $event->content = $request->content;
 
         $event->save();
@@ -60,9 +74,13 @@ class EventsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($slug)
     {
-        //
+       
+    $events['event'] = Event::where('slug',$slug)->first();
+    $events['categories'] = EventCategory::all();
+    $events['latest_events'] =Event::orderBy('created_at','desc')->take(3)->get();
+        return view('events.single_event',$events);
     }
 
     /**
@@ -73,8 +91,10 @@ class EventsController extends Controller
      */
     public function edit($id)
     {
+        $categories = EventCategory::all();
         $event = Event::find($id);
-        return view('events.edit')->with('event',$event);
+        return view('events.edit')->with('event',$event)
+                                  ->with('categories',$categories);
 
     }
 
@@ -91,12 +111,23 @@ class EventsController extends Controller
          'title'=>'required',
         ]);
 
+        if($request->hasFile('featured_image')){
+            $image = $request->featured_image;
+            $new_image = time().$image->getClientOriginalName();
+            $image->move('assets/uploads/events',$new_image);
+            $new_image = 'assets/uploads/events/'.$new_image;
+
+        }
+
         $event = Event::where('id',$id)
                         ->update([
                          'title'=>$request->title,
                          'start_date'=>$request->start_date,
                          'end_date'=>$request->end_date,
-                         'content'=>$request->content
+                         'content'=>$request->content,
+                         'category_id'=>$request->category_id,
+                         'slug'=>str_slug($request->title),
+                         'featured_img'=>$new_image
                         ]);
 
         Session::flash('success','Event update successfully');
@@ -118,5 +149,17 @@ class EventsController extends Controller
         Session::flash('success','Event successfully deleted');
         return redirect()->route('events'); 
 
+    }
+
+    //Retun front view All Events view
+
+    public function all_events(){
+
+         $events['events'] = Event::all();
+         $events['categories'] = EventCategory::all();
+         $events['latest_event'] = DB::table('events')->latest()->first();
+         //events count relating to categories
+
+        return view('events.all_events',$events);
     }
 }
