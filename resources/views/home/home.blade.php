@@ -3,7 +3,7 @@
   <!-- Start Hero Slider -->
   <div  style="margin-top: 80px;" class="hero-slider flexslider clearfix" data-autoplay="yes" data-pagination="yes" data-arrows="yes" data-style="fade" data-pause="yes">
     <ul class="slides">
-      <li class=" parallax" style="background-image:url('{{asset('assets/images/slider/slide_kkkt.PNG')}}');"></li>
+      <li class=" parallax" style="background-image:url('{{asset('assets/images/slider/slide_kkkt.PNG')}}');">KANISA LA KIINJILI LA KILUTHERI TANZANIA</li>
       <li class="parallax" style="background-image:url({{asset('assets/images/slider/slide_kkkt2.PNG')}});"></li>
     </ul>
   </div>
@@ -86,7 +86,7 @@
                   @foreach($news as $news)
                   <li class="item post">
                     <div class="row">
-                      <div class="col-md-4"> <a href="#" class="media-box"> <img src="http://placehold.it/600x400&amp;text=IMAGE+PLACEHOLDER" alt="" class="img-thumbnail"> </a></div>
+                      <div class="col-md-4"> <a href="#" class="media-box"> <img src="http://placehold.it/600x400&amp;text=IMAGE+PLACEHOLDER" alt="" class="img-thumbnail"></a></div>
                       <div class="col-md-8">
                         <div class="post-title">
                           <h2><a href="{{url('/blog/'.$news->id)}}">{{$news->title}}</a></h2>

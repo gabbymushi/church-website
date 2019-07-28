@@ -1,4 +1,4 @@
-@extends('dashboard.layouts.main')
+@extends('admin.layouts.main')
 @section('content')
 @if(count($errors) > 0)
  <div class="alert alert-danger fade show" role="alert">

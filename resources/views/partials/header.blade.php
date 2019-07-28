@@ -17,7 +17,7 @@
                  	</ul>
               	</nav>
          	</div>
-          	<div class="col-md-6 col-sm-6">
+          	<div class="col-md-6 col-sm-6" id="login">
             	<nav class="top-menus pull-right">
                 	<ul>
                     	<li>
@@ -41,15 +41,21 @@
     <div class="topbar">
       <div class="container">
         <div class="row">
-          <div class="col-md-4 col-sm-6 col-xs-8">
-            <h1 class="logo"> <a href="index.html"><img style="max-width:500px;" src="{{asset('assets/images/logo.png')}}" alt="Logo"></a> </h1>
-            
+          <div class="col-md-8 col-sm-6 col-xs-8" style="">
+            <h1 class="logo"> <a href="index.html"><img style="max-width:500px; max-height: 80px; margin-right: 10px;" src="{{asset('assets/images/logo.png')}}" alt="Logo"></a> </h1>
+
+            <h3 class="title1" style="margin-top: 10px ; margin-left: 10px; color:#074368; font-weight:bold;"><b>ELCT - Evangelical Lutheran Church in Tanzania</b></h3>
+            <div id="diosece">          
+              <h3 class="title1" style="text-decoration: none; color:#074a29; margin-left: 10px; margin-top: -20px;">Diosece of Meru</h3>
+              </div>
+
+          
           </div>
-          <div class="col-md-8 col-sm-6 col-xs-4">
+      <div class="col-md-4 col-sm-6 col-xs-4" style="height: 100%;">
             <div class="top-search hidden-sm hidden-xs">
             	<form>
                 	<div class="input-group">
-                 		<span class="input-group-addon"><i class="fa fa-search"></i></span>
+                 		<span class="input-group-addon" style="background-color:#074a29; color: #fff;"><i class="fa fa-search"></i></span>
                 		<input type="text" class="form-control" placeholder="Type your keywords...">
                  	</div>
               	</form>
