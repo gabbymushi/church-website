@@ -21,7 +21,7 @@ class StaffController extends Controller
 
 
     public function manage(){
-        $staff = Staff::paginate(2);
+        $staff = Staff::paginate(10);
         return view('staff.manage-staff')
                   ->with('staffs',$staff);
     }
@@ -47,8 +47,7 @@ class StaffController extends Controller
         $this->validate($request,[
          'fname'=>'required',
          'lname'=>'required',
-         'phone1'=>'required|numeric',
-         'phone2' => 'numeric',
+         'phone1'=>'required',
          'designation'=>'required'
         ]);
         if ($request->hasFile('photo')) {
