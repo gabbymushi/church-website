@@ -9,7 +9,29 @@
             </li>
             <li>
                 <a href="#">
-                    <i class="metismenu-icon pe-7s-diamond"></i>
+                    <i class="metismenu-icon fa fa-blog"></i>
+                    News & Blog
+                    <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                </a>
+                <ul>
+                    <li>
+                        <a href="{{url('/post/blog')}}">
+                            <i class="metismenu-icon"></i>
+                            Post news
+                        </a>
+                    </li>
+                    <li>
+                        <a href="elements-dropdowns.html">
+                            <i class="metismenu-icon">
+                            </i>Manage News
+                        </a>
+                    </li>
+
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="metismenu-icon fa fa-user"></i>
                     Users
                     <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
                 </a>
@@ -26,13 +48,13 @@
                             </i>Dropdowns
                         </a>
                     </li>
-               
+
                 </ul>
             </li>
             <li>
                 <a href="#">
                     <i class="metismenu-icon pe-7s-diamond"></i>
-                   Events
+                    Events
                     <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
                 </a>
                 <ul>
@@ -53,29 +75,7 @@
             </li>
             <li>
                 <a href="#">
-                    <i class="metismenu-icon pe-7s-diamond"></i>
-                    News & Blog
-                    <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
-                </a>
-                <ul>
-                    <li>
-                        <a href="{{url('/post/blog')}}">
-                            <i class="metismenu-icon"></i>
-                            Post news
-                        </a>
-                    </li>
-                    <li>
-                        <a href="elements-dropdowns.html">
-                            <i class="metismenu-icon">
-                            </i>Manage News
-                        </a>
-                    </li>
-               
-                </ul>
-            </li>
-              <li>
-                <a href="#">
-                    <i class="metismenu-icon pe-7s-diamond"></i>
+                    <i class="metismenu-icon fa fa-users"></i>
                     Staff
                     <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
                 </a>
@@ -86,10 +86,10 @@
                             Manage Staff
                         </a>
                     </li>
-               
+
                 </ul>
             </li>
-            <li>
+            <!-- <li>
                 <a href="#">
                     <i class="metismenu-icon pe-7s-car"></i>
                     Components
@@ -163,8 +163,8 @@
                         </a>
                     </li>
                 </ul>
-            </li>
-            <li  >
+            </li> -->
+            <li>
                 <a href="tables-regular.html">
                     <i class="metismenu-icon pe-7s-display2"></i>
                     Tables
