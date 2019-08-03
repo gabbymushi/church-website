@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Ministry;
 
 class MinistryController extends Controller
 {
@@ -13,7 +14,8 @@ class MinistryController extends Controller
      */
     public function index()
     {
-        //
+        $data['ministries'] = Ministry::all();
+        return view('admin.ministry.index', $data);      
     }
 
     /**
@@ -23,7 +25,8 @@ class MinistryController extends Controller
      */
     public function create()
     {
-        //
+        $data['ministries'] = Ministry::all();
+        return view('admin.ministry.create-ministry', $data);   
     }
 
     /**
@@ -34,7 +37,12 @@ class MinistryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $ministry = new Ministry();
+        $ministry->name = $request->name;
+        $ministry->description = $request->description;
+        $ministry->slug = str_slug($request->name);
+        $ministry->save();
+        Session::flash('success','Event created successfull');
     }
 
     /**
