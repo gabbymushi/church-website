@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Ministry;
+use Session;
 
 class MinistryController extends Controller
 {
@@ -42,7 +43,8 @@ class MinistryController extends Controller
         $ministry->description = $request->description;
         $ministry->slug = str_slug($request->name);
         $ministry->save();
-        Session::flash('success','Event created successfull');
+        Session::flash('success','Ministry added successfully');
+        return redirect('ministry');
     }
 
     /**
@@ -53,7 +55,7 @@ class MinistryController extends Controller
      */
     public function show($id)
     {
-        //
+        return view('');
     }
 
     /**
