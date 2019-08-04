@@ -55,7 +55,7 @@ class MinistryController extends Controller
      */
     public function show($id)
     {
-        return view('');
+        return view('ministry.view-ministry');
     }
 
     /**
