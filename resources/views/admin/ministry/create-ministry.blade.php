@@ -21,7 +21,7 @@
                     <span class="btn-icon-wrapper pr-2 opacity-7">
                         <i class="fa fa-business-time fa-w-20"></i>
                     </span>
-                    Buttons
+                    Back
                 </button>
                 <div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu dropdown-menu-right">
                     <ul class="nav flex-column">
@@ -72,41 +72,23 @@
                 <div class="main-card mb-3 card">
                     <div class="card-body">
                         <!-- <h5 class="card-title">Controls Types</h5> -->
-                        <form method="POST" action="/blog" class="" enctype="multipart/form-data">
+                        <form method="POST" action="/ministry" class="" enctype="multipart/form-data">
                             @csrf
                             <div class="position-relative form-group">
-                                <label for="title" class="">Title</label>
-                                <input name="title" id="title" placeholder="News Title" type="text" class="form-control">
+                                <label for="name" class="">Name</label>
+                                <input name="name" id="name" placeholder="Name" type="text" class="form-control" required="required">
                             </div>
-                            <div class="position-relative form-group">
-                                <label for="title" class="">Cover Photo</label>
+                            <!-- <div class="position-relative form-group">
+                                <label for="title" class="">Cover Photo</label> 
                                 <input name="picture" id="picture" placeholder="Cover Photo" type="file" class="form-control">
                             </div>
-                            <!-- <div class="position-relative form-group"><label for="examplePassword" class="">Conet</label><input name="password" id="examplePassword" placeholder="password placeholder" type="password"
-                                                                                                                                                           class="form-control"></div> -->
-                            <!-- <div class="position-relative form-group"><label for="exampleSelect" class="">Select</label><select name="select" id="exampleSelect" class="form-control">
-                                                        <option>1</option>
-                                                        <option>2</option>
-                                                        <option>3</option>
-                                                        <option>4</option>
-                                                        <option>5</option>
-                                                    </select></div>
-                                                    <div class="position-relative form-group"><label for="exampleSelectMulti" class="">Select Multiple</label><select multiple="" name="selectMulti" id="exampleSelectMulti" class="form-control">
-                                                        <option>1</option>
-                                                        <option>2</option>
-                                                        <option>3</option>
-                                                        <option>4</option>
-                                                        <option>5</option>
-                                                    </select></div> -->
+             -->
                             <div class="position-relative form-group">
-                                <label for="content" class="">Content </label>
-                                <textarea name="content" id="newsEditor" class="form-control">
-                                                        </textarea>
+                                <label for="description" class="">Description </label>
+                                <textarea name="description" id="description" class="form-control" required="required">
+                                </textarea>
                             </div>
-                            <!-- <div class="position-relative form-group"><label for="exampleFile" class="">File</label><input name="file" id="exampleFile" type="file" class="form-control-file">
-                                                        <small class="form-text text-muted">This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.</small>
-                                                    </div> -->
-                            <button class="mt-1 btn btn-primary">Post news</button>
+                            <button class="mt-1 btn btn-primary">save</button>
                         </form>
                     </div>
                 </div>
