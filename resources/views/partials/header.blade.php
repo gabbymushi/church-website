@@ -111,11 +111,13 @@
                           </div>
                           <div class="col-md-3"> <span class="megamenu-sub-title"><i class="fa fa-pagelines"></i> Our Ministries</span>
                             <ul class="sub-menu">
-                              <li><a href="ministry.html">Women's Ministry</a></li>
+                              @foreach (App\Ministry::all() as $ministry)
+                              <li><a href="ministry.html">{{$ministry->name}}</a></li>
+                             @endforeach
                               <li><a href="ministry.html">Men's Ministry</a></li>
-                              <li><a href="ministry.html">Children's Ministry</a></li>
+                             <!--  <li><a href="ministry.html">Children's Ministry</a></li>
                               <li><a href="ministry.html">Youth Ministry</a></li>
-                              <li><a href="ministry.html">Prayer Requests</a></li>
+                              <li><a href="ministry.html">Prayer Requests</a></li> -->
                             </ul>
                           </div>
                           <div class="col-md-3"> <span class="megamenu-sub-title"><i class="fa fa-clock-o"></i> Upcoming Events</span>
