@@ -167,3 +167,7 @@ Route::get('ministry/delete',[
 'uses'=>'MinistryController@destroy',
 'as'=>'ministry.delete'
 ]);
+Route::get('ministry/{slug}',[
+'uses'=>'MinistryController@show',
+'as'=>'ministry.show'
+]);
