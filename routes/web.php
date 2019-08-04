@@ -155,6 +155,10 @@ Route::get('ministry/create',[
 'uses'=>'MinistryController@create',
 'as'=>'ministry.create'
 ]);
+Route::post('ministry/',[
+'uses'=>'MinistryController@store',
+'as'=>'ministry.store'
+]);
 Route::get('ministry/edit',[
 'uses'=>'MinistryController@edit',
 'as'=>'ministry.edit'
