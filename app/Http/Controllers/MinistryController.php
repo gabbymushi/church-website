@@ -53,9 +53,10 @@ class MinistryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($lug)
     {
-        return view('ministry.view-ministry');
+        $data['ministry'] = Ministry::where(['slug'=>$lug])->first();
+        return view('ministry.view-ministry',$data);
     }
 
     /**
