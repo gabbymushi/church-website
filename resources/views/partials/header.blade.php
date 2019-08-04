@@ -114,7 +114,7 @@
                               @foreach (App\Ministry::all() as $ministry)
                               <li><a href="{{url('ministry/'.$ministry->slug)}}">{{$ministry->name}}</a></li>
                              @endforeach
-                              <li><a href="ministry.html">Men's Ministry</a></li>
+                              <!-- <li><a href="ministry.html">Men's Ministry</a></li> -->
                              <!--  <li><a href="ministry.html">Children's Ministry</a></li>
                               <li><a href="ministry.html">Youth Ministry</a></li>
                               <li><a href="ministry.html">Prayer Requests</a></li> -->
