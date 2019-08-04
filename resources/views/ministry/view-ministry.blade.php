@@ -7,24 +7,24 @@
         <div class="row">
           <div class="col-md-8">
             <header class="single-post-header clearfix">
-              <h2 class="post-title">Our Church Women's Ministry</h2>
+              <h2 class="post-title">{{$ministry->name}}</h2>
             </header>
             <div class="post-content">
             	<img src="http://placehold.it/1280x635&amp;text=IMAGE+PLACEHOLDER" alt="Women Ministry" class="img-thumbnail">
                <div class="spacer-30"></div>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, sem quis lacinia faucibus, orci ipsum gravida tortor, vel interdum mi sapien ut justo. Nulla varius consequat magna, id molestie ipsum volutpat quis. Pellentesque ipsum erat, facilisis ut venenatis eu, sodales vel dolor.</p>
+              <p>{{$ministry->name}}.</p>
               <hr>
-              <h3>Get Involved</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, sem quis lacinia faucibus, orci ipsum gravida tortor, vel interdum mi sapien ut justo. Nulla varius consequat magna, id molestie ipsum volutpat quis. Suspendisse consectetur fringilla luctus. Fusce id mi diam, non ornare orci. Pellentesque ipsum erat, facilisis ut venenatis eu, sodales vel dolor.</p>
-              <a href="contact.html" class="btn btn-primary">Find a Lifegroup</a>
-              <hr>
+              <!-- <h3>Get Involved</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, sem quis lacinia faucibus, orci ipsum gravida tortor, vel interdum mi sapien ut justo. Nulla varius consequat magna, id molestie ipsum volutpat quis. Suspendisse consectetur fringilla luctus. Fusce id mi diam, non ornare orci. Pellentesque ipsum erat, facilisis ut venenatis eu, sodales vel dolor.</p> -->
+              <a href="{{route('contactus')}}" class="btn btn-primary">Find a Lifegroup</a>
+              <!-- <hr>
               	<h3>Ministry Team</h3>
                 <ul class="checks">
                 	<li>Mildred George</li>
                   <li>Ashleigh Cox</li>
                   <li>Giorgiana Mărginean</li>
                   <li>Christine Mendez</li>
-                </ul>
+                </ul> -->
             </div>
           </div>
           <!-- Start Sidebar -->
