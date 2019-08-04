@@ -112,7 +112,7 @@
                           <div class="col-md-3"> <span class="megamenu-sub-title"><i class="fa fa-pagelines"></i> Our Ministries</span>
                             <ul class="sub-menu">
                               @foreach (App\Ministry::all() as $ministry)
-                              <li><a href="ministry.html">{{$ministry->name}}</a></li>
+                              <li><a href="{{url('ministry/'.$ministry->slug)}}">{{$ministry->name}}</a></li>
                              @endforeach
                               <li><a href="ministry.html">Men's Ministry</a></li>
                              <!--  <li><a href="ministry.html">Children's Ministry</a></li>
