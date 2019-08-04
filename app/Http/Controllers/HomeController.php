@@ -41,7 +41,7 @@ class HomeController extends Controller
 
     public function index()
     {
-        $data['news'] = News::all();
+        $data['news'] = News::orderBy('created_at','desc')->take(2)->get();
         $data['events'] =Event::orderBy('created_at','desc')->take(5)->get();
         $data['last_record'] = DB::table('events')->latest()->first();
         return view('home.home', $data);

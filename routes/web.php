@@ -146,3 +146,24 @@ Route::post('staff/update/{id}',[
 'uses'=>'StaffController@update',
 'as'=>'update.staff'
 ]);
+//Ministries routes
+Route::get('ministry',[
+'uses'=>'MinistryController@index',
+'as'=>'ministry'
+]);
+Route::get('ministry/create',[
+'uses'=>'MinistryController@create',
+'as'=>'ministry.create'
+]);
+Route::post('ministry/',[
+'uses'=>'MinistryController@store',
+'as'=>'ministry.store'
+]);
+Route::get('ministry/edit',[
+'uses'=>'MinistryController@edit',
+'as'=>'ministry.edit'
+]);
+Route::get('ministry/delete',[
+'uses'=>'MinistryController@destroy',
+'as'=>'ministry.delete'
+]);
