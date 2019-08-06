@@ -65,9 +65,10 @@ class MinistryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($lug)
     {
-        //
+        $data['ministry'] = Ministry::where(['slug'=>$lug])->first();
+        return view('ministry.view-ministry',$data);
     }
 
     /**
