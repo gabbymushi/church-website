@@ -10,7 +10,6 @@
                     	<a href="{{route('ministry.create')}}" style="margin-bottom: 20px" class="btn btn-primary btn-md pull-right">New Ministry</a>
 
                     </h5>
-
                         <table class="mb-0 table table-bordered">
                             <thead>
                             <tr>
@@ -28,8 +27,8 @@
                                 <td>{{$ministry->name}}</td>
                                 <td>{{$ministry->description}}</td>
                                 <td>
-                              <!-- <a href="{{route('ministry.edit',['id'=>$ministry->id])}}"><div class="badge badge-primary">Edit</div></a>
-                              <a href="{{route('ministry.delete',['id'=>$ministry->id])}}"><div class="badge badge-danger">Delete</div></a> -->
+                              <a href="{{route('ministry.edit',['id'=>$ministry->id])}}"><div class="badge badge-primary">Edit</div></a>
+                              <a href="{{route('ministry.delete',['id'=>$ministry->id])}}"><div class="badge badge-danger">Delete</div></a>
                                 </td>
                             </tr>
                             @endforeach
