@@ -15,7 +15,7 @@ class SermonController extends Controller
     public function index()
     {
         $data['sermons'] = Sermon::all();
-        return view('admin.sermon.create', $data);
+        return view('admin.sermon.index', $data);
     }
 
     /**
@@ -25,7 +25,7 @@ class SermonController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.sermon.create');
     }
 
     /**
