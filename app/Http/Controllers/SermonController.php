@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Sermon;
 
 class SermonController extends Controller
 {
@@ -13,7 +14,8 @@ class SermonController extends Controller
      */
     public function index()
     {
-        //
+        $data['sermons'] = Sermon::all();
+        return view('admin.sermon.create', $data);
     }
 
     /**
