@@ -184,10 +184,10 @@ Route::get('sermon/create',[
 'uses'=>'SermonController@create',
 'as'=>'sermon.create'
 ]);
-// Route::post('ministry/',[
-// 'uses'=>'SermonController@store',
-// 'as'=>'ministry.store'
-// ]);
+Route::post('sermon/',[
+'uses'=>'SermonController@store',
+'as'=>'sermon.store'
+]);
 // Route::get('ministry/{slug}/edit',[
 // 'uses'=>'SermonController@edit',
 // 'as'=>'ministry.edit'
