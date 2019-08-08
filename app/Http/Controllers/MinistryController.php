@@ -16,7 +16,7 @@ class MinistryController extends Controller
     public function index()
     {
         $data['ministries'] = Ministry::all();
-        return view('admin.ministry.index', $data);      
+        return view('admin.ministry.index', $data);
     }
 
     /**
@@ -27,7 +27,7 @@ class MinistryController extends Controller
     public function create()
     {
         $data['ministries'] = Ministry::all();
-        return view('admin.ministry.create-ministry', $data);   
+        return view('admin.ministry.create-ministry', $data);
     }
 
     /**
@@ -43,7 +43,7 @@ class MinistryController extends Controller
         $ministry->description = $request->description;
         $ministry->slug = str_slug($request->name);
         $ministry->save();
-        Session::flash('success','Ministry added successfully');
+        Session::flash('success', 'Ministry added successfully');
         return redirect('ministry');
     }
 
@@ -55,8 +55,8 @@ class MinistryController extends Controller
      */
     public function show($lug)
     {
-        $data['ministry'] = Ministry::where(['slug'=>$lug])->first();
-        return view('ministry.view-ministry',$data);
+        $data['ministry'] = Ministry::where(['slug' => $lug])->first();
+        return view('ministry.view-ministry', $data);
     }
 
     /**
@@ -65,10 +65,12 @@ class MinistryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($lug)
+    public function edit($slug)
     {
-        $data['ministry'] = Ministry::where(['slug'=>$lug])->first();
-        return view('ministry.view-ministry',$data);
+        // echo $slug;
+        // exit;
+        $data['ministry'] = Ministry::where(['slug' => $slug])->first();
+        return view('admin.ministry.edit', $data);
     }
 
     /**
@@ -80,7 +82,13 @@ class MinistryController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $event = Ministry::where('id', $id)
+            ->update([
+                'name' => $request->name,
+                'description' => $request->description,
+            ]);
+        Session::flash('success', 'Ministry update successfully');
+        return redirect()->route('ministry');
     }
 
     /**
@@ -91,6 +99,11 @@ class MinistryController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $category = Ministry::find($id);
+
+        $category->delete();
+
+        Session::flash('success','Ministry deleted successfully');
+        return redirect()->route('ministry');
     }
 }
