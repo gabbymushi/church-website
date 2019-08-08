@@ -8,14 +8,14 @@
                 </i>
             </div>
             <div>Ministries
-                <div class="page-title-subheading">Add Ministries
+                <div class="page-title-subheading">Edit Ministries
                 </div>
             </div>
         </div>
         <div class="page-title-actions">
-            <button type="button" data-toggle="tooltip" title="Example Tooltip" data-placement="bottom" class="btn-shadow mr-3 btn btn-dark">
+            <!-- <button type="button" data-toggle="tooltip" title="Example Tooltip" data-placement="bottom" class="btn-shadow mr-3 btn btn-dark">
                 <i class="fa fa-star"></i>
-            </button>
+            </button> -->
             <div class="d-inline-block dropdown">
                 <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn-shadow dropdown-toggle btn btn-info">
                     <span class="btn-icon-wrapper pr-2 opacity-7">
@@ -72,11 +72,11 @@
                 <div class="main-card mb-3 card">
                     <div class="card-body">
                         <!-- <h5 class="card-title">Controls Types</h5> -->
-                        <form method="POST" action="/ministry" class="" enctype="multipart/form-data">
+                        <form method="POST" action="/ministry/update/{{$ministry->id}}" class="" enctype="multipart/form-data">
                             @csrf
                             <div class="position-relative form-group">
                                 <label for="name" class="">Name</label>
-                                <input name="name" id="name" placeholder="Name" type="text" class="form-control" required="required">
+                                <input name="name" id="name" value="{{$ministry->name}}" type="text" class="form-control" required="required">
                             </div>
                             <!-- <div class="position-relative form-group">
                                 <label for="title" class="">Cover Photo</label> 
@@ -85,8 +85,7 @@
              -->
                             <div class="position-relative form-group">
                                 <label for="description" class="">Description </label>
-                                <textarea name="description" id="description" class="form-control" required="required">
-                                </textarea>
+                                <textarea name="description" id="description" class="form-control" required="required"> {{$ministry->description}}</textarea>
                             </div>
                             <button class="mt-1 btn btn-primary">save</button>
                         </form>
