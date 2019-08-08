@@ -3,12 +3,12 @@
 <div class="app-page-title">
     <div class="page-title-wrapper">
         <div class="page-title-heading">
-            <div class="page-title-icon">
+            <!-- <div class="page-title-icon">
                 <i class="pe-7s-display1 icon-gradient bg-premium-dark">
                 </i>
-            </div>
-            <div>Ministries
-                <div class="page-title-subheading">Add Ministries
+            </div> -->
+            <div>Sermons
+                <div class="page-title-subheading">Add Surmons
                 </div>
             </div>
         </div>
@@ -72,11 +72,11 @@
                 <div class="main-card mb-3 card">
                     <div class="card-body">
                         <!-- <h5 class="card-title">Controls Types</h5> -->
-                        <form method="POST" action="/ministry" class="" enctype="multipart/form-data">
+                        <form method="POST" action="/sermon" class="" enctype="multipart/form-data">
                             @csrf
                             <div class="position-relative form-group">
-                                <label for="name" class="">Name</label>
-                                <input name="name" id="name" placeholder="Name" type="text" class="form-control" required="required">
+                                <label for="title" class="">Title</label>
+                                <input name="title" id="title" placeholder="Title" type="text" class="form-control" required="required">
                             </div>
                             <!-- <div class="position-relative form-group">
                                 <label for="title" class="">Cover Photo</label> 
@@ -84,8 +84,8 @@
                             </div>
              -->
                             <div class="position-relative form-group">
-                                <label for="description" class="">Description </label>
-                                <textarea name="description" id="description" class="form-control" required="required">
+                                <label for="content" class="">Content </label>
+                                <textarea name="content" id="content" class="form-control" required="required">
                                 </textarea>
                             </div>
                             <button class="mt-1 btn btn-primary">save</button>
