@@ -17,7 +17,7 @@ class CreateSermonsTable extends Migration
             $table->bigIncrements('id');
             $table->string('slug')->unique()->nullable();
             $table->string('title');
-            $table->string('description');
+            $table->string('content');
             $table->timestamps();
         });
     }
