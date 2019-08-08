@@ -16,7 +16,7 @@ class BlogController extends Controller
      */
     public function index()
     {
-        $data['news'] = News::all();
+        $data['news'] = News::orderBy('id','DESC')->get();
         return view('blog.blog', $data);
     }
 
