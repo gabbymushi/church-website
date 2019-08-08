@@ -6,8 +6,8 @@
         <div class="col-lg-12">
                 <div class="main-card mb-3 card">
                     <div class="card-body">
-                    	<h5 class="card-title">All Ministries
-                    	<a href="{{route('ministry.create')}}" style="margin-bottom: 20px" class="btn btn-primary btn-md pull-right">New Ministry</a>
+                    	<h5 class="card-title">All Sermons
+                    	<a href="{{route('sermon.create')}}" style="margin-bottom: 20px" class="btn btn-primary btn-md pull-right">New Sermon</a>
 
                     </h5>
                         <table class="mb-0 table table-bordered">
