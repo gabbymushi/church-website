@@ -27,8 +27,8 @@
                                 <td>{{$ministry->name}}</td>
                                 <td>{{$ministry->description}}</td>
                                 <td>
-                              <a href="{{route('ministry.edit',['id'=>$ministry->id])}}"><div class="badge badge-primary">Edit</div></a>
-                              <a href="{{route('ministry.delete',['id'=>$ministry->id])}}"><div class="badge badge-danger">Delete</div></a>
+                              <a href="{{url('ministry/'.$ministry->slug.'/edit')}}"><div class="badge badge-primary">Edit</div></a>
+                              <a href="{{url('ministry/'.$ministry->id.'/delete')}}"><div class="badge badge-danger">Delete</div></a>
                                 </td>
                             </tr>
                             @endforeach
