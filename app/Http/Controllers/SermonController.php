@@ -3,11 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\News;
-use App\NewsTag;
-use App\File;
+use App\Sermon;
+use Session;
 
-class BlogController extends Controller
+class SermonController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,8 +15,8 @@ class BlogController extends Controller
      */
     public function index()
     {
-        $data['news'] = News::orderBy('id','DESC')->get();
-        return view('blog.blog', $data);
+        $data['sermons'] = Sermon::orderBy('id','DESC')->get();
+        return view('admin.sermon.index', $data);
     }
 
     /**
@@ -27,7 +26,7 @@ class BlogController extends Controller
      */
     public function create()
     {
-        return view('admin.blog.create-post');
+        return view('admin.sermon.create');
     }
 
     /**
@@ -38,9 +37,10 @@ class BlogController extends Controller
      */
     public function store(Request $request)
     {
-        $model = new News();
-        $destinationPath = 'assets/images/blog';
+        $model = new Sermon();
+        $destinationPath = 'assets/images/sermon';
         $model->title = $request->input('title');
+        $model->slug =  str_slug($request->input('title'));
         $model->content = $request->input('content');
         //   $model->user_id = Auth::user()->user_id;
         $model->save();
@@ -54,7 +54,8 @@ class BlogController extends Controller
                 $fileModel->save();
             }
         }
-        return redirect('/post/blog');
+        Session::flash('success', 'Sermon added successfully');
+        return redirect('sermon');
     }
 
     /**
@@ -65,10 +66,7 @@ class BlogController extends Controller
      */
     public function show($id)
     {
-        // $data['tags']=NewsTag::where(['news_id'=>$id])->with();
-        $data['post'] = News::find($id);
-        //  dd($data['post']);
-        return view('blog.post', $data);
+        //
     }
 
     /**

@@ -31,7 +31,29 @@
             </li>
             <li>
                 <a href="#">
-                    <i class="metismenu-icon fa fa-blog"></i>
+                    <i class="metismenu-icon fa fa-file"></i>
+                    Sermons
+                    <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                </a>
+                <ul>
+                    <!-- <li>
+                        <a href="{{url('/post/blog')}}">
+                            <i class="metismenu-icon"></i>
+                            Post news
+                        </a>
+                    </li> -->
+                    <li>
+                        <a href="{{url('sermon')}}">
+                            <i class="metismenu-icon">
+                            </i>Manage sermons
+                        </a>
+                    </li>
+
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="metismenu-icon fa fa-list"></i>
                     Ministries
                     <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
                 </a>
@@ -39,15 +61,15 @@
                     <li>
                         <a href="{{url('ministry')}}">
                             <i class="metismenu-icon"></i>
-                           Add ministry
+                            Manage ministry
                         </a>
                     </li>
-                    <li>
+                    <!-- <li>
                         <a href="elements-dropdowns.html">
                             <i class="metismenu-icon">
                             </i>Manage ministry
                         </a>
-                    </li>
+                    </li> -->
 
                 </ul>
             </li>

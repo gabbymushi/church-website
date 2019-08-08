@@ -159,11 +159,11 @@ Route::post('ministry/',[
 'uses'=>'MinistryController@store',
 'as'=>'ministry.store'
 ]);
-Route::get('ministry/edit',[
+Route::get('ministry/{slug}/edit',[
 'uses'=>'MinistryController@edit',
 'as'=>'ministry.edit'
 ]);
-Route::get('ministry/delete',[
+Route::get('ministry/{id}/delete',[
 'uses'=>'MinistryController@destroy',
 'as'=>'ministry.delete'
 ]);
@@ -171,3 +171,36 @@ Route::get('ministry/{slug}',[
 'uses'=>'MinistryController@show',
 'as'=>'ministry.show'
 ]);
+Route::post('ministry/update/{id}',[
+'uses'=>'MinistryController@update',
+'as'=>'ministry.update'
+]);
+//Ministries routes
+Route::get('sermon',[
+'uses'=>'SermonController@index',
+'as'=>'sermon'
+]);
+Route::get('sermon/create',[
+'uses'=>'SermonController@create',
+'as'=>'sermon.create'
+]);
+Route::post('sermon/',[
+'uses'=>'SermonController@store',
+'as'=>'sermon.store'
+]);
+// Route::get('ministry/{slug}/edit',[
+// 'uses'=>'SermonController@edit',
+// 'as'=>'ministry.edit'
+// ]);
+// Route::get('ministry/{id}/delete',[
+// 'uses'=>'SermonController@destroy',
+// 'as'=>'ministry.delete'
+// ]);
+// Route::get('ministry/{slug}',[
+// 'uses'=>'SermonController@show',
+// 'as'=>'ministry.show'
+// ]);
+// Route::post('ministry/update/{id}',[
+// 'uses'=>'SermonController@update',
+// 'as'=>'ministry.update'
+// ]);

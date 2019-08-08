@@ -6,29 +6,29 @@
         <div class="col-lg-12">
                 <div class="main-card mb-3 card">
                     <div class="card-body">
-                    	<h5 class="card-title">All Ministries
-                    	<a href="{{route('ministry.create')}}" style="margin-bottom: 20px" class="btn btn-primary btn-md pull-right">New Ministry</a>
+                    	<h5 class="card-title">All Sermons
+                    	<a href="{{route('sermon.create')}}" style="margin-bottom: 20px" class="btn btn-primary btn-md pull-right">New Sermon</a>
 
                     </h5>
                         <table class="mb-0 table table-bordered">
                             <thead>
                             <tr>
                                 <th>#</th>
-                                <th>Name</th>
-                                <th>Description</th>
+                                <th>Title</th>
+                                <th>Content</th>
                                 <th>Actions</th>
                             </tr>
                             </thead>
                             <tbody>
                             	<?php $i = 1; ?>
-                            @foreach($ministries as $ministry)
+                            @foreach($sermons as $sermon)
                             <tr>
                                 <th>{{$i++}}</th>
-                                <td>{{$ministry->name}}</td>
-                                <td>{{$ministry->description}}</td>
+                                <td>{{$sermon->title}}</td>
+                                <td>{{$sermon->content}}</td>
                                 <td>
-                              <a href="{{url('ministry/'.$ministry->slug.'/edit')}}"><div class="badge badge-primary">Edit</div></a>
-                              <a href="{{url('ministry/'.$ministry->id.'/delete')}}"><div class="badge badge-danger">Delete</div></a>
+                              <a href="{{url('sermon/'.$sermon->id.'/edit')}}"><div class="badge badge-primary">Edit</div></a>
+                              <a href="{{url('sermon/'.$sermon->id.'/delete')}}"><div class="badge badge-danger">Delete</div></a>
                                 </td>
                             </tr>
                             @endforeach
