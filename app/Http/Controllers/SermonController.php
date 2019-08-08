@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Sermon;
+use Session;
 
 class SermonController extends Controller
 {
@@ -14,7 +15,7 @@ class SermonController extends Controller
      */
     public function index()
     {
-        $data['sermons'] = Sermon::all();
+        $data['sermons'] = Sermon::orderBy('id','DESC')->get();
         return view('admin.sermon.index', $data);
     }
 
@@ -36,7 +37,25 @@ class SermonController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $model = new Sermon();
+        $destinationPath = 'assets/images/sermon';
+        $model->title = $request->input('title');
+        $model->slug =  str_slug($request->input('title'));
+        $model->content = $request->input('content');
+        //   $model->user_id = Auth::user()->user_id;
+        $model->save();
+        if ($request->hasFile('picture')) {
+            $file = $request->file('picture');
+            if ($file->move($destinationPath, $file->getClientOriginalName())) {
+                $fileModel = new File();
+                $fileModel->name = $file->getClientOriginalName();
+                $fileModel->mime_type = $file->getClientMimeType();
+                $fileModel->news_id = $model->id;
+                $fileModel->save();
+            }
+        }
+        Session::flash('success', 'Sermon added successfully');
+        return redirect('sermon');
     }
 
     /**
