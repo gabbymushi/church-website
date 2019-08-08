@@ -15,7 +15,7 @@
                             <tr>
                                 <th>#</th>
                                 <th>Title</th>
-                                <th>Description</th>
+                                <th>Content</th>
                                 <th>Actions</th>
                             </tr>
                             </thead>
@@ -25,10 +25,10 @@
                             <tr>
                                 <th>{{$i++}}</th>
                                 <td>{{$sermon->title}}</td>
-                                <td>{{$sermon->description}}</td>
+                                <td>{{$sermon->content}}</td>
                                 <td>
-                              <a href="{{url('ministry/'.$sermon->slug.'/edit')}}"><div class="badge badge-primary">Edit</div></a>
-                              <a href="{{url('ministry/'.$sermon->id.'/delete')}}"><div class="badge badge-danger">Delete</div></a>
+                              <a href="{{url('sermon/'.$sermon->id.'/edit')}}"><div class="badge badge-primary">Edit</div></a>
+                              <a href="{{url('sermon/'.$sermon->id.'/delete')}}"><div class="badge badge-danger">Delete</div></a>
                                 </td>
                             </tr>
                             @endforeach
