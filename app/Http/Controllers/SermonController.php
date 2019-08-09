@@ -15,8 +15,13 @@ class SermonController extends Controller
      */
     public function index()
     {
-        $data['sermons'] = Sermon::orderBy('id','DESC')->get();
+        $data['sermons'] = Sermon::orderBy('id', 'DESC')->get();
         return view('admin.sermon.index', $data);
+    }
+    public function allSermons()
+    {
+        $data['sermons'] = Sermon::orderBy('id', 'DESC')->get();
+        return view('sermon.index', $data);
     }
 
     /**
@@ -77,7 +82,8 @@ class SermonController extends Controller
      */
     public function edit($id)
     {
-        //
+        $data['sermon'] = Sermon::where('id', $id)->first();
+        return view('admin.sermon.edit', $data);
     }
 
     /**
@@ -89,7 +95,13 @@ class SermonController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $sermon = Sermon::where('id', $id)
+            ->update([
+                'title' => $request->title,
+                'content' => $request->content,
+            ]);
+        Session::flash('success', 'Sermon update successfully');
+        return redirect()->route('sermon');
     }
 
     /**
@@ -100,6 +112,9 @@ class SermonController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $category = Sermon::find($id);
+        $category->delete();
+        Session::flash('success','Sermon deleted successfully');
+        return redirect()->route('sermon');
     }
 }
