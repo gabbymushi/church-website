@@ -149,12 +149,12 @@
                     <li><a href="single-event.html">Single Event</a></li>
                   </ul>
                 </li>
-                <li><a href="sermons.html">Sermons</a>
-                  <ul class="dropdown">
+                <li><a href="{{route('sermon.all')}}">Sermons</a>
+                  <!-- <ul class="dropdown">
                     <li><a href="sermon-albums.html">Sermon Albums</a></li>
                     <li><a href="sermons.html">Sermons Archive</a></li>
                     <li><a href="single-sermon.html">Single Sermon</a></li>
-                  </ul>
+                  </ul> -->
                 </li>
                 <li><a href="gallery-2cols-pagination.html">Gallery</a>
                   <ul class="dropdown">
