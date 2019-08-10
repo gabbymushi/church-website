@@ -22,7 +22,7 @@
                   <div class="col-md-4"> <a href="single-sermon.html" class="media-box"> <img src="http://placehold.it/800x600&amp;text=IMAGE+PLACEHOLDER" alt="" class="img-thumbnail"> </a> </div>
                   <div class="col-md-8">
                     <p>{{$sermon->content}}.</p>
-                    <p><a href="single-sermon.html" class="btn btn-primary">Continue reading <i class="fa fa-long-arrow-right"></i></a></p>
+                    <p><a href="{{url('sermon/'.$sermon->slug.'/view')}}" class="btn btn-primary">Continue reading <i class="fa fa-long-arrow-right"></i></a></p>
                   </div>
                 </div>
               </div>
