@@ -198,10 +198,10 @@ Route::get('sermon/{id}/delete',[
 'uses'=>'SermonController@destroy',
 'as'=>'sermon.delete'
 ]);
-// Route::get('ministry/{slug}',[
-// 'uses'=>'SermonController@show',
-// 'as'=>'ministry.show'
-// ]);
+Route::get('sermon/{slug}/view',[
+'uses'=>'SermonController@show',
+'as'=>'sermon.show'
+]);
 Route::post('sermon/update/{id}',[
 'uses'=>'SermonController@update',
 'as'=>'sermon.update'
