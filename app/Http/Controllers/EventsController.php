@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\EventCategory;
 use App\Event;
+use App\News;
 use Session;
 use DB;
 
@@ -51,6 +52,13 @@ class EventsController extends Controller
             $new_image = 'assets/uploads/events/'.$new_image;
 
         }
+        if($request->hasFile('attachment')){
+            $attachment = $request->attachment;
+            $new_attachment = time().$attachment->getClientOriginalName();
+            $attachment->move('assets/uploads/events',$new_attachment);
+            $new_attachment = 'assets/uploads/events/'.$new_attachment;
+
+        }
         
         $event = new Event;
 
@@ -61,6 +69,7 @@ class EventsController extends Controller
         $event->event_category_id = $request->category_id;
         $event->featured_img = $new_image;
         $event->content = $request->content;
+        $event->attachment=$new_attachment;
 
         $event->save();
         Session::flash('success','Event created successfull');
@@ -111,11 +120,19 @@ class EventsController extends Controller
          'title'=>'required',
         ]);
 
+
         if($request->hasFile('featured_image')){
             $image = $request->featured_image;
             $new_image = time().$image->getClientOriginalName();
             $image->move('assets/uploads/events',$new_image);
             $new_image = 'assets/uploads/events/'.$new_image;
+
+        }
+        if($request->hasFile('attachment')){
+            $attachment = $request->attachment;
+            $new_attachment = time().$attachment->getClientOriginalName();
+            $attachment->move('assets/uploads/events',$new_attachment);
+            $new_attachment = 'assets/uploads/events/'.$new_attachment;
 
         }
 
@@ -125,9 +142,10 @@ class EventsController extends Controller
                          'start_date'=>$request->start_date,
                          'end_date'=>$request->end_date,
                          'content'=>$request->content,
-                         'category_id'=>$request->category_id,
+                         'event_category_id'=>$request->category_id,
                          'slug'=>str_slug($request->title),
-                         'featured_img'=>$new_image
+                         'featured_img'=>$new_image,
+                         'attachment'=>$new_attachment
                         ]);
 
         Session::flash('success','Event update successfully');
@@ -154,7 +172,7 @@ class EventsController extends Controller
     //Retun front view All Events view
 
     public function all_events(){
-
+         $events['posts'] =News::orderBy('created_at','desc')->take(3)->get();
          $events['events'] = Event::all();
          $events['categories'] = EventCategory::all();
          $events['latest_event'] = DB::table('events')->latest()->first();
