@@ -3,8 +3,15 @@
   <!-- Start Hero Slider -->
   <div  style="margin-top: 80px;" class="hero-slider flexslider clearfix" data-autoplay="yes" data-pagination="yes" data-arrows="yes" data-style="fade" data-pause="yes">
     <ul class="slides">
-      <li class=" parallax" style="background-image:url('{{asset('assets/images/slider/slide_kkkt.PNG')}}');">KANISA LA KIINJILI LA KILUTHERI TANZANIA</li>
-      <li class="parallax" style="background-image:url({{asset('assets/images/slider/slide_kkkt2.PNG')}});"></li>
+      <li class="parallax text-center" style="background-image:url({{asset('assets/images/slider/slide_kkkt2.PNG')}});">
+        <div class="text-center" style="display: inline-block; position: absolute; background-color:rgba(0,0,0,.5); padding: 10px 10px 0px 10px; margin-left: -500px color: #ffffff; margin-top: 400px; font-weight: bold;"><h4 style="color:white;">KANISA LA KIINJILI LA KILUTHERI TANZANIA</h4></div>
+      </li>
+      <li class="parallax text-center" style="background-image:url({{asset('assets/images/slider/slide_kkkt2.PNG')}});">
+        <div class="text-center" style="display: inline-block; position: absolute; background-color:rgba(0,0,0,.5); padding:10px 10px 0px 10px; color: #ffffff; margin-top: 400px; font-weight: bold;"><h4 style="color:white; text-decoration: underline;">The Church focuses on propagating the "holistic" Gospel serving man through spiritual</h4></div>
+      </li>
+       <li class="parallax text-center" style="background-image:url({{asset('assets/images/slider/slide_kkkt2.PNG')}});">
+        <div class="text-center" style="display: inline-block; position: absolute; background-color:rgba(0,0,0,.5); padding:10px 10px 0px 10px; color: #ffffff; margin-top: 400px; font-weight: bold;"><h4 style="color:white; text-decoration: underline;">The Church focuses on propagating the "holistic" Gospel serving man through spiritual</h4></div>
+      </li>
     </ul>
   </div>
   <!-- End Hero Slider --> 
@@ -14,9 +21,10 @@
       <div class="row">
         <div class="col-md-3 col-sm-6 col-xs-6 notice-bar-title"> <span class="notice-bar-title-icon hidden-xs"><i class="fa fa-calendar fa-3x"></i></span> <span class="title-note">Next</span> <strong>Upcoming Event</strong> </div>
         <div class="col-md-3 col-sm-6 col-xs-6 notice-bar-event-title">
-          <h5><a href="single-event.html">{{$last_record->title}}</a></h5>
+          <h5><a href="single-event.html">@if(isset($last_record)) {{$last_record->title}}</a></h5>
            <?php $latest_date = date('F j ,Y',strtotime($last_record->start_date)) ;?>
           <span class="meta-data">{{$latest_date}}</span> </div>
+          @endif
         <div id="counter" class="col-md-4 col-sm-6 col-xs-12 counter" data-date="{{$latest_date}}">
           <div class="timer-col"> <span id="days"></span> <span class="timer-type">days</span> </div>
           <div class="timer-col"> <span id="hours"></span> <span class="timer-type">hrs</span> </div>
@@ -35,7 +43,9 @@
         <div class="row"> 
           <!-- Start Featured Blocks -->
           <div class="featured-blocks clearfix">
-            <div class="col-md-4 col-sm-4 featured-block"> <a href="our-staff.html" class="img-thumbnail"> <img src="http://placehold.it/600x400&amp;text=IMAGE+PLACEHOLDER" alt="staff"> <strong>Our Pastors</strong> <span class="more">read more</span> </a> </div>
+            <div class="col-md-4 col-sm-4 featured-block"> <a href="our-staff.html" class="img-thumbnail"> <img src="{{asset('/'.$askofu->photo)}}" alt="staff"> <strong style="margin-bottom:0px;">
+              {{$askofu->fname .' '.$askofu->lname.' '.', Bishop ELCT-DME' }}
+            </strong> <span class="more">Bishop Profile</span> </a> </div>
             <div class="col-md-4 col-sm-4 featured-block"> <a href="about.html" class="img-thumbnail"> <img src="http://placehold.it/600x400&amp;text=IMAGE+PLACEHOLDER" alt="staff"> <strong>New Here</strong> <span class="more">read more</span> </a> </div>
             <div class="col-md-4 col-sm-4 featured-block"> <a href="sermons.html" class="img-thumbnail"> <img src="http://placehold.it/600x400&amp;text=IMAGE+PLACEHOLDER" alt="staff"> <strong>Sermons Archive</strong> <span class="more">read more</span> </a> </div>
           </div>
@@ -50,6 +60,7 @@
               </header>
               <section class="listing-cont">
                 <ul>
+                  @if(isset($events))
                   @foreach($events as $event)
                   <?php 
                   $date =date('jS F,Y',strtotime($event->start_date)) ;
@@ -71,6 +82,7 @@
                     </div>
                   </li>
                   @endforeach
+                  @endif
         
                 </ul>
               </section>

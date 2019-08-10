@@ -35,6 +35,11 @@
                          <input type="file" name="featured_image" class="form-control">
                      </div>
                      </div>
+                      <div class="position-relative row form-group"><label for="exampleText" class="col-sm-2 col-form-label">Attachment</label>
+                     <div class="col-sm-10">
+                         <input type="file" name="attachment" class="form-control">
+                     </div>
+                     </div>
                              
                                             <div class="position-relative row form-check">
                                                 <div class="col-sm-10 text-center">

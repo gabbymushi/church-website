@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Event;
 use App\News;
+use App\Staff;
 use DB;
 
 class HomeController extends Controller
@@ -44,6 +45,7 @@ class HomeController extends Controller
         $data['news'] = News::all();
         $data['events'] =Event::orderBy('created_at','desc')->take(5)->get();
         $data['last_record'] = DB::table('events')->latest()->first();
+        $data['askofu'] = Staff::where('designation','askofu')->first();
         return view('home.home', $data);
     }
     public function aboutUs()
