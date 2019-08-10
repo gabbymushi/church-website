@@ -3,7 +3,7 @@
   <!-- Start Hero Slider -->
   <div  style="margin-top: 80px;" class="hero-slider flexslider clearfix" data-autoplay="yes" data-pagination="yes" data-arrows="yes" data-style="fade" data-pause="yes">
     <ul class="slides">
-      <li class="parallax text-center" style="background-image:url({{asset('assets/images/slider/slide_kkkt2.PNG')}});">
+      <li class="parallax text-center" style="background-image:url({{asset('assets/images/slider/slide_kkkt.PNG')}});">
         <div class="text-center" style="display: inline-block; position: absolute; background-color:rgba(0,0,0,.5); padding: 10px 10px 0px 10px; margin-left: -500px color: #ffffff; margin-top: 400px; font-weight: bold;"><h4 style="color:white;">KANISA LA KIINJILI LA KILUTHERI TANZANIA</h4></div>
       </li>
       <li class="parallax text-center" style="background-image:url({{asset('assets/images/slider/slide_kkkt2.PNG')}});">
@@ -43,11 +43,14 @@
         <div class="row"> 
           <!-- Start Featured Blocks -->
           <div class="featured-blocks clearfix">
-            <div class="col-md-4 col-sm-4 featured-block"> <a href="our-staff.html" class="img-thumbnail"> <img src="{{asset('/'.$askofu->photo)}}" alt="staff"> <strong style="margin-bottom:0px;">
+            <div class="col-md-4 col-sm-4 featured-block"> <a href="our-staff.html" class="img-thumbnail">
+
+             <img src="{{asset('/'.$askofu->photo)}}" alt="staff"> <strong style="margin-bottom:0px;">
+
               {{$askofu->fname .' '.$askofu->lname.' '.', Bishop ELCT-DME' }}
             </strong> <span class="more">Bishop Profile</span> </a> </div>
-            <div class="col-md-4 col-sm-4 featured-block"> <a href="about.html" class="img-thumbnail"> <img src="http://placehold.it/600x400&amp;text=IMAGE+PLACEHOLDER" alt="staff"> <strong>New Here</strong> <span class="more">read more</span> </a> </div>
-            <div class="col-md-4 col-sm-4 featured-block"> <a href="sermons.html" class="img-thumbnail"> <img src="http://placehold.it/600x400&amp;text=IMAGE+PLACEHOLDER" alt="staff"> <strong>Sermons Archive</strong> <span class="more">read more</span> </a> </div>
+            <div class="col-md-4 col-sm-4 featured-block"> <a href="{{route('all.staff')}}" class="img-thumbnail"> <img src="{{asset('assets\uploads\maaskofu.jpg')}}" alt="staff"> <strong>New Here</strong> <span class="more">read more</span> </a> </div>
+            <div class="col-md-4 col-sm-4 featured-block"> <a href="sermons.html" class="img-thumbnail"> <img src="{{asset('assets\uploads\sermons.jpg')}}" alt="staff"> <strong>Sermons Archive</strong> <span class="more">read more</span> </a> </div>
           </div>
           <!-- End Featured Blocks --> 
         </div>
@@ -153,9 +156,9 @@
         <div class="col-md-3 col-sm-3">
           <h4>Updates from our gallery</h4>
           <a href="{{route('gallery.all')}}" class="btn btn-default btn-lg">More Galleries</a> </div>
-        <div class="col-md-3 col-sm-3 post format-image"> <a href="http://placehold.it/600x400&amp;text=IMAGE+PLACEHOLDER" class="media-box" data-rel="prettyPhoto[Gallery]"> <img src="http://placehold.it/600x400&amp;text=IMAGE+PLACEHOLDER" alt=""> </a> </div>
-        <div class="col-md-3 col-sm-3 post format-video"> <a href="http://youtu.be/NEFfnbQlGo8" class="media-box" data-rel="prettyPhoto[Gallery]"> <img src="http://placehold.it/600x400&amp;text=IMAGE+PLACEHOLDER" alt=""> </a> </div>
-        <div class="col-md-3 col-sm-3 post format-image"> <a href="http://placehold.it/600x400&amp;text=IMAGE+PLACEHOLDER" class="media-box" data-rel="prettyPhoto[Gallery]"> <img src="http://placehold.it/600x400&amp;text=IMAGE+PLACEHOLDER" alt=""> </a> </div>
+        <div class="col-md-3 col-sm-3 post format-image"> <a href="{{asset('assets\uploads\kkt_news.jpg')}}" class="media-box" data-rel="prettyPhoto[Gallery]"> <img src="{{asset('assets\uploads\maaskofu.jpg')}}" alt=""> </a> </div>
+        <div class="col-md-3 col-sm-3 post format-video"> <a href="http://youtu.be/NEFfnbQlGo8" class="media-box" data-rel="prettyPhoto[Gallery]"> <img src="{{asset('assets\uploads\newhere.jpg')}}" alt=""> </a> </div>
+        <div class="col-md-3 col-sm-3 post format-image"> <a href="{{asset('assets\uploads\newhere.jpg')}}" class="media-box" data-rel="prettyPhoto[Gallery]"> <img src="{{asset('assets\uploads\sermons.jpg')}}" alt=""> </a> </div>
       </div>
     </div>
   </div>
