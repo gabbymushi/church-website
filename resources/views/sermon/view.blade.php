@@ -1,3 +1,5 @@
+  @extends('layouts.main')
+  @section('content')
   <!-- Start Content -->
   <div class="main" role="main">
     <div id="content" class="content full">
@@ -6,7 +8,7 @@
           <div class="col-md-9">
             <header class="single-post-header clearfix">
               <div class="pull-right sermon-actions"> <a href="https://vimeo.com/19564018" class="play-video-link" data-placement="top" data-toggle="tooltip" data-original-title="Video" ><i class="fa fa-video-camera"></i></a> <a href="audio/Miaow-02-Hidden.mp3" class="play-audio-link" data-placement="top" data-toggle="tooltip" data-original-title="Audio" ><i class="fa fa-headphones"></i></a> <a href="#" data-placement="top" data-toggle="tooltip" data-original-title="Download Audio" ><i class="fa fa-download"></i></a> <a href="#" data-placement="top" data-toggle="tooltip" data-original-title="Download PDF" ><i class="fa fa-book"></i></a> </div>
-              <h2 class="post-title">Sermon Title</h2>
+              <h2 class="post-title">{{$sermon->title}}</h2>
             </header>
             <article class="post-content">
               <div class="video-container">
@@ -15,10 +17,10 @@
               <div class="audio-container">
                 <audio class="audio-player" src="audio/Miaow-02-Hidden.mp3" type="audio/mp3" controls></audio>
               </div>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis fermentum sem, ac viverra ante luctus vel. Donec vel mauris quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis fermentum sem, ac viverra ante luctus vel. Donec vel mauris quam.</p>
+              <p>{{$sermon->content}}.</p>
               <div class="post-meta"> <i class="fa fa-tags"></i> <a href="#">Faith</a>, <a href="#">Heart</a>, <a href="#">Love</a>, <a href="#">Praise</a>, <a href="#">Sin</a>, <a href="#">Soul</a> </div>
             </article>
-            <section class="post-comments">
+            <!-- <section class="post-comments">
               <h3><i class="fa fa-comment"></i> Comments (4)</h3>
               <ol class="comments">
                 <li>
@@ -69,8 +71,8 @@
                   </div>
                 </li>
               </ol>
-            </section>
-            <section class="post-comment-form">
+            </section> -->
+            <!-- <section class="post-comment-form">
               <h3><i class="fa fa-share"></i> Post a comment</h3>
               <form>
                 <div class="row">
@@ -101,7 +103,7 @@
                   </div>
                 </div>
               </form>
-            </section>
+            </section> -->
           </div>
           <!-- Start Sidebar -->
           <div class="col-md-3 sidebar">
@@ -138,3 +140,4 @@
       </div>
     </div>
   </div>
+  @endsection
