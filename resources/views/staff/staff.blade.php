@@ -35,7 +35,7 @@
           <div class="col-md-4 col-sm-4">
             <div class="grid-item staff-item">
               <div class="grid-item-inner">
-                <div class="media-box"> <img src="{{$staff->photo}}" alt=""> </div>
+                <div class="media-box" style="text-align: center;"> <img style="max-width: 150px; max-height: 150px" src="{{asset($staff->photo)}}" alt=""> </div>
                 <div class="grid-content">
                   <h3>{{$staff->fname.' '.$staff->lname}}</h3>
                   <nav class="social-icons"> <a href="#"><i class="fa fa-facebook"></i></a> <a href="#"><i class="fa fa-twitter"></i></a> <a href="#"><i class="fa fa-google-plus"></i></a> <a href="#"><i class="fa fa-pinterest"></i></a> </nav>

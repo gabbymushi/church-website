@@ -18,6 +18,7 @@ class CreateEventsTable extends Migration
             $table->string('title');
             $table->text('content');
             $table->string('featured_img')->nullable();
+            $table->string('attachment')->nullable();
             $table->string('slug')->unique()->nullable();
             $table->bigInteger('user_id')->unsigned()->index()->nullable();
             $table->bigInteger('event_category_id')->unsigned()->index()->nullable();

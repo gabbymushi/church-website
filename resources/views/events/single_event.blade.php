@@ -65,7 +65,9 @@
                   </div>
                 </div>
                 <p>{{$event->content}}</p>
-                <audio class="audio-player" id="player2" src="audio/Miaow-02-Hidden.mp3" type="audio/mp3" controls></audio>
+                @if(isset($event->attachment))
+                 <p>Download the event attachment here : <a href="{{asset($event->attachment)}}" target="blank">File</a></p>
+                @endif
                 
               </div>
             </article>

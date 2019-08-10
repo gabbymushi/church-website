@@ -24,10 +24,10 @@
                         	<a target="_blank" href="{{route('login')}}">Login</a>
                      	</li>
                     	<li>
-                        	<a href="events-calendar.html">Calendar</a>
+                        	<a href="{{route('events.calender')}}">Calendar</a>
                      	</li>
                     	<li>
-                        	<a href="donate.html">Donate Now</a>
+                        	<a href="#">Donate Now</a>
                      	</li>
                  	</ul>
               	</nav>
@@ -37,7 +37,7 @@
   </div>
   <!-- End Top Row -->
   <!-- Start Site Header -->
-  <header class="site-header">
+  <header class="site-header" >
     <div class="topbar">
       <div class="container">
         <div class="row">
@@ -71,29 +71,6 @@
             <nav class="navigation">
               <ul class="sf-menu">
                 <li><a href="{{url('/')}}">Home</a>
-                  <!-- <ul class="dropdown">
-                    <li><a href="index.html">Sliders</a>
-                    		<ul class="dropdown">
-                    			<li><a href="index.html">Flex Slider</a></li>
-                    			<li><a href="index-nivoslider.html">Nivo Slider</a></li>
-                    			<li><a href="index-rev-slider.html">Revolution Slider <span class="label label-danger">New</span></a></li>
-                         </ul>
-                    </li>
-                    <li><a href="index.html">Headers</a>
-                    		<ul class="dropdown">
-                    			<li><a href="index.html">Style 1</a></li>
-                    			<li><a href="header-style2.html">Style 2</a></li>
-                    			<li><a href="header-style3.html">Style 3</a></li>
-                    			<li><a href="header-style4.html">Style 4 <span class="label label-danger">New</span></a></li>
-                         </ul>
-                    </li>
-                    <li><a href="index.html">Home version 1</a></li>
-                    <li><a href="index1.html">Home version 2</a></li>
-                    <li><a href="index2.html">Home version 3</a></li>
-                    <li><a href="index3.html">Home version 4</a></li>
-                    <li><a href="index4.html">Home version 5</a></li>
-                    <li><a href="index5.html">Home version 6 <span class="label label-danger">New</span></a></li>
-                  </ul> -->
                 </li>
                 <li><a href="{{url('/about-us')}}">About Us</a>
                   <ul class="dropdown">
@@ -176,13 +153,6 @@
                   </ul>
                 </li>
                 <li><a href="{{url('/blog')}}">Blog</a>
-                  <!-- <ul class="dropdown">
-                    <li><a href="blog-masonry.html">Masonry Blog</a></li>
-                    <li><a href="blog-full-width.html">Full Width Blog</a></li>
-                    <li><a href="blog-timeline.html">Timeline Blog</a></li>
-                    <li><a href="blog-medium-thumbnails.html">Medium Thumbnails</a></li>
-                    <li><a href="blog-post.html">Single Blog Post</a></li>
-                  </ul> -->
                 </li>
                 <li><a href="causes.html">Causes</a>
                   <ul class="dropdown">
