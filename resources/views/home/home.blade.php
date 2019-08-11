@@ -43,7 +43,7 @@
         <div class="row"> 
           <!-- Start Featured Blocks -->
           <div class="featured-blocks clearfix">
-            <div class="col-md-4 col-sm-4 featured-block"> <a href="our-staff.html" class="img-thumbnail">
+            <div class="col-md-4 col-sm-4 featured-block"> <a href="{{route('all.staff')}}" class="img-thumbnail">
 
              <img src="{{asset('/'.$askofu->photo)}}" alt="staff"> <strong style="margin-bottom:0px;">
 

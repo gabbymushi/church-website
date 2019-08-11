@@ -47,7 +47,7 @@
                              
                                             <div class="position-relative row form-check">
                                                 <div class="col-sm-10 text-center">
-                                                    <button class="btn btn-primary" type="submit">Save Event</button>
+                                                    <button class="btn btn-primary" type="submit">Update Event</button>
                                                 </div>
                                             </div>
                                         </form>
