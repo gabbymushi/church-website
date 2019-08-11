@@ -96,7 +96,7 @@
                     <span class="month">{{$monthName}}, {{$date[0]}}</span>
                 </div>
                 <h4 class="featured-event-title"><a href="#">{{$latest_event->title}}</a></h4>
-                <p>{{$latest_event->content}}</p>
+                <p>{{str_limit($latest_event->content,100)}}</p>
               </div>
             </div>
             <div class="widget sidebar-widget">
