@@ -10,4 +10,7 @@ class News extends Model
     public function tags(){
         return $this->belongsToMany('App\Tag','news_tags');
     }
+    public function files(){
+        return $this->hasOne('App\File','news_id');
+    }
 }
