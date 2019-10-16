@@ -88,3 +88,14 @@
   </footer>
   <!-- End Footer --> 
   <a id="back-to-top"><i class="fa fa-angle-double-up"></i></a> 
+    <script type="text/javascript">
+        jQuery(document).ready(function() {
+             jQuery('.tp-banner').revolution(
+            {
+              delay:9000,
+              startwidth:1170,
+              startheight:500,
+              hideThumbs:10
+            });
+        });
+      </script>

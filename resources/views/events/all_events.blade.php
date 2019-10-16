@@ -96,7 +96,7 @@
                     <span class="month">{{$monthName}}, {{$date[0]}}</span>
                 </div>
                 <h4 class="featured-event-title"><a href="#">{{$latest_event->title}}</a></h4>
-                <p>{{$latest_event->content}}</p>
+                <p>{{str_limit($latest_event->content,100)}}</p>
               </div>
             </div>
             <div class="widget sidebar-widget">
@@ -117,15 +117,15 @@
                 <h3>Recent Posts</h3>
               </div>
               <ul>
-                <li class="clearfix"> <a href="#" class="media-box post-image"> <img src="http://placehold.it/800x600&amp;text=IMAGE+PLACEHOLDER" alt="" class="img-thumbnail"> </a>
-                  <div class="widget-blog-content"><a href="#">Voluptatum deleniti atque corrupti voluptatum deleniti atque corrupti</a> <span class="meta-data"><i class="fa fa-calendar"></i> on 17th Dec, 2013</span> </div>
+                @if(isset($posts))
+                @foreach($posts as $post)
+                <li class="clearfix"> <a href="#" class="media-box post-image"> <img src="{{asset('$post->featured_img')}}" alt="" class="img-thumbnail"> </a>
+                  <div class="widget-blog-content"><a href="#">{{$event->title}}</a> <span class="meta-data">
+
+                    <i class="fa fa-calendar"></i>{{date('jS F,Y',strtotime($post->created_at))}}</span> </div>
                 </li>
-                <li class="clearfix"> <a href="#" class="media-box post-image"> <img src="http://placehold.it/800x600&amp;text=IMAGE+PLACEHOLDER" alt="" class="img-thumbnail"> </a>
-                  <div class="widget-blog-content"><a href="#">Voluptatum deleniti atque corrupti</a> <span class="meta-data"><i class="fa fa-calendar"></i> on 17th Dec, 2013</span> </div>
-                </li>
-                <li class="clearfix"> <a href="#" class="media-box post-image"> <img src="http://placehold.it/800x600&amp;text=IMAGE+PLACEHOLDER" alt="" class="img-thumbnail"> </a>
-                  <div class="widget-blog-content"><a href="#">Voluptatum deleniti atque corrupti voluptatum deleniti atque corrupti</a> <span class="meta-data"><i class="fa fa-calendar"></i> on 17th Dec, 2013</span> </div>
-                </li>
+                @endforeach
+                @endif
               </ul>
             </div>
             <!-- Recent Comments Widget -->

@@ -53,8 +53,8 @@ class StaffController extends Controller
         if ($request->hasFile('photo')) {
          $photo = $request->photo;
          $photo_new = time().$photo->getClientOriginalName();
-         $photo->move('assets/uploads',$photo_new);
-         $photo_new_name = 'assets/uploads/'.$photo_new;   
+         $photo->move('assets/uploads/staff',$photo_new);
+         $photo_new_name = 'assets/uploads/staff/'.$photo_new;   
         }
 
         $staff = new Staff;
@@ -69,7 +69,7 @@ class StaffController extends Controller
         $staff->instagram_link = $request->instagram;
         $staff->other_link = $request->other;
         $staff->description = $request->description;
-        $staff->photo = $request->photo;
+        $staff->photo = $photo_new_name;
         $staff->save();
         Session::flash('success','Staff created successfully');
         return redirect()->route('manage.staff');
@@ -123,8 +123,8 @@ class StaffController extends Controller
         if ($request->hasFile('photo')) {
          $photo = $request->photo;
          $photo_new = time().$photo->getClientOriginalName();
-         $photo->move('assets/uploads',$photo_new);
-         $photo_new_name = 'assets/uploads/'.$photo_new;   
+         $photo->move('assets/uploads/staff',$photo_new);
+         $photo_new_name = 'assets/uploads/staff/'.$photo_new;   
         }
 
         $staff = Staff::find($id);
@@ -139,7 +139,7 @@ class StaffController extends Controller
         $staff->instagram_link = $request->instagram;
         $staff->other_link = $request->other;
         $staff->description = $request->description;
-        $staff->photo = $request->photo;
+        $staff->photo = $photo_new_name;
         $staff->update();
         Session::flash('success','Staff updated successfully');
         return redirect()->route('manage.staff');

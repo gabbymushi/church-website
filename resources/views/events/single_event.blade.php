@@ -39,7 +39,7 @@
               <h2 class="post-title">{{$event->title}}</h2>
             </header>
             <article class="post-content">
-              <div class="event-description"> <img src="http://placehold.it/800x450&amp;text=IMAGE+PLACEHOLDER" class="img-responsive">
+              <div class="event-description"> <img src="{{asset($event->featured_img)}}" class="img-responsive">
                 <div class="spacer-20"></div>
                 <div class="row">
                   <div class="col-md-8">
@@ -65,7 +65,9 @@
                   </div>
                 </div>
                 <p>{{$event->content}}</p>
-                <audio class="audio-player" id="player2" src="audio/Miaow-02-Hidden.mp3" type="audio/mp3" controls></audio>
+                @if(isset($event->attachment))
+                 <p>Download the event attachment here : <a href="{{asset($event->attachment)}}" target="blank">File</a></p>
+                @endif
                 
               </div>
             </article>
@@ -77,24 +79,23 @@
                 <h3>Upcoming Events</h3>
               </div>
               <ul>
+                @foreach($latest_events as $comming_event)
+                <?php
+                   $date = explode('-', $comming_event->start_date);
+                   //Get month name
+                  $monthNum  =  $date[1];
+                  $dateObj   = DateTime::createFromFormat('!m', $monthNum);
+                  $monthName = $dateObj->format('F'); // March
+                  $monthName = mb_strimwidth($monthName, 0, 3);
+                   ?>
                 <li class="item event-item clearfix">
-                  <div class="event-date"> <span class="date">06</span> <span class="month">Aug</span> </div>
+                  <div class="event-date"> <span class="date">{{$date[2]}}</span> <span class="month">{{$monthName}}</span> </div>
                   <div class="event-detail">
-                    <h4><a href="#">Monday Prayer</a></h4>
+                    <h4><a href="#">{{$comming_event->title}}</a></h4>
                     <span class="event-dayntime meta-data">Monday | 07:00 AM</span> </div>
                 </li>
-                <li class="item event-item clearfix">
-                  <div class="event-date"> <span class="date">28</span> <span class="month">Aug</span> </div>
-                  <div class="event-detail">
-                    <h4><a href="#">Staff members meet</a></h4>
-                    <span class="event-dayntime meta-data">Monday | 01:00 PM</span> </div>
-                </li>
-                <li class="item event-item clearfix">
-                  <div class="event-date"> <span class="date">25</span> <span class="month">Sep</span> </div>
-                  <div class="event-detail">
-                    <h4><a href="#">Evening Prayer</a></h4>
-                    <span class="event-dayntime meta-data">Friday | 06:00 PM</span> </div>
-                </li>
+                @endforeach
+             
               </ul>
             </div>
             <div class="widget sidebar-widget">
@@ -102,11 +103,11 @@
                 <h3>Events Categories</h3>
               </div>
               <ul>
-                <li><a href="#">Church Home</a> (9)</li>
-                <li><a href="#">About Us</a> (24)</li>
-                <li><a href="#">All Events</a> (13)</li>
-                <li><a href="#">Sermons Archive</a> (23)</li>
-                <li><a href="#">Our Ministries</a> (65)</li>
+                @foreach($categories as $category)
+                <li>
+                  <a href="#">{{$category->name}}</a> ({{App\Event::where("event_category_id",$category->id)->get()->count()}})
+                </li>
+                @endforeach
               </ul>
             </div>
             <!-- Recent Posts Widget -->
@@ -115,15 +116,13 @@
                 <h3>Recent Posts</h3>
               </div>
               <ul>
+                @foreach($news as $new)
                 <li class="clearfix"> <a href="#" class="media-box post-image"> <img src="http://placehold.it/800x600&amp;text=IMAGE+PLACEHOLDER" alt="" class="img-thumbnail"> </a>
-                  <div class="widget-blog-content"><a href="#">Voluptatum deleniti atque corrupti voluptatum deleniti atque corrupti</a> <span class="meta-data"><i class="fa fa-calendar"></i> on 17th Dec, 2013</span> </div>
+                  <div class="widget-blog-content"><a href="#">{{$new->title}}</a> <span class="meta-data"><i class="fa fa-calendar"></i> on 17th Dec, 2013</span> </div>
                 </li>
-                <li class="clearfix"> <a href="#" class="media-box post-image"> <img src="http://placehold.it/800x600&amp;text=IMAGE+PLACEHOLDER" alt="" class="img-thumbnail"> </a>
-                  <div class="widget-blog-content"><a href="#">Voluptatum deleniti atque corrupti</a> <span class="meta-data"><i class="fa fa-calendar"></i> on 17th Dec, 2013</span> </div>
-                </li>
-                <li class="clearfix"> <a href="#" class="media-box post-image"> <img src="http://placehold.it/800x600&amp;text=IMAGE+PLACEHOLDER" alt="" class="img-thumbnail"> </a>
-                  <div class="widget-blog-content"><a href="#">Voluptatum deleniti atque corrupti voluptatum deleniti atque corrupti</a> <span class="meta-data"><i class="fa fa-calendar"></i> on 17th Dec, 2013</span> </div>
-                </li>
+                 @endforeach
+          
+          
               </ul>
             </div>
           </div>

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\EventCategory;
 use App\Event;
+use App\News;
 use Session;
 use DB;
 
@@ -44,24 +45,32 @@ class EventsController extends Controller
          'title'=>'required',
         ]);
 
+        $event = new Event;
         if($request->hasFile('featured_image')){
             $image = $request->featured_image;
             $new_image = time().$image->getClientOriginalName();
             $image->move('assets/uploads/events',$new_image);
             $new_image = 'assets/uploads/events/'.$new_image;
+            $event->featured_img = $new_image;
+
+        }
+        if($request->hasFile('attachment')){
+            $attachment = $request->attachment;
+            $new_attachment = time().$attachment->getClientOriginalName();
+            $attachment->move('assets/uploads/events',$new_attachment);
+            $new_attachment = 'assets/uploads/events/'.$new_attachment;
+            $event->attachment=$new_attachment;
 
         }
         
-        $event = new Event;
+       
 
         $event->title = $request->title;
         $event->start_date = $request->start_date;
         $event->slug = str_slug($request->title);
         $event->end_date = $request->end_date;
         $event->event_category_id = $request->category_id;
-        $event->featured_img = $new_image;
         $event->content = $request->content;
-
         $event->save();
         Session::flash('success','Event created successfull');
         return redirect()->route('events');
@@ -76,11 +85,11 @@ class EventsController extends Controller
      */
     public function show($slug)
     {
-       
-    $events['event'] = Event::where('slug',$slug)->first();
-    $events['categories'] = EventCategory::all();
-    $events['latest_events'] =Event::orderBy('created_at','desc')->take(3)->get();
-        return view('events.single_event',$events);
+    $data['news'] = News::orderBy('created_at','desc')->take(3)->get();  
+    $data['event'] = Event::where('slug',$slug)->first();
+    $data['categories'] = EventCategory::all();
+    $data['latest_events'] =Event::orderBy('created_at','desc')->take(3)->get();
+        return view('events.single_event',$data);
     }
 
     /**
@@ -110,27 +119,36 @@ class EventsController extends Controller
         $this->validate($request,[
          'title'=>'required',
         ]);
+         
+         $event = Event::find($id);
 
-        if($request->hasFile('featured_image')){
+         if($request->hasFile('featured_image')){
             $image = $request->featured_image;
             $new_image = time().$image->getClientOriginalName();
             $image->move('assets/uploads/events',$new_image);
             $new_image = 'assets/uploads/events/'.$new_image;
+            $event->featured_img = $new_image;
+
+        }
+        if($request->hasFile('attachment')){
+            $attachment = $request->attachment;
+            $new_attachment = time().$attachment->getClientOriginalName();
+            $attachment->move('assets/uploads/events',$new_attachment);
+            $new_attachment = 'assets/uploads/events/'.$new_attachment;
+            $event->attachment=$new_attachment;
 
         }
 
-        $event = Event::where('id',$id)
-                        ->update([
-                         'title'=>$request->title,
-                         'start_date'=>$request->start_date,
-                         'end_date'=>$request->end_date,
-                         'content'=>$request->content,
-                         'category_id'=>$request->category_id,
-                         'slug'=>str_slug($request->title),
-                         'featured_img'=>$new_image
-                        ]);
+        $event->title = $request->title;
+        $event->start_date = $request->start_date;
+        $event->slug = str_slug($request->title);
+        $event->end_date = $request->end_date;
+        $event->event_category_id = $request->category_id;
+        $event->content = $request->content;
+        $event->update();
+       
 
-        Session::flash('success','Event update successfully');
+        Session::flash('success','Event updated successfully');
         return redirect()->route('events'); 
     }
 
@@ -154,7 +172,7 @@ class EventsController extends Controller
     //Retun front view All Events view
 
     public function all_events(){
-
+         $events['posts'] =News::orderBy('created_at','desc')->take(3)->get();
          $events['events'] = Event::all();
          $events['categories'] = EventCategory::all();
          $events['latest_event'] = DB::table('events')->latest()->first();

@@ -11,8 +11,19 @@
  @endif
 <div class="main-card mb-3 card">
                 <div class="card-body"><h5 class="card-title">New Staff</h5>
-                                       <form method="post" action="{{route('store.staff')}}" enctype="multipart/form-data">
-                                        {{csrf_field()}}
+                <form method="post" action="{{route('store.staff')}}" enctype="multipart/form-data">
+                    {{csrf_field()}}
+                     <div class="position-relative row form-group"><label for="exampleEmail" class="col-sm-2 col-form-label">Title<span class="text-danger">*</span></label>
+                        <div class="col-sm-10">
+                        <select class="form-control" name="designation" id="">
+                         <option value="askofu">Bishop</option>
+                         <option value="katibu-mkuu">Mr.</option>
+                         <option value="mchungaji">Pastor</option>
+                          <option value="Mwinjilisti">Miss</option>
+                          <option value="Mwinjilisti">Mrs</option>
+                          </select>
+                            </div>
+                            </div>
                                             <div class="position-relative row form-group"><label for="exampleEmail" class="col-sm-2 col-form-label">First Name<span class="text-danger">*</span></label>
                                                 <div class="col-sm-10"><input name="fname" id="title" value="{{old('fname')}}" placeholder="First Name" type="text" class="form-control"></div>
                                             </div>
@@ -24,10 +35,17 @@
                                                 <label for="lastname" class="col-sm-2 col-form-label">Last Name<span class="text-danger">*</span></label>
                                                 <div class="col-sm-10"><input name="lname" id="lname" value="{{old('lname')}}" placeholder="Last Name" type="text" class="form-control"></div>
                                             </div>
-                                            <div class="position-relative row form-group">
-                                                <label for="designation" class="col-sm-2 col-form-label">Designation<span class="text-danger">*</span></label>
-                                                <div class="col-sm-10"><input name="designation" id="designation" value="{{old('designation')}}"placeholder="Designation" type="text" class="form-control"></div>
-                                            </div>
+             <div class="position-relative row form-group">
+                <label for="designation" class="col-sm-2 col-form-label">Designation<span class="text-danger">*</span></label>
+                 <div class="col-sm-10">
+                    <select class="form-control" name="designation" id="">
+                        <option value="askofu">Askofu</option>
+                        <option value="katibu-mkuu">Katibu Mkuu</option>
+                        <option value="mchungaji">Mchungaji</option>
+                        <option value="Mwinjilisti">Mwinjilisti</option>
+                    </select>
+                </div>
+                    </div>
                                            
                                            <div class="position-relative row form-group">
                                                 <label for="designation" class="col-sm-2 col-form-label">Phone 1<span class="text-danger">*</span></label>
