@@ -41,7 +41,7 @@
             </header>
             <article class="post-content"> <span class="post-meta meta-data"><span><i class="fa fa-calendar"></i> Posted on {{date('jS F,Y',strtotime($post->created_at))}}</span> <span><i class="fa fa-archive"></i> Categories: <a href="#">Uncategorized</a></span></span>
               <div class="featured-image"> <img src="{{asset('assets/images/blog/'.$post->files->name)}}" alt=""> </div>
-              {{$post->content}}
+              {!! $post->content !!}
               <div class="post-meta"> <i class="fa fa-tags"></i> <a href="#">Faith</a>, <a href="#">Heart</a>, <a href="#">Love</a>, <a href="#">Praise</a>, <a href="#">Sin</a>, <a href="#">Soul</a> </div>
             </article>
           </div>
