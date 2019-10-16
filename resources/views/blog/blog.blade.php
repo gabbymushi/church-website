@@ -34,11 +34,11 @@
           @foreach($news as $news)
             <article class="post">
               <div class="row">
-                <div class="col-md-4 col-sm-4"> <a href="{{url('/blog/'.$news->id)}}"><img src="http://placehold.it/600x400&amp;text=IMAGE+PLACEHOLDER" alt="" class="img-thumbnail"></a> </div>
+                <div class="col-md-4 col-sm-4"> <a href="{{url('/blog/'.$news->id)}}"><img src="{{asset('assets/images/blog/'.$news->files->name)}}" alt="" class="img-thumbnail"></a> </div>
                 <div class="col-md-8 col-sm-8">
                   <h3><a href="single-event.html">{{$news->title}}</a></h3>
                   <span class="post-meta meta-data"> <span><i class="fa fa-calendar"></i> {{date('jS F,Y',strtotime($news->created_at))}}</span><span><i class="fa fa-archive"></i> <a href="#">Uncategorized</a></span> <span><a href="#"><i class="fa fa-comment"></i> 12</a></span></span>
-                  <p>{!!$news->content!!}}</p>
+                  <p>{!!$news->content!!}</p>
                   <p><a href="{{url('/blog/'.$news->id)}}" class="btn btn-primary">Continue reading <i class="fa fa-long-arrow-right"></i></a></p>
                 </div>
               </div>
