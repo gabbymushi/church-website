@@ -66,6 +66,9 @@ class StaffController extends Controller
         $staff->phone2 = $request->phone2;
         $staff->description = $request->description;
         $staff->photo = $photo_new_name;
+        $staff->jimbo_id = $request->jimbo_id;
+        $staff->usharika_id = $request->usharika_id;
+        $staff->mtaa_id = $request->mtaa_id;
         $staff->save();
         Session::flash('success','Staff created successfully');
         return redirect()->route('manage.staff');

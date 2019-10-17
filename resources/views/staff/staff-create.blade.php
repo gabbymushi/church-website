@@ -19,8 +19,9 @@
                          <option value="askofu">Bishop</option>
                          <option value="katibu-mkuu">Mr.</option>
                          <option value="mchungaji">Pastor</option>
-                          <option value="Mwinjilisti">Miss</option>
-                          <option value="Mwinjilisti">Mrs</option>
+                          <option value="miss">Miss</option>
+                          <option value="mrs">Mrs</option>
+                          <option value="mwinjilisti">Mwinjilisti</option>
                           </select>
                             </div>
                             </div>
@@ -62,6 +63,39 @@
                                                 <label for="instagram" class="col-sm-2 col-form-label">Photo</label>
                                                 <div class="col-sm-10"><input name="photo" id="photo" value="{{old('photo')}}"  type="file" class="form-control"></div>
                                             </div>
+                                             <div class="position-relative row form-group">
+                <label for="designation" class="col-sm-2 col-form-label">Jimbo<span class="text-danger">*</span></label>
+                 <div class="col-sm-10">
+                    <select class="form-control" name="jimbo_id" id="">
+                      @foreach(App\Jimbo::all() as $jimbo)
+                        <option value="{{$jimbo->id}}">{{$jimbo->name}}</option>
+                        @endforeach
+                    </select>
+                </div>
+                    </div>
+
+                     <div class="position-relative row form-group">
+                <label for="designation" class="col-sm-2 col-form-label">Usharika<span class="text-danger">*</span></label>
+                 <div class="col-sm-10">
+                    <select class="form-control" name="usharika_id" id="">
+                        @foreach(App\Sharika::all() as $usharika)
+                        <option value="{{$usharika->id}}">{{$usharika->name}}</option>
+                        @endforeach
+                    </select>
+                    </select>
+                </div>
+                    </div>
+                     <div class="position-relative row form-group">
+                <label for="designation" class="col-sm-2 col-form-label">Mtaa<span class="text-danger">*</span></label>
+                 <div class="col-sm-10">
+                    <select class="form-control" name="mtaa_id" id="">
+                        @foreach(App\Mtaa::all() as $mtaa)
+                        <option value="{{$mtaa->id}}">{{$mtaa->name}}</option>
+                        @endforeach
+                    </select>
+                    </select>
+                </div>
+                    </div>
                              
                                             <div class="position-relative row form-check">
                                                 <div class="col-sm-10 text-center">

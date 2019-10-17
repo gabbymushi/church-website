@@ -2395,7 +2395,7 @@ ol.breadcrumb > .active{
 .accordion-heading:hover .accordion-toggle,
 .accordion-heading:hover .accordion-toggle.inactive {
 	background:#666;
-	color:#fff;
+	color:#000;
 }
 .accordion-heading .accordion-toggle.active {
 	color:#fff;
@@ -2419,7 +2419,7 @@ ol.breadcrumb > .active{
 	transition: all 0.1s linear 0s;
 }
 .accordion-heading:hover .accordion-toggle i {
-	color: #fff;
+	color: #000;
 }
 .accordion-heading .accordion-toggle.active i,
 .accordion-heading:hover .accordion-toggle.inactive i {
@@ -2427,7 +2427,7 @@ ol.breadcrumb > .active{
 }
 .accordion-heading.accordionize .accordion-toggle.active i,
 .accordion-heading.togglize .accordion-toggle.active i {
-	color: #fff;
+	color: #000;
 	-webkit-transform: rotate(180deg);
 	-moz-transform: rotate(180deg);
 	-ms-transform: rotate(180deg);

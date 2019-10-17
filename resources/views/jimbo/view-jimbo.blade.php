@@ -14,7 +14,6 @@
     </div>
   </div>
   <!-- End Nav Backed Header --> 
-
   <!-- Start Content -->
   <div class="main" role="main">
     <div id="content" class="content full">
@@ -22,40 +21,92 @@
         <div class="row">
           <div class="col-md-8">
             <header class="single-post-header clearfix">
-              <h2 class="post-title">{{$jimbo->name}}</h2>
-            </header>
-            <div class="post-content">
-              <img src="http://placehold.it/1280x635&amp;text=IMAGE+PLACEHOLDER" alt="Women Ministry" class="img-thumbnail">
+         <h2 class="post-title">{{$jimbo->name}}</h2>
+        </header>
+        <div class="post-content">
+        <img src="http://placehold.it/1280x635&amp;text=IMAGE+PLACEHOLDER" alt="Women Ministry" class="img-thumbnail">
                <div class="spacer-30"></div>
-              <p>{{$jimbo->description}}</p>
-              <hr>
-              <h3>Get Involved</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, sem quis lacinia faucibus, orci ipsum gravida tortor, vel interdum mi sapien ut justo. Nulla varius consequat magna, id molestie ipsum volutpat quis. Suspendisse consectetur fringilla luctus. Fusce id mi diam, non ornare orci. Pellentesque ipsum erat, facilisis ut venenatis eu, sodales vel dolor.</p>
-              <a href="contact.html" class="btn btn-primary">Find a Lifegroup</a>
-              <hr>
-                <h3>Ministry Team</h3>
-                <ul class="checks">
-                  <li><a href="#">Mildred George</a></li>
-                  <li>Ashleigh Cox</li>
-                  <li>Giorgiana Mărginean</li>
-                  <li>Christine Mendez</li>
-                </ul>
+        <p>{{$jimbo->description}}</p>
+        <hr>
+        <h3>Viongozi wa jimbo</h3>
+        <div class="staff-dme text-center" style="color: #000;">
+          <div class="col-md-4 col-sm-4">
+            <div class="grid-item staff-item">
+              <div class="grid-item-inner">
+                <div class="media-box"> <img src="http://placehold.it/500x300&amp;text=IMAGE+PLACEHOLDER" alt=""> </div>
+                <div class="grid-content">
+                  <p style="font-weight: bold;">Melina Mironescu</p>
+                  <p>Lorem ipsum dolor sit amet</p>
+                </div>
+              </div>
             </div>
-            <table class="table table-striped">
-              <thead>
-                <th>SN</th>
-                <th>Name</th>
-                <th>Age</th>
-              </thead>
-              <tbody>
-               <tr>
-                 <a href="#">  <td>1</td>
-                  <td>Daniel Elias</td>
-                  <td>25</td>
-                  </a>
-                </tr>
-              </tbody>
-            </table>
+          </div>
+          <div class="col-md-4 col-sm-4">
+            <div class="grid-item staff-item">
+              <div class="grid-item-inner">
+                <div class="media-box"> <img src="http://placehold.it/500x300&amp;text=IMAGE+PLACEHOLDER" alt=""> </div>
+                <div class="grid-content">
+                   <p style="font-weight: bold;">Melina Mironescu</p>
+                  <p>Lorem ipsum dolor sit amet</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-4">
+            <div class="grid-item staff-item">
+              <div class="grid-item-inner">
+                <div class="media-box"> <img src="http://placehold.it/500x300&amp;text=IMAGE+PLACEHOLDER" alt=""> </div>
+                <div class="grid-content">
+                   <p style="font-weight: bold;">Melina Mironescu</p>
+                  <p>Lorem ipsum dolor sit amet</p>
+                </div>
+              </div>
+            </div>
+          </div>
+           
+          </div>
+         @if(isset($jimbo->sharika))
+           <div class="spacer-30"></div>
+          <hr>
+
+          <h3>SHARIKA {{$jimbo->name}}</h3>
+          <div class="sharika-dme">
+           
+               @foreach($jimbo->sharika as $sharika)
+              <!-- Start Accordion -->
+            <div class="accordion" id="accordionArea">
+              <div class="accordion-group panel">
+                <div class="accordion-heading accordionize"> <a class="accordion-toggle active" data-toggle="collapse" data-parent="#accordionArea" href="#Area{{$sharika->id}}">Usharika wa {{$sharika->name}}<i class="fa fa-angle-down"></i> </a> </div>
+                <div id="Area{{$sharika->id}}" class="accordion-body collapse">
+                  <div class="accordion-inner">
+                  <table class="table table-striped" style="color: #000;">
+                    <thead style="background-color: #CCC; font-weight: bold;">
+                      <th>Mtaa</th>
+                      <th>Mwinjilist</th>
+                      <th>Namba ya simu</th>
+                    </thead>
+                    <tbody>
+                      @foreach(App\Mtaa::where('sharika_id',$sharika->id)->get() as $mtaa)
+                      @foreach(App\Staff::where('mtaa_id',$mtaa->id)->get() as $staff)
+                      <tr>
+                        <td>{{$mtaa->name}}</td>
+                        <td>{{$staff->fname.' '.$staff->lname}}</td>
+                        <td>{{$staff->phone1}}</td>
+                      </tr>
+                      @endforeach
+                      @endforeach
+                    </tbody>
+                    
+                  </table>
+                   </div>
+                </div>
+              </div>
+            </div>
+            <!-- End Accordion -->
+              @endforeach
+             </div>
+             @endif
+            </div>
           </div>
           <!-- Start Sidebar -->
           <div class="col-md-4 sidebar">
@@ -75,7 +126,7 @@
             </div>
             <div class="widget-upcoming-events widget">
               <div class="sidebar-widget-title">
-                <h3>Jimbo Events</h3>
+                <h3>Events</h3>
               </div>
               <ul>
                 <li class="item event-item clearfix">

@@ -24,6 +24,8 @@ class CreateStaffTable extends Migration
             $table->string('phone2')->nullable();
             $table->string('description')->nullable();
             $table->string('photo')->nullable();
+            $table->bigInteger('jimbo_id')->unsigned()->index()->nullable();
+            $table->bigInteger('usharika_id')->unsigned()->index()->nullable();
             $table->bigInteger('mtaa_id')->unsigned()->index()->nullable();
             $table->timestamps();
         });

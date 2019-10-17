@@ -12,4 +12,9 @@ class Staff extends Model
                             'phone2',
                              'description',
                              'photo']; 
+
+     public function mtaa(){
+     	return $this->belongsTo('App\Mtaa');
+     }
+
 }
