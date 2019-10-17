@@ -55,22 +55,6 @@
                                                 <label for="designation" class="col-sm-2 col-form-label">Phone 2</label>
                                                 <div class="col-sm-10"><input name="phone2" id="phone2" value="{{old('phone2')}}" placeholder="Phone 2" type="text" class="form-control"></div>
                                             </div>
-                                            <div class="position-relative row form-group">
-                                                <label for="facebook" class="col-sm-2 col-form-label">Facebook Link</label>
-                                                <div class="col-sm-10"><input name="facebook" id="facebook" value="{{old('facebook')}}" placeholder="Facebook Link" type="text" class="form-control"></div>
-                                            </div>
-                                              <div class="position-relative row form-group">
-                                                <label for="tweeter" class="col-sm-2 col-form-label">Tweeter Link</label>
-                                                <div class="col-sm-10"><input name="tweeter" id="tweeter" value="{{old('tweeter')}}" placeholder="Tweeter Link" type="text" class="form-control"></div>
-                                            </div>
-                                            <div class="position-relative row form-group">
-                                                <label for="instagram" class="col-sm-2 col-form-label">Instagram Link</label>
-                                                <div class="col-sm-10"><input name="instagram" id="instagram" value="{{old('instagram')}}" placeholder="Instagram Link" type="text" class="form-control"></div>
-                                            </div>
-                                                 <div class="position-relative row form-group">
-                                                <label for="instagram" class="col-sm-2 col-form-label">Other Link</label>
-                                                <div class="col-sm-10"><input name="other" id="other" value="{{old('other')}}" placeholder="Other Link" type="text" class="form-control"></div>
-                                            </div>
                                             <div class="position-relative row form-group"><label for="description" class="col-sm-2 col-form-label">Description</label>
                                                 <div class="col-sm-10"><textarea name="description" id="description" value="{{old('description')}}" class="form-control"></textarea></div>
                                             </div>

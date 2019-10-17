@@ -22,6 +22,11 @@
     -->
     <link href="{{asset('dashboard_panel/main.css')}}" rel="stylesheet">
     <link href="{{asset('css/toastr.min.css')}}" rel="stylesheet">
+    <style type="text/css">
+        .required1{
+            color: red;
+        }
+    </style>
 </head>
 
 <body>

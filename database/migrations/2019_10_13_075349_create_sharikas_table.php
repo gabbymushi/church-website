@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateMinistriesTable extends Migration
+class CreateSharikasTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,13 @@ class CreateMinistriesTable extends Migration
      */
     public function up()
     {
-        Schema::create('ministries', function (Blueprint $table) {
+        Schema::create('sharikas', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('slug')->unique()->nullable();
             $table->string('name');
             $table->text('description');
+            $table->string('slug');
+            $table->bigInteger('jimbo_id')->unsigned()->index()->nullable();
+            $table->foreign('jimbo_id')->references('id')->on('jimbos')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
         });
     }
@@ -29,6 +31,6 @@ class CreateMinistriesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('ministries');
+        Schema::dropIfExists('sharikas');
     }
 }

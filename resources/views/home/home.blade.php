@@ -43,14 +43,25 @@
         <div class="row"> 
           <!-- Start Featured Blocks -->
           <div class="featured-blocks clearfix">
-            <div class="col-md-4 col-sm-4 featured-block"> <a href="{{route('all.staff')}}" class="img-thumbnail">
-
+            <div class="col-md-4 col-sm-4 featured-block"> 
+              <h3>Our Bishop</h3>
+              <a href="{{route('all.staff')}}" class="img-thumbnail">
+             @if(isset($askofu))
              <img src="{{asset('/'.$askofu->photo)}}" alt="staff"> <strong style="margin-bottom:0px;">
+               {{$askofu->fname .' '.$askofu->lname.' '.', Bishop ELCT-DME' }}
+              @else
+               <img src="{{asset('assets/images/staff/askofu.jpg')}}" alt="staff"> <strong style="margin-bottom:0px;">
+                 Daniel Elias Ngungath
+              @endif
 
-              {{$askofu->fname .' '.$askofu->lname.' '.', Bishop ELCT-DME' }}
+             
             </strong> <span class="more">Bishop Profile</span> </a> </div>
-            <div class="col-md-4 col-sm-4 featured-block"> <a href="{{route('all.staff')}}" class="img-thumbnail"> <img src="{{asset('assets\uploads\maaskofu.jpg')}}" alt="staff"> <strong>New Here</strong> <span class="more">read more</span> </a> </div>
-            <div class="col-md-4 col-sm-4 featured-block"> <a href="sermons.html" class="img-thumbnail"> <img src="{{asset('assets\uploads\sermons.jpg')}}" alt="staff"> <strong>Sermons Archive</strong> <span class="more">read more</span> </a> </div>
+            <div class="col-md-4 col-sm-4 featured-block"> 
+              <h3>What we Do</h3>
+              <a href="{{route('all.staff')}}" class="img-thumbnail"> <img src="{{asset('assets\uploads\maaskofu.jpg')}}" alt="staff"> <strong>New Here</strong> <span class="more">read more</span> </a> </div>
+            <div class="col-md-4 col-sm-4 featured-block">
+              <h3>Resources</h3>
+             <a href="sermons.html" class="img-thumbnail"> <img src="{{asset('assets\uploads\sermons.jpg')}}" alt="staff"> <strong>Sermons Archive</strong> <span class="more">read more</span> </a> </div>
           </div>
           <!-- End Featured Blocks --> 
         </div>
@@ -120,29 +131,27 @@
             <!-- Latest Sermons -->
             <div class="listing sermons-listing">
               <header class="listing-header">
-                <h3>Recent Sermons</h3>
+                <h4>DME Structure</h4>
               </header>
               <section class="listing-cont">
-                <ul>
-                  <li class="item sermon featured-sermon"> <span class="date">Feb 14, 2014</span>
-                    <h4><a href="single-sermon.html">How To Recover The Cutting Edge</a></h4>
-                    <div class="featured-sermon-video">
-                      <iframe width="200" height="150" src="http://player.vimeo.com/video/19564018?title=0&amp;byline=0&amp;color=007F7B"></iframe>
-                    </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis consectetur adipiscing elit. Nulla convallis egestas rhoncus</p>
-                    <div class="sermon-actions"> <a href="#" data-placement="top" data-toggle="tooltip" data-original-title="Video"><i class="fa fa-video-camera"></i></a> <a href="#" data-placement="top" data-toggle="tooltip" data-original-title="Audio"><i class="fa fa-headphones"></i></a> <a href="#" data-placement="top" data-toggle="tooltip" data-original-title="Read online"><i class="fa fa-file-text-o"></i></a> <a href="#" data-placement="top" data-toggle="tooltip" data-original-title="Download PDF"><i class="fa fa-book"></i></a> </div>
+                <ul class="text-center">
+                  @if(isset($majimbo))
+                  @foreach($majimbo as $jimbo)
+                   <li class="item sermon featured-sermon"> 
+                    <a href="{{route('jimbo.show',[$jimbo->slug])}}"> <h4 style="font-weight: bold;">{{$jimbo->name}}</h4> </a>
                   </li>
-                  <li class="item sermon">
-                    <h2 class="sermon-title"><a href="single-sermon.html">Voluptatum deleniti atque corrupti</a></h2>
-                    <span class="meta-data"><i class="fa fa-calendar"></i> on 17th Dec, 2013</span> </li>
-                  <li class="item sermon">
-                    <h2 class="sermon-title"><a href="single-sermon.html">Voluptatum deleniti atque corrupti</a></h2>
-                    <span class="meta-data"><i class="fa fa-calendar"></i> on 17th Dec, 2013</span> </li>
-                  <li class="item sermon">
-                    <h2 class="sermon-title"><a href="single-sermon.html">Voluptatum deleniti atque corrupti</a></h2>
-                    <span class="meta-data"><i class="fa fa-calendar"></i> on 17th Dec, 2013</span> </li>
+                  @endforeach
+                  @endif
                 </ul>
               </section>
+            </div>
+            <div class="download-center">
+               <header class="listing-header">
+                <h4>Download Center</h4>
+              </header>
+              
+              <a href="#"><p>DME Almanac</p></a>
+              <a href=""><p>DME Magazine</p></a>
             </div>
           </div>
         </div>

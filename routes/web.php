@@ -18,6 +18,7 @@ use App\Http\Controllers\HomeController;
 // });
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('/about-us', 'HomeController@aboutUs');
+Route::get('/dme-history','HomeController@dme_history')->name('dme.history');
 // Auth::routes();
 
 // Route::get('/home', 'HomeController@index')->name('home');
@@ -177,7 +178,97 @@ Route::post('ministry/update/{id}', [
     'uses' => 'MinistryController@update',
     'as' => 'ministry.update'
 ]);
-//Ministries routes
+//Majimbo Routes
+Route::get('/majimbo',[
+'uses'=>'JimboController@index',
+'as'=>'manage.jimbo'
+]);
+Route::get('/jimbo/create',[
+'uses'=>'JimboController@create',
+'as'=>'jimbo.create'
+]);
+Route::post('/jimbo/store',[
+'uses'=>'JimboController@store',
+'as'=>'jimbo.store'
+]);
+Route::get('/jimbo/{id}/edit/',[
+'uses'=>'JimboController@edit',
+'as'=>'jimbo.edit'
+]);
+Route::post('/jimbo/update/{id}',[
+'uses'=>'JimboController@update',
+'as'=>'jimbo.update'
+]);
+Route::get('/jimbo/{id}/delete',[
+'uses'=>'JimboController@destroy',
+'as'=>'jimbo.delete'
+]);
+Route::get('/jimbo/show/{slug}',[
+'uses'=>'JimboController@show',
+'as'=>'jimbo.show'
+]);
+//Sharika routes
+Route::get('/sharika',[
+'uses'=>'SharikaController@index',
+'as'=>'sharika'
+]);
+Route::get('/sharika/create',[
+'uses'=>'SharikaController@create',
+'as'=>'sharika.create'
+]);
+Route::post('/sharika/store',[
+'uses'=>'SharikaController@store',
+'as'=>'sharika.store'
+]);
+Route::get('/usharika/{id}/edit',[
+'uses'=>'SharikaController@edit',
+'as'=>'usharika.edit'
+]);
+Route::post('/usharika/update/{id}',[
+'uses'=>'SharikaController@update',
+'as'=>'sharika.update'
+]);
+
+Route::get('/usharika/{id}/delete',[
+'uses'=>'SharikaController@destroy',
+'as'=>'usharika.destroy'
+]);
+
+Route::get('/usharika/show/{id}',[
+'uses'=>'SharikaController@show',
+'as'=>'usharika.show'
+]);
+//Mitaa Routes
+Route::get('/mitaa',[
+'uses'=>'MtaaController@index',
+'as'=>'mitaa'
+]);
+Route::get('/mtaa/create',[
+'uses'=>'MtaaController@create',
+'as'=>'mtaa.create'
+]);
+Route::post('/mtaa/store',[
+'uses'=>'MtaaController@store',
+'as'=>'mtaa.store'
+]);
+Route::get('/mtaa/{id}/edit',[
+'uses'=>'MtaaController@edit',
+'as'=>'mtaa.edit'
+]);
+Route::post('/mtaa/update/{id}',[
+'uses'=>'MtaaController@update',
+'as'=>'mtaa.update'
+]);
+
+Route::get('/mtaa/{id}/delete',[
+'uses'=>'MtaaController@destroy',
+'as'=>'mtaa.destroy'
+]);
+Route::get('/mtaa/show/{id}',[
+'uses'=>'MtaaController@show',
+'as'=>'mtaa.show'
+]);
+//Sermon routes
 Route::get('sermon', [
     'uses' => 'SermonController@index',
     'as' => 'sermon'

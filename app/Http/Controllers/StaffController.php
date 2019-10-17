@@ -64,10 +64,6 @@ class StaffController extends Controller
         $staff->designation = $request->designation;
         $staff->phone1 = $request->phone1;
         $staff->phone2 = $request->phone2;
-        $staff->facebook_link = $request->facebook;
-        $staff->tweeter_link = $request->tweeter;
-        $staff->instagram_link = $request->instagram;
-        $staff->other_link = $request->other;
         $staff->description = $request->description;
         $staff->photo = $photo_new_name;
         $staff->save();

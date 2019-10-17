@@ -73,6 +73,40 @@
 
                 </ul>
             </li>
+                <li>
+                <a href="#">
+                    <i class="metismenu-icon fa fa-list"></i>
+                    DME Structure
+                    <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                </a>
+                <ul>
+                    <li>
+                        <a href="{{url('/majimbo')}}">
+                            <i class="metismenu-icon"></i>
+                            Manage Majimbo
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{url('sharika')}}">
+                            <i class="metismenu-icon"></i>
+                            Manage Sharika
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{url('mitaa')}}">
+                            <i class="metismenu-icon"></i>
+                            Manage Mitaa
+                        </a>
+                    </li>
+                    <!-- <li>
+                        <a href="elements-dropdowns.html">
+                            <i class="metismenu-icon">
+                            </i>Manage ministry
+                        </a>
+                    </li> -->
+
+                </ul>
+            </li>
             <li>
                 <a href="#">
                     <i class="metismenu-icon fa fa-user"></i>

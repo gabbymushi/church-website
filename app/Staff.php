@@ -10,10 +10,6 @@ class Staff extends Model
                             'designation',
                             'phone1',
                             'phone2',
-                             'facebook_link',
-                             'tweeter_link',
-                             'instagram_link',
-                             'other_link',
                              'description',
                              'photo']; 
 }
