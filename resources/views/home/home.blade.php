@@ -55,10 +55,23 @@
               @endif
 
              
-            </strong> <span class="more">Bishop Profile</span> </a> </div>
+            </strong> <span class="more">Bishop Profile</span> </a>
+             </div>
             <div class="col-md-4 col-sm-4 featured-block"> 
               <h3>What we Do</h3>
-              <a href="{{route('all.staff')}}" class="img-thumbnail"> <img src="{{asset('assets\uploads\maaskofu.jpg')}}" alt="staff"> <strong>New Here</strong> <span class="more">read more</span> </a> </div>
+            
+              <div class="grid-item-inner">
+                <div class="media-box">
+                  <div class="flexslider" data-autoplay="yes" data-pagination="yes" data-arrows="yes" data-style="slide" data-pause="yes">
+                    <ul class="slides">
+                      <li class="item"><a href="http://placehold.it/600x400&amp;text=IMAGE+PLACEHOLDER" data-rel="prettyPhoto[postname]"><img src="{{asset('assets/images/chuo-kkt.jpg')}}" alt=""></a></li>
+                      <li class="item"><a href="http://placehold.it/600x400&amp;text=IMAGE+PLACEHOLDER" data-rel="prettyPhoto[postname]"><img src="{{asset('assets/images/shule-kkkt.jpg')}}" alt=""></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+            </div>
             <div class="col-md-4 col-sm-4 featured-block">
               <h3>Resources</h3>
              <a href="sermons.html" class="img-thumbnail"> <img src="{{asset('assets\uploads\sermons.jpg')}}" alt="staff"> <strong>Sermons Archive</strong> <span class="more">read more</span> </a> </div>
