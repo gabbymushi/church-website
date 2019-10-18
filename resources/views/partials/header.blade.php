@@ -21,7 +21,7 @@
             	<nav class="top-menus pull-right">
                 	<ul>
                     	<li>
-                        	<a target="_blank" href="{{route('login')}}">Login</a>
+                        	<a target="_blank" href="{{route('login')}}">DME Login</a>
                      	</li>
                     	<li>
                         	<a href="{{route('events.calender')}}">Calendar</a>
@@ -74,7 +74,7 @@
                 </li>
                 <li><a href="{{url('/about-us')}}">About Us</a>
                   <ul class="dropdown">
-                    <li><a href="{{route('all.staff')}}">Our Staff</a></li>
+                    <li><a href="{{route('dme.history')}}">Our History</a></li>
                 	<li><a href="{{route('contactus')}}">Contact</a></li>
                   </ul>
                 </li>

@@ -3,7 +3,7 @@
       <div class="row"> 
         <!-- Start Footer Widgets -->
         <div class="col-md-3 col-sm-3 widget footer-widget">
-          <h4 class="footer-widget-title">CONTACT US</h4>
+          <h4 class="footer-widget-title">Contact Information</h4>
             <ul>
               <li><a href="{{route('home')}}">
                 Evangelical Lutheran Church in Tanzania,Diocese of Meru (ELCT – DME).</a>

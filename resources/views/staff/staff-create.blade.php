@@ -19,8 +19,10 @@
                          <option value="askofu">Bishop</option>
                          <option value="katibu-mkuu">Mr.</option>
                          <option value="mchungaji">Pastor</option>
-                          <option value="Mwinjilisti">Miss</option>
-                          <option value="Mwinjilisti">Mrs</option>
+                          <option value="miss">Miss</option>
+                          <option value="mrs">Mrs</option>
+                          <option value="mwinjilisti">Mwinj</option>
+                          <option value="bi">Bi</option>
                           </select>
                             </div>
                             </div>
@@ -42,34 +44,31 @@
                         <option value="askofu">Askofu</option>
                         <option value="katibu-mkuu">Katibu Mkuu</option>
                         <option value="mchungaji">Mchungaji</option>
+                        <option value="parishworker">Parishworker</option>
+                        <option value="karani">Karani</option>
                         <option value="Mwinjilisti">Mwinjilisti</option>
                     </select>
                 </div>
                     </div>
-                                           
-                                           <div class="position-relative row form-group">
+                    <div class="position-relative row form-group">
+                      <label for="designation" class="col-sm-2 col-form-label"> MNGT Options</label>
+                  <div class="col-sm-10">
+                  <div class="checkbox">
+                  <label><input type="checkbox" name="dmemgt" value="1"> DME MNGNT</label>
+                  &nbsp;
+                  <label><input type="checkbox" name="jmbmgt" value="1"> JIMBO MNGNT</label>
+                   &nbsp;
+                  <label><input type="checkbox" name="shrkmgt" value="1"> SHARIKA MNGNT</label>
+                   </div>   
+                     </div>
+                      </div> 
+                      <div class="position-relative row form-group">
                                                 <label for="designation" class="col-sm-2 col-form-label">Phone 1<span class="text-danger">*</span></label>
                                                 <div class="col-sm-10"><input name="phone1" id="phone1" value="{{old('phone1')}}"  placeholder="Phone 1" type="text" class="form-control"></div>
                                             </div>
                                             <div class="position-relative row form-group">
                                                 <label for="designation" class="col-sm-2 col-form-label">Phone 2</label>
                                                 <div class="col-sm-10"><input name="phone2" id="phone2" value="{{old('phone2')}}" placeholder="Phone 2" type="text" class="form-control"></div>
-                                            </div>
-                                            <div class="position-relative row form-group">
-                                                <label for="facebook" class="col-sm-2 col-form-label">Facebook Link</label>
-                                                <div class="col-sm-10"><input name="facebook" id="facebook" value="{{old('facebook')}}" placeholder="Facebook Link" type="text" class="form-control"></div>
-                                            </div>
-                                              <div class="position-relative row form-group">
-                                                <label for="tweeter" class="col-sm-2 col-form-label">Tweeter Link</label>
-                                                <div class="col-sm-10"><input name="tweeter" id="tweeter" value="{{old('tweeter')}}" placeholder="Tweeter Link" type="text" class="form-control"></div>
-                                            </div>
-                                            <div class="position-relative row form-group">
-                                                <label for="instagram" class="col-sm-2 col-form-label">Instagram Link</label>
-                                                <div class="col-sm-10"><input name="instagram" id="instagram" value="{{old('instagram')}}" placeholder="Instagram Link" type="text" class="form-control"></div>
-                                            </div>
-                                                 <div class="position-relative row form-group">
-                                                <label for="instagram" class="col-sm-2 col-form-label">Other Link</label>
-                                                <div class="col-sm-10"><input name="other" id="other" value="{{old('other')}}" placeholder="Other Link" type="text" class="form-control"></div>
                                             </div>
                                             <div class="position-relative row form-group"><label for="description" class="col-sm-2 col-form-label">Description</label>
                                                 <div class="col-sm-10"><textarea name="description" id="description" value="{{old('description')}}" class="form-control"></textarea></div>
@@ -78,6 +77,39 @@
                                                 <label for="instagram" class="col-sm-2 col-form-label">Photo</label>
                                                 <div class="col-sm-10"><input name="photo" id="photo" value="{{old('photo')}}"  type="file" class="form-control"></div>
                                             </div>
+                                             <div class="position-relative row form-group">
+                <label for="designation" class="col-sm-2 col-form-label">Jimbo<span class="text-danger">*</span></label>
+                 <div class="col-sm-10">
+                    <select class="form-control" name="jimbo_id" id="">
+                      @foreach(App\Jimbo::all() as $jimbo)
+                        <option value="{{$jimbo->id}}">{{$jimbo->name}}</option>
+                        @endforeach
+                    </select>
+                </div>
+                    </div>
+
+                     <div class="position-relative row form-group">
+                <label for="designation" class="col-sm-2 col-form-label">Usharika<span class="text-danger">*</span></label>
+                 <div class="col-sm-10">
+                    <select class="form-control" name="usharika_id" id="">
+                        @foreach(App\Sharika::all() as $usharika)
+                        <option value="{{$usharika->id}}">{{$usharika->name}}</option>
+                        @endforeach
+                    </select>
+                    </select>
+                </div>
+                    </div>
+                     <div class="position-relative row form-group">
+                <label for="designation" class="col-sm-2 col-form-label">Mtaa<span class="text-danger">*</span></label>
+                 <div class="col-sm-10">
+                    <select class="form-control" name="mtaa_id" id="">
+                        @foreach(App\Mtaa::all() as $mtaa)
+                        <option value="{{$mtaa->id}}">{{$mtaa->name}}</option>
+                        @endforeach
+                    </select>
+                    </select>
+                </div>
+                    </div>
                              
                                             <div class="position-relative row form-check">
                                                 <div class="col-sm-10 text-center">
