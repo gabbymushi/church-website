@@ -47,51 +47,20 @@ Katika kuhubiri Injili ya Yesu kwa matendo Dayosisi ya Meru inaendesha vituo vya
             <hr>
             <h3>Our Staff</h3>
           </div>
-          <div class="staff-dme" style="color: red">
+          <div class="staff-dme text-center" style="color: #000;">
+        @foreach(App\Staff::where('dmemgt',1)->get() as $mgntstaff)
           <div class="col-md-3 col-sm-3">
             <div class="grid-item staff-item">
               <div class="grid-item-inner">
                 <div class="media-box"> <img src="http://placehold.it/500x300&amp;text=IMAGE+PLACEHOLDER" alt=""> </div>
                 <div class="grid-content">
-                  <h3>Melina Mironescu</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis fermentum sem, ac viverra ante luctus vel. Donec vel mauris quam.</p>
+                  <p style="font-weight: bold;">{{$mgntstaff->fname}}&nbsp;{{$mgntstaff->lname}}</p>
+                  <p><?php echo ucfirst($mgntstaff->designation) ?></p>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col-md-3 col-sm-3">
-            <div class="grid-item staff-item">
-              <div class="grid-item-inner">
-                <div class="media-box"> <img src="http://placehold.it/500x300&amp;text=IMAGE+PLACEHOLDER" alt=""> </div>
-                <div class="grid-content">
-                  <h3>Francisc Cazan</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis fermentum sem, ac viverra ante luctus vel. Donec vel mauris quam.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3 col-sm-3">
-            <div class="grid-item staff-item">
-              <div class="grid-item-inner">
-                <div class="media-box"> <img src="http://placehold.it/500x300&amp;text=IMAGE+PLACEHOLDER" alt=""> </div>
-                <div class="grid-content">
-                  <h3>Ethan Kay</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis fermentum sem, ac viverra ante luctus vel. Donec vel mauris quam.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-             <div class="col-md-3 col-sm-3">
-            <div class="grid-item staff-item">
-              <div class="grid-item-inner">
-                <div class="media-box"> <img src="http://placehold.it/500x300&amp;text=IMAGE+PLACEHOLDER" alt=""> </div>
-                <div class="grid-content">
-                  <h3>Ethan Kay</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis fermentum sem, ac viverra ante luctus vel. Donec vel mauris quam.</p>
-                </div>
-              </div>
-            </div>
-          </div>
+          @endforeach
           </div>
         </div>
       </div>

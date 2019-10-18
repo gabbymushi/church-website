@@ -24,7 +24,7 @@
          <h2 class="post-title">{{$jimbo->name}}</h2>
         </header>
         <div class="post-content">
-        <img src="http://placehold.it/1280x635&amp;text=IMAGE+PLACEHOLDER" alt="Women Ministry" class="img-thumbnail">
+        <img src="{{asset('assets/uploads/jimbo-img/jimbo.jpg')}}" alt="Women Ministry" class="img-thumbnail">
                <div class="spacer-30"></div>
         <p>{{$jimbo->description}}</p>
         <hr>
@@ -37,7 +37,7 @@
                 <div class="media-box"> <img src="http://placehold.it/500x300&amp;text=IMAGE+PLACEHOLDER" alt=""> </div>
                 <div class="grid-content">
                   <p style="font-weight: bold;">{{$mgntstaff->fname}}&nbsp;{{$mgntstaff->lname}}</p>
-                  <p>{{$mgntstaff->designation}}</p>
+                  <p><?php echo ucfirst($mgntstaff->designation) ?></p>
                 </div>
               </div>
             </div>
