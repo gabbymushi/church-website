@@ -30,50 +30,31 @@
         <hr>
         <h3>Viongozi wa jimbo</h3>
         <div class="staff-dme text-center" style="color: #000;">
+          @foreach(App\Staff::where('jimbo_id',$jimbo->id)->where('jmbmgt',1)->get() as $mgntstaff)
           <div class="col-md-4 col-sm-4">
             <div class="grid-item staff-item">
               <div class="grid-item-inner">
                 <div class="media-box"> <img src="http://placehold.it/500x300&amp;text=IMAGE+PLACEHOLDER" alt=""> </div>
                 <div class="grid-content">
-                  <p style="font-weight: bold;">Melina Mironescu</p>
-                  <p>Lorem ipsum dolor sit amet</p>
+                  <p style="font-weight: bold;">{{$mgntstaff->fname}}&nbsp;{{$mgntstaff->lname}}</p>
+                  <p>{{$mgntstaff->designation}}</p>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col-md-4 col-sm-4">
-            <div class="grid-item staff-item">
-              <div class="grid-item-inner">
-                <div class="media-box"> <img src="http://placehold.it/500x300&amp;text=IMAGE+PLACEHOLDER" alt=""> </div>
-                <div class="grid-content">
-                   <p style="font-weight: bold;">Melina Mironescu</p>
-                  <p>Lorem ipsum dolor sit amet</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-4">
-            <div class="grid-item staff-item">
-              <div class="grid-item-inner">
-                <div class="media-box"> <img src="http://placehold.it/500x300&amp;text=IMAGE+PLACEHOLDER" alt=""> </div>
-                <div class="grid-content">
-                   <p style="font-weight: bold;">Melina Mironescu</p>
-                  <p>Lorem ipsum dolor sit amet</p>
-                </div>
-              </div>
-            </div>
-          </div>
+          @endforeach
            
           </div>
-         @if(isset($jimbo->sharika))
+         @if(isset($jimbo->sharikas))
            <div class="spacer-30"></div>
           <hr>
 
           <h3>SHARIKA {{$jimbo->name}}</h3>
           <div class="sharika-dme">
            
-               @foreach($jimbo->sharika as $sharika)
+               @foreach($jimbo->sharikas as $sharika)
               <!-- Start Accordion -->
+
             <div class="accordion" id="accordionArea">
               <div class="accordion-group panel">
                 <div class="accordion-heading accordionize"> <a class="accordion-toggle active" data-toggle="collapse" data-parent="#accordionArea" href="#Area{{$sharika->id}}">Usharika wa {{$sharika->name}}<i class="fa fa-angle-down"></i> </a> </div>
@@ -82,7 +63,8 @@
                   <table class="table table-striped" style="color: #000;">
                     <thead style="background-color: #CCC; font-weight: bold;">
                       <th>Mtaa</th>
-                      <th>Mwinjilist</th>
+                      <th>Jina Kamili</th>
+                      <th>Cheo</th>
                       <th>Namba ya simu</th>
                     </thead>
                     <tbody>
@@ -91,6 +73,7 @@
                       <tr>
                         <td>{{$mtaa->name}}</td>
                         <td>{{$staff->fname.' '.$staff->lname}}</td>
+                         <td>{{$staff->designation}}</td>
                         <td>{{$staff->phone1}}</td>
                       </tr>
                       @endforeach

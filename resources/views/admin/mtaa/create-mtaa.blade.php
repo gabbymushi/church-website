@@ -94,13 +94,11 @@
                             <div class="position-relative form-group">
                                 <label for="description" class="">Sharika </label>
                                 <select class="form-control" name="sharika_id" id="sharika_id">
-                                    @if(isset($sharika))
-                                    @foreach($sharika as $usharika)
+                                   
+                                    @foreach(App\Sharika::all() as $usharika)
                                     <option value="{{$usharika->id}}">{{$usharika->name}}</option>
                                     @endforeach
-                                    @else
-                                    <option value="">Please Create Sharika first</option>
-                                    @endif
+                     
                                   
                                 </select>
                             </div>

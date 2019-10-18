@@ -21,7 +21,8 @@
                          <option value="mchungaji">Pastor</option>
                           <option value="miss">Miss</option>
                           <option value="mrs">Mrs</option>
-                          <option value="mwinjilisti">Mwinjilisti</option>
+                          <option value="mwinjilisti">Mwinj</option>
+                          <option value="bi">Bi</option>
                           </select>
                             </div>
                             </div>
@@ -43,12 +44,25 @@
                         <option value="askofu">Askofu</option>
                         <option value="katibu-mkuu">Katibu Mkuu</option>
                         <option value="mchungaji">Mchungaji</option>
+                        <option value="parishworker">Parishworker</option>
+                        <option value="karani">Karani</option>
                         <option value="Mwinjilisti">Mwinjilisti</option>
                     </select>
                 </div>
                     </div>
-                                           
-                                           <div class="position-relative row form-group">
+                    <div class="position-relative row form-group">
+                      <label for="designation" class="col-sm-2 col-form-label"> MNGT Options</label>
+                  <div class="col-sm-10">
+                  <div class="checkbox">
+                  <label><input type="checkbox" name="dmemgt" value="1"> DME MNGNT</label>
+                  &nbsp;
+                  <label><input type="checkbox" name="jmbmgt" value="1"> JIMBO MNGNT</label>
+                   &nbsp;
+                  <label><input type="checkbox" name="shrkmgt" value="1"> SHARIKA MNGNT</label>
+                   </div>   
+                     </div>
+                      </div> 
+                      <div class="position-relative row form-group">
                                                 <label for="designation" class="col-sm-2 col-form-label">Phone 1<span class="text-danger">*</span></label>
                                                 <div class="col-sm-10"><input name="phone1" id="phone1" value="{{old('phone1')}}"  placeholder="Phone 1" type="text" class="form-control"></div>
                                             </div>

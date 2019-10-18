@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Jimbo extends Model
 {
-    public function sharika(){
+    public function sharikas(){
     	return $this->hasMany('App\Sharika');
     }
 }

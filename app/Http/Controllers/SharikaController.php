@@ -48,7 +48,7 @@ class SharikaController extends Controller
         $sharika->name = $request->name;
         $sharika->slug = str_slug($request->name);
         $sharika->description = $request->description;
-        $sharika->jimbo_id = 2;
+        $sharika->jimbo_id = $request->jimbo_id;
 
         $sharika->save();
         Session::flash('success','Sharika created Successfully');

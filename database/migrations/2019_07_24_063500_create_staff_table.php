@@ -27,6 +27,10 @@ class CreateStaffTable extends Migration
             $table->bigInteger('jimbo_id')->unsigned()->index()->nullable();
             $table->bigInteger('usharika_id')->unsigned()->index()->nullable();
             $table->bigInteger('mtaa_id')->unsigned()->index()->nullable();
+            $table->boolean('dmemgt')->nullable();
+            $table->boolean('jmbmgt')->nullable();
+            $table->boolean('shrkmgt')->nullable();
+            
             $table->timestamps();
         });
     }

@@ -94,7 +94,7 @@
 
                                      <div class="position-relative form-group">
                                 <label for="description" class="">Select Jimbo </label>
-                                <select class="form-control" name="sharika_id" id="sharika_id">
+                                <select class="form-control" name="jimbo_id" id="jimbo_id">
                                     @if(isset($majimbo))
                                     @foreach($majimbo as $jimbo)
                                     <option value="{{$jimbo->id}}">{{$jimbo->name}}</option>
