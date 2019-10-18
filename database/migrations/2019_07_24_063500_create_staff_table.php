@@ -22,12 +22,15 @@ class CreateStaffTable extends Migration
             $table->string('designation');
             $table->string('phone1');
             $table->string('phone2')->nullable();
-            $table->string('facebook_link')->nullable();
-            $table->string('tweeter_link')->nullable();
-            $table->string('instagram_link')->nullable();
-            $table->string('other_link')->nullable();
             $table->string('description')->nullable();
             $table->string('photo')->nullable();
+            $table->bigInteger('jimbo_id')->unsigned()->index()->nullable();
+            $table->bigInteger('usharika_id')->unsigned()->index()->nullable();
+            $table->bigInteger('mtaa_id')->unsigned()->index()->nullable();
+            $table->boolean('dmemgt')->nullable();
+            $table->boolean('jmbmgt')->nullable();
+            $table->boolean('shrkmgt')->nullable();
+            
             $table->timestamps();
         });
     }

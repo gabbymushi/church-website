@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Event;
 use App\News;
 use App\Staff;
+use App\Jimbo;
 use DB;
 
 class HomeController extends Controller
@@ -46,6 +47,8 @@ class HomeController extends Controller
         $data['events'] =Event::orderBy('created_at','desc')->take(5)->get();
         $data['last_record'] = DB::table('events')->latest()->first();
         $data['askofu'] = Staff::where('designation','askofu')->first();
+        $data['majimbo']=Jimbo::all();
+       // dd($data['askofu']);
         return view('home.home', $data);
     }
     public function aboutUs()
@@ -55,5 +58,9 @@ class HomeController extends Controller
 
     public function allGallery(){
         return view('home.all-gallery');
+    }
+
+    public function dme_history(){
+        return view('home.dme-history');
     }
 }

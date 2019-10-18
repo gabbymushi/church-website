@@ -64,12 +64,14 @@ class StaffController extends Controller
         $staff->designation = $request->designation;
         $staff->phone1 = $request->phone1;
         $staff->phone2 = $request->phone2;
-        $staff->facebook_link = $request->facebook;
-        $staff->tweeter_link = $request->tweeter;
-        $staff->instagram_link = $request->instagram;
-        $staff->other_link = $request->other;
         $staff->description = $request->description;
         $staff->photo = $photo_new_name;
+        $staff->jimbo_id = $request->jimbo_id;
+        $staff->usharika_id = $request->usharika_id;
+        $staff->mtaa_id = $request->mtaa_id;
+        $staff->dmemgt = $request->dmemgt;
+        $staff->jmbmgt = $request->jmbmgt;
+        $staff->shrkmgt = $request->shrkmgt;
         $staff->save();
         Session::flash('success','Staff created successfully');
         return redirect()->route('manage.staff');
