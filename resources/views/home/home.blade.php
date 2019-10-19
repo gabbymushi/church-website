@@ -12,73 +12,60 @@
                       <!-- LAYERS -->
           
                       <!-- LAYER NR. 1 -->
-                      <div class="tp-caption largewhitebg customin ltl tp-resizeme" 
-                           data-x="center" data-hoffset="0" 
-                           data-y="center" data-voffset="-34" 
-                          data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" 
-                          data-speed="500" 
-                          data-start="2000" 
+                    
+                     
+                     <!-- LAYER NR. 1 -->
+                      <div class="tp-caption large_text randomrotate tp-resizeme" 
+                           data-x="100" 
+                           data-y="200"  
+                          data-speed="300" 
+                          data-start="500" 
                           data-easing="Power3.easeInOut" 
                           data-splitin="none" 
                           data-splitout="none" 
-                          data-elementdelay="0.08" 
-                          data-endelementdelay="0.08" 
-                           data-end="8000" 
-               data-endspeed="500" 
+                          data-elementdelay="0.1" 
+                          data-endelementdelay="0.1" 
+                           data-end="3000" 
+               data-endspeed="300" 
               
-                          style="z-index: 5; max-width: auto; max-height: auto; white-space: nowrap;">KUSIMIKWA ASKOFU DME 
-                      </div>
-              
-                      <!-- LAYER NR. 2 -->
-                      <div class="tp-caption boldwide_small_white randomrotate customout tp-resizeme" 
-                           data-x="center" data-hoffset="0" 
-                           data-y="center" data-voffset="38" 
-                           data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" 
-                          data-speed="500" 
-                          data-start="3000" 
-                          data-easing="Power3.easeInOut" 
-                          data-splitin="chars" 
-                          data-splitout="chars" 
-                          data-elementdelay="0.08" 
-                          data-endelementdelay="0.08" 
-                           data-end="6500" 
-               data-endspeed="500" 
-              
-                          style="z-index: 6; max-width: auto; max-height: auto; white-space: nowrap;">Jimbo la Mashariki  
+                          style="z-index: 5; max-width: auto; max-height: auto; white-space: nowrap;">Kusimikwa Askofu
                       </div>
               
                       <!-- LAYER NR. 3 -->
-                      <div class="tp-caption mediumwhitebg sfl stl tp-resizeme" 
-                           data-x="235" 
-                           data-y="357"  
+                      <!-- LAYER NR. 2 -->
+                      <div class="tp-caption large_text randomrotate tp-resizeme" 
+                           data-x="100" 
+                           data-y="259"  
                           data-speed="300" 
-                          data-start="4600" 
+                          data-start="800" 
                           data-easing="Power3.easeInOut" 
                           data-splitin="none" 
                           data-splitout="none" 
-                          data-elementdelay="0.08" 
-                          data-endelementdelay="0.08" 
-                           data-end="7500" 
+                          data-elementdelay="0.1" 
+                          data-endelementdelay="0.1" 
+                           data-end="4000" 
                data-endspeed="300" 
               
-                          style="z-index: 7; max-width: auto; max-height: auto; white-space: nowrap;">Usharika wa Kolila 
+                          style="z-index: 6; max-width: auto; max-height: auto; white-space: nowrap;">Jimbo La Magharibi
                       </div>
               
                       <!-- LAYER NR. 4 -->
-                      <div class="tp-caption mediumwhitebg sfr str tp-resizeme" 
-                           data-x="581" 
-                           data-y="359"  
+                          <!-- LAYER NR. 3 -->
+                      <div class="tp-caption randomrotate customout tp-resizeme" 
+                           data-x="100" 
+                           data-y="330"  
+                           data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" 
                           data-speed="300" 
-                          data-start="5100" 
+                          data-start="1100" 
                           data-easing="Power3.easeInOut" 
                           data-splitin="none" 
                           data-splitout="none" 
-                          data-elementdelay="0.08" 
-                          data-endelementdelay="0.08" 
-                           data-end="8000" 
-               data-endspeed="300" 
+                          data-elementdelay="0.1" 
+                          data-endelementdelay="0.1" 
+                           data-end="5000" 
+                          data-endspeed="300" 
               
-                          style="z-index: 8; max-width: auto; max-height: auto; white-space: nowrap;">Mtaa wa Kolila 
+                          style="z-index: 7; max-width: auto; max-height: auto; white-space: nowrap;"><a href='#' class='btn btn-primary btn-lg' style="color:#fff;">More Events</a> 
                       </div>
                   </li>
                   <!-- SLIDE  -->
