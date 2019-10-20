@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateJimbosTable extends Migration
+class CreateDownloadsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,10 @@ class CreateJimbosTable extends Migration
      */
     public function up()
     {
-        Schema::create('jimbos', function (Blueprint $table) {
+        Schema::create('downloads', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('name');
-            $table->text('description')->nullable();
-            $table->string('featured')->nullable();
-            $table->string('slug');
+            $table->string('title');
+            $table->string('document');
             $table->timestamps();
         });
     }
@@ -30,6 +28,6 @@ class CreateJimbosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('jimbos');
+        Schema::dropIfExists('downloads');
     }
 }

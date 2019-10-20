@@ -7,6 +7,7 @@ use App\Event;
 use App\News;
 use App\Staff;
 use App\Jimbo;
+use App\Download;
 use DB;
 
 class HomeController extends Controller
@@ -48,6 +49,7 @@ class HomeController extends Controller
         $data['last_record'] = DB::table('events')->latest()->first();
         $data['askofu'] = Staff::where('designation','askofu')->first();
         $data['majimbo']=Jimbo::all();
+        $data['downloads'] =Download::orderBy('created_at','desc')->take(5)->get();
        // dd($data['askofu']);
         return view('home.home', $data);
     }

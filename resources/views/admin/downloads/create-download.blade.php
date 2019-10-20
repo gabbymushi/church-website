@@ -7,8 +7,8 @@
                 <i class="pe-7s-display1 icon-gradient bg-premium-dark">
                 </i>
             </div>
-            <div>Majimbo
-                <div class="page-title-subheading">Add Jimbo
+            <div>Downloads
+                <div class="page-title-subheading">Add Download
                 </div>
             </div>
         </div>
@@ -72,30 +72,21 @@
                 <div class="main-card mb-3 card">
                     <div class="card-body">
                         <!-- <h5 class="card-title">Controls Types</h5> -->
-                        <form method="POST" action="/jimbo/store" class="" enctype="multipart/form-data">
+                        <form method="POST" action="/document/store" class="" enctype="multipart/form-data">
                             @csrf
                             <div class="position-relative form-group">
-                                <label for="name" class="">Name</label>
-                                <input name="name" id="name" placeholder="Name" type="text" class="form-control" required="required">
+                                <label for="name" class="">Title</label>
+                                <input name="title" id="title" placeholder="Title" type="text" class="form-control" required="required">
                             </div>
-                            <!-- <div class="position-relative form-group">
-                                <label for="title" class="">Cover Photo</label> 
-                                <input name="picture" id="picture" placeholder="Cover Photo" type="file" class="form-control">
-                            </div>
-             -->
+                            
                             <div class="position-relative form-group">
-                                <label for="description" class="">Description </label>
-                                <textarea name="description" id="description" class="form-control" required="required">
-                                </textarea>
-                            </div>
-                            <div class="position-relative form-group">
-                                <label for="description" class="Control-label">Featured Image </label>
+                                <label for="description" class="Control-label">Document File</label>
                                 <div class="form-control">
-                                   <input type="file" name="featured"> 
+                                   <input type="file" name="document"> 
                                 </div>
                                 
                             </div>
-                            <button class="mt-1 btn btn-primary">save</button>
+                            <button class="mt-1 btn btn-primary">Save Document</button>
                         </form>
                     </div>
                 </div>

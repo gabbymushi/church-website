@@ -8,14 +8,14 @@
                 </i>
             </div>
             <div>Majimbo
-                <div class="page-title-subheading">Add Jimbo
+                <div class="page-title-subheading">Edit Jimbo
                 </div>
             </div>
         </div>
         <div class="page-title-actions">
-            <button type="button" data-toggle="tooltip" title="Example Tooltip" data-placement="bottom" class="btn-shadow mr-3 btn btn-dark">
+            <!-- <button type="button" data-toggle="tooltip" title="Example Tooltip" data-placement="bottom" class="btn-shadow mr-3 btn btn-dark">
                 <i class="fa fa-star"></i>
-            </button>
+            </button> -->
             <div class="d-inline-block dropdown">
                 <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn-shadow dropdown-toggle btn btn-info">
                     <span class="btn-icon-wrapper pr-2 opacity-7">
@@ -72,11 +72,14 @@
                 <div class="main-card mb-3 card">
                     <div class="card-body">
                         <!-- <h5 class="card-title">Controls Types</h5> -->
-                        <form method="POST" action="/jimbo/store" class="" enctype="multipart/form-data">
+                        <form method="POST" action="/jimbo/update/{{$jimbo->id}}" class="" enctype="multipart/form-data">
                             @csrf
                             <div class="position-relative form-group">
                                 <label for="name" class="">Name</label>
-                                <input name="name" id="name" placeholder="Name" type="text" class="form-control" required="required">
+                                <input name="name" id="name" value="{{$jimbo->name}}" type="text" class="form-control" required="required">
+                                @if($errors->has('name'))
+                                <p>{{$errors->first('name')}}</p>
+                                @endif
                             </div>
                             <!-- <div class="position-relative form-group">
                                 <label for="title" class="">Cover Photo</label> 
@@ -85,17 +88,9 @@
              -->
                             <div class="position-relative form-group">
                                 <label for="description" class="">Description </label>
-                                <textarea name="description" id="description" class="form-control" required="required">
-                                </textarea>
+                                <textarea name="description" id="description" class="form-control" required="required"> {{$jimbo->description}}</textarea>
                             </div>
-                            <div class="position-relative form-group">
-                                <label for="description" class="Control-label">Featured Image </label>
-                                <div class="form-control">
-                                   <input type="file" name="featured"> 
-                                </div>
-                                
-                            </div>
-                            <button class="mt-1 btn btn-primary">save</button>
+                            <button class="mt-1 btn btn-primary">Update Jimbo</button>
                         </form>
                     </div>
                 </div>

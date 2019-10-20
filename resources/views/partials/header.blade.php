@@ -1,5 +1,5 @@
   <!-- Start Top Row -->
-  <div class="toprow">
+  <div class="toprow" style="">
   	<div class="container">
     	<div class="row">
           	<div class="col-md-6 col-sm-6">

@@ -1,18 +1,135 @@
 @extends('layouts.main')
 @section('content')
-  <!-- Start Hero Slider -->
-  <div  style="margin-top: 80px;" class="hero-slider flexslider clearfix" data-autoplay="yes" data-pagination="yes" data-arrows="yes" data-style="fade" data-pause="yes">
-    <ul class="slides">
-      <li class="parallax text-center" style="background-image:url({{asset('assets/images/slider/slide_kkkt.PNG')}});">
-        <div class="text-center" style="display: inline-block; position: absolute; background-color:rgba(0,0,0,.5); padding: 10px 10px 0px 10px; margin-left: -500px color: #ffffff; margin-top: 400px; font-weight: bold;"><h4 style="color:white;">KANISA LA KIINJILI LA KILUTHERI TANZANIA</h4></div>
-      </li>
-      <li class="parallax text-center" style="background-image:url({{asset('assets/images/slider/slide_kkkt2.PNG')}});">
-        <div class="text-center" style="display: inline-block; position: absolute; background-color:rgba(0,0,0,.5); padding:10px 10px 0px 10px; color: #ffffff; margin-top: 400px; font-weight: bold;"><h4 style="color:white; text-decoration: underline;">The Church focuses on propagating the "holistic" Gospel serving man through spiritual</h4></div>
-      </li>
-       <li class="parallax text-center" style="background-image:url({{asset('assets/images/slider/slide_kkkt2.PNG')}});">
-        <div class="text-center" style="display: inline-block; position: absolute; background-color:rgba(0,0,0,.5); padding:10px 10px 0px 10px; color: #ffffff; margin-top: 400px; font-weight: bold;"><h4 style="color:white; text-decoration: underline;">The Church focuses on propagating the "holistic" Gospel serving man through spiritual</h4></div>
-      </li>
-    </ul>
+    <!-- Start Hero Slider -->
+  <div class="slider-rev-cont" style="margin-top: 80px;">
+      <div class="tp-banner-container">
+          <div class="tp-banner">
+              <ul style="display:none;">
+                  <!-- SLIDE  -->
+                  <li data-transition="fade" data-slotamount="1" data-masterspeed="1000"  data-saveperformance="off"  data-title="Slide 1">
+                      <!-- MAIN IMAGE -->
+                      <img src="{{asset('assets/images/slider/slide_kkkt.png')}}"  alt="fullslide1"  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+                      <!-- LAYERS -->
+          
+                      <!-- LAYER NR. 1 -->
+                    
+                     
+                     <!-- LAYER NR. 1 -->
+                      <div class="tp-caption large_text randomrotate tp-resizeme" 
+                           data-x="100" 
+                           data-y="200"  
+                          data-speed="300" 
+                          data-start="500" 
+                          data-easing="Power3.easeInOut" 
+                          data-splitin="none" 
+                          data-splitout="none" 
+                          data-elementdelay="0.1" 
+                          data-endelementdelay="0.1" 
+                           data-end="3000" 
+               data-endspeed="300" 
+              
+                          style="z-index: 5; max-width: auto; max-height: auto; white-space: nowrap;">Kusimikwa Askofu
+                      </div>
+              
+                      <!-- LAYER NR. 3 -->
+                      <!-- LAYER NR. 2 -->
+                      <div class="tp-caption large_text randomrotate tp-resizeme" 
+                           data-x="100" 
+                           data-y="259"  
+                          data-speed="300" 
+                          data-start="800" 
+                          data-easing="Power3.easeInOut" 
+                          data-splitin="none" 
+                          data-splitout="none" 
+                          data-elementdelay="0.1" 
+                          data-endelementdelay="0.1" 
+                           data-end="4000" 
+               data-endspeed="300" 
+              
+                          style="z-index: 6; max-width: auto; max-height: auto; white-space: nowrap;">Jimbo La Magharibi
+                      </div>
+              
+                      <!-- LAYER NR. 4 -->
+                          <!-- LAYER NR. 3 -->
+                      <div class="tp-caption randomrotate customout tp-resizeme" 
+                           data-x="100" 
+                           data-y="330"  
+                           data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" 
+                          data-speed="300" 
+                          data-start="1100" 
+                          data-easing="Power3.easeInOut" 
+                          data-splitin="none" 
+                          data-splitout="none" 
+                          data-elementdelay="0.1" 
+                          data-endelementdelay="0.1" 
+                           data-end="5000" 
+                          data-endspeed="300" 
+              
+                          style="z-index: 7; max-width: auto; max-height: auto; white-space: nowrap;"><a href='#' class='btn btn-primary btn-lg' style="color:#fff;">More Events</a> 
+                      </div>
+                  </li>
+                  <!-- SLIDE  -->
+                  <li data-transition="fade" data-slotamount="1" data-masterspeed="1000"  data-saveperformance="off"  data-title="Slide 2">
+                      <!-- MAIN IMAGE -->
+                      <img src="{{asset('assets/images/slider/slide_kkkt2.png')}}"  alt="fullslide1"  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+                      <!-- LAYERS -->
+          
+                      <!-- LAYER NR. 1 -->
+                      <div class="tp-caption large_text randomrotate tp-resizeme" 
+                           data-x="100" 
+                           data-y="200"  
+                          data-speed="300" 
+                          data-start="500" 
+                          data-easing="Power3.easeInOut" 
+                          data-splitin="none" 
+                          data-splitout="none" 
+                          data-elementdelay="0.1" 
+                          data-endelementdelay="0.1" 
+                           data-end="3000" 
+               data-endspeed="300" 
+              
+                          style="z-index: 5; max-width: auto; max-height: auto; white-space: nowrap;">Love the God 
+                      </div>
+              
+                      <!-- LAYER NR. 2 -->
+                      <div class="tp-caption large_text randomrotate tp-resizeme" 
+                           data-x="100" 
+                           data-y="259"  
+                          data-speed="300" 
+                          data-start="800" 
+                          data-easing="Power3.easeInOut" 
+                          data-splitin="none" 
+                          data-splitout="none" 
+                          data-elementdelay="0.1" 
+                          data-endelementdelay="0.1" 
+                           data-end="4000" 
+               data-endspeed="300" 
+              
+                          style="z-index: 6; max-width: auto; max-height: auto; white-space: nowrap;">Love his Creations 
+                      </div>
+              
+                      <!-- LAYER NR. 3 -->
+                      <div class="tp-caption randomrotate customout tp-resizeme" 
+                           data-x="100" 
+                           data-y="330"  
+                           data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" 
+                          data-speed="300" 
+                          data-start="1100" 
+                          data-easing="Power3.easeInOut" 
+                          data-splitin="none" 
+                          data-splitout="none" 
+                          data-elementdelay="0.1" 
+                          data-endelementdelay="0.1" 
+                           data-end="5000" 
+               data-endspeed="300" 
+              
+                          style="z-index: 7; max-width: auto; max-height: auto; white-space: nowrap;"><a href='sermons.html' class='btn btn-primary btn-lg' style="color:#fff;">Our Sermons</a> 
+                      </div>
+                  </li>
+              </ul> 
+              <div class="tp-bannertimer" style="display:none;"></div>  
+          </div>
+      </div>
   </div>
   <!-- End Hero Slider --> 
   <!-- Start Notice Bar -->
@@ -164,18 +281,20 @@
                <header class="listing-header">
                 <h4>Download Center</h4>
               </header>
-              <section class="listing-cont">
-              
-              <a href="#"><p>DME Almanac</p></a>
-              <a href=""><p>DME Magazine</p></a>
-            </section>
+               <ul class="checks">
+               @if(isset($downloads))
+               @foreach($downloads as $document)
+                 <a href="{{Storage::url($document->document)}}" target="blank"><li>{{$document->title}}</li></a> 
+                 @endforeach
+                 @endif
+                  
+                </ul>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  MUST/DG/19/0030
   <!-- Start Featured Gallery -->
   <div class="featured-gallery">
     <div class="container">

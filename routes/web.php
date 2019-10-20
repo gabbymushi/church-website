@@ -107,6 +107,20 @@ Route::get('/contactus', [
     'as' => 'contactus'
 ]);
 
+//Downloads Templates
+Route::get('/downloads',[
+  'uses' => 'DownloadsController@index',
+  'as' => 'downloads'
+]);
+Route::get('/downloads/create',[
+  'uses' => 'DownloadsController@create',
+  'as' => 'download.create'
+]);
+
+Route::post('/document/store',[
+  'uses' => 'DownloadsController@store',
+  'as' => 'download.store'
+]);
 //Staff routes
 Route::get('all/staff', [
     'uses' => 'StaffController@index',
