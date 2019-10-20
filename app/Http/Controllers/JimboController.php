@@ -42,10 +42,19 @@ class JimboController extends Controller
       //dd($request->name);
       $Jimbo = new Jimbo();
 
+        $this->validate($request,[
+          'featured'=>'mimes:png,jpg,jpeg|Max:20000'
+          ]);
+         
+         $featured = $request->file('featured')->store('public/majimbo');
+          
+
       $Jimbo->name = $request->name;
       $Jimbo->slug = str_slug($request->name);
       $Jimbo->description = $request->description;
+      $Jimbo->featured = $featured;
       $Jimbo->save();
+
 
       Session::flash('success','Jimbo created successfully');
       return redirect()->route('manage.jimbo');
