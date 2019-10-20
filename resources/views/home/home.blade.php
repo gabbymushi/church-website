@@ -281,18 +281,20 @@
                <header class="listing-header">
                 <h4>Download Center</h4>
               </header>
-              <section class="listing-cont">
-              
-              <a href="#"><p>DME Almanac</p></a>
-              <a href=""><p>DME Magazine</p></a>
-            </section>
+               <ul class="checks">
+               @if(isset($downloads))
+               @foreach($downloads as $document)
+                 <a href="{{Storage::url($document->document)}}" target="blank"><li>{{$document->title}}</li></a> 
+                 @endforeach
+                 @endif
+                  
+                </ul>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  MUST/DG/19/0030
   <!-- Start Featured Gallery -->
   <div class="featured-gallery">
     <div class="container">
