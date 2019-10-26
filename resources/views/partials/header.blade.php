@@ -42,7 +42,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-8 col-sm-6 col-xs-8" style="">
-            <h1 class="logo"> <a href="index.html"><img style="max-width:500px; max-height: 80px; margin-right: 10px;" src="{{asset('assets/images/logo.png')}}" alt="Logo"></a> </h1>
+            <h1 class="logo"> <a href="/"><img style="max-width:500px; max-height: 80px; margin-right: 10px;" src="{{asset('assets/images/logo.png')}}" alt="Logo"></a> </h1>
 
             <h3 class="title1" style="margin-top: 10px ; margin-left: 10px; color:#074368; font-weight:bold;"><b>ELCT - Evangelical Lutheran Church in Tanzania</b></h3>
             <div id="diosece">          
@@ -75,6 +75,7 @@
                 <li><a href="{{url('/about-us')}}">About Us</a>
                   <ul class="dropdown">
                     <li><a href="{{route('dme.history')}}">Our History</a></li>
+                    <li><a href="{{route('dme.mission')}}">Mission & Vision</a></li>
                 	<li><a href="{{route('contactus')}}">Contact</a></li>
                   </ul>
                 </li>

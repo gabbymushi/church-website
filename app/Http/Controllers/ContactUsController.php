@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\News;
 
 class ContactUsController extends Controller
 {
@@ -13,7 +14,8 @@ class ContactUsController extends Controller
      */
     public function index()
     {
-        return view('home.about-us');
+        $data['news'] = News::orderBy('created_at','desc')->take(2)->get();
+        return view('home.contact-us',$data);
     }
 
     /**

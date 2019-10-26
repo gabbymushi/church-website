@@ -65,4 +65,9 @@ class HomeController extends Controller
     public function dme_history(){
         return view('home.dme-history');
     }
+
+     public function dme_mission(){
+        $data['events'] =Event::orderBy('created_at','desc')->take(5)->get();
+        return view('home.dme-mission',$data);
+    }
 }

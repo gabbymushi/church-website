@@ -20,7 +20,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <h1>Our Staff</h1>
+          <h1>DME Management Staff</h1>
         </div>
       </div>
     </div>
@@ -31,20 +31,22 @@
     <div id="content" class="content full">
       <div class="container">
         <div class="row">
+          if(isset($staffs))
           @foreach($staffs as $staff)
-          <div class="col-md-4 col-sm-4">
+          <div class="col-md-3 col-sm-3">
             <div class="grid-item staff-item">
               <div class="grid-item-inner">
-                <div class="media-box" style="text-align: center;"> <img style="max-width: 150px; max-height: 150px" src="{{asset($staff->photo)}}" alt=""> </div>
-                <div class="grid-content">
+                <div class="media-box" style="text-align: center;"> <img style="max-width: 150px; max-height: 100px" width="100p" src="{{asset($staff->photo)}}" alt=""> </div>
+                <div class="grid-content text-center">
                   <h3>{{$staff->fname.' '.$staff->lname}}</h3>
-                  <nav class="social-icons"> <a href="#"><i class="fa fa-facebook"></i></a> <a href="#"><i class="fa fa-twitter"></i></a> <a href="#"><i class="fa fa-google-plus"></i></a> <a href="#"><i class="fa fa-pinterest"></i></a> </nav>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis fermentum sem, ac viverra ante luctus vel. Donec vel mauris quam.</p>
+                  
+                  <p>{{$staff->designation}}</p>
                 </div>
               </div>
             </div>
           </div>
          @endforeach
+         @endif
         </div>
       </div>
     </div>

@@ -168,7 +168,7 @@
                {{$askofu->fname .' '.$askofu->lname.' '.', Bishop ELCT-DME' }}
               @else
                <img src="{{asset('assets/images/staff/askofu.jpg')}}" alt="staff"> <strong style="margin-bottom:0px;">
-                 Daniel Elias Ngungath
+                 Elias Kitoi
               @endif
 
              
@@ -267,7 +267,7 @@
                 <ul class="text-center">
                   @if(isset($majimbo))
                   @foreach($majimbo as $jimbo)
-                   <li class="item sermon featured-sermon"> 
+                   <li class="item sermon featured-sermon" style="width: 100px"> 
                     <a href="{{route('jimbo.show',[$jimbo->slug])}}"> <h4 style="font-weight: bold;">{{$jimbo->name}}</h4> </a>
                   </li>
                   @endforeach
