@@ -168,7 +168,7 @@
                {{$askofu->fname .' '.$askofu->lname.' '.', Bishop ELCT-DME' }}
               @else
                <img src="{{asset('assets/images/staff/askofu.jpg')}}" alt="staff"> <strong style="margin-bottom:0px;">
-                 Elias Kitoi
+                 Elias Kitoi ,Bishop ELCT-DME
               @endif
 
              

@@ -63,10 +63,7 @@
                   <label><input type="checkbox" name="shrkmgt" value="1"> SHARIKA MNGNT</label>
                   &nbsp;
                   <label><input type="checkbox" name="askofu" value="1"> Askofu Mkuu </label>
-                   &nbsp;
-                  <label><input type="checkbox" name="m-askofu" value="1">Msaidizi wa Askofu</label>
-                  &nbsp;
-                  <label><input type="checkbox" name="m-askofu" value="1">Msaidizi wa Askofu</label>
+                   
                    </div>   
                      </div>
                       </div> 

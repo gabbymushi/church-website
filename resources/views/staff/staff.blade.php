@@ -1,13 +1,12 @@
 @extends('layouts.main')
 @section('content')
   <!-- Start Nav Backed Header -->
-  <div class="nav-backed-header parallax" style="background-image:url(http://placehold.it/1280x635&amp;text=IMAGE+PLACEHOLDER);">
+  <div class="nav-backed-header parallax">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
           <ol class="breadcrumb">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
+            <li><a href="{{route('home')}}">Home</a></li>
             <li class="active">Staff</li>
           </ol>
         </div>
@@ -31,21 +30,22 @@
     <div id="content" class="content full">
       <div class="container">
         <div class="row">
-          if(isset($staffs))
+          @if(isset($staffs))
           @foreach($staffs as $staff)
-          <div class="col-md-3 col-sm-3">
+          <div class="col-md-4 col-sm-4">
             <div class="grid-item staff-item">
               <div class="grid-item-inner">
                 <div class="media-box" style="text-align: center;"> <img style="max-width: 150px; max-height: 100px" width="100p" src="{{asset($staff->photo)}}" alt=""> </div>
-                <div class="grid-content text-center">
-                  <h3>{{$staff->fname.' '.$staff->lname}}</h3>
-                  
-                  <p>{{$staff->designation}}</p>
+                <div class="grid-content staff-name text-center">
+                  <p style="font-weight: bold;">{{$staff->fname}}&nbsp;{{$staff->lname}}</p>
+                  <p><?php echo ucfirst($staff->designation) ?></p>
                 </div>
               </div>
             </div>
           </div>
+
          @endforeach
+
          @endif
         </div>
       </div>

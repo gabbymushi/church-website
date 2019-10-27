@@ -75,7 +75,7 @@
                     <li><a href="{{route('dme.history')}}">Our History</a></li>
                     <li><a href="{{route('dme.mission')}}">Mission & Vision</a></li>
                 	<li><a href="{{route('contactus')}}">Contact</a></li>
-                  <li><a href="{{route('contactus')}}">Our Staff</a></li>
+                  <li><a href="/all/staff">Our Staff</a></li>
                   </ul>
                 </li>
                 <li class="megamenu"><a href="#">Our Work</a>

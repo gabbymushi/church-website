@@ -72,6 +72,7 @@ class StaffController extends Controller
         $staff->dmemgt = $request->dmemgt;
         $staff->jmbmgt = $request->jmbmgt;
         $staff->shrkmgt = $request->shrkmgt;
+        $staff->askofu = $request->askofu;
         $staff->save();
         Session::flash('success','Staff created successfully');
         return redirect()->route('manage.staff');

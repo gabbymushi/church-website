@@ -123,7 +123,7 @@ Route::post('/document/store',[
   'as' => 'download.store'
 ]);
 //Staff routes
-Route::get('all/staff', [
+Route::get('/all/staff', [
     'uses' => 'StaffController@index',
     'as' => 'all.staff'
 ]);

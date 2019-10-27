@@ -30,7 +30,7 @@ class CreateStaffTable extends Migration
             $table->boolean('dmemgt')->nullable();
             $table->boolean('jmbmgt')->nullable();
             $table->boolean('shrkmgt')->nullable();
-            
+            $table->boolean('askofu')->nullable();
             $table->timestamps();
         });
     }

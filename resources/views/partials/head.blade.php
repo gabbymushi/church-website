@@ -156,7 +156,7 @@ div.transbox p {
   color: #000000;
 }
 
-div.staff-name {
+div.staff-name{
 	background-color: #074a29;
 	color: #fff;
 }
