@@ -135,5 +135,31 @@ font-family: 'Open Sans', sans-serif;
 .tab-content{
 	background-color:#f8f7f3;
 }
+
+div.background {
+  background: url(klematis.jpg) repeat;
+  border: 2px solid black;
+}
+
+div.transbox {
+  margin: 30px;
+  background-color: #fff;
+  border: 1px solid black;
+  opacity: 0.6;
+  padding: 5px;
+  filter: alpha(opacity=60); /* For IE8 and earlier */
+}
+
+div.transbox p {
+  margin: 5%;
+  font-weight: bold;
+  color: #000000;
+}
+
+div.staff-name {
+	background-color: #074a29;
+	color: #fff;
+}
+}
  
 </style>

@@ -87,6 +87,26 @@
           
             </div>
           </div>
+          <!-- Contacts information -->
+            <div class="col-md-3 sidebar"> 
+            <!-- Recent Posts Widget -->
+            <div class="widget-recent-posts widget">
+              <div class="sidebar-widget-title">
+                <h4>Contacts Informations</h4>
+              </div>
+                <ul class="checks">
+                  <li>
+                    <b style="font-weight: bold;">Mob: </b>+255 27 255 3656
+                  </li>
+                  <li>
+                   <b style="font-weight: bold;">Email: </b>elctdme@habari.co.tz
+                  </li>
+                  <li>
+                   <b style="font-weight: bold;">Website: </b>www.elctdme.co.tz
+                  </li>
+                </ul>
+            </div>
+          </div>
         </div>
       </div>
     </div>

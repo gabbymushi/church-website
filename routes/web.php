@@ -316,3 +316,7 @@ Route::get('sermon/all',[
 'uses'=>'SermonController@allSermons',
 'as'=>'sermon.all'
 ]);
+
+//Church Projects Routes
+Route::get('/projects','ProjectsController@index')->name('projects');
+Route::get('/projects/show','ProjectsController@show')->name('projects.show');

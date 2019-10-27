@@ -35,7 +35,7 @@
             <div class="grid-item staff-item">
               <div class="grid-item-inner">
                 <div class="media-box"> <img src="http://placehold.it/500x300&amp;text=IMAGE+PLACEHOLDER" alt=""> </div>
-                <div class="grid-content">
+                <div class="grid-content staff-name">
                   <p style="font-weight: bold;">{{$mgntstaff->fname}}&nbsp;{{$mgntstaff->lname}}</p>
                   <p><?php echo ucfirst($mgntstaff->designation) ?></p>
                 </div>

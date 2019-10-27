@@ -175,24 +175,87 @@
             </strong> <span class="more">Bishop Profile</span> </a>
              </div>
             <div class="col-md-4 col-sm-4 featured-block"> 
-              <h3>What we Do</h3>
+              <h3><a href="#">Our Work >></a></h3>
             
               <div class="grid-item-inner">
                 <div class="media-box">
-                  <div class="flexslider" data-autoplay="yes" data-pagination="yes" data-arrows="yes" data-style="slide" data-pause="yes">
-                    <ul class="slides">
-                      <li class="item"><a href="http://placehold.it/600x400&amp;text=IMAGE+PLACEHOLDER" data-rel="prettyPhoto[postname]"><img src="{{asset('assets/images/chuo-kkt.jpg')}}" alt=""></a></li>
-                      <li class="item"><a href="http://placehold.it/600x400&amp;text=IMAGE+PLACEHOLDER" data-rel="prettyPhoto[postname]"><img src="{{asset('assets/images/shule-kkkt.jpg')}}" alt=""></a></li>
+                  <div class="flexslider" data-autoplay="yes" data-pagination="no" data-arrows="yes" data-style="slide" data-pause="yes">
+                    <ul class="slides text-center" style="margin: auto;">
+                      <li class="item"><a href="{{asset('assets/images/chuo.jpg')}}" data-rel="prettyPhoto[postname]">
+                      <div class="tp-caption large_text randomrotate tp-resizeme transbox" 
+                          style="z-index: 6; font-size: 15px; max-width: auto; max-height: auto; white-space: nowrap; margin: auto; color: #000; margin-top: -5px;">
+                          Education 
+                      </div>
+                        <img src="{{asset('assets/images/chuo.jpg')}}" alt="">
+                       
+                      </a>
+
+                      </li>
+                       <li class="item"><a href="{{asset('assets/images/shule-kkkt.jpg')}}" data-rel="prettyPhoto[postname]">
+                         <div class="tp-caption large_text randomrotate tp-resizeme transbox" 
+                          style="z-index: 6; font-size: 15px; max-width: auto; max-height: auto; white-space: nowrap; margin: auto; color: #000; margin-top: -5px;">
+                          Education 
+                      </div>
+                        <img src="{{asset('assets/images/shule-kkkt.jpg')}}" alt="">
+                       
+                      </a>
+
+                      </li>
+                      <li class="item" style="text-align: center"><a href="{{asset('assets/images/hospital.jpg')}}" data-rel="prettyPhoto[postname]">
+                          <div class="tp-caption large_text randomrotate tp-resizeme transbox" 
+                          style="z-index: 6; font-size: 15px; max-width: auto; max-height: auto; white-space: nowrap;margin: auto; color: #000; margin-top: -5px;">
+                          Health 
+                      </div>
+                        <img src="{{asset('assets/images/hospital.jpg')}}" alt="">
+                       
+                      </a></li>
                     </ul>
                   </div>
                 </div>
               </div>
             
             </div>
-            <div class="col-md-4 col-sm-4 featured-block">
-              <h3>Resources</h3>
-             <a href="sermons.html" class="img-thumbnail"> <img src="{{asset('assets\uploads\sermons.jpg')}}" alt="staff"> <strong>Sermons Archive</strong> <span class="more">read more</span> </a> </div>
-          </div>
+           <div class="col-md-4 col-sm-4 featured-block"> 
+              <h3><a href="/projects">Projects >></a></h3>
+            
+              <div class="grid-item-inner">
+                <div class="media-box">
+                  <div class="flexslider" data-autoplay="yes" data-pagination="no" data-arrows="yes" data-style="slide" data-pause="yes">
+                    <ul class="slides">
+                      <li class="item"><a href="{{asset('assets/images/project1.jpg')}}" data-rel="prettyPhoto[postname]">
+                       <div class="tp-caption large_text randomrotate tp-resizeme transbox" 
+                          style="z-index: 6; font-size: 15px; max-width: auto; max-height: auto; white-space: nowrap; margin: auto; color: #000; margin-top: -5px;">
+                          Love his Creations  
+                      </div>
+                        <img src="{{asset('assets/images/project1.jpg')}}" alt="">
+                       
+                      </a>
+
+                      </li>
+                       <li class="item"><a href="{{asset('assets/images/project2.PNG')}}" data-rel="prettyPhoto[postname]">
+                          <div class="tp-caption large_text randomrotate tp-resizeme transbox" 
+                          style="z-index: 6; font-size: 15px; max-width: auto; max-height: auto; white-space: nowrap; margin: auto; color: #000; margin-top: -5px;">
+                          Community health and Development  
+                      </div>
+                        <img src="{{asset('assets/images/project2.jpg')}}" alt="">
+                       
+                      </a>
+
+                      </li>
+                      <li class="item"><a href="{{asset('assets/images/project3.jpg')}}" data-rel="prettyPhoto[postname]">
+                         <div class="tp-caption large_text randomrotate tp-resizeme transbox" 
+                          style="z-index: 6; font-size: 15px; max-width: auto; max-height: auto; white-space: nowrap; margin: 20px; margin-left: 80px;margin: auto; color: #000; margin-top: -5px;">
+                          Women and Youth Empowerment   
+                      </div>
+                        <img src="{{asset('assets/images/project3.jpg')}}" alt="">
+                       
+                      </a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+            </div>
           <!-- End Featured Blocks --> 
         </div>
         <div class="row">
@@ -267,7 +330,7 @@
                 <ul class="text-center">
                   @if(isset($majimbo))
                   @foreach($majimbo as $jimbo)
-                   <li class="item sermon featured-sermon" style="width: 100px"> 
+                   <li class="item sermon featured-sermon"  style="max-height: 40px"> 
                     <a href="{{route('jimbo.show',[$jimbo->slug])}}"> <h4 style="font-weight: bold;">{{$jimbo->name}}</h4> </a>
                   </li>
                   @endforeach
