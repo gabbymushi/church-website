@@ -19,6 +19,7 @@ use App\Http\Controllers\HomeController;
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('/about-us', 'HomeController@aboutUs');
 Route::get('/dme-history','HomeController@dme_history')->name('dme.history');
+Route::get('/dme-mission','HomeController@dme_mission')->name('dme.mission');
 // Auth::routes();
 
 // Route::get('/home', 'HomeController@index')->name('home');
@@ -122,7 +123,7 @@ Route::post('/document/store',[
   'as' => 'download.store'
 ]);
 //Staff routes
-Route::get('all/staff', [
+Route::get('/all/staff', [
     'uses' => 'StaffController@index',
     'as' => 'all.staff'
 ]);
@@ -315,3 +316,7 @@ Route::get('sermon/all',[
 'uses'=>'SermonController@allSermons',
 'as'=>'sermon.all'
 ]);
+
+//Church Projects Routes
+Route::get('/projects','ProjectsController@index')->name('projects');
+Route::get('/projects/show','ProjectsController@show')->name('projects.show');

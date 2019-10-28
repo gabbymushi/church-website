@@ -3,9 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\News;
 
-class ContactUsController extends Controller
+class ProjectsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +13,7 @@ class ContactUsController extends Controller
      */
     public function index()
     {
-        $data['news'] = News::orderBy('created_at','desc')->take(2)->get();
-        return view('home.contact-us',$data);
+        return view('projects.index');
     }
 
     /**
@@ -45,9 +43,9 @@ class ContactUsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show()
     {
-        //
+        return view('projects.show');
     }
 
     /**

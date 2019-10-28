@@ -35,7 +35,7 @@
             <div class="grid-item staff-item">
               <div class="grid-item-inner">
                 <div class="media-box"> <img src="http://placehold.it/500x300&amp;text=IMAGE+PLACEHOLDER" alt=""> </div>
-                <div class="grid-content">
+                <div class="grid-content staff-name">
                   <p style="font-weight: bold;">{{$mgntstaff->fname}}&nbsp;{{$mgntstaff->lname}}</p>
                   <p><?php echo ucfirst($mgntstaff->designation) ?></p>
                 </div>
@@ -60,6 +60,8 @@
                 <div class="accordion-heading accordionize"> <a class="accordion-toggle active" data-toggle="collapse" data-parent="#accordionArea" href="#Area{{$sharika->id}}">Usharika wa {{$sharika->name}}<i class="fa fa-angle-down"></i> </a> </div>
                 <div id="Area{{$sharika->id}}" class="accordion-body collapse">
                   <div class="accordion-inner">
+                    
+                 
                   <table class="table table-striped" style="color: #000;">
                     <thead style="background-color: #CCC; font-weight: bold;">
                       <th>Mtaa</th>
@@ -81,6 +83,7 @@
                     </tbody>
                     
                   </table>
+                 
                    </div>
                 </div>
               </div>
@@ -93,39 +96,53 @@
           </div>
           <!-- Start Sidebar -->
           <div class="col-md-4 sidebar">
-            <!-- Photo Gallery Widget -->
-            <div class="widget-gallery widget">
-              <div class="sidebar-widget-title">
-                <h3>Latest Gallery Items</h3>
-              </div>
-              <ul>
-                <li> <a href="http://placehold.it/600x400&amp;text=IMAGE+PLACEHOLDER" class="media-box post-image" data-rel="prettyPhoto[galwid]"> <img src="http://placehold.it/80x80&amp;text=IMAGE" alt="" class="img-thumbnail"> </a></li>
-                <li> <a href="http://placehold.it/600x400&amp;text=IMAGE+PLACEHOLDER" class="media-box post-image" data-rel="prettyPhoto[galwid]"> <img src="http://placehold.it/80x80&amp;text=IMAGE" alt="" class="img-thumbnail"> </a></li>
-                <li> <a href="http://placehold.it/600x400&amp;text=IMAGE+PLACEHOLDER" class="media-box post-image" data-rel="prettyPhoto[galwid]"> <img src="http://placehold.it/80x80&amp;text=IMAGE" alt="" class="img-thumbnail"> </a></li>
-                <li> <a href="http://placehold.it/600x400&amp;text=IMAGE+PLACEHOLDER" class="media-box post-image" data-rel="prettyPhoto[galwid]"> <img src="http://placehold.it/80x80&amp;text=IMAGE" alt="" class="img-thumbnail"> </a></li>
-                <li> <a href="http://placehold.it/600x400&amp;text=IMAGE+PLACEHOLDER" class="media-box post-image" data-rel="prettyPhoto[galwid]"> <img src="http://placehold.it/80x80&amp;text=IMAGE" alt="" class="img-thumbnail"> </a></li>
-                <li> <a href="http://placehold.it/600x400&amp;text=IMAGE+PLACEHOLDER" class="media-box post-image" data-rel="prettyPhoto[galwid]"> <img src="http://placehold.it/80x80&amp;text=IMAGE" alt="" class="img-thumbnail"> </a></li>
-              </ul>
-            </div>
+             <header class="single-post-header clearfix">
+               <h2 class="post-title">Other Districts</h2>
+              </header>
+            <ul class="checks">
+              @foreach($majimbo as $jimbo)
+               
+                  <h4><li style="padding-bottom: 10px; padding-top: 10px;">
+                     <a href="{{route('jimbo.show',[$jimbo->slug])}}">
+                     {{$jimbo->name}}
+                      </a>
+                    </li></h4>
+               
+              @endforeach
+            </ul>
+          
             <div class="widget-upcoming-events widget">
               <div class="sidebar-widget-title">
-                <h3>Events</h3>
+                <h3>Upcoming Events</h3>
               </div>
-              <ul>
-                <li class="item event-item clearfix">
-                  <div class="event-date"> <span class="date">28</span> <span class="month">Aug</span> </div>
-                  <div class="event-detail">
-                    <h4><a href="#">Staff members meet</a></h4>
-                    <span class="event-dayntime meta-data">Monday | 01:00 PM</span> </div>
-                </li>
-                <li class="item event-item clearfix">
-                  <div class="event-date"> <span class="date">06</span> <span class="month">Aug</span> </div>
-                  <div class="event-detail">
-                    <h4><a href="#">Monday Prayer</a></h4>
-                    <span class="event-dayntime meta-data">Monday | 07:00 AM</span> </div>
-                </li>
-              </ul>
+             <ul>
+                  @if(isset($events))
+                  @foreach($events as $event)
+                  <?php 
+                  $date =date('jS F,Y',strtotime($event->start_date)) ;
+                  $new_event_date = date('Y-m-d',strtotime($date));
+                  $date2 = explode('-',$new_event_date);
+                  //Get month name
+                  $monthNum  =  $date2[1];
+                  $dateObj   = DateTime::createFromFormat('!m', $monthNum);
+                  $monthName = $dateObj->format('F'); // March
+                  $monthName = mb_strimwidth($monthName, 0, 5);
+                  ?>
+                  <li class="item event-item clearfix">
+                    <div class="event-date"> <span class="date">{{$date2[2]}}</span> <span class="month">{{$monthName}}</span> </div>
+                    <div class="event-detail">
+                      <h4><a href="{{route('single_event',['id'=>$event->slug])}}">{{$event->title}}</a></h4>
+                      <span class="event-dayntime meta-data">{{$date}}</span> </div>
+                   
+                  </li>
+                  @endforeach
+                  @endif
+        
+                </ul>
             </div>
+            <header class="single-post-header clearfix">
+               <h2 class="post-title">Districts Projects</h2>
+              </header>
           </div>
         </div>
       </div>

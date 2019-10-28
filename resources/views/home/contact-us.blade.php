@@ -76,17 +76,35 @@
               <div class="sidebar-widget-title">
                 <h3>Recent Posts</h3>
               </div>
-              <ul>
-                <li class="clearfix"> <a href="#" class="media-box post-image"> <img src="http://placehold.it/800x600&amp;text=IMAGE+PLACEHOLDER" alt="" class="img-thumbnail"> </a>
-                  <div class="widget-blog-content"><a href="#">Voluptatum deleniti atque corrupti voluptatum deleniti atque corrupti</a> <span class="meta-data"><i class="fa fa-calendar"></i> on 17th Dec, 2013</span> </div>
-                </li>
-                <li class="clearfix"> <a href="#" class="media-box post-image"> <img src="http://placehold.it/800x600&amp;text=IMAGE+PLACEHOLDER" alt="" class="img-thumbnail"> </a>
-                  <div class="widget-blog-content"><a href="#">Voluptatum deleniti atque corrupti</a> <span class="meta-data"><i class="fa fa-calendar"></i> on 17th Dec, 2013</span> </div>
-                </li>
-                <li class="clearfix"> <a href="#" class="media-box post-image"> <img src="http://placehold.it/800x600&amp;text=IMAGE+PLACEHOLDER" alt="" class="img-thumbnail"> </a>
-                  <div class="widget-blog-content"><a href="#">Voluptatum deleniti atque corrupti voluptatum deleniti atque corrupti</a> <span class="meta-data"><i class="fa fa-calendar"></i> on 17th Dec, 2013</span> </div>
-                </li>
-              </ul>
+                <ul>
+                  @foreach($news as $news)
+                  <li class="clearfix"> <a href="#" class="media-box post-image"> <img src="http://placehold.it/800x600&amp;text=IMAGE+PLACEHOLDER" alt="" class="img-thumbnail"> </a>
+                  <div class="widget-blog-content"><a href="{{url('/blog/'.$news->id)}}">{{$news->title}}</a> <span class="meta-data"><i class="fa fa-calendar"></i> on {{date('jS F,Y',strtotime($news->created_at))}}</span> </div>
+                  </li>
+                 
+                  @endforeach
+                </ul>
+          
+            </div>
+          </div>
+          <!-- Contacts information -->
+            <div class="col-md-3 sidebar"> 
+            <!-- Recent Posts Widget -->
+            <div class="widget-recent-posts widget">
+              <div class="sidebar-widget-title">
+                <h4>Contacts Informations</h4>
+              </div>
+                <ul class="checks">
+                  <li>
+                    <b style="font-weight: bold;">Mob: </b>+255 27 255 3656
+                  </li>
+                  <li>
+                   <b style="font-weight: bold;">Email: </b>elctdme@habari.co.tz
+                  </li>
+                  <li>
+                   <b style="font-weight: bold;">Website: </b>www.elctdme.co.tz
+                  </li>
+                </ul>
             </div>
           </div>
         </div>
