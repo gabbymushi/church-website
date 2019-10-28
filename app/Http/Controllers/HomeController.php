@@ -47,10 +47,11 @@ class HomeController extends Controller
         $data['news'] = News::orderBy('created_at','desc')->take(2)->get();
         $data['events'] =Event::orderBy('created_at','desc')->take(5)->get();
         $data['last_record'] = DB::table('events')->latest()->first();
-        $data['askofu'] = Staff::where('designation','askofu')->first();
+        $data['askofu'] = Staff::where('askofu','1')->first();
         $data['majimbo']=Jimbo::all();
         $data['downloads'] =Download::orderBy('created_at','desc')->take(5)->get();
-       // dd($data['askofu']);
+
+      // dd($data['askofu']);
         return view('home.home', $data);
     }
     public function aboutUs()
@@ -64,5 +65,10 @@ class HomeController extends Controller
 
     public function dme_history(){
         return view('home.dme-history');
+    }
+
+     public function dme_mission(){
+        $data['events'] =Event::orderBy('created_at','desc')->take(5)->get();
+        return view('home.dme-mission',$data);
     }
 }

@@ -6,14 +6,12 @@
             	<nav class="top-menus">
                 	<ul>
                     	<li>
-                        	<a href="#"><i class="fa fa-facebook-square"></i></a>
+                        	<a href="#">Swahili</i></a>
                      	</li>
                     	<li>
-                        	<a href="#"><i class="fa fa-twitter-square"></i></a>
+                        	<a href="#">English</a>
                      	</li>
-                    	<li>
-                        	<a href="#"><i class="fa fa-instagram"></i></a>
-                     	</li>
+                    	
                  	</ul>
               	</nav>
          	</div>
@@ -42,7 +40,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-8 col-sm-6 col-xs-8" style="">
-            <h1 class="logo"> <a href="index.html"><img style="max-width:500px; max-height: 80px; margin-right: 10px;" src="{{asset('assets/images/logo.png')}}" alt="Logo"></a> </h1>
+            <h1 class="logo"> <a href="/"><img style="max-width:500px; max-height: 80px; margin-right: 10px;" src="{{asset('assets/images/logo.png')}}" alt="Logo"></a> </h1>
 
             <h3 class="title1" style="margin-top: 10px ; margin-left: 10px; color:#074368; font-weight:bold;"><b>ELCT - Evangelical Lutheran Church in Tanzania</b></h3>
             <div id="diosece">          
@@ -56,7 +54,7 @@
             	<form>
                 	<div class="input-group">
                  		<span class="input-group-addon" style="background-color:#074a29; color: #fff;"><i class="fa fa-search"></i></span>
-                		<input type="text" class="form-control" placeholder="Type your keywords...">
+                		<input type="text" class="form-control" placeholder="Search events ,news">
                  	</div>
               	</form>
             </div>
@@ -75,7 +73,9 @@
                 <li><a href="{{url('/about-us')}}">About Us</a>
                   <ul class="dropdown">
                     <li><a href="{{route('dme.history')}}">Our History</a></li>
+                    <li><a href="{{route('dme.mission')}}">Mission & Vision</a></li>
                 	<li><a href="{{route('contactus')}}">Contact</a></li>
+                  <li><a href="/all/staff">Our Staff</a></li>
                   </ul>
                 </li>
                 <li class="megamenu"><a href="#">Our Work</a>
@@ -104,13 +104,14 @@
                               <li><a href="single-event.html">Evening Prayer</a> <span class="meta-data">Friday | 07:00 PM</span> </li>
                             </ul>
                           </div>
-                          <div class="col-md-3"> <span class="megamenu-sub-title"><i class="fa fa-cog"></i> Features</span>
+                          <div class="col-md-3"> <span class="megamenu-sub-title"><i class="fa fa-book"></i> Departments</span>
                             <ul class="sub-menu">
-                              <li><a href="shortcodes.html">Shortcodes</a></li>
-                              <li><a href="typography.html">Typography</a></li>
-                    			<li><a href="shop.html">Shop <span class="label label-danger">New</span></a></li>
-                    			<li><a href="shop-sidebar.html">Shop Sidebar <span class="label label-danger">New</span></a></li>
-                    			<li><a href="shop-product.html">Single Product <span class="label label-danger">New</span></a></li>
+                              <li><a href="shortcodes.html">Education Department</a></li>
+                              <li><a href="typography.html">Hr Department</a></li>
+                    			<li><a href="shop.html">Health Department</a></li>
+                    			<li><a href="shop-sidebar.html">Treasury Department</a></li>
+                    			<li><a href="shop-sidebar.html">Youth Department</a></li>
+                          <li><a href="shop-sidebar.html">Women and Children Department</a></li>
                             </ul>
                           </div>
                         </div>
@@ -120,10 +121,9 @@
                 </li>
                 <li><a href="events.html">Events</a>
                   <ul class="dropdown">
-                    <li><a href="events.html">Events Listing</a></li>
+                    <li><a href="{{route('all_events')}}">Events Listing</a></li>
                     <li><a href="{{route('events.calender')}}">Events Calender</a></li>
-                    <li><a href="events-grid.html">Events Masonry Grid</a></li>
-                    <li><a href="single-event.html">Single Event</a></li>
+                    
                   </ul>
                 </li>
                 <li><a href="{{route('sermon.all')}}">Sermons</a>
@@ -154,13 +154,7 @@
                 </li>
                 <li><a href="{{url('/blog')}}">Blog</a>
                 </li>
-                <li><a href="causes.html">Causes</a>
-                  <ul class="dropdown">
-                    <li><a href="causes.html">Causes List</a></li>
-                    <li><a href="causes-grid.html">Causes Grid</a></li>
-                    <li><a href="single-cause.html">Single Cause</a></li>
-                  </ul>
-              	</li>
+               
               </ul>
             </nav>
           </div>

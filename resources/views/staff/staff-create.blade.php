@@ -47,6 +47,8 @@
                         <option value="parishworker">Parishworker</option>
                         <option value="karani">Karani</option>
                         <option value="Mwinjilisti">Mwinjilisti</option>
+                        <option value="Msaidizi wa Askofu">Msaidizi wa Askofu</option>
+                        <option value="Msaidizi wa Askofu">Mtunza Hazina</option>
                     </select>
                 </div>
                     </div>
@@ -59,6 +61,9 @@
                   <label><input type="checkbox" name="jmbmgt" value="1"> JIMBO MNGNT</label>
                    &nbsp;
                   <label><input type="checkbox" name="shrkmgt" value="1"> SHARIKA MNGNT</label>
+                  &nbsp;
+                  <label><input type="checkbox" name="askofu" value="1"> Askofu Mkuu </label>
+                   
                    </div>   
                      </div>
                       </div> 

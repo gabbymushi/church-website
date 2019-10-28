@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Jimbo;
 use Session;
+use App\Event;
+use App\Jimbo;
 use Auth;
 
 class JimboController extends Controller
@@ -69,10 +70,11 @@ class JimboController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show($slug)
-    {
+    {   $data['majimbo']=Jimbo::all();
         $jimbo = Jimbo::where('slug',$slug)->first();
+        $data['events'] =Event::orderBy('created_at','desc')->take(5)->get();
        
-        return view('jimbo.view-jimbo')->with('jimbo',$jimbo);
+        return view('jimbo.view-jimbo',$data)->with('jimbo',$jimbo);
 
 
     }
