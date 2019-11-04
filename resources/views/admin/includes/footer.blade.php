@@ -5,12 +5,7 @@
                 <ul class="nav">
                     <li class="nav-item">
                         <a href="javascript:void(0);" class="nav-link">
-                            Footer Link 1
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="javascript:void(0);" class="nav-link">
-                            Footer Link 2
+                            ELCT-DME-<?php echo date('Y') ?>
                         </a>
                     </li>
                 </ul>
@@ -19,15 +14,7 @@
                 <ul class="nav">
                     <li class="nav-item">
                         <a href="javascript:void(0);" class="nav-link">
-                            Footer Link 3
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="javascript:void(0);" class="nav-link">
-                            <div class="badge badge-success mr-1 ml-0">
-                                <small>NEW</small>
-                            </div>
-                            Footer Link 4
+                            Dashboard Version 1.0
                         </a>
                     </li>
                 </ul>

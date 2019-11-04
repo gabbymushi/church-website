@@ -3,9 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Project;
+use App\Department;
 use Session;
-class ProjectsController extends Controller
+
+class DepartmentsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +15,9 @@ class ProjectsController extends Controller
      */
     public function index()
     {
-        return view('projects.index');
+        $departments = Department::paginate(10);
+
+        return view('admin.departments.index',compact('departments'));
     }
 
     /**
@@ -24,7 +27,7 @@ class ProjectsController extends Controller
      */
     public function create()
     {
-        return view('admin.projects.create');
+        return view('admin.project.create');
     }
 
     /**
@@ -53,7 +56,6 @@ class ProjectsController extends Controller
 
       Session::flash('success','Project created successfully');
       return redirect()->route('projects.manage');
-
     }
 
     /**
@@ -62,9 +64,9 @@ class ProjectsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show()
+    public function show($id)
     {
-        return view('projects.show');
+        //
     }
 
     /**
@@ -98,15 +100,6 @@ class ProjectsController extends Controller
      */
     public function destroy($id)
     {
-        $project = Project::find($id);
-        $project->delete();
-        return redirect()->route('projects.manage')->with('success','Project Deleted Successfuly');
-    }
-
-    //project manage function
-
-    public function manage(){
-        $projects = Project::paginate(10);
-        return view('admin.projects.index',compact('projects'));
+        //
     }
 }

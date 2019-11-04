@@ -21,7 +21,7 @@ class StaffController extends Controller
 
 
     public function manage(){
-        $staff = Staff::paginate(10);
+        $staff = Staff::paginate(5);
         return view('staff.manage-staff')
                   ->with('staffs',$staff);
     }

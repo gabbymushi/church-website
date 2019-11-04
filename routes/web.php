@@ -148,7 +148,7 @@ Route::get('/staff/destroy/{id}', [
     'as' => 'staff.destroy'
 ]);
 
-Route::post('/logout', [
+Route::get('/logout', [
     'uses' => 'Auth\LoginController@logout',
     'as' => 'logout'
 ]);
@@ -320,3 +320,65 @@ Route::get('sermon/all',[
 //Church Projects Routes
 Route::get('/projects','ProjectsController@index')->name('projects');
 Route::get('/projects/show','ProjectsController@show')->name('projects.show');
+
+//Projects Routes
+Route::get('/projects/manage',[
+'uses'=>'ProjectsController@manage',
+'as'=>'projects.manage'
+]);
+Route::get('/project/create',[
+'uses'=>'ProjectsController@create',
+'as'=>'project.create'
+]);
+Route::post('/project/store',[
+'uses'=>'ProjectsController@store',
+'as'=>'project.store'
+]);
+Route::get('/project/{id}/edit/',[
+'uses'=>'ProjectsController@edit',
+'as'=>'project.edit'
+]);
+Route::post('/project/update/{id}',[
+'uses'=>'ProjectsController@update',
+'as'=>'project.update'
+]);
+Route::get('/project/{id}/delete',[
+'uses'=>'ProjectsController@destroy',
+'as'=>'project.delete'
+]);
+Route::get('/project/show/{slug}',[
+'uses'=>'ProjectsController@show',
+'as'=>'project.show'
+]);
+
+
+//Church Departments
+//Projects Routes
+Route::get('/departments/manage',[
+'uses'=>'DepartmentsController@index',
+'as'=>'projects.manage'
+]);
+Route::get('/department/create',[
+'uses'=>'DepartmentsController@create',
+'as'=>'department.create'
+]);
+Route::post('/department/store',[
+'uses'=>'DepartmentsController@store',
+'as'=>'department.store'
+]);
+Route::get('/department/{id}/edit/',[
+'uses'=>'DepartmentsController@edit',
+'as'=>'department.edit'
+]);
+Route::post('/department/update/{id}',[
+'uses'=>'DepartmentsController@update',
+'as'=>'department.update'
+]);
+Route::get('/department/{id}/delete',[
+'uses'=>'DepartmentsController@destroy',
+'as'=>'department.delete'
+]);
+Route::get('/department/show/{slug}',[
+'uses'=>'DepartmentsController@show',
+'as'=>'department.show'
+]);
