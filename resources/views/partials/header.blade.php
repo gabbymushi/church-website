@@ -133,26 +133,15 @@
                     <li><a href="single-sermon.html">Single Sermon</a></li>
                   </ul> -->
                 </li>
-                <li><a href="gallery-2cols-pagination.html">Gallery</a>
+                <li><a href="gallery-2cols-pagination.html">Projects</a>
                   <ul class="dropdown">
-                    <li><a href="gallery-2cols-pagination.html">With Pagination</a>
-                      <ul class="dropdown">
-                        <li><a href="gallery-2cols-pagination.html">2 Columns</a></li>
-                        <li><a href="gallery-3cols-pagination.html">3 Columns</a></li>
-                        <li><a href="gallery-4cols-pagination.html">4 Columns</a></li>
-                      </ul>
-                    </li>
-                    <li><a href="gallery-2cols-filter.html">With Filter</a>
-                      <ul class="dropdown">
-                        <li><a href="gallery-2cols-filter.html">2 Columns</a></li>
-                        <li><a href="gallery-3cols-filter.html">3 Columns</a></li>
-                        <li><a href="gallery-4cols-filter.html">4 Columns</a></li>
-                      </ul>
-                    </li>
-                    <li><a href="gallery-masonry.html">Masonry Grid</a></li>
+                    <li><a href="gallery-masonry.html">Community health and Development project.</a></li>
+                    <li><a href="gallery-masonry.html">Skygen for Eye services</a></li>
+                    <li><a href="gallery-masonry.html">Skygen for Eye services</a></li>
+                    <li><a href="gallery-masonry.html">Women and Youth Empowerment Project at Nkoaranga</a></li>
                   </ul>
                 </li>
-                <li><a href="{{url('/blog')}}">Blog</a>
+                <li><a href="{{url('/blog')}}">News</a>
                 </li>
                
               </ul>
