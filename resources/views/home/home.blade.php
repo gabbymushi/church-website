@@ -179,7 +179,7 @@
             </strong> <span class="more">Bishop Profile</span> </a>
              </div>
             <div class="col-md-4 col-sm-4 featured-block"> 
-              <h3><a href="#">Our Work >></a></h3>
+              <h3><a href="#">What we Do ?</a></h3>
             
               <div class="grid-item-inner">
                 <div class="media-box">
@@ -220,7 +220,7 @@
             
             </div>
            <div class="col-md-4 col-sm-4 featured-block"> 
-              <h3><a href="/projects">Projects >></a></h3>
+              <h3><a href="/projects">DME Projects</a></h3>
             
               <div class="grid-item-inner">
                 <div class="media-box">

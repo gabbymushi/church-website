@@ -58,6 +58,7 @@ class StaffController extends Controller
         }
 
         $staff = new Staff;
+        $staff->title = $request->title;
         $staff->fname = $request->fname;
         $staff->mname = $request->mname;
         $staff->lname = $request->lname;

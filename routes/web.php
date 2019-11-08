@@ -249,7 +249,7 @@ Route::get('/usharika/{id}/delete',[
 'as'=>'usharika.destroy'
 ]);
 
-Route::get('/usharika/show/{id}',[
+Route::get('/usharika/show/{id}/{slug}',[
 'uses'=>'SharikaController@show',
 'as'=>'usharika.show'
 ]);

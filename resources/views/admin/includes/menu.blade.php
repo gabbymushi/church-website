@@ -197,6 +197,13 @@
                         </a>
                     </li>
 
+                    <li>
+                        <a href="{{route('manage.staff')}}">
+                            <i class="metismenu-icon"></i>
+                            Assign Staff Department
+                        </a>
+                    </li>
+
                 </ul>
             </li>
          <li>

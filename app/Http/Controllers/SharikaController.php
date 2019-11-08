@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Sharika;
+use App\Event;
 use App\Jimbo;
 use Session;
 use Auth;
@@ -63,9 +64,11 @@ class SharikaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
-    {
-        //
+    public function show($id,$slug)
+    {   $events = Event::orderBy('created_at','desc')->take(5)->get();
+        $sharika = Sharika::where('id',$id)
+                            ->where('slug',$slug)->first();
+        return view('usharika.view-usharika',compact('sharika'))->with('events',$events);
     }
 
     /**

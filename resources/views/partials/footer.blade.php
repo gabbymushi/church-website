@@ -4,38 +4,36 @@
         <!-- Start Footer Widgets -->
         <div class="col-md-3 col-sm-3 widget footer-widget">
           <h4 class="footer-widget-title">Contact Information</h4>
+            <p class=""><a href="{{route('home')}}">
+                Evangelical Lutheran Church in Tanzania-Diocese of Meru (ELCT – DME).</a>
+            </p> 
             <ul>
-              <li><a href="{{route('home')}}">
-                Evangelical Lutheran Church in Tanzania,Diocese of Meru (ELCT – DME).</a>
-              </li>
-              <li><a href="#">P.O.Box 96 USA-RIVERS, TANZANIA.</a></li>
-              <li><a href="#">DME Telephone: +255 27 255 3656</a></li>
-              <li><a href="#">DME Website: www.elctdme.co.tz</a></li>
-              <li><a href="#">DME E-mail: elctdme@habari.co.tz</a></li>
+              <li><a href="#"><b style="font-weight: bold;">P.O.Box </b>96 USA-RIVERS, TANZANIA.</a></li>
+              <li><a href="#"> <b style="font-weight: bold;">DME Telephone: </b>+255 27 255 3656</a></li>
+              <li><a href="#"><b style="font-weight: bold;">DME Website: </b>www.elctdme.co.tz</a></li>
+              <li><a href="#"><b style="font-weight: bold;">DME E-mail: </b> elctdme@habari.co.tz</a></li>
             </ul>
-            <ul style="padding-top: 10px;">
-              <li><a href="#">Contact Us</a></li>
-            </ul>
+            
           
         </div>
         <div class="col-md-2 col-sm-2 widget footer-widget">
           <h4 class="footer-widget-title">USEFUL LINKS</h4>
           <ul>
-            <li><a href="index.html">Church Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="events.html">All Events</a></li>
-            <li><a href="sermons.html">Sermons Archive</a></li>
-            <li><a href="blog-masonry.html">Our Blog</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="dme-history">About Us</a></li>
+            <li><a href="/all_events">All Events</a></li>
+            <li><a href="#">Sermons Archive</a></li>
+            <li><a href="/blog">Our Blog</a></li>
           </ul>
         </div>
         <div class="col-md-3 col-sm-3 widget footer-widget">
           <h4 class="footer-widget-title">Looking for Something?</h4>
           <ul>
-             <li><a href="index.html">Events</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="events.html">All Events</a></li>
-            <li><a href="sermons.html">Sermons Archive</a></li>
-            <li><a href="blog-masonry.html">Our Blog</a></li>
+             <li><a href="/events/calender">Events Calender</a></li>
+            <li><a href="/all/staff">DME Management</a></li>
+            <li><a href="/projects">DME Projects</a></li>
+            <li><a href="#">Career</a></li>
+            <li><a href="#">Give</a></li>
           </ul>
         </div>
         
