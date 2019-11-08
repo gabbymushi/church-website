@@ -54,7 +54,7 @@
             	<form>
                 	<div class="input-group">
                  		<span class="input-group-addon" style="background-color:#074a29; color: #fff;"><i class="fa fa-search"></i></span>
-                		<input type="text" class="form-control" placeholder="Search events ,news">
+                		<input type="text" class="form-control" placeholder="Search DME">
                  	</div>
               	</form>
             </div>

@@ -226,34 +226,25 @@
                 <div class="media-box">
                   <div class="flexslider" data-autoplay="yes" data-pagination="no" data-arrows="yes" data-style="slide" data-pause="yes">
                     <ul class="slides">
-                      <li class="item"><a href="{{asset('assets/images/project1.jpg')}}" data-rel="prettyPhoto[postname]">
+
+                      @if(App\Project::orderBy('created_at','desc')->take(5)->get() !=null)
+                      @foreach(App\Project::orderBy('created_at','desc')->take(5)->get() as $project)
+                      <li class="item">
+
+                        <a href="{{Storage::url($project->featured)}}" data-rel="prettyPhoto[postname]">
                        <div class="tp-caption large_text randomrotate tp-resizeme transbox" 
                           style="z-index: 6; font-size: 15px; max-width: auto; max-height: auto; white-space: nowrap; margin: auto; color: #000; margin-top: -5px;">
-                          Love his Creations  
+                         {{$project->name}} 
                       </div>
-                        <img src="{{asset('assets/images/project1.jpg')}}" alt="">
+                        <img src="{{Storage::url($project->featured)}}" alt="">
                        
                       </a>
 
                       </li>
-                       <li class="item"><a href="{{asset('assets/images/project2.PNG')}}" data-rel="prettyPhoto[postname]">
-                          <div class="tp-caption large_text randomrotate tp-resizeme transbox" 
-                          style="z-index: 6; font-size: 15px; max-width: auto; max-height: auto; white-space: nowrap; margin: auto; color: #000; margin-top: -5px;">
-                          Community health and Development  
-                      </div>
-                        <img src="{{asset('assets/images/project2.jpg')}}" alt="">
-                       
-                      </a>
-
-                      </li>
-                      <li class="item"><a href="{{asset('assets/images/project3.jpg')}}" data-rel="prettyPhoto[postname]">
-                         <div class="tp-caption large_text randomrotate tp-resizeme transbox" 
-                          style="z-index: 6; font-size: 15px; max-width: auto; max-height: auto; white-space: nowrap; margin: 20px; margin-left: 80px;margin: auto; color: #000; margin-top: -5px;">
-                          Women and Youth Empowerment   
-                      </div>
-                        <img src="{{asset('assets/images/project3.jpg')}}" alt="">
-                       
-                      </a></li>
+                      @endforeach
+                      @endif
+                    
+              
                     </ul>
                   </div>
                 </div>
