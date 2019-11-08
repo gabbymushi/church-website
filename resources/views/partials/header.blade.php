@@ -105,13 +105,12 @@
                             </ul>
                           </div>
                           <div class="col-md-3"> <span class="megamenu-sub-title"><i class="fa fa-book"></i> Departments</span>
-                            <ul class="sub-menu">
-                              <li><a href="shortcodes.html">Education Department</a></li>
-                              <li><a href="typography.html">Hr Department</a></li>
-                    			<li><a href="shop.html">Health Department</a></li>
-                    			<li><a href="shop-sidebar.html">Treasury Department</a></li>
-                    			<li><a href="shop-sidebar.html">Youth Department</a></li>
-                          <li><a href="shop-sidebar.html">Women and Children Department</a></li>
+                            <ul class="dropdown">
+                           @if(App\Department::all() != null)
+                             @foreach(App\Department::all() as $department)
+                            <li><a href="{{route('department.show',[$department->id,$department->slug])}}">{{$department->name}}</a></li>
+                             @endforeach
+                             @endif
                             </ul>
                           </div>
                         </div>
@@ -133,12 +132,15 @@
                     <li><a href="single-sermon.html">Single Sermon</a></li>
                   </ul> -->
                 </li>
-                <li><a href="gallery-2cols-pagination.html">Projects</a>
+                <li><a href="#">Projects</a>
                   <ul class="dropdown">
-                    <li><a href="gallery-masonry.html">Community health and Development project.</a></li>
-                    <li><a href="gallery-masonry.html">Skygen for Eye services</a></li>
-                    <li><a href="gallery-masonry.html">Skygen for Eye services</a></li>
-                    <li><a href="gallery-masonry.html">Women and Youth Empowerment Project at Nkoaranga</a></li>
+                    @if(App\Project::all() != null)
+                    @foreach(App\Project::all() as $project)
+                    <li>
+                      <a href="{{route('project.show',[$project->id,$project->slug])}}">{{$project->name}}</a>
+                    </li>
+                    @endforeach
+                    @endif
                   </ul>
                 </li>
                 <li><a href="{{url('/blog')}}">News</a>

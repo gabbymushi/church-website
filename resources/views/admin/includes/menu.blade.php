@@ -68,7 +68,7 @@
             </li>
                 <li>
                 <a href="#">
-                    <i class="metismenu-icon fa fa-list"></i>
+                    <i class="metismenu-icon fa fa-church"></i>
                     DME Structure
                     <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
                 </a>
@@ -96,7 +96,7 @@
             </li>
                  <li>
                 <a href="#">
-                    <i class="metismenu-icon fa fa-list"></i>
+                    <i class="metismenu-icon fa fa-download"></i>
                     Downloads
                     <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
                 </a>
@@ -126,7 +126,7 @@
             </li>
               <li>
                 <a href="#">
-                    <i class="metismenu-icon fa fa-book"></i>
+                    <i class="metismenu-icon fa fa-archive"></i>
                     Departments
                     <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
                 </a>

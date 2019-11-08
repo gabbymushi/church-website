@@ -9,25 +9,12 @@
           <ol class="breadcrumb">
             <li><a href="/">Home</a></li>
             <li><a href="/projects">DME Projects</a></li>
-            <li class="active">Education for Masai children</li>
           </ol>
         </div>
       </div>
     </div>
   </div>
   <!-- End Nav Backed Header --> 
-  <!-- Start Page Header -->
-  <div class="page-header">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-10 col-sm-10 col-xs-8">
-          <h1>Projects</h1>
-        </div>
-        <div class="col-md-2 col-sm-2 col-xs-4"> <a href="/projects" class="pull-right btn btn-primary">All Projects</a> </div>
-      </div>
-    </div>
-  </div>
-  <!-- End Page Header --> 
   <!-- Start Content -->
   <div class="main" role="main">
     <div id="content" class="content full">
@@ -35,11 +22,11 @@
         <div class="row">
           <div class="col-md-9">
             <header class="single-post-header clearfix">
-              <h2 class="post-title">Education for Masai children</h2>
+              <h2 class="post-title">{{$project->name}}</h2>
             </header>
             <article class="post-content cause-item">
                 <span class="post-meta meta-data">
-                  <span><i class="fa fa-calendar"></i> 28th Jan, 2014</span>
+                  <span><i class="fa fa-calendar"></i>{{$project->created_at}}</span>
                   <span><i class="fa fa-archive"></i> <a href="#">Education</a>, <a href="#">Africa</a></span>
                   <span><a href="#"><i class="fa fa-comment"></i> 12</a></span>
                 </span>
@@ -47,7 +34,12 @@
                 
                 <div class="row">
                   <div class="col-md-7">
-                    <img src="http://placehold.it/600x400&amp;text=IMAGE+PLACEHOLDER" class="img-responsive">
+                   
+                    @if(isset($project->featured))
+                    <img src="{{Storage::url($project->featured)}}" class="img-responsive">
+                    @else
+                     <img src="http://placehold.it/600x400&amp;text=IMAGE+PLACEHOLDER" alt="" class="img-thumbnail">
+                     @endif
                     </div>
                   <div class="col-md-5">
                         <ul class="list-group">
@@ -57,8 +49,8 @@
                               <div class="progress-bar progress-bar-success" data-appear-progress-animation="80%" data-appear-animation-delay="200"></div><!-- Upto 30% use class progress-bar-danger , upto 70% use class progress-bar-warning , afterwards use class progress-bar-success -->
                             </div>
                           </li>
-                          <li class="list-group-item"> <span class="badge">$200000</span> Amount Needed </li>
-                          <li class="list-group-item"> <span class="badge">$160000</span> Collected yet </li>
+                          <li class="list-group-item"> <span class="badge">Tsh 200000</span> Amount Needed </li>
+                          <li class="list-group-item"> <span class="badge">Tsh 160000</span> Collected yet </li>
                           <li class="list-group-item"> <span class="badge accent-bg">80%</span> Percentile </li>
                           <li class="list-group-item"> <span class="badge">15</span> Days left to achieve target</li>
                         </ul>
@@ -66,8 +58,7 @@
                     </div>
                 </div>
                 <div class="spacer-30"></div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis fermentum sem, ac viverra ante luctus vel. Donec vel mauris quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis fermentum sem, ac viverra ante luctus vel. Donec vel mauris quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis fermentum sem, ac viverra ante luctus vel. Donec vel mauris quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis fermentum sem, ac viverra ante luctus vel. Donec vel mauris quam.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis fermentum sem, ac viverra ante luctus vel. Donec vel mauris quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis fermentum sem, ac viverra ante luctus vel. Donec vel mauris quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis fermentum sem, ac viverra ante luctus vel. Donec vel mauris quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis fermentum sem, ac viverra ante luctus vel. Donec vel mauris quam.</p>
+                <p>{{$project->description}}</p>
             </article>
             <!-- Payment Modal Window -->
             <div class="modal fade" id="PaymentModal" tabindex="-1" data-backdrop="static" role="dialog" aria-labelledby="PaymentModalLabel" aria-hidden="true">
@@ -83,7 +74,7 @@
                           <div class="col-md-6">
                                 <label>How much would you like to donate?</label>
                                 <div class="input-group margin-20">
-                                    <span class="input-group-addon">$</span>
+                                    <span class="input-group-addon">Tsh</span>
                                     <select name="donation amount" class="form-control">
                                         <option value="20">20</option>
                                         <option value="50">50</option>
@@ -136,22 +127,15 @@
           </div>
           <!-- Start Sidebar -->
           <div class="col-md-3 sidebar">
-            <div class="widget sidebar-widget search-form-widget">
-              <div class="input-group input-group-lg">
-                <input type="text" class="form-control" placeholder="Search Posts...">
-                <span class="input-group-btn">
-                <button class="btn btn-default" type="button"><i class="fa fa-search fa-lg"></i></button>
-                </span> </div>
-            </div>
             <div class="widget sidebar-widget">
               <div class="sidebar-widget-title">
-                <h3>Post Categories</h3>
+                <h3>Project Categories</h3>
               </div>
               <ul>
-                <li><a href="#">Faith</a> (10)</li>
-                <li><a href="#">Missions</a> (12)</li>
-                <li><a href="#">Salvation</a> (34)</li>
-                <li><a href="#">Worship</a> (14)</li>
+                <li><a href="#">Church</a> (10)</li>
+                <li><a href="#">Children</a> (12)</li>
+                <li><a href="#">Education</a> (34)</li>
+                <li><a href="#">Women</a> (14)</li>
               </ul>
             </div>
             <div class="widget sidebar-widget">

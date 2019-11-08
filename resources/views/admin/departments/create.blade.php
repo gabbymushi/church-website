@@ -7,8 +7,8 @@
                 <i class="pe-7s-display1 icon-gradient bg-premium-dark">
                 </i>
             </div>
-            <div>Majimbo
-                <div class="page-title-subheading">Add Jimbo
+            <div>Departments
+                <div class="page-title-subheading">Add New Department
                 </div>
             </div>
         </div>
@@ -72,7 +72,7 @@
                 <div class="main-card mb-3 card">
                     <div class="card-body">
                         <!-- <h5 class="card-title">Controls Types</h5> -->
-                        <form method="POST" action="/jimbo/store" class="" enctype="multipart/form-data">
+                        <form method="POST" action="/department/store" class="" enctype="multipart/form-data">
                             @csrf
                             <div class="position-relative form-group">
                                 <label for="name" class="">Name</label>

@@ -7,7 +7,7 @@
                 <div class="main-card mb-3 card">
                     <div class="card-body">
                     	<h5 class="card-title">All epartments
-                    	<a href="{{route('jimbo.create')}}" style="margin-bottom: 20px" class="btn btn-primary btn-md pull-right">New Department</a>
+                    	<a href="{{route('department.create')}}" style="margin-bottom: 20px" class="btn btn-primary btn-md pull-right">New Department</a>
 
                     </h5>
                         <table class="mb-0 table table-bordered">
