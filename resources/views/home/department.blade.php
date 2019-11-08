@@ -54,20 +54,30 @@
               <div class="sidebar-widget-title">
                 <h3>Upcoming Events</h3>
               </div>
-              <ul>
-                <li class="item event-item clearfix">
-                  <div class="event-date"> <span class="date">28</span> <span class="month">Aug</span> </div>
-                  <div class="event-detail">
-                    <h4><a href="#">Staff members meet</a></h4>
-                    <span class="event-dayntime meta-data">Monday | 01:00 PM</span> </div>
-                </li>
-                <li class="item event-item clearfix">
-                  <div class="event-date"> <span class="date">06</span> <span class="month">Aug</span> </div>
-                  <div class="event-detail">
-                    <h4><a href="#">Monday Prayer</a></h4>
-                    <span class="event-dayntime meta-data">Monday | 07:00 AM</span> </div>
-                </li>
-              </ul>
+               <ul>
+                  @if(isset($events))
+                  @foreach($events as $event)
+                  <?php 
+                  $date =date('jS F,Y',strtotime($event->start_date)) ;
+                  $new_event_date = date('Y-m-d',strtotime($date));
+                  $date2 = explode('-',$new_event_date);
+                  //Get month name
+                  $monthNum  =  $date2[1];
+                  $dateObj   = DateTime::createFromFormat('!m', $monthNum);
+                  $monthName = $dateObj->format('F'); // March
+                  $monthName = mb_strimwidth($monthName, 0, 5);
+                  ?>
+                  <li class="item event-item clearfix">
+                    <div class="event-date"> <span class="date">{{$date2[2]}}</span> <span class="month">{{$monthName}}</span> </div>
+                    <div class="event-detail">
+                      <h4><a href="{{route('single_event',['id'=>$event->slug])}}">{{$event->title}}</a></h4>
+                      <span class="event-dayntime meta-data">{{$date}}</span> </div>
+                   
+                  </li>
+                  @endforeach
+                  @endif
+        
+                </ul>
             </div>
           </div>
         </div>

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Department;
+use App\Event;
 use Session;
 
 class DepartmentsController extends Controller
@@ -65,10 +66,12 @@ class DepartmentsController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show($id,$slug)
-    {
+    {   
+        $events =Event::orderBy('created_at','desc')->take(5)->get();
         $department = Department::where('id',$id)
                             ->where('slug',$slug)->first();
-        return view('home.department',compact('department'));
+
+        return view('home.department',compact('department'))->with('events',$events);
     }
 
     /**

@@ -139,10 +139,14 @@
         <div class="col-md-3 col-sm-6 col-xs-6 notice-bar-title"> <span class="notice-bar-title-icon hidden-xs"><i class="fa fa-calendar fa-3x"></i></span> <span class="title-note">Next</span> <strong>Upcoming Event</strong> </div>
         <div class="col-md-3 col-sm-6 col-xs-6 notice-bar-event-title">
           <h5><a href="single-event.html">@if(isset($last_record)) {{$last_record->title}}</a></h5>
-           <?php $latest_date = date('F j ,Y',strtotime($last_record->start_date)) ;?>
+           <?php
+            $latest_date = date('F j ,Y',strtotime($last_record->start_date)) ;
+
+            ?>
           <span class="meta-data">{{$latest_date}}</span> </div>
-          @endif
+         
         <div id="counter" class="col-md-4 col-sm-6 col-xs-12 counter" data-date="{{$latest_date}}">
+           @endif
           <div class="timer-col"> <span id="days"></span> <span class="timer-type">days</span> </div>
           <div class="timer-col"> <span id="hours"></span> <span class="timer-type">hrs</span> </div>
           <div class="timer-col"> <span id="minutes"></span> <span class="timer-type">mins</span> </div>
