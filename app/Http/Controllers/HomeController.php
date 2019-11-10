@@ -8,10 +8,17 @@ use App\News;
 use App\Staff;
 use App\Jimbo;
 use App\Download;
+use App\Department;
+use App\Project;
 use DB;
 
 class HomeController extends Controller
 {
+    public function __construct(){
+
+        $this->middleware(['auth'],['except'=>array('aboutUs','allGallery','dme_history','dme_mission','index','users')]);
+
+    }
     /**
      * Create a new controller instance.
      *
@@ -49,9 +56,10 @@ class HomeController extends Controller
         $data['last_record'] = DB::table('events')->latest()->first();
         $data['askofu'] = Staff::where('askofu','1')->first();
         $data['majimbo']=Jimbo::all();
+        $data['departments']=Department::all();
+        $data['projects']=Project::all();
         $data['downloads'] =Download::orderBy('created_at','desc')->take(5)->get();
 
-      // dd($data['askofu']);
         return view('home.home', $data);
     }
     public function aboutUs()

@@ -16,13 +16,13 @@
                      <div class="position-relative row form-group"><label for="exampleEmail" class="col-sm-2 col-form-label">Title<span class="text-danger">*</span></label>
                         <div class="col-sm-10">
                         <select class="form-control" name="designation" id="">
-                         <option value="askofu">Bishop</option>
-                         <option value="katibu-mkuu">Mr.</option>
-                         <option value="mchungaji">Pastor</option>
-                          <option value="miss">Miss</option>
-                          <option value="mrs">Mrs</option>
-                          <option value="mwinjilisti">Mwinj</option>
-                          <option value="bi">Bi</option>
+                         <option value="Bishop">Bishop</option>
+                         <option value="Mr">Mr.</option>
+                         <option value="Mchungaji">Pastor</option>
+                          <option value="Miss">Miss</option>
+                          <option value="Mrs">Mrs</option>
+                          <option value="Mwinjilisti">Mwinj</option>
+                          <option value="Bi">Bi</option>
                           </select>
                             </div>
                             </div>
@@ -41,14 +41,14 @@
                 <label for="designation" class="col-sm-2 col-form-label">Designation<span class="text-danger">*</span></label>
                  <div class="col-sm-10">
                     <select class="form-control" name="designation" id="">
-                        <option value="askofu">Askofu</option>
-                        <option value="katibu-mkuu">Katibu Mkuu</option>
-                        <option value="mchungaji">Mchungaji</option>
-                        <option value="parishworker">Parishworker</option>
-                        <option value="karani">Karani</option>
+                        <option value="Askofu">Askofu</option>
+                        <option value="Katibu Mkuu">Katibu Mkuu</option>
+                        <option value="Mchungaji">Mchungaji</option>
+                        <option value="Parishworker">Parishworker</option>
+                        <option value="Karani">Karani</option>
                         <option value="Mwinjilisti">Mwinjilisti</option>
                         <option value="Msaidizi wa Askofu">Msaidizi wa Askofu</option>
-                        <option value="Msaidizi wa Askofu">Mtunza Hazina</option>
+                        <option value="Mtunza Hazina">Mtunza Hazina</option>
                     </select>
                 </div>
                     </div>
@@ -82,7 +82,7 @@
                                                 <label for="instagram" class="col-sm-2 col-form-label">Photo</label>
                                                 <div class="col-sm-10"><input name="photo" id="photo" value="{{old('photo')}}"  type="file" class="form-control"></div>
                                             </div>
-                                             <div class="position-relative row form-group">
+                <div class="position-relative row form-group">
                 <label for="designation" class="col-sm-2 col-form-label">Jimbo<span class="text-danger">*</span></label>
                  <div class="col-sm-10">
                     <select class="form-control" name="jimbo_id" id="">
@@ -93,7 +93,7 @@
                 </div>
                     </div>
 
-                     <div class="position-relative row form-group">
+                <div class="position-relative row form-group">
                 <label for="designation" class="col-sm-2 col-form-label">Usharika<span class="text-danger">*</span></label>
                  <div class="col-sm-10">
                     <select class="form-control" name="usharika_id" id="">
@@ -101,7 +101,7 @@
                         <option value="{{$usharika->id}}">{{$usharika->name}}</option>
                         @endforeach
                     </select>
-                    </select>
+                    
                 </div>
                     </div>
                      <div class="position-relative row form-group">
@@ -112,7 +112,7 @@
                         <option value="{{$mtaa->id}}">{{$mtaa->name}}</option>
                         @endforeach
                     </select>
-                    </select>
+                   
                 </div>
                     </div>
                              

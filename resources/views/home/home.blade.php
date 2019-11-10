@@ -139,10 +139,14 @@
         <div class="col-md-3 col-sm-6 col-xs-6 notice-bar-title"> <span class="notice-bar-title-icon hidden-xs"><i class="fa fa-calendar fa-3x"></i></span> <span class="title-note">Next</span> <strong>Upcoming Event</strong> </div>
         <div class="col-md-3 col-sm-6 col-xs-6 notice-bar-event-title">
           <h5><a href="single-event.html">@if(isset($last_record)) {{$last_record->title}}</a></h5>
-           <?php $latest_date = date('F j ,Y',strtotime($last_record->start_date)) ;?>
+           <?php
+            $latest_date = date('F j ,Y',strtotime($last_record->start_date)) ;
+
+            ?>
           <span class="meta-data">{{$latest_date}}</span> </div>
-          @endif
+         
         <div id="counter" class="col-md-4 col-sm-6 col-xs-12 counter" data-date="{{$latest_date}}">
+           @endif
           <div class="timer-col"> <span id="days"></span> <span class="timer-type">days</span> </div>
           <div class="timer-col"> <span id="hours"></span> <span class="timer-type">hrs</span> </div>
           <div class="timer-col"> <span id="minutes"></span> <span class="timer-type">mins</span> </div>
@@ -175,7 +179,7 @@
             </strong> <span class="more">Bishop Profile</span> </a>
              </div>
             <div class="col-md-4 col-sm-4 featured-block"> 
-              <h3><a href="#">Our Work >></a></h3>
+              <h3><a href="#">What we Do ?</a></h3>
             
               <div class="grid-item-inner">
                 <div class="media-box">
@@ -216,40 +220,31 @@
             
             </div>
            <div class="col-md-4 col-sm-4 featured-block"> 
-              <h3><a href="/projects">Projects >></a></h3>
+              <h3><a href="/projects">DME Projects</a></h3>
             
               <div class="grid-item-inner">
                 <div class="media-box">
                   <div class="flexslider" data-autoplay="yes" data-pagination="no" data-arrows="yes" data-style="slide" data-pause="yes">
                     <ul class="slides">
-                      <li class="item"><a href="{{asset('assets/images/project1.jpg')}}" data-rel="prettyPhoto[postname]">
+
+                      @if(App\Project::orderBy('created_at','desc')->take(5)->get() !=null)
+                      @foreach(App\Project::orderBy('created_at','desc')->take(5)->get() as $project)
+                      <li class="item">
+
+                        <a href="{{Storage::url($project->featured)}}" data-rel="prettyPhoto[postname]">
                        <div class="tp-caption large_text randomrotate tp-resizeme transbox" 
                           style="z-index: 6; font-size: 15px; max-width: auto; max-height: auto; white-space: nowrap; margin: auto; color: #000; margin-top: -5px;">
-                          Love his Creations  
+                         {{$project->name}} 
                       </div>
-                        <img src="{{asset('assets/images/project1.jpg')}}" alt="">
+                        <img src="{{Storage::url($project->featured)}}" alt="">
                        
                       </a>
 
                       </li>
-                       <li class="item"><a href="{{asset('assets/images/project2.PNG')}}" data-rel="prettyPhoto[postname]">
-                          <div class="tp-caption large_text randomrotate tp-resizeme transbox" 
-                          style="z-index: 6; font-size: 15px; max-width: auto; max-height: auto; white-space: nowrap; margin: auto; color: #000; margin-top: -5px;">
-                          Community health and Development  
-                      </div>
-                        <img src="{{asset('assets/images/project2.jpg')}}" alt="">
-                       
-                      </a>
-
-                      </li>
-                      <li class="item"><a href="{{asset('assets/images/project3.jpg')}}" data-rel="prettyPhoto[postname]">
-                         <div class="tp-caption large_text randomrotate tp-resizeme transbox" 
-                          style="z-index: 6; font-size: 15px; max-width: auto; max-height: auto; white-space: nowrap; margin: 20px; margin-left: 80px;margin: auto; color: #000; margin-top: -5px;">
-                          Women and Youth Empowerment   
-                      </div>
-                        <img src="{{asset('assets/images/project3.jpg')}}" alt="">
-                       
-                      </a></li>
+                      @endforeach
+                      @endif
+                    
+              
                     </ul>
                   </div>
                 </div>

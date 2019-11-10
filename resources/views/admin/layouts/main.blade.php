@@ -184,6 +184,8 @@
     <script type="text/javascript" src="{{asset('dashboard_panel/assets/scripts/main.js')}}"></script>
     <script type="text/javascript" src="{{asset('js/toastr.min.js')}}"></script>
     <script type="text/javascript" src="{{asset('assets/plugins/ckeditor5-build-classic/ckeditor.js')}}"></script>
+    <!-- Datatable -->
+    <script src="{{asset('js/jquery.dataTables.min.js')}}"></script>
     <script type="text/javascript">
         @if(Session::has('success')) {
 
@@ -205,6 +207,10 @@
             });
         var ck = CKEDITOR.replace('box');
         ck.config.height = 600;
+
+    $(document).ready( function () {
+    $('#staff').DataTable();
+        });
     </script>
 </body>
 

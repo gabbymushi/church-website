@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Department;
+use App\Event;
 use Session;
 
 class DepartmentsController extends Controller
@@ -27,7 +28,7 @@ class DepartmentsController extends Controller
      */
     public function create()
     {
-        return view('admin.project.create');
+        return view('admin.departments.create');
     }
 
     /**
@@ -38,24 +39,24 @@ class DepartmentsController extends Controller
      */
     public function store(Request $request)
     {
-        $project = new Project();
+        $department = new Department();
 
         $this->validate($request,[
           'featured'=>'mimes:png,jpg,jpeg|Max:20000'
           ]);
          
-         $featured = $request->file('featured')->store('public/projects');
+         $featured = $request->file('featured')->store('public/departments');
           
 
-      $project->name = $request->name;
-      $project->slug = str_slug($request->name);
-      $project->description = $request->description;
-      $project->featured = $featured;
-      $project->save();
+          $department->name = $request->name;
+          $department->slug = str_slug($request->name);
+          $department->description = $request->description;
+          $department->featured = $featured;
+          $department->save();
 
 
-      Session::flash('success','Project created successfully');
-      return redirect()->route('projects.manage');
+      Session::flash('success','Department created successfully');
+      return redirect()->route('departments.manage');
     }
 
     /**
@@ -64,9 +65,13 @@ class DepartmentsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
-    {
-        //
+    public function show($id,$slug)
+    {   
+        $events =Event::orderBy('created_at','desc')->take(5)->get();
+        $department = Department::where('id',$id)
+                            ->where('slug',$slug)->first();
+
+        return view('home.department',compact('department'))->with('events',$events);
     }
 
     /**
@@ -100,6 +105,9 @@ class DepartmentsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $department = Department::find($id);
+        $department->delete();
+        Session::flash('success','Department Deleted Successfully');
+        return redirect()->route('departments.manage');
     }
 }

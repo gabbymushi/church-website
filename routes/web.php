@@ -249,7 +249,7 @@ Route::get('/usharika/{id}/delete',[
 'as'=>'usharika.destroy'
 ]);
 
-Route::get('/usharika/show/{id}',[
+Route::get('/usharika/show/{id}/{slug}',[
 'uses'=>'SharikaController@show',
 'as'=>'usharika.show'
 ]);
@@ -346,17 +346,16 @@ Route::get('/project/{id}/delete',[
 'uses'=>'ProjectsController@destroy',
 'as'=>'project.delete'
 ]);
-Route::get('/project/show/{slug}',[
+Route::get('/project/show/{id}/{slug}',[
 'uses'=>'ProjectsController@show',
 'as'=>'project.show'
 ]);
 
 
 //Church Departments
-//Projects Routes
 Route::get('/departments/manage',[
 'uses'=>'DepartmentsController@index',
-'as'=>'projects.manage'
+'as'=>'departments.manage'
 ]);
 Route::get('/department/create',[
 'uses'=>'DepartmentsController@create',
@@ -378,7 +377,7 @@ Route::get('/department/{id}/delete',[
 'uses'=>'DepartmentsController@destroy',
 'as'=>'department.delete'
 ]);
-Route::get('/department/show/{slug}',[
+Route::get('/department/show/{id}/{slug}',[
 'uses'=>'DepartmentsController@show',
 'as'=>'department.show'
 ]);

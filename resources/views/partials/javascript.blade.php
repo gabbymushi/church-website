@@ -10,7 +10,11 @@
 
 <script src="{{asset('assets/js/init.js')}}"></script> <!-- All Scripts --> 
 <script src="{{asset('assets/plugins/flexslider/js/jquery.flexslider.js')}}"></script> <!-- FlexSlider --> 
-<script src="{{asset('assets/plugins/countdown/js/jquery.countdown.min.js')}}"></script> <!-- Jquery Timer -->
+<script src="{{asset('assets/plugins/countdown/js/jquery.countdown.min.js')}}"></script> 
+<!-- Datatable -->
+<script src="{{asset('js/jquery.dataTables.min.js')}}"></script>
+<!-- Jquery Timer -->
+
 	<script type="text/javascript">
 				jQuery(document).ready(function() {
 					   jQuery('.tp-banner').revolution(
@@ -21,6 +25,7 @@
 							hideThumbs:10
 						});
 				});
+
 			</script>
 <script src="{{asset('assets/plugins/fullcalendar/lib/moment.min.js')}}"></script>
 <script src="{{asset('assets/plugins/fullcalendar/fullcalendar.min.js')}}"></script>
@@ -92,4 +97,7 @@
 		
 	});
 
+$(document).ready( function () {
+    $('#sharika').DataTable();
+} );
 </script>

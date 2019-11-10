@@ -78,14 +78,20 @@
                                 <label for="name" class="">Name</label>
                                 <input name="name" id="name" value="{{$mtaa->name}}" type="text" class="form-control" required="required">
                             </div>
-                            <!-- <div class="position-relative form-group">
-                                <label for="title" class="">Cover Photo</label> 
-                                <input name="picture" id="picture" placeholder="Cover Photo" type="file" class="form-control">
-                            </div>
-             -->
                             <div class="position-relative form-group">
                                 <label for="description" class="">Description </label>
                                 <textarea name="description" id="description" class="form-control" required="required"> {{$mtaa->description}}</textarea>
+                            </div>
+                              <div class="position-relative form-group">
+                                <label for="description" class="">Sharika </label>
+                                <select class="form-control" name="sharika_id" id="sharika_id">
+                                   
+                                    @foreach(App\Sharika::all() as $usharika)
+                                    <option value="{{$usharika->id}}" {{$mtaa->sharika_id == $usharika->id ? 'selected':''}}>{{$usharika->name}}</option>
+                                    @endforeach
+                     
+                                  
+                                </select>
                             </div>
                             <button class="mt-1 btn btn-primary">Update Mtaa</button>
                         </form>

@@ -48,16 +48,21 @@ class StaffController extends Controller
          'fname'=>'required',
          'lname'=>'required',
          'phone1'=>'required',
-         'designation'=>'required'
+         'designation'=>'required',
+
         ]);
+
+         $staff = new Staff;
         if ($request->hasFile('photo')) {
          $photo = $request->photo;
          $photo_new = time().$photo->getClientOriginalName();
          $photo->move('assets/uploads/staff',$photo_new);
-         $photo_new_name = 'assets/uploads/staff/'.$photo_new;   
+         $photo_new_name = 'assets/uploads/staff/'.$photo_new;
+         $staff->photo = $photo_new_name;   
         }
 
-        $staff = new Staff;
+        
+        $staff->title = $request->title;
         $staff->fname = $request->fname;
         $staff->mname = $request->mname;
         $staff->lname = $request->lname;
@@ -65,7 +70,7 @@ class StaffController extends Controller
         $staff->phone1 = $request->phone1;
         $staff->phone2 = $request->phone2;
         $staff->description = $request->description;
-        $staff->photo = $photo_new_name;
+        
         $staff->jimbo_id = $request->jimbo_id;
         $staff->usharika_id = $request->usharika_id;
         $staff->mtaa_id = $request->mtaa_id;
@@ -120,29 +125,35 @@ class StaffController extends Controller
          'fname'=>'required',
          'lname'=>'required',
          'phone1'=>'required|numeric',
-         'phone2' => 'numeric',
-         'designation'=>'required'
+         'designation'=>'required',
+         
         ]);
+
+        $staff = Staff::find($id);
         if ($request->hasFile('photo')) {
          $photo = $request->photo;
          $photo_new = time().$photo->getClientOriginalName();
          $photo->move('assets/uploads/staff',$photo_new);
          $photo_new_name = 'assets/uploads/staff/'.$photo_new;   
+         $staff->photo = $photo_new_name;
         }
 
-        $staff = Staff::find($id);
+        
         $staff->fname = $request->fname;
         $staff->mname = $request->mname;
         $staff->lname = $request->lname;
         $staff->designation = $request->designation;
         $staff->phone1 = $request->phone1;
         $staff->phone2 = $request->phone2;
-        $staff->facebook_link = $request->facebook;
-        $staff->tweeter_link = $request->tweeter;
-        $staff->instagram_link = $request->instagram;
-        $staff->other_link = $request->other;
         $staff->description = $request->description;
-        $staff->photo = $photo_new_name;
+        
+        $staff->jimbo_id = $request->jimbo_id;
+        $staff->usharika_id = $request->usharika_id;
+        $staff->mtaa_id = $request->mtaa_id;
+        $staff->dmemgt = $request->dmemgt;
+        $staff->jmbmgt = $request->jmbmgt;
+        $staff->shrkmgt = $request->shrkmgt;
+        $staff->askofu = $request->askofu;
         $staff->update();
         Session::flash('success','Staff updated successfully');
         return redirect()->route('manage.staff');

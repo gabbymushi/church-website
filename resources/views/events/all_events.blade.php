@@ -128,17 +128,7 @@
                 @endif
               </ul>
             </div>
-            <!-- Recent Comments Widget -->
-            <div class="widget_recent_comments widget">
-              <div class="sidebar-widget-title">
-                <h3>Recent Comments</h3>
-              </div>
-              <ul>
-                <li class="recentcomments"> <a href="#">Admin</a> on <a href="#">Voluptatum deleniti atque corrupti voluptatum deleniti atque corrupti</a> </li>
-                <li class="recentcomments"> Admin on <a href="#">Voluptatum deleniti atque corrupti</a> </li>
-                <li class="recentcomments"> <a href="#">Admin</a> on <a href="#">Voluptatum deleniti atque corrupti voluptatum deleniti atque corrupti</a> </li>
-              </ul>
-            </div>
+          
           </div>
         </div>
       </div>

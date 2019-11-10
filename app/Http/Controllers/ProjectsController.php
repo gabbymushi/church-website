@@ -13,8 +13,8 @@ class ProjectsController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        return view('projects.index');
+    {   $allprojects = Project::paginate(5);
+        return view('projects.index',compact('allprojects'));
     }
 
     /**
@@ -62,9 +62,11 @@ class ProjectsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show()
-    {
-        return view('projects.show');
+    public function show($id,$slug)
+    {   
+     $project = Project::where('id',$id)
+                            ->where('slug',$slug)->first();
+        return view('projects.show',compact('project'));
     }
 
     /**

@@ -34,7 +34,13 @@
           <div class="col-md-4 col-sm-4">
             <div class="grid-item staff-item">
               <div class="grid-item-inner">
-                <div class="media-box"> <img src="http://placehold.it/500x300&amp;text=IMAGE+PLACEHOLDER" alt=""> </div>
+                <div class="media-box">
+                  @if(isset($mgntstaff->photo))
+                  <img src="{{asset($mgntstaff->photo)}}" alt="">
+                  @else
+                   <img src="http://placehold.it/500x300&amp;text=IMAGE+PLACEHOLDER" alt="">
+                  @endif 
+               </div>
                 <div class="grid-content staff-name">
                   <p style="font-weight: bold;">{{$mgntstaff->fname}}&nbsp;{{$mgntstaff->lname}}</p>
                   <p><?php echo ucfirst($mgntstaff->designation) ?></p>
@@ -54,40 +60,7 @@
            
                @foreach($jimbo->sharikas as $sharika)
               <!-- Start Accordion -->
-
-            <div class="accordion" id="accordionArea">
-              <div class="accordion-group panel">
-                <div class="accordion-heading accordionize"> <a class="accordion-toggle active" data-toggle="collapse" data-parent="#accordionArea" href="#Area{{$sharika->id}}">Usharika wa {{$sharika->name}}<i class="fa fa-angle-down"></i> </a> </div>
-                <div id="Area{{$sharika->id}}" class="accordion-body collapse">
-                  <div class="accordion-inner">
-                    
-                 
-                  <table class="table table-striped" style="color: #000;">
-                    <thead style="background-color: #CCC; font-weight: bold;">
-                      <th>Mtaa</th>
-                      <th>Jina Kamili</th>
-                      <th>Cheo</th>
-                      <th>Namba ya simu</th>
-                    </thead>
-                    <tbody>
-                      @foreach(App\Mtaa::where('sharika_id',$sharika->id)->get() as $mtaa)
-                      @foreach(App\Staff::where('mtaa_id',$mtaa->id)->get() as $staff)
-                      <tr>
-                        <td>{{$mtaa->name}}</td>
-                        <td>{{$staff->fname.' '.$staff->lname}}</td>
-                         <td>{{$staff->designation}}</td>
-                        <td>{{$staff->phone1}}</td>
-                      </tr>
-                      @endforeach
-                      @endforeach
-                    </tbody>
-                    
-                  </table>
-                 
-                   </div>
-                </div>
-              </div>
-            </div>
+              <a href="{{route('usharika.show',[$sharika->id,$sharika->slug])}}" class="btn btn-primary btn-block donate-paypal">Usharika wa {{$sharika->name}}</a>
             <!-- End Accordion -->
               @endforeach
              </div>
@@ -100,7 +73,7 @@
                <h2 class="post-title">Other Districts</h2>
               </header>
             <ul class="checks">
-              @foreach($majimbo as $jimbo)
+              @foreach(App\Jimbo::where('id','!=',$jimbo->id)->get() as $jimbo)
                
                   <h4><li style="padding-bottom: 10px; padding-top: 10px;">
                      <a href="{{route('jimbo.show',[$jimbo->slug])}}">

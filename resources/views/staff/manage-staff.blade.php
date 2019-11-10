@@ -25,7 +25,7 @@
                                 <?php $i = 1; ?>
                             @foreach($staffs as $staff)
                             <tr>
-                                <th>{{$i++}}</th>
+                                <td>{{$i++}}</td>
                                 <td>{{$staff->fname.' '.$staff->lname}}</td>
                                 <td>{{$staff->designation}}</td>
                                 <td>{{$staff->phone1}}</td>
@@ -37,6 +37,7 @@
                             @endforeach
                             </tbody>
                         </table>
+                            
                          
                     </div>
                     
@@ -44,6 +45,8 @@
                              {{$staffs->links()}}
                    </div>
 
+
+                  
                 </div>
             </div>
 </div>

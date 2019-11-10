@@ -54,7 +54,7 @@
             	<form>
                 	<div class="input-group">
                  		<span class="input-group-addon" style="background-color:#074a29; color: #fff;"><i class="fa fa-search"></i></span>
-                		<input type="text" class="form-control" placeholder="Search events ,news">
+                		<input type="text" class="form-control" placeholder="Search DME">
                  	</div>
               	</form>
             </div>
@@ -105,13 +105,12 @@
                             </ul>
                           </div>
                           <div class="col-md-3"> <span class="megamenu-sub-title"><i class="fa fa-book"></i> Departments</span>
-                            <ul class="sub-menu">
-                              <li><a href="shortcodes.html">Education Department</a></li>
-                              <li><a href="typography.html">Hr Department</a></li>
-                    			<li><a href="shop.html">Health Department</a></li>
-                    			<li><a href="shop-sidebar.html">Treasury Department</a></li>
-                    			<li><a href="shop-sidebar.html">Youth Department</a></li>
-                          <li><a href="shop-sidebar.html">Women and Children Department</a></li>
+                            <ul class="dropdown">
+                           @if(App\Department::all() != null)
+                             @foreach(App\Department::all() as $department)
+                            <li><a href="{{route('department.show',[$department->id,$department->slug])}}">{{$department->name}}</a></li>
+                             @endforeach
+                             @endif
                             </ul>
                           </div>
                         </div>
@@ -119,26 +118,30 @@
                     </li>
                   </ul>
                 </li>
-                <li><a href="events.html">Events</a>
+                <li><a href="#">Events</a>
                   <ul class="dropdown">
-                    <li><a href="{{route('all_events')}}">Events Listing</a></li>
+                    <li><a href="{{route('all_events')}}">All Events</a></li>
                     <li><a href="{{route('events.calender')}}">Events Calender</a></li>
                     
                   </ul>
                 </li>
-                <li><a href="{{route('sermon.all')}}">Sermons</a>
-                  <!-- <ul class="dropdown">
-                    <li><a href="sermon-albums.html">Sermon Albums</a></li>
-                    <li><a href="sermons.html">Sermons Archive</a></li>
-                    <li><a href="single-sermon.html">Single Sermon</a></li>
-                  </ul> -->
+                <li><a href="#">Faith</a>
+                   <ul class="dropdown">
+                    <li><a href="#">DME Teaching</a></li>
+                    <li><a href="#">Daily Bible Reading</a></li>
+                    <li><a href="#">Faith and Society</a></li>
+                    <li><a href="#">Journal of Lutheran Ethics</a></li>
+                  </ul> 
                 </li>
-                <li><a href="gallery-2cols-pagination.html">Projects</a>
+                <li><a href="#">Projects</a>
                   <ul class="dropdown">
-                    <li><a href="gallery-masonry.html">Community health and Development project.</a></li>
-                    <li><a href="gallery-masonry.html">Skygen for Eye services</a></li>
-                    <li><a href="gallery-masonry.html">Skygen for Eye services</a></li>
-                    <li><a href="gallery-masonry.html">Women and Youth Empowerment Project at Nkoaranga</a></li>
+                    @if(App\Project::all() != null)
+                    @foreach(App\Project::all() as $project)
+                    <li>
+                      <a href="{{route('project.show',[$project->id,$project->slug])}}">{{$project->name}}</a>
+                    </li>
+                    @endforeach
+                    @endif
                   </ul>
                 </li>
                 <li><a href="{{url('/blog')}}">News</a>

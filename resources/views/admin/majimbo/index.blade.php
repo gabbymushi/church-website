@@ -38,6 +38,7 @@
                     </div>
                     
                     <div style="margin-left: 40%;" class="col-md-12 text-center">
+                          {{$majimbo->links()}}
                    </div>
 
                 </div>
