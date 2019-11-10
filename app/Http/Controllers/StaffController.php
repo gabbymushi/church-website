@@ -150,6 +150,10 @@ class StaffController extends Controller
         $staff->jimbo_id = $request->jimbo_id;
         $staff->usharika_id = $request->usharika_id;
         $staff->mtaa_id = $request->mtaa_id;
+        $staff->dmemgt = $request->dmemgt;
+        $staff->jmbmgt = $request->jmbmgt;
+        $staff->shrkmgt = $request->shrkmgt;
+        $staff->askofu = $request->askofu;
         $staff->update();
         Session::flash('success','Staff updated successfully');
         return redirect()->route('manage.staff');

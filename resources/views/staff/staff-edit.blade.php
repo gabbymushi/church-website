@@ -43,13 +43,13 @@
                       <label for="designation" class="col-sm-2 col-form-label"> MNGT Options</label>
                   <div class="col-sm-10">
                   <div class="checkbox">
-                  <label><input type="checkbox" name="dmemgt" value="1"> DME MNGNT</label>
+                  <label><input type="checkbox" {{$staff->dmemgt == 1 ? 'checked' :''}} name="dmemgt" value="1"> DME MNGNT</label>
                   &nbsp;
-                  <label><input type="checkbox" name="jmbmgt" value="1"> JIMBO MNGNT</label>
+                  <label><input type="checkbox" {{$staff->jmbmgt == 1 ? 'checked' :''}} name="jmbmgt" value="1"> JIMBO MNGNT</label>
                    &nbsp;
-                  <label><input type="checkbox" name="shrkmgt" value="1"> SHARIKA MNGNT</label>
+                  <label><input type="checkbox" {{$staff->shrkmgt == 1 ? 'checked' :''}} name="shrkmgt" value="1"> SHARIKA MNGNT</label>
                   &nbsp;
-                  <label><input type="checkbox" name="askofu" value="1"> Askofu Mkuu </label>
+                  <label><input type="checkbox" name="askofu" {{$staff->askofu == 1 ? 'checked' :''}} value="1"> Askofu Mkuu </label>
                    
                    </div>   
                      </div>
