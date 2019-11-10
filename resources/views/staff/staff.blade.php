@@ -1,4 +1,4 @@
-@extends('layouts.main')
+ZX@extends('layouts.main')
 @section('content')
   <!-- Start Nav Backed Header -->
   <div class="nav-backed-header parallax">

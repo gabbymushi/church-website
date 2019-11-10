@@ -82,7 +82,7 @@
                                                 <label for="instagram" class="col-sm-2 col-form-label">Photo</label>
                                                 <div class="col-sm-10"><input name="photo" id="photo" value="{{old('photo')}}"  type="file" class="form-control"></div>
                                             </div>
-                                             <div class="position-relative row form-group">
+                <div class="position-relative row form-group">
                 <label for="designation" class="col-sm-2 col-form-label">Jimbo<span class="text-danger">*</span></label>
                  <div class="col-sm-10">
                     <select class="form-control" name="jimbo_id" id="">
@@ -93,7 +93,7 @@
                 </div>
                     </div>
 
-                     <div class="position-relative row form-group">
+                <div class="position-relative row form-group">
                 <label for="designation" class="col-sm-2 col-form-label">Usharika<span class="text-danger">*</span></label>
                  <div class="col-sm-10">
                     <select class="form-control" name="usharika_id" id="">
@@ -101,7 +101,7 @@
                         <option value="{{$usharika->id}}">{{$usharika->name}}</option>
                         @endforeach
                     </select>
-                    </select>
+                    
                 </div>
                     </div>
                      <div class="position-relative row form-group">
@@ -112,7 +112,7 @@
                         <option value="{{$mtaa->id}}">{{$mtaa->name}}</option>
                         @endforeach
                     </select>
-                    </select>
+                   
                 </div>
                     </div>
                              

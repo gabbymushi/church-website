@@ -78,14 +78,20 @@
                                 <label for="name" class="">Name</label>
                                 <input name="name" id="name" value="{{$usharika->name}}" type="text" class="form-control" required="required">
                             </div>
-                            <!-- <div class="position-relative form-group">
-                                <label for="title" class="">Cover Photo</label> 
-                                <input name="picture" id="picture" placeholder="Cover Photo" type="file" class="form-control">
-                            </div>
-             -->
                             <div class="position-relative form-group">
                                 <label for="description" class="">Description </label>
                                 <textarea name="description" id="description" class="form-control" required="required"> {{$usharika->description}}</textarea>
+                            </div>
+                            <div class="position-relative form-group">
+                                <label for="description" class="">Select Jimbo </label>
+                                <select class="form-control" name="jimbo_id" id="jimbo_id">
+                                    
+                                    @foreach(App\Jimbo::all() as $jimbo)
+                                    <option value="{{$jimbo->id}}" {{$usharika->jimbo_id==$jimbo->id ? 'selected':''}} >{{$jimbo->name}}</option>
+                                    @endforeach
+                                    
+                                  
+                                </select>
                             </div>
                             <button class="mt-1 btn btn-primary">Update Usharika</button>
                         </form>

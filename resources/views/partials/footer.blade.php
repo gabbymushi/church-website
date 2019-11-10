@@ -22,8 +22,8 @@
             <li><a href="/">Home</a></li>
             <li><a href="dme-history">About Us</a></li>
             <li><a href="/all_events">All Events</a></li>
-            <li><a href="#">Sermons Archive</a></li>
-            <li><a href="/blog">Our Blog</a></li>
+            <li><a href="/contactus">Contact Us</a></li>
+            <li><a href="/blog">DME Blog</a></li>
           </ul>
         </div>
         <div class="col-md-3 col-sm-3 widget footer-widget">

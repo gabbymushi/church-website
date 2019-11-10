@@ -76,10 +76,10 @@
                                 <div class="input-group margin-20">
                                     <span class="input-group-addon">Tsh</span>
                                     <select name="donation amount" class="form-control">
-                                        <option value="20">20</option>
-                                        <option value="50">50</option>
-                                        <option value="100">100</option>
-                                        <option value="Custom">100+</option>
+                                        <option value="10000">10000</option>
+                                        <option value="20000">20000</option>
+                                        <option value="50000">50000</option>
+                                        <option value="Custom">1000+</option>
                                     </select>
                                 </div>
                             </div>
@@ -119,7 +119,7 @@
                     </form>
                   </div>
                   <div class="modal-footer">
-                    <p class="small short">If you would prefer to call in your donation, please call 1800.785.876</p>
+                    <p class="small short" style="color: red; font-weight: bold;"> If you would prefer to call in your donation, please call +255 27 255 3656</p>
                   </div>
                 </div>
               </div>
@@ -127,6 +127,17 @@
           </div>
           <!-- Start Sidebar -->
           <div class="col-md-3 sidebar">
+            <div class="widget sidebar-widget">
+              <div class="sidebar-widget-title">
+                <h3>Other DME Projects</h3>
+              </div>
+              <ul>
+                @foreach(App\Project::where('id','!=',$project->id)->orderBy('created_at','desc')->take(5)->get() as $otherproject)
+                <li><h4><a href="/project/show/$otherproject->id/$otherproject->slug">{{$otherproject->name}}</a></h4> </li>
+                @endforeach
+                
+              </ul>
+            </div>
             <div class="widget sidebar-widget">
               <div class="sidebar-widget-title">
                 <h3>Project Categories</h3>
@@ -137,12 +148,7 @@
                 <li><a href="#">Education</a> (34)</li>
                 <li><a href="#">Women</a> (14)</li>
               </ul>
-            </div>
-            <div class="widget sidebar-widget">
-              <div class="sidebar-widget-title">
-                <h3>Post Tags</h3>
-              </div>
-              <div class="tag-cloud"> <a href="#">Faith</a> <a href="#">Heart</a> <a href="#">Love</a> <a href="#">Praise</a> <a href="#">Sin</a> <a href="#">Soul</a> <a href="#">Missions</a> <a href="#">Worship</a> <a href="#">Faith</a> <a href="#">Heart</a> <a href="#">Love</a> <a href="#">Praise</a> <a href="#">Sin</a> <a href="#">Soul</a> <a href="#">Missions</a> <a href="#">Worship</a> </div>
+             
             </div>
           </div>
         </div>

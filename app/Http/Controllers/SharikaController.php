@@ -18,7 +18,7 @@ class SharikaController extends Controller
      */
     public function index()
     { 
-        $sharika = Sharika::all();
+        $sharika = Sharika::paginate(5);
          return view('admin.sharika.index')->with('sharika',$sharika);
         
     }
@@ -99,7 +99,7 @@ class SharikaController extends Controller
         $usharika->name = $request->name;
         $usharika->slug = str_slug($request->name);
         $usharika->description = $request->description;
-        $usharika->jimbo_id = 2;
+        $usharika->jimbo_id = $request->jimbo_id;
         $usharika->update();
         Session::flash('success','Sharika updated Successfully');
         return redirect()->route('sharika');

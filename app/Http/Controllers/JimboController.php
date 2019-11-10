@@ -17,7 +17,7 @@ class JimboController extends Controller
      */
     public function index()
     {
-         $data['majimbo'] = Jimbo::all();
+         $data['majimbo'] = Jimbo::paginate(5);
         return view('admin.majimbo.index', $data);
     }
 

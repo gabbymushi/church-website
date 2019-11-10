@@ -120,7 +120,7 @@
                 </li>
                 <li><a href="events.html">Events</a>
                   <ul class="dropdown">
-                    <li><a href="{{route('all_events')}}">Events Listing</a></li>
+                    <li><a href="{{route('all_events')}}">All Events</a></li>
                     <li><a href="{{route('events.calender')}}">Events Calender</a></li>
                     
                   </ul>

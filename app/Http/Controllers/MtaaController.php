@@ -17,7 +17,7 @@ class MtaaController extends Controller
      */
      public function index()
     { 
-        $mitaa = Mtaa::all();
+        $mitaa = Mtaa::paginate(5);
         $sharika = Sharika::all();
          return view('admin.mtaa.index')->with('mitaa',$mitaa)
                                         ->with('sharika',$sharika);
@@ -98,7 +98,7 @@ class MtaaController extends Controller
         $mtaa->name = $request->name;
         $mtaa->slug = str_slug($request->name);
         $mtaa->description = $request->description;
-        $mtaa->sharika_id = 3;
+        $mtaa->sharika_id = $request->sharika_id;
         $mtaa->update();
         Session::flash('success','Mtaa updated Successfully');
         return redirect()->route('mitaa');
