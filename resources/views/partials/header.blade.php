@@ -118,19 +118,20 @@
                     </li>
                   </ul>
                 </li>
-                <li><a href="events.html">Events</a>
+                <li><a href="#">Events</a>
                   <ul class="dropdown">
                     <li><a href="{{route('all_events')}}">All Events</a></li>
                     <li><a href="{{route('events.calender')}}">Events Calender</a></li>
                     
                   </ul>
                 </li>
-                <li><a href="{{route('sermon.all')}}">Sermons</a>
-                  <!-- <ul class="dropdown">
-                    <li><a href="sermon-albums.html">Sermon Albums</a></li>
-                    <li><a href="sermons.html">Sermons Archive</a></li>
-                    <li><a href="single-sermon.html">Single Sermon</a></li>
-                  </ul> -->
+                <li><a href="#">Faith</a>
+                   <ul class="dropdown">
+                    <li><a href="#">DME Teaching</a></li>
+                    <li><a href="#">Daily Bible Reading</a></li>
+                    <li><a href="#">Faith and Society</a></li>
+                    <li><a href="#">Journal of Lutheran Ethics</a></li>
+                  </ul> 
                 </li>
                 <li><a href="#">Projects</a>
                   <ul class="dropdown">
