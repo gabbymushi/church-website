@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\News;
 use App\NewsTag;
 use App\File;
+use Session;
 
 class BlogController extends Controller
 {
@@ -54,7 +55,10 @@ class BlogController extends Controller
                 $fileModel->save();
             }
         }
-        return redirect('/post/blog');
+
+    Session::flash('success','News created successfully');
+    
+        return redirect()->route('blog.manage');
     }
 
     /**
@@ -79,7 +83,8 @@ class BlogController extends Controller
      */
     public function edit($id)
     {
-        //
+        $news = News::findOrFail($id);
+        return view('admin.blog.edit-post',compact('news'));
     }
 
     /**
@@ -90,8 +95,28 @@ class BlogController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
-    {
-        //
+    { 
+
+        $model =News::findOrFail($id);
+        $destinationPath = 'assets/images/blog';
+        $model->title = $request->input('title');
+        $model->content = $request->input('content');
+        //   $model->user_id = Auth::user()->user_id;
+        $model->update();
+        if ($request->hasFile('picture')) {
+            $file = $request->file('picture');
+            if ($file->move($destinationPath, $file->getClientOriginalName())) {
+                $fileModel = new File();
+                $fileModel->name = $file->getClientOriginalName();
+                $fileModel->mime_type = $file->getClientMimeType();
+                $fileModel->news_id = $model->id;
+                $fileModel->save();
+            }
+        }
+
+      Session::flash('success','News created successfully');
+    
+      return redirect()->route('blog.manage');
     }
 
     /**
@@ -102,6 +127,17 @@ class BlogController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $news = News::findOrFail($id);
+        $news->delete();
+
+        Session::flash('success','News Deleted successfully');
+      return redirect()->route('blog.manage');
+
+
+    }
+
+      public function manage(){
+        $news = News::paginate(10);
+        return view('admin.blog.index',compact('news'));
     }
 }
