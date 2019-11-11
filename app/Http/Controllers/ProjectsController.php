@@ -41,13 +41,21 @@ class ProjectsController extends Controller
           'featured'=>'mimes:png,jpg,jpeg|Max:20000'
           ]);
          
-         $featured = $request->file('featured')->store('public/projects');
+        // $featured = $request->file('featured')->store('public/projects');
+
+          if($request->hasFile('featured')){
+            $image = $request->featured;
+            $new_image = time().$image->getClientOriginalName();
+            $image->move('assets/projects',$new_image);
+            $new_image = 'assets/projects/'.$new_image;
+            $project->featured =  $new_image;
+
+        }
           
 
       $project->name = $request->name;
       $project->slug = str_slug($request->name);
       $project->description = $request->description;
-      $project->featured = $featured;
       $project->save();
 
 
