@@ -236,7 +236,7 @@
                           style="z-index: 6; font-size: 15px; max-width: auto; max-height: auto; white-space: nowrap; margin: auto; color: #000; margin-top: -5px;">
                          {{$project->name}} 
                       </div>
-                        <img src="{{$project->featured}}" alt="">
+                        <img src="{{$project->featured}}"  width="240" height="125" alt="">
                        
                       </a>
 

@@ -19,11 +19,11 @@
         <div class="col-md-2 col-sm-2 widget footer-widget">
           <h4 class="footer-widget-title">USEFUL LINKS</h4>
           <ul>
-            <li><a href="/">Home</a></li>
             <li><a href="dme-history">About Us</a></li>
             <li><a href="/all_events">All Events</a></li>
             <li><a href="/contactus">Contact Us</a></li>
             <li><a href="/blog">DME Blog</a></li>
+            <li><a href=" http://www.elct.org/">ELCT</a></li>
           </ul>
         </div>
         <div class="col-md-3 col-sm-3 widget footer-widget">
