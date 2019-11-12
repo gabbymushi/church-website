@@ -31,7 +31,23 @@ Route::get('/dashboard', [
     'uses' => 'HomeController@dashboard',
     'as' => 'dashboard'
 ]);
-
+Route::get('/manage/blog', 'BlogController@manage')->name('blog.manage');
+Route::get('/dashboard', [
+    'uses' => 'HomeController@dashboard',
+    'as' => 'dashboard'
+]);
+Route::get('/news/{id}/edit/',[
+'uses'=>'BlogController@edit',
+'as'=>'news.edit'
+]);
+Route::post('/news/update/{id}',[
+'uses'=>'BlogController@update',
+'as'=>'news.update'
+]);
+Route::get('/news/{id}/delete',[
+'uses'=>'BlogController@destroy',
+'as'=>'news.delete'
+]);
 Route::get('/users', [
     'uses' => 'HomeController@users',
     'as' => 'users'

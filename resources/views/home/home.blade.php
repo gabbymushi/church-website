@@ -236,7 +236,7 @@
                           style="z-index: 6; font-size: 15px; max-width: auto; max-height: auto; white-space: nowrap; margin: auto; color: #000; margin-top: -5px;">
                          {{$project->name}} 
                       </div>
-                        <img src="{{Storage::url($project->featured)}}" alt="">
+                        <img src="{{$project->featured}}"  width="240" height="125" alt="">
                        
                       </a>
 
@@ -305,7 +305,7 @@
                         <div class="post-title">
                           <h2><a href="{{url('/blog/'.$news->id)}}">{{$news->title}}</a></h2>
                           <span class="meta-data"><i class="fa fa-calendar"></i> on {{date('jS F,Y',strtotime($news->created_at))}}</span></div>
-                        <p>{!!$news->content!!}.</p>
+                        <p>{!!str_limit($news->content, $limit = 150, $end = '...') !!}</p>
                       </div>
                     </div>
                   </li>

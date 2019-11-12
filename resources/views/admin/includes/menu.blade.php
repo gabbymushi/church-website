@@ -21,7 +21,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="elements-dropdowns.html">
+                        <a href="{{route('blog.manage')}}">
                             <i class="metismenu-icon">
                             </i>Manage News
                         </a>
