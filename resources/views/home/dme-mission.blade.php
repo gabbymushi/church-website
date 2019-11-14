@@ -23,25 +23,25 @@
         <div class="row">
           <div class="col-md-8">
             <header class="single-post-header clearfix">
-              <h2 class="post-title">Our Church Mission</h2>
+              <h2 class="post-title">DME Mission</h2>
             </header>
             <div class="post-content">
               
                <div class="spacer-30"></div>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, sem quis lacinia faucibus, orci ipsum gravida tortor, vel interdum mi sapien ut justo. Nulla varius consequat magna, id molestie ipsum volutpat quis. Pellentesque ipsum erat, facilisis ut venenatis eu, sodales vel dolor.</p>
+              <p style="font-family: sans-serif; font-size: 16px; color: #000;">Dhamira ya KKKT Dayosisi ya Meru ni Kushuhudia injili ya Yesu Kristo( Mathayo 28:19-20) iletayo wokovu kamili(Luka 4:18-19) Kimwili,Kiakili,kiroho,Kisaikolojojia,kiuchumi na katika kutunza uumbaji kwa watu wote kuhubiri,Kufundisha na kutetea Haki  na kushuhudia kwa manenona matendo ilikuwafanya watu wote wamfahamu Mungu na Yesu Kristo(Yohana 17:3) na kuwa wanafunzi wake kwa msaada wa Roho Mtakatifu.</p>
               <hr>
               <header class="single-post-header clearfix">
-              <h2 class="post-title">Our Church Vision</h2>
+              <h2 class="post-title">DME Vision</h2>
             </header>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, sem quis lacinia faucibus, orci ipsum gravida tortor, vel interdum mi sapien ut justo. Nulla varius consequat magna, id molestie ipsum volutpat quis. Suspendisse consectetur fringilla luctus. Fusce id mi diam, non ornare orci. Pellentesque ipsum erat, facilisis ut venenatis eu, sodales vel dolor.</p>
+              <p style="font-family: sans-serif; font-size: 16px; color: #000;">Taswira ya KKKT dayosisi ya Meru  ni kuona kwamba:Kwa Uongozi war oho mtakatifu na roho ya Umoja na upendo Dayosisi yetu inawaita na kuwavuta  kwa Yesu Kristo watu wote kwa njia ya Neno la Mungu  kama lilivyo katika biblia yaani Agano la jipya ,Agano la kale ili wamfahamu ,wamwamminina wamkiri kuwa Bwana na mwokozi wao ili wapate uzima wa Milele.</p>
              
               <hr>
-                <h3>Our Core Values</h3>
+                <h3>DME Core Values</h3>
                 <ul class="checks">
-                  <li>Mildred George</li>
+                  <!-- <li>Mildred George</li>
                   <li>Ashleigh Cox</li>
                   <li>Giorgiana Mărginean</li>
-                  <li>Christine Mendez</li>
+                  <li>Christine Mendez</li> -->
                 </ul>
             </div>
           </div>
@@ -50,17 +50,18 @@
             <!-- Photo Gallery Widget -->
             <div class="widget-gallery widget">
               <div class="sidebar-widget-title">
-                <h3>Latest Gallery Items</h3>
+                <h3>Latest from Gallery</h3>
               </div>
               <ul>
-                <li> <a href="http://placehold.it/600x400&amp;text=IMAGE+PLACEHOLDER" class="media-box post-image" data-rel="prettyPhoto[galwid]"> <img src="http://placehold.it/80x80&amp;text=IMAGE" alt="" class="img-thumbnail"> </a></li>
-                <li> <a href="http://placehold.it/600x400&amp;text=IMAGE+PLACEHOLDER" class="media-box post-image" data-rel="prettyPhoto[galwid]"> <img src="http://placehold.it/80x80&amp;text=IMAGE" alt="" class="img-thumbnail"> </a></li>
-                <li> <a href="http://placehold.it/600x400&amp;text=IMAGE+PLACEHOLDER" class="media-box post-image" data-rel="prettyPhoto[galwid]"> <img src="http://placehold.it/80x80&amp;text=IMAGE" alt="" class="img-thumbnail"> </a></li>
-                <li> <a href="http://placehold.it/600x400&amp;text=IMAGE+PLACEHOLDER" class="media-box post-image" data-rel="prettyPhoto[galwid]"> <img src="http://placehold.it/80x80&amp;text=IMAGE" alt="" class="img-thumbnail"> </a></li>
-                <li> <a href="http://placehold.it/600x400&amp;text=IMAGE+PLACEHOLDER" class="media-box post-image" data-rel="prettyPhoto[galwid]"> <img src="http://placehold.it/80x80&amp;text=IMAGE" alt="" class="img-thumbnail"> </a></li>
-                <li> <a href="http://placehold.it/600x400&amp;text=IMAGE+PLACEHOLDER" class="media-box post-image" data-rel="prettyPhoto[galwid]"> <img src="http://placehold.it/80x80&amp;text=IMAGE" alt="" class="img-thumbnail"> </a></li>
+                <li> <a href="{{asset('assets\images\img-7.jpg')}}" class="media-box post-image" data-rel="prettyPhoto[galwid]"> <img src="{{asset('assets\images\img-7.jpg')}}" alt="" class="img-thumbnail"> </a></li>
+                <li> <a href="{{asset('assets\images\img-6.jpg')}}" class="media-box post-image" data-rel="prettyPhoto[galwid]"> <img src="{{asset('assets\images\img-6.jpg')}}" alt="" class="img-thumbnail"> </a></li>
+                <li> <a href="{{asset('assets\images\img-5.jpg')}}" class="media-box post-image" data-rel="prettyPhoto[galwid]"> <img src="{{asset('assets\images\img-5.jpg')}}" alt="" class="img-thumbnail"> </a></li>
+                <li> <a href="{{asset('assets\images\img-4.jpg')}}" class="media-box post-image" data-rel="prettyPhoto[galwid]"> <img src="{{asset('assets\images\img-4.jpg')}}" alt="" class="img-thumbnail"> </a></li>
+                <li> <a href="{{asset('assets\images\img-3.jpg')}}" class="media-box post-image" data-rel="prettyPhoto[galwid]"> <img src="{{asset('assets\images\img-3.jpg')}}" alt="" class="img-thumbnail"> </a></li>
+                <li> <a href="{{asset('assets\images\img-2.jpg')}}" class="media-box post-image" data-rel="prettyPhoto[galwid]"> <img src="{{asset('assets\images\img-2.jpg')}}" alt="" class="img-thumbnail"> </a></li>
               </ul>
             </div>
+            <hr>
 
 
             <div class="widget-upcoming-events widget">

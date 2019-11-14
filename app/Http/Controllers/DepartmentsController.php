@@ -45,13 +45,20 @@ class DepartmentsController extends Controller
           'featured'=>'mimes:png,jpg,jpeg|Max:20000'
           ]);
          
-         $featured = $request->file('featured')->store('public/departments');
+        if($request->hasFile('featured')){
+            $image = $request->featured;
+            $new_image = time().$image->getClientOriginalName();
+            $image->move('assets/departments',$new_image);
+            $new_image = 'assets/departments/'.$new_image;
+            $department->featured =  $new_image;
+            
+
+        }
           
 
           $department->name = $request->name;
           $department->slug = str_slug($request->name);
           $department->description = $request->description;
-          $department->featured = $featured;
           $department->save();
 
 
@@ -82,7 +89,9 @@ class DepartmentsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $department = Department::findOrFail($id);
+
+        return view('admin.departments.edit',compact('department'));
     }
 
     /**
@@ -94,7 +103,33 @@ class DepartmentsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+       
+       $department = Department::findOrFail($id);
+
+        $this->validate($request,[
+          'featured'=>'mimes:png,jpg,jpeg|Max:20000'
+          ]);
+         
+         if($request->hasFile('featured')){
+            $image = $request->featured;
+            $new_image = time().$image->getClientOriginalName();
+            $image->move('assets/departments',$new_image);
+            $new_image = 'assets/departments/'.$new_image;
+            $department->featured =  $new_image;
+            
+
+        }
+        
+          
+
+          $department->name = $request->name;
+          $department->slug = str_slug($request->name);
+          $department->description = $request->description;
+          $department->update();
+
+
+      Session::flash('success','Department updated successfully');
+      return redirect()->route('departments.manage');
     }
 
     /**

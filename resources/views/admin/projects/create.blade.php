@@ -85,7 +85,7 @@
              -->
                             <div class="position-relative form-group">
                                 <label for="description" class="">Description </label>
-                                <textarea name="description" id="description" class="form-control" required="required">
+                                <textarea name="description" id="newsEditor" class="form-control" required="required">
                                 </textarea>
                             </div>
                             <div class="position-relative form-group">

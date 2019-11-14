@@ -110,7 +110,7 @@ class BlogController extends Controller
                 $fileModel->name = $file->getClientOriginalName();
                 $fileModel->mime_type = $file->getClientMimeType();
                 $fileModel->news_id = $model->id;
-                $fileModel->save();
+                $fileModel->update();
             }
         }
 

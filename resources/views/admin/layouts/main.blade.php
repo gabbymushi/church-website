@@ -208,6 +208,8 @@
         var ck = CKEDITOR.replace('box');
         ck.config.height = 600;
 
+
+
     $(document).ready( function () {
     $('#staff').DataTable();
         });

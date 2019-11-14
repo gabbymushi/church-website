@@ -16,6 +16,7 @@
                      <div class="position-relative row form-group"><label for="exampleEmail" class="col-sm-2 col-form-label">Title<span class="text-danger">*</span></label>
                         <div class="col-sm-10">
                         <select class="form-control" name="designation" id="">
+                          <option selected="" value="" disabled="">Select Title</option>
                          <option value="Bishop">Bishop</option>
                          <option value="Mr">Mr.</option>
                          <option value="Mchungaji">Pastor</option>
@@ -41,6 +42,7 @@
                 <label for="designation" class="col-sm-2 col-form-label">Designation<span class="text-danger">*</span></label>
                  <div class="col-sm-10">
                     <select class="form-control" name="designation" id="">
+                      <option selected="" value="" disabled="">Select Designation</option>
                         <option value="Askofu">Askofu</option>
                         <option value="Katibu Mkuu">Katibu Mkuu</option>
                         <option value="Mchungaji">Mchungaji</option>
@@ -86,6 +88,7 @@
                 <label for="designation" class="col-sm-2 col-form-label">Jimbo<span class="text-danger">*</span></label>
                  <div class="col-sm-10">
                     <select class="form-control" name="jimbo_id" id="">
+                      <option selected="" disabled="" value="">Select Jimbo</option>
                       @foreach(App\Jimbo::all() as $jimbo)
                         <option value="{{$jimbo->id}}">{{$jimbo->name}}</option>
                         @endforeach
@@ -97,6 +100,7 @@
                 <label for="designation" class="col-sm-2 col-form-label">Usharika<span class="text-danger">*</span></label>
                  <div class="col-sm-10">
                     <select class="form-control" name="usharika_id" id="">
+                      <option selected="" disabled="" value="">Select Usharika</option>
                         @foreach(App\Sharika::all() as $usharika)
                         <option value="{{$usharika->id}}">{{$usharika->name}}</option>
                         @endforeach
@@ -108,6 +112,7 @@
                 <label for="designation" class="col-sm-2 col-form-label">Mtaa<span class="text-danger">*</span></label>
                  <div class="col-sm-10">
                     <select class="form-control" name="mtaa_id" id="">
+                      <option selected="" disabled="" value="">Select Mtaa</option>
                         @foreach(App\Mtaa::all() as $mtaa)
                         <option value="{{$mtaa->id}}">{{$mtaa->name}}</option>
                         @endforeach

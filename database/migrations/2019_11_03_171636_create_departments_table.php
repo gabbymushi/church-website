@@ -17,7 +17,7 @@ class CreateDepartmentsTable extends Migration
             $table->bigIncrements('id');
             $table->string("name");
             $table->text("description");
-            $table->string("featured");
+            $table->string("featured")->nullable();
             $table->timestamps();
         });
     }

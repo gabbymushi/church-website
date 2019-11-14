@@ -138,6 +138,18 @@ Route::post('/document/store',[
   'uses' => 'DownloadsController@store',
   'as' => 'download.store'
 ]);
+Route::get('/document/{id}/edit/',[
+'uses'=>'DownloadsController@edit',
+'as'=>'document.edit'
+]);
+Route::post('/document/update/{id}',[
+'uses'=>'DownloadsController@update',
+'as'=>'document.update'
+]);
+Route::get('/document/{id}/delete',[
+'uses'=>'DownloadsController@destroy',
+'as'=>'document.delete'
+]);
 //Staff routes
 Route::get('/all/staff', [
     'uses' => 'StaffController@index',
