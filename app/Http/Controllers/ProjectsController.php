@@ -85,7 +85,8 @@ class ProjectsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $project = Project::findOrFail($id);
+        return view('admin.projects.edit',compact('project'));
     }
 
     /**
@@ -97,7 +98,34 @@ class ProjectsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $project = Project::findOrFail($id);
+
+        $this->validate($request,[
+          'featured'=>'mimes:png,jpg,jpeg|Max:20000'
+          ]);
+         
+       
+
+          if($request->hasFile('featured')){
+            $image = $request->featured;
+            $new_image = time().$image->getClientOriginalName();
+            $image->move('assets/projects',$new_image);
+            $new_image = 'assets/projects/'.$new_image;
+            $project->featured =  $new_image;
+            
+
+        }
+          
+
+      $project->name = $request->name;
+      $project->slug = str_slug($request->name);
+      $project->description = $request->description;
+      $project->update();
+
+
+      Session::flash('success','Project updated successfully');
+      return redirect()->route('projects.manage');
+        
     }
 
     /**

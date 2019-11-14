@@ -49,10 +49,10 @@
                       </div>
                       <div class="panel-body">
                         <ul class="info-table">
-                          <li><i class="fa fa-calendar"></i> <strong>Monday</strong> | 6th March, 2014</li>
-                          <li><i class="fa fa-clock-o"></i> 7:00 AM - 1:00 PM</li>
-                          <li><i class="fa fa-map-marker"></i> 341 Magetic state, US</li>
-                          <li><i class="fa fa-phone"></i> 1 800 321 4321</li>
+                          <li><i class="fa fa-calendar"></i> {{date('jS F,Y',strtotime($event->created_at))}}</li>
+                          <li><i class="fa fa-clock-o"></i> 08:00 AM - 2:00 PM</li>
+                          <li><i class="fa fa-map-marker"></i>ELCT Diocese of Meru </li>
+                          <li><i class="fa fa-phone"></i> +255 27 255 3656</li>
                         </ul>
                       </div>
                     </div>
@@ -117,8 +117,8 @@
               </div>
               <ul>
                 @foreach($news as $new)
-                <li class="clearfix"> <a href="#" class="media-box post-image"> <img src="http://placehold.it/800x600&amp;text=IMAGE+PLACEHOLDER" alt="" class="img-thumbnail"> </a>
-                  <div class="widget-blog-content"><a href="#">{{$new->title}}</a> <span class="meta-data"><i class="fa fa-calendar"></i> on 17th Dec, 2013</span> </div>
+                <li class="clearfix"> <a href="#" class="media-box post-image"> <img src="" alt="" class="img-thumbnail"> </a>
+                  <div class="widget-blog-content"><a href="">{{$new->title}}</a> <span class="meta-data"><i class="fa fa-calendar"></i> on {{date('jS F,Y',strtotime($new->created_at))}}</span> </div>
                 </li>
                  @endforeach
           

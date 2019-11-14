@@ -41,9 +41,19 @@ class DownloadsController extends Controller
           'document'=>'required|mimes:pdf,doc,docx|Max:20000'
              ]);
           $document = new Download;
-          $document1 = $request->file('document')->store('public/documents');
+         
+         
+        if($request->hasFile('document')){
+            $image = $request->document;
+            $new_image = time().$image->getClientOriginalName();
+            $image->move('assets/documents',$new_image);
+            $new_image = 'assets/documents/'.$new_image;
+            $document->document =  $new_image;
+            
+
+        }
+
           $document->title = $request->title;
-          $document->document = $document1;
           $document->save();
           Session::flash('success','Download created successfully');
         return redirect()->route('downloads');
@@ -68,7 +78,8 @@ class DownloadsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $document = Download::findOrFail($id);
+        return view('admin.downloads.edit',compact('document'));
     }
 
     /**
@@ -80,7 +91,29 @@ class DownloadsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        
+        $this->validate($request,[
+          'document'=>'required|mimes:pdf,doc,docx|Max:20000'
+             ]);
+          $document = Download::findOrFail($id);
+         
+         
+        if($request->hasFile('document')){
+            $image = $request->document;
+            $new_image = time().$image->getClientOriginalName();
+            $image->move('assets/documents',$new_image);
+            $new_image = 'assets/documents/'.$new_image;
+            $document->document =  $new_image;
+            
+
+        }
+
+          $document->title = $request->title;
+          $document->update();
+          Session::flash('success','Download update successfully');
+        return redirect()->route('downloads');
+
+
     }
 
     /**
@@ -91,6 +124,9 @@ class DownloadsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $document = Download::findOrFail($id);
+        $document->delete();
+        Session::flash('success','Download delete successfully');
+        return redirect()->route('downloads');
     }
 }

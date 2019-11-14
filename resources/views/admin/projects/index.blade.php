@@ -25,7 +25,7 @@
                             <tr>
                                 <th>{{$i++}}</th>
                                 <td>{{$project->name}}</td>
-                                <td>{{$project->description}}</td>
+                                <td>{!!$project->description!!}</td>
                                 <td>
                               <a href="{{url('project/'.$project->id.'/edit')}}"><div class="badge badge-primary">Edit</div></a>
                               <a href="{{url('project/'.$project->id.'/delete')}}"><div class="badge badge-danger">Delete</div></a>

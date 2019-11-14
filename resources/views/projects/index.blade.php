@@ -38,7 +38,7 @@
                 	<a href="/projects/show">
 
                     @if(isset($oneproject->featured))
-                    <img src="{{Storage::url($oneproject->featured)}}" alt="" class="img-thumbnail">
+                    <img src="{{asset($oneproject->featured)}}" alt="" class="img-thumbnail">
                     @else
                     <img src="http://placehold.it/600x400&amp;text=IMAGE+PLACEHOLDER" alt="" class="img-thumbnail">
                     @endif
@@ -59,7 +59,7 @@
                   <div class="progress">
                     <div class="progress-bar progress-bar-success" data-appear-progress-animation="80%" data-appear-animation-delay="200"></div><!-- Upto 30% use class progress-bar-danger , upto 70% use class progress-bar-warning , afterwards use class progress-bar-success -->
                   </div>
-                  <p>{{$oneproject->description}}</p>
+                  <p>{!!$oneproject->description!!}</p>
                 </div>
               </div>
             </article>

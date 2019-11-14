@@ -1,4 +1,4 @@
-ZX@extends('layouts.main')
+@extends('layouts.main')
 @section('content')
   <!-- Start Nav Backed Header -->
   <div class="nav-backed-header parallax">
@@ -31,6 +31,7 @@ ZX@extends('layouts.main')
       <div class="container">
         <div class="row">
           @if(isset($staffs))
+          
           @foreach($staffs as $staff)
           <div class="col-md-3 col-sm-3">
             <div class="grid-item staff-item">
@@ -51,6 +52,7 @@ ZX@extends('layouts.main')
           </div>
 
          @endforeach
+      
 
          @endif
         </div>

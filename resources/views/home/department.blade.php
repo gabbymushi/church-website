@@ -24,17 +24,25 @@
               <h2 class="post-title">{{$department->name}}</h2>
             </header>
             <div class="post-content">
-              <img src="http://placehold.it/1280x635&amp;text=IMAGE+PLACEHOLDER" alt="Women Ministry" class="img-thumbnail">
+              @if(isset($department->featured))
+              <img src="{{asset($department->featured)}}" alt="Department" class="img-thumbnail">
+              
+              @else
+              <img src="http://placehold.it/1280x635&amp;text=IMAGE+PLACEHOLDER" alt="Department" class="img-thumbnail">
+              @endif
+
+           
                <div class="spacer-30"></div>
-              <p>{{$department->description}}</p>
+              
+              <p>{!!$department->description!!}</p>
               <hr>
-                <h3>Department Team</h3>
+                <!-- <h3>Department Team</h3>
                 <ul class="checks">
                   <li>Mildred George</li>
                   <li>Ashleigh Cox</li>
                   <li>Giorgiana Mărginean</li>
                   <li>Christine Mendez</li>
-                </ul>
+                </ul> -->
             </div>
           </div>
           <!-- Start Sidebar -->

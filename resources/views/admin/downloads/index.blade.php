@@ -27,8 +27,8 @@
                                 <td>{{$download->title}}</td>
                                
                                 <td>
-                              <a href="{{url('download/'.$download->id.'/edit')}}"><div class="badge badge-primary">Edit</div></a>
-                              <a href="{{url('download/'.$download->id.'/delete')}}"><div class="badge badge-danger">Delete</div></a>
+                              <a href="{{url('document/'.$download->id.'/edit')}}"><div class="badge badge-primary">Edit</div></a>
+                              <a href="{{url('document/'.$download->id.'/delete')}}"><div class="badge badge-danger">Delete</div></a>
                                 </td>
                             </tr>
                             @endforeach

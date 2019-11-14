@@ -8,7 +8,7 @@
                   <!-- SLIDE  -->
                   <li data-transition="fade" data-slotamount="1" data-masterspeed="1000"  data-saveperformance="off"  data-title="Slide 1">
                       <!-- MAIN IMAGE -->
-                      <img src="{{asset('assets/images/slider/slide_kkkt.png')}}"  alt="fullslide1"  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+                      <img src="{{asset('assets/images/slider/slide1-dme.jpg')}}"  alt="fullslide1"  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
                       <!-- LAYERS -->
           
                       <!-- LAYER NR. 1 -->
@@ -65,13 +65,13 @@
                            data-end="5000" 
                           data-endspeed="300" 
               
-                          style="z-index: 7; max-width: auto; max-height: auto; white-space: nowrap;"><a href='#' class='btn btn-primary btn-lg' style="color:#fff;">More Events</a> 
+                          style="z-index: 7; max-width: auto; max-height: auto; white-space: nowrap;"><a href='/all_events' class='btn btn-primary btn-lg' style="color:#fff;">More Events</a> 
                       </div>
                   </li>
                   <!-- SLIDE  -->
                   <li data-transition="fade" data-slotamount="1" data-masterspeed="1000"  data-saveperformance="off"  data-title="Slide 2">
                       <!-- MAIN IMAGE -->
-                      <img src="{{asset('assets/images/slider/slide_kkkt2.png')}}"  alt="fullslide1"  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+                      <img src="{{asset('assets/images/slider/slide2-dme.jpg')}}"  alt="fullslide1"  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
                       <!-- LAYERS -->
           
                       <!-- LAYER NR. 1 -->
@@ -123,7 +123,66 @@
                            data-end="5000" 
                data-endspeed="300" 
               
-                          style="z-index: 7; max-width: auto; max-height: auto; white-space: nowrap;"><a href='sermons.html' class='btn btn-primary btn-lg' style="color:#fff;">Our Sermons</a> 
+                          style="z-index: 7; max-width: auto; max-height: auto; white-space: nowrap;"><!-- <a href='sermons.html' class='btn btn-primary btn-lg' style="color:#fff;">Our Sermons</a>  -->
+                      </div>
+                  </li>
+
+                  <!-- SLIDE 3 -->
+                  <li data-transition="fade" data-slotamount="1" data-masterspeed="1000"  data-saveperformance="off"  data-title="Slide 2">
+                      <!-- MAIN IMAGE -->
+                      <img src="{{asset('assets/images/slider/slide3-dme.jpg')}}"  alt="fullslide1"  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+                      <!-- LAYERS -->
+          
+                      <!-- LAYER NR. 1 -->
+                      <div class="tp-caption large_text randomrotate tp-resizeme" 
+                           data-x="100" 
+                           data-y="200"  
+                          data-speed="300" 
+                          data-start="500" 
+                          data-easing="Power3.easeInOut" 
+                          data-splitin="none" 
+                          data-splitout="none" 
+                          data-elementdelay="0.1" 
+                          data-endelementdelay="0.1" 
+                           data-end="3000" 
+               data-endspeed="300" 
+              
+                          style="z-index: 5; max-width: auto; max-height: auto; white-space: nowrap;">Love the God 
+                      </div>
+              
+                      <!-- LAYER NR. 2 -->
+                      <div class="tp-caption large_text randomrotate tp-resizeme" 
+                           data-x="100" 
+                           data-y="259"  
+                          data-speed="300" 
+                          data-start="800" 
+                          data-easing="Power3.easeInOut" 
+                          data-splitin="none" 
+                          data-splitout="none" 
+                          data-elementdelay="0.1" 
+                          data-endelementdelay="0.1" 
+                           data-end="4000" 
+               data-endspeed="300" 
+              
+                          style="z-index: 6; max-width: auto; max-height: auto; white-space: nowrap;">Love his Creations 
+                      </div>
+              
+                      <!-- LAYER NR. 3 -->
+                      <div class="tp-caption randomrotate customout tp-resizeme" 
+                           data-x="100" 
+                           data-y="330"  
+                           data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" 
+                          data-speed="300" 
+                          data-start="1100" 
+                          data-easing="Power3.easeInOut" 
+                          data-splitin="none" 
+                          data-splitout="none" 
+                          data-elementdelay="0.1" 
+                          data-endelementdelay="0.1" 
+                           data-end="5000" 
+               data-endspeed="300" 
+              
+                          style="z-index: 7; max-width: auto; max-height: auto; white-space: nowrap;"><!-- <a href='sermons.html' class='btn btn-primary btn-lg' style="color:#fff;">Our Sermons</a> --> 
                       </div>
                   </li>
               </ul> 
@@ -185,32 +244,23 @@
                 <div class="media-box">
                   <div class="flexslider" data-autoplay="yes" data-pagination="no" data-arrows="yes" data-style="slide" data-pause="yes">
                     <ul class="slides text-center" style="margin: auto;">
-                      <li class="item"><a href="{{asset('assets/images/chuo.jpg')}}" data-rel="prettyPhoto[postname]">
+                      <li class="item"><a href="{{asset('assets/images/elimu.jpg')}}" data-rel="prettyPhoto[postname]">
                       <div class="tp-caption large_text randomrotate tp-resizeme transbox" 
                           style="z-index: 6; font-size: 15px; max-width: auto; max-height: auto; white-space: nowrap; margin: auto; color: #000; margin-top: -5px;">
                           Education 
                       </div>
-                        <img src="{{asset('assets/images/chuo.jpg')}}" alt="">
+                        <img src="{{asset('assets\images\elimu.jpg')}}" alt="">
                        
                       </a>
 
                       </li>
-                       <li class="item"><a href="{{asset('assets/images/shule-kkkt.jpg')}}" data-rel="prettyPhoto[postname]">
-                         <div class="tp-caption large_text randomrotate tp-resizeme transbox" 
-                          style="z-index: 6; font-size: 15px; max-width: auto; max-height: auto; white-space: nowrap; margin: auto; color: #000; margin-top: -5px;">
-                          Education 
-                      </div>
-                        <img src="{{asset('assets/images/shule-kkkt.jpg')}}" alt="">
-                       
-                      </a>
-
-                      </li>
-                      <li class="item" style="text-align: center"><a href="{{asset('assets/images/hospital.jpg')}}" data-rel="prettyPhoto[postname]">
+                     
+                      <li class="item" style="text-align: center"><a href="{{asset('assets/images/afya.jpg')}}" data-rel="prettyPhoto[postname]">
                           <div class="tp-caption large_text randomrotate tp-resizeme transbox" 
                           style="z-index: 6; font-size: 15px; max-width: auto; max-height: auto; white-space: nowrap;margin: auto; color: #000; margin-top: -5px;">
                           Health 
                       </div>
-                        <img src="{{asset('assets/images/hospital.jpg')}}" alt="">
+                        <img src="{{asset('assets/images/afya.jpg')}}" alt="">
                        
                       </a></li>
                     </ul>
@@ -234,7 +284,8 @@
                         <a href="{{Storage::url($project->featured)}}" data-rel="prettyPhoto[postname]">
                        <div class="tp-caption large_text randomrotate tp-resizeme transbox" 
                           style="z-index: 6; font-size: 15px; max-width: auto; max-height: auto; white-space: nowrap; margin: auto; color: #000; margin-top: -5px;">
-                         {{$project->name}} 
+                          {{str_limit($project->name, 30)}}
+                         
                       </div>
                         <img src="{{$project->featured}}"  width="240" height="125" alt="">
                        
@@ -342,7 +393,7 @@
                <ul class="checks">
                @if(isset($downloads))
                @foreach($downloads as $document)
-                 <a href="{{Storage::url($document->document)}}" target="blank"><li>{{$document->title}}</li></a> 
+                 <a href="{{asset($document->document)}}" target="blank"><li>{{$document->title}}</li></a> 
                  @endforeach
                  @endif
                   
@@ -360,9 +411,9 @@
         <div class="col-md-3 col-sm-3">
           <h4>Updates from our gallery</h4>
           <a href="{{route('gallery.all')}}" class="btn btn-default btn-lg">More Galleries</a> </div>
-        <div class="col-md-3 col-sm-3 post format-image"> <a href="{{asset('assets\uploads\kkt_news.jpg')}}" class="media-box" data-rel="prettyPhoto[Gallery]"> <img src="{{asset('assets\uploads\maaskofu.jpg')}}" alt=""> </a> </div>
-        <div class="col-md-3 col-sm-3 post format-video"> <a href="http://youtu.be/NEFfnbQlGo8" class="media-box" data-rel="prettyPhoto[Gallery]"> <img src="{{asset('assets\uploads\newhere.jpg')}}" alt=""> </a> </div>
-        <div class="col-md-3 col-sm-3 post format-image"> <a href="{{asset('assets\uploads\newhere.jpg')}}" class="media-box" data-rel="prettyPhoto[Gallery]"> <img src="{{asset('assets\uploads\sermons.jpg')}}" alt=""> </a> </div>
+        <div class="col-md-3 col-sm-3 post format-image"> <a href="{{asset('assets\images\img-1.jpg')}}" class="media-box" data-rel="prettyPhoto[Gallery]"> <img src="{{asset('assets\images\img-2.jpg')}}" alt=""> </a> </div>
+        <div class="col-md-3 col-sm-3 post format-video"> <a href="http://youtu.be/NEFfnbQlGo8" class="media-box" data-rel="prettyPhoto[Gallery]"> <img src="{{asset('assets\images\img-3.jpg')}}" alt=""> </a> </div>
+        <div class="col-md-3 col-sm-3 post format-image"> <a href="{{asset('assets\images\img-4.jpg')}}" class="media-box" data-rel="prettyPhoto[Gallery]"> <img src="{{asset('assets\images\img-7.jpg')}}" alt=""> </a> </div>
       </div>
     </div>
   </div>

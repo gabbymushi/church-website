@@ -36,7 +36,7 @@
                   <div class="col-md-7">
                    
                     @if(isset($project->featured))
-                    <img src="{{Storage::url($project->featured)}}" class="img-responsive">
+                    <img src="{{asset($project->featured)}}" class="img-responsive">
                     @else
                      <img src="http://placehold.it/600x400&amp;text=IMAGE+PLACEHOLDER" alt="" class="img-thumbnail">
                      @endif
@@ -58,7 +58,7 @@
                     </div>
                 </div>
                 <div class="spacer-30"></div>
-                <p>{{$project->description}}</p>
+                <p>{!!$project->description!!}</p>
             </article>
             <!-- Payment Modal Window -->
             <div class="modal fade" id="PaymentModal" tabindex="-1" data-backdrop="static" role="dialog" aria-labelledby="PaymentModalLabel" aria-hidden="true">
@@ -133,7 +133,7 @@
               </div>
               <ul>
                 @foreach(App\Project::where('id','!=',$project->id)->orderBy('created_at','desc')->take(5)->get() as $otherproject)
-                <li><h4><a href="/project/show/$otherproject->id/$otherproject->slug">{{$otherproject->name}}</a></h4> </li>
+                <li><h4><a href="/project/show/{{$otherproject->id}}/{{$otherproject->slug}}">{{$otherproject->name}}</a></h4> </li>
                 @endforeach
                 
               </ul>

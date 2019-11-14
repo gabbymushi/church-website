@@ -76,7 +76,7 @@
                     <li><a href="{{route('dme.mission')}}">Mission & Vision</a></li>
                 	<li><a href="{{route('contactus')}}">Contact</a></li>
                   <li><a href="/all/staff">Our Staff</a></li>
-                  <li><a href="#">DME Structure</a></li>
+                 
                   </ul>
                 </li>
                 <li class="megamenu"><a href="#">Our Work</a>
@@ -100,9 +100,13 @@
                           </div>
                           <div class="col-md-3"> <span class="megamenu-sub-title"><i class="fa fa-clock-o"></i> Upcoming Events</span>
                             <ul class="sub-menu">
-                              <li><a href="single-event.html">Monday Prayer</a> <span class="meta-data">Monday | 06:00 PM</span> </li>
-                              <li><a href="single-event.html">Staff members meet</a> <span class="meta-data">Tuesday | 08:00 AM</span> </li>
-                              <li><a href="single-event.html">Evening Prayer</a> <span class="meta-data">Friday | 07:00 PM</span> </li>
+                              @if(App\Event::orderBy('created_at','desc')->take(5)->get() !=null)
+                              @foreach(App\Event::orderBy('created_at','desc')->take(5)->get() as $headerev)
+                              <li><a href="{{route('single_event',['id'=>$headerev->slug])}}">{{ str_limit($headerev->title, 25)}}</a> <span class="meta-data">{{date('jS F,Y',strtotime($headerev->created_at))}}</span> </li>
+                              @endforeach
+                              @endif
+
+                              
                             </ul>
                           </div>
                           <div class="col-md-3"> <span class="megamenu-sub-title"><i class="fa fa-book"></i> Departments</span>
