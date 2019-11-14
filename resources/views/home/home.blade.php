@@ -351,7 +351,7 @@
                   @foreach($news as $news)
                   <li class="item post">
                     <div class="row">
-                      <div class="col-md-4"> <a href="#" class="media-box"> <img src="http://placehold.it/600x400&amp;text=IMAGE+PLACEHOLDER" alt="" class="img-thumbnail"></a></div>
+                      <div class="col-md-4"> <a href="{{url('/blog/'.$news->id)}}" class="media-box"> <img src="{{asset('assets/images/blog/'.$news->files->name)}}" alt="" class="img-thumbnail"></a></div>
                       <div class="col-md-8">
                         <div class="post-title">
                           <h2><a href="{{url('/blog/'.$news->id)}}">{{$news->title}}</a></h2>
