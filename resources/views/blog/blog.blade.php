@@ -1,13 +1,13 @@
 @extends('layouts.main')
 @section('content')
 <!-- Start Nav Backed Header -->
-<div class="nav-backed-header parallax" style="background-image:url(http://placehold.it/1280x635&amp;text=IMAGE+PLACEHOLDER);">
+  <div class="nav-backed-header parallax">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
           <ol class="breadcrumb">
-            <li><a href="index.html">Home</a></li>
-            <li class="active">Blog</li>
+            <li><a href="{{route('home')}}">Home</a></li>
+            <li class="active">DME Blog</li>
           </ol>
         </div>
       </div>
