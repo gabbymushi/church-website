@@ -41,9 +41,11 @@
                   font-family: Verdana, Arial, sans-serif;
                   text-align: center; border-collapse: collapse; padding: 5px; background-color: #ccc; color: #000; ">{{$project->img_caption}}</div>
                     @else
-                     <img src="http://placehold.it/600x400&amp;text=IMAGE+PLACEHOLDER" alt="" class="img-thumbnail">
+                     <img src="{{'assets/images/project.jpg'}}" alt="">
                      
                      @endif
+
+                     
                     </div>
                   <div class="col-md-5">
                         <ul class="list-group">
