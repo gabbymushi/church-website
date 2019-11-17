@@ -77,11 +77,11 @@
         <div class="copyrights-col-right col-md-6 col-sm-6">
      
         <ul class="social-icons icon-circle list-unstyled list-inline"> 
-        <li> <a href="#"><i class="fa fa-facebook"></i></a></li> 
-        <li> <a href="#"><i class="fa fa-google-plus"></i></a></li> 
-        <li> <a href="#"><i class="fa fa-instagram"></i></a></li> 
-        <li> <a href="#"><i class="fa fa-twitter"></i></a></li>
-        <li> <a href="#"><i class="fa fa-youtube"></i></a></li>
+        <li> <a href="https://web.facebook.com/ELCT-Diocese-of-Meru-114070866674459/?ref=search&__tn__=%2Cd%2CP-R&eid=ARBTh29bHWhx3nU3hXUlRq5IST6DN3OtGB_DAQFdo7S7KiPzS3wa8t9Di3m7Eegy37hIkMqjFltdzQ6z" target="blank"><i class="fa fa-facebook"></i></a></li> 
+        <li> <a href="#" target="blank"><i class="fa fa-google-plus"></i></a></li> 
+        <li> <a href="#" target="blank"><i class="fa fa-instagram"></i></a></li> 
+        <li> <a href="#" target="blank"><i class="fa fa-twitter"></i></a></li>
+        <li> <a href="#" target="blank"><i class="fa fa-youtube"></i></a></li>
       </ul>
   
        </div>
