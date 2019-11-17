@@ -28,7 +28,7 @@
                            data-end="3000" 
                data-endspeed="300" 
               
-                          style="z-index: 5; max-width: auto; max-height: auto; white-space: nowrap;">Kusimikwa Askofu
+                          style="z-index: 5; max-width: auto; max-height: auto; white-space: nowrap; font-size: 30px;">Baba Askofu Mh. Elias K. Nasari akiwa Misioni 
                       </div>
               
                       <!-- LAYER NR. 3 -->
@@ -46,7 +46,72 @@
                            data-end="4000" 
                data-endspeed="300" 
               
-                          style="z-index: 6; max-width: auto; max-height: auto; white-space: nowrap;">Jimbo La Magharibi
+                          style="z-index: 6; max-width: auto; max-height: auto; white-space: nowrap;font-size: 30px;">Usharika wa Mkuru Jimbo la Kaskazini
+                      </div>
+              
+                      <!-- LAYER NR. 4 -->
+                          <!-- LAYER NR. 3 -->
+                      <div class="tp-caption randomrotate customout tp-resizeme" 
+                           data-x="100" 
+                           data-y="330"  
+                           data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" 
+                          data-speed="300" 
+                          data-start="1100" 
+                          data-easing="Power3.easeInOut" 
+                          data-splitin="none" 
+                          data-splitout="none" 
+                          data-elementdelay="0.1" 
+                          data-endelementdelay="0.1" 
+                           data-end="5000" 
+                          data-endspeed="300" 
+              
+                          style="z-index: 7; max-width: auto; max-height: auto; white-space: nowrap;"><a href='/all_events' class='btn btn-primary btn-lg' style="color:#fff;">More Events</a> 
+                      </div>
+                  </li>
+                  <!-- SLIDE  -->
+
+                        <!-- SLIDE  -->
+                  <li data-transition="fade" data-slotamount="1" data-masterspeed="1000"  data-saveperformance="off"  data-title="Slide 1">
+                      <!-- MAIN IMAGE -->
+                      <img src="{{asset('assets/images/slider/slide4-dme.jpg')}}"  alt="fullslide1"  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+                      <!-- LAYERS -->
+          
+                      <!-- LAYER NR. 1 -->
+                    
+                     
+                     <!-- LAYER NR. 1 -->
+                      <div class="tp-caption large_text randomrotate tp-resizeme" 
+                           data-x="100" 
+                           data-y="200"  
+                          data-speed="300" 
+                          data-start="500" 
+                          data-easing="Power3.easeInOut" 
+                          data-splitin="none" 
+                          data-splitout="none" 
+                          data-elementdelay="0.1" 
+                          data-endelementdelay="0.1" 
+                           data-end="3000" 
+               data-endspeed="300" 
+              
+                          style="z-index: 5; max-width: auto; max-height: auto; white-space: nowrap; font-size: 30px;">Wakuu wa Majimbo na Wachungaji 
+                      </div>
+              
+                      <!-- LAYER NR. 3 -->
+                      <!-- LAYER NR. 2 -->
+                      <div class="tp-caption large_text randomrotate tp-resizeme" 
+                           data-x="100" 
+                           data-y="259"  
+                          data-speed="300" 
+                          data-start="800" 
+                          data-easing="Power3.easeInOut" 
+                          data-splitin="none" 
+                          data-splitout="none" 
+                          data-elementdelay="0.1" 
+                          data-endelementdelay="0.1" 
+                           data-end="4000" 
+               data-endspeed="300" 
+              
+                          style="z-index: 6; max-width: auto; max-height: auto; white-space: nowrap;font-size: 30px;">Wakati wa Mkutano mkuu DME
                       </div>
               
                       <!-- LAYER NR. 4 -->
@@ -88,7 +153,7 @@
                            data-end="3000" 
                data-endspeed="300" 
               
-                          style="z-index: 5; max-width: auto; max-height: auto; white-space: nowrap;">Love the God 
+                          style="z-index: 5; max-width: auto; max-height: auto; white-space: nowrap;font-size: 30px;">Mh. Baba Askofu Elias Nasari na Wachungaji wa DME .
                       </div>
               
                       <!-- LAYER NR. 2 -->
@@ -105,7 +170,7 @@
                            data-end="4000" 
                data-endspeed="300" 
               
-                          style="z-index: 6; max-width: auto; max-height: auto; white-space: nowrap;">Love his Creations 
+                          style="z-index: 6; max-width: auto; max-height: auto; white-space: nowrap;font-size: 30px;">Mara Baada ya Kikao cha Kiutendaji .
                       </div>
               
                       <!-- LAYER NR. 3 -->
@@ -147,7 +212,7 @@
                            data-end="3000" 
                data-endspeed="300" 
               
-                          style="z-index: 5; max-width: auto; max-height: auto; white-space: nowrap;">Love the God 
+                          style="z-index: 5; max-width: auto; max-height: auto; white-space: nowrap;font-size: 30px;">Kusimikwa Msaidizi wa Askofu KKKT-DME
                       </div>
               
                       <!-- LAYER NR. 2 -->
@@ -164,7 +229,7 @@
                            data-end="4000" 
                data-endspeed="300" 
               
-                          style="z-index: 6; max-width: auto; max-height: auto; white-space: nowrap;">Love his Creations 
+                          style="z-index: 6; max-width: auto; max-height: auto; white-space: nowrap;font-size: 30px;">Mchungaji Ndelekwa Kuwawei Pallangyo . 
                       </div>
               
                       <!-- LAYER NR. 3 -->
@@ -281,13 +346,17 @@
                       @foreach(App\Project::orderBy('created_at','desc')->take(5)->get() as $project)
                       <li class="item">
 
-                        <a href="{{Storage::url($project->featured)}}" data-rel="prettyPhoto[postname]">
+                        <a href="{{$project->featured}}" data-rel="prettyPhoto[postname]">
                        <div class="tp-caption large_text randomrotate tp-resizeme transbox" 
                           style="z-index: 6; font-size: 15px; max-width: auto; max-height: auto; white-space: nowrap; margin: auto; color: #000; margin-top: -5px;">
                           {{str_limit($project->name, 30)}}
                          
                       </div>
-                        <img src="{{$project->featured}}"  width="240" height="125" alt="">
+                        @if(isset($project->featured))
+                        <img src="{{$project->featured}}" alt="">
+                        @else
+                        <img src="{{'assets/images/project.jpg'}}" alt="">
+                        @endif
                        
                       </a>
 

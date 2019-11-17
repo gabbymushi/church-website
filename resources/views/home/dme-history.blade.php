@@ -35,15 +35,7 @@
 <p style="font-family: sans-serif; font-size: 16px; color: #000;">Dayosisi hii awali ilikuwa ni Jimbo chini ya Dayosisi ya Kaskazini na imepakana na Dayosisi ya Kaskazini Kati kwa upande wa Magharibi na Kusini pamoja na Dayosisi Kaskazini kwa upande wa Mashariki na upande wa Kaskazini ni Mlima Meru.
 Dayosisi ya Meru huudumia kwa sehemu kubwa eneo lililopo Jimbo la Uchaguzi la Arumeru Mashariki lenye eneo la Kilometa za mraba 1,483. Wakazi wengi wa eneo hili ni Wakulima na Wafugaji.
 </p>
-<p style="font-family: sans-serif; font-size: 16px; color: #000;">
-Taswira na Dhamira (Vision and Mission) Taswira
-Ushirika wa Wakristo wenye umoja,upendo, amani na furaha waliobarikiwa kiroho, kiakili, kisaikolojia na kimwili, wenye matumaini ya kuurithi uzima wa milele kwa njia ya Yesu Kristo.
 
-</p>
-<p style="font-family: sans-serif; font-size: 16px; color: #000;">
-Dhamira ni kuwafanya watu wote wamfahamu Mungu na Yesu Kristo (Yoh 17:3) na kuwa Wanafunzi
-wake kwa kuwahubiria kwa maneno na kwa matendo Injili ya Yesu kristo (Mt 28: 19-20) kwa kuzingatia Neno la Mungu kama ilivyo katika Biblia (Yaani Agano la Kale na Agano jipya) na misingi ya mafundisho ya Kilutheri kwa kuongozwa na Roho Mtakatifu na Katiba ya Dayosisi.
-</p>
 <p style="font-family: sans-serif; font-size: 16px; color: #000;">
 Majimbo, Sharika na Vituo
 Dayosisi ya Meru kwa sasa ina Majimbo 5 ambayo ni; Jimbo la Kati, Kusini, Magharibi, Mashariki na Kaskazini. Jumla ya Sharika ni 59 na mitaa ipatayo 166. Idadi ya Wakristo kwa sasa inakadiriwa kuwa zaidi ya 80,000.

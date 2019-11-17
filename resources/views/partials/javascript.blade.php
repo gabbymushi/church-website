@@ -14,8 +14,26 @@
 <!-- Datatable -->
 <script src="{{asset('js/jquery.dataTables.min.js')}}"></script>
 <!-- Jquery Timer -->
+<!-- Toastr plugi -->
+<script type="text/javascript" src="{{asset('js/toastr.min.js')}}"></script>
+<script type="text/javascript">
+	
+	  @if(Session::has('success')) {
+
+            toastr.success("{{Session::get('success')}}");
+
+        }
+        @elseif(Session::has('warning')) {
+            toastr.warning("{{Session::get('warning')}}");
+        }
+
+        @endif
+
+</script>
 
 	<script type="text/javascript">
+
+		 
 				jQuery(document).ready(function() {
 					   jQuery('.tp-banner').revolution(
 						{

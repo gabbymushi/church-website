@@ -45,12 +45,17 @@
               <div class="tab-content custom-tab-content" align="center">
               <div class="subscribe-panel">
               <p>Subscribe to our weekly Newsletter and stay tuned.</p>        
-              <form action="" method="post">
+  <form action="/subscription" method="post">
+    @csrf
                  <div class="col-md-12">
                 <div class="input-group" style="padding: 0">
                   <span class="input-group-addon" style="background-color:#074a29; color: #fff;"><i class="fa fa-envelope" aria-hidden="true"></i></span>
                   <input type="text" class="form-control input-lg" name="email" id="email"  placeholder="Enter your Email"/>
+                  
                    </div>
+                    @if($errors->has('email'))
+                    <span style="color: red">{{$errors->first('email')}}</span>
+                    @endif
                    </div>
                     <div class="col-md-12"></div>
                     <br/><br/><br/>

@@ -37,8 +37,12 @@
                    
                     @if(isset($project->featured))
                     <img src="{{asset($project->featured)}}" class="img-responsive">
+                    <div style="font-size: 90%;
+                  font-family: Verdana, Arial, sans-serif;
+                  text-align: center; border-collapse: collapse; padding: 5px; background-color: #ccc; color: #000; ">{{$project->img_caption}}</div>
                     @else
                      <img src="http://placehold.it/600x400&amp;text=IMAGE+PLACEHOLDER" alt="" class="img-thumbnail">
+                     
                      @endif
                     </div>
                   <div class="col-md-5">

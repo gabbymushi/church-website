@@ -1,6 +1,15 @@
 @extends('layouts.main')
 @section('content')
-
+<style type="text/css">
+  
+  .rotate90 {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+</style>
 <div class="body"> 
   <!-- Start Nav Backed Header -->
   <div class="nav-backed-header parallax">
@@ -33,16 +42,18 @@
               <header class="single-post-header clearfix">
               <h2 class="post-title">DME Vision</h2>
             </header>
-              <p style="font-family: sans-serif; font-size: 16px; color: #000;">Taswira ya KKKT dayosisi ya Meru  ni kuona kwamba:Kwa Uongozi war oho mtakatifu na roho ya Umoja na upendo Dayosisi yetu inawaita na kuwavuta  kwa Yesu Kristo watu wote kwa njia ya Neno la Mungu  kama lilivyo katika biblia yaani Agano la jipya ,Agano la kale ili wamfahamu ,wamwamminina wamkiri kuwa Bwana na mwokozi wao ili wapate uzima wa Milele.</p>
+              <p style="font-family: sans-serif; font-size: 16px; color: #000;">Taswira ya KKKT dayosisi ya Meru  ni kuona kwamba:Kwa Uongozi wa roho mtakatifu na roho ya Umoja na upendo Dayosisi yetu inawaita na kuwavuta  kwa Yesu Kristo watu wote kwa njia ya Neno la Mungu  kama lilivyo katika biblia yaani Agano la jipya ,Agano la kale ili wamfahamu ,wamwamminina wamkiri kuwa Bwana na mwokozi wao ili wapate uzima wa Milele.</p>
              
               <hr>
-                <h3>DME Core Values</h3>
-                <ul class="checks">
-                  <!-- <li>Mildred George</li>
+                <h3>DME Administrative Structure</h3>
+              
+                <img src="{{asset('assets\images\DME-tructure.jpg')}}" width="400" class="rotate90" style="margin-top: -130px; margin-left: 120px;">
+                <!-- <ul class="checks">
+                  <li>Mildred George</li>
                   <li>Ashleigh Cox</li>
                   <li>Giorgiana Mărginean</li>
-                  <li>Christine Mendez</li> -->
-                </ul>
+                  <li>Christine Mendez</li>
+                </ul> -->
             </div>
           </div>
           <!-- Start Sidebar -->
