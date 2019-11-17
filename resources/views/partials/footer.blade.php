@@ -45,12 +45,17 @@
               <div class="tab-content custom-tab-content" align="center">
               <div class="subscribe-panel">
               <p>Subscribe to our weekly Newsletter and stay tuned.</p>        
-              <form action="" method="post">
+  <form action="/subscription" method="post">
+    @csrf
                  <div class="col-md-12">
                 <div class="input-group" style="padding: 0">
                   <span class="input-group-addon" style="background-color:#074a29; color: #fff;"><i class="fa fa-envelope" aria-hidden="true"></i></span>
                   <input type="text" class="form-control input-lg" name="email" id="email"  placeholder="Enter your Email"/>
+                  
                    </div>
+                    @if($errors->has('email'))
+                    <span style="color: red">{{$errors->first('email')}}</span>
+                    @endif
                    </div>
                     <div class="col-md-12"></div>
                     <br/><br/><br/>
@@ -72,11 +77,11 @@
         <div class="copyrights-col-right col-md-6 col-sm-6">
      
         <ul class="social-icons icon-circle list-unstyled list-inline"> 
-        <li> <a href="#"><i class="fa fa-facebook"></i></a></li> 
-        <li> <a href="#"><i class="fa fa-google-plus"></i></a></li> 
-        <li> <a href="#"><i class="fa fa-instagram"></i></a></li> 
-        <li> <a href="#"><i class="fa fa-twitter"></i></a></li>
-        <li> <a href="#"><i class="fa fa-youtube"></i></a></li>
+        <li> <a href="https://web.facebook.com/ELCT-Diocese-of-Meru-114070866674459/?ref=search&__tn__=%2Cd%2CP-R&eid=ARBTh29bHWhx3nU3hXUlRq5IST6DN3OtGB_DAQFdo7S7KiPzS3wa8t9Di3m7Eegy37hIkMqjFltdzQ6z" target="blank"><i class="fa fa-facebook"></i></a></li> 
+        <li> <a href="#" target="blank"><i class="fa fa-google-plus"></i></a></li> 
+        <li> <a href="#" target="blank"><i class="fa fa-instagram"></i></a></li> 
+        <li> <a href="#" target="blank"><i class="fa fa-twitter"></i></a></li>
+        <li> <a href="#" target="blank"><i class="fa fa-youtube"></i></a></li>
       </ul>
   
        </div>

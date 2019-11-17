@@ -41,13 +41,20 @@
                 <iframe src="https://maps.google.com/?ie=UTF8&amp;ll=-3.2505404,36.6925952&amp;spn=0.043846,0.077162&amp;t=m&amp;z=14&amp;output=embed"></iframe>
               </div>
               <div class="row">
-                <form method="post" id="contactform" name="contactform" class="contact-form" action="mail/contact.php">
+                <form method="post"   action="{{route('contactus.store')}}">
+                  @csrf
                   <div class="col-md-6 margin-15">
                     <div class="form-group">
                       <input type="text" id="name" name="name"  class="form-control input-lg" placeholder="Name*">
+                      @if($errors->has('name'))
+                      <span style="color: red">{{$errors->first('name')}}</span>
+                      @endif
                     </div>
                     <div class="form-group">
                       <input type="email" id="email" name="email"  class="form-control input-lg" placeholder="Email*">
+                      @if($errors->has('email'))
+                      <span style="color: red">{{$errors->first('email')}}</span>
+                      @endif
                     </div>
                     <div class="form-group">
                       <input type="text" id="phone" name="phone" class="form-control input-lg" placeholder="Phone">
@@ -59,7 +66,7 @@
                     </div>
                   </div>
                   <div class="col-md-12">
-                    <input id="submit" name="submit" type="submit" class="btn btn-primary btn-lg pull-right" value="Submit now!">
+                    <button id="submit" name="submit" type="submit" class="btn btn-primary btn-lg pull-right" value="">Submit now!</button>
                   </div>
                 </form>
                 <div class="clearfix"></div>

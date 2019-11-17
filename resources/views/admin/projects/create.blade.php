@@ -93,6 +93,12 @@
                                 <div class="form-control">
                                    <input type="file" name="featured"> 
                                 </div>
+                                <br>
+                                <div class="position-relative form-group">
+                                <label for="description" class="">Image Caption </label>
+                                <textarea name="img_caption" id="" class="form-control">
+                                </textarea>
+                            </div>
                                 
                             </div>
                             <button class="mt-1 btn btn-primary">save</button>

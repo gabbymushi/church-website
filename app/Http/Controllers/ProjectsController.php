@@ -37,13 +37,14 @@ class ProjectsController extends Controller
     {
         $project = new Project();
 
-        $this->validate($request,[
-          'featured'=>'mimes:png,jpg,jpeg|Max:20000'
-          ]);
+       
          
         // $featured = $request->file('featured')->store('public/projects');
 
           if($request->hasFile('featured')){
+             $this->validate($request,[
+              'featured'=>'mimes:png,jpg,jpeg|Max:20000'
+             ]);
             $image = $request->featured;
             $new_image = time().$image->getClientOriginalName();
             $image->move('assets/projects',$new_image);
@@ -56,6 +57,7 @@ class ProjectsController extends Controller
       $project->name = $request->name;
       $project->slug = str_slug($request->name);
       $project->description = $request->description;
+      $project->img_caption = $request->img_caption;
       $project->save();
 
 
@@ -100,13 +102,14 @@ class ProjectsController extends Controller
     {
         $project = Project::findOrFail($id);
 
-        $this->validate($request,[
-          'featured'=>'mimes:png,jpg,jpeg|Max:20000'
-          ]);
+        
          
        
 
           if($request->hasFile('featured')){
+            $this->validate($request,[
+              'featured'=>'mimes:png,jpg,jpeg|Max:20000'
+            ]);
             $image = $request->featured;
             $new_image = time().$image->getClientOriginalName();
             $image->move('assets/projects',$new_image);
@@ -120,6 +123,7 @@ class ProjectsController extends Controller
       $project->name = $request->name;
       $project->slug = str_slug($request->name);
       $project->description = $request->description;
+      $project->img_caption = $request->img_caption;
       $project->update();
 
 

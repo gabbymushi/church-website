@@ -123,7 +123,44 @@ Route::get('/contactus', [
     'uses' => 'ContactUsController@index',
     'as' => 'contactus'
 ]);
+Route::get('/contactus/manage', [
+    'uses' => 'ContactUsController@manage',
+    'as' => 'contactus.manage'
+]);
+Route::post('/contactus/store', [
+    'uses' => 'ContactUsController@store',
+    'as' => 'contactus.store'
+]);
 
+Route::get('/contactus/{id}/edit/',[
+'uses'=>'ContactUsController@edit',
+'as'=>'contactus.edit'
+]);
+Route::post('/contactus/update/{id}',[
+'uses'=>'ContactUsController@update',
+'as'=>'contactus.update'
+]);
+Route::get('/contactus/{id}/delete',[
+'uses'=>'ContactUsController@destroy',
+'as'=>'contactus.delete'
+]);
+
+Route::get('/contactus/show/{id}',[
+'uses'=>'ContactUsController@show',
+'as'=>'contactus.show'
+]);
+Route::post('/subscription', [
+    'uses' => 'ContactUsController@subscription',
+    'as' => 'subscription'
+]);
+Route::get('/subscription/manage', [
+    'uses' => 'ContactUsController@manage_subscription',
+    'as' => 'subscription.manage'
+]);
+Route::get('/subscription/{id}/delete',[
+'uses'=>'ContactUsController@subscription_delete',
+'as'=>'subscription.delete'
+]);
 //Downloads Templates
 Route::get('/downloads',[
   'uses' => 'DownloadsController@index',

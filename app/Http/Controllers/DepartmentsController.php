@@ -41,11 +41,12 @@ class DepartmentsController extends Controller
     {
         $department = new Department();
 
-        $this->validate($request,[
-          'featured'=>'mimes:png,jpg,jpeg|Max:20000'
-          ]);
+        
          
         if($request->hasFile('featured')){
+            $this->validate($request,[
+              'featured'=>'mimes:png,jpg,jpeg|Max:20000'
+            ]);
             $image = $request->featured;
             $new_image = time().$image->getClientOriginalName();
             $image->move('assets/departments',$new_image);
@@ -106,11 +107,12 @@ class DepartmentsController extends Controller
        
        $department = Department::findOrFail($id);
 
-        $this->validate($request,[
-          'featured'=>'mimes:png,jpg,jpeg|Max:20000'
-          ]);
+        
          
          if($request->hasFile('featured')){
+            $this->validate($request,[
+             'featured'=>'mimes:png,jpg,jpeg|Max:20000'
+             ]);
             $image = $request->featured;
             $new_image = time().$image->getClientOriginalName();
             $image->move('assets/departments',$new_image);

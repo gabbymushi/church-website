@@ -28,6 +28,8 @@
 <link href="{{asset('assets/plugins/fullcalendar/fullcalendar.print.css')}}" rel='stylesheet' media='print' />
 <!-- Datatable -->
 <link href="{{asset('css/jquery.dataTables.min.css')}}" rel="stylesheet" type="text/css">
+<!-- Toastr -->
+<link href="{{asset('css/toastr.min.css')}}" rel="stylesheet">
 <style type="text/css">
 /*----- Genral Classes start ------*/
 

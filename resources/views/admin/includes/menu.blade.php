@@ -109,6 +109,25 @@
                     </li>
                 </ul>
             </li>
+               <li>
+                <a href="#">
+                    <i class="metismenu-icon fa fa-envelope"></i>
+                    Messages
+                    <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                </a>
+                <ul>
+                    <li>
+                        <a href="{{url('/contactus/manage')}}">
+                            <i class="metismenu-icon"></i>
+                            Manage Masages&nbsp;<span class="badge badge-success">{{App\ContactUs::all()->count()}}</span>
+                        </a>
+                        <a href="{{url('/subscription/manage')}}">
+                            <i class="metismenu-icon"></i>
+                            Manage Subscription&nbsp;<span class="badge badge-warning">{{App\Subscriptions::all()->count()}}</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
               <li>
                 <a href="#">
                     <i class="metismenu-icon fa fa-edit"></i>

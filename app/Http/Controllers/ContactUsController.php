@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\News;
+use App\ContactUs;
+use Session;
+use  App\Subscriptions;
 
 class ContactUsController extends Controller
 {
@@ -36,7 +39,27 @@ class ContactUsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request,[
+         'name'=>'required',
+         'email'=>'email|required',
+         'comments'=>'required'
+          
+        ]);
+
+        $comment = new ContactUs();
+        $comment->name = $request->name;
+        $comment->email = $request->email;
+        $comment->comments = $request->comments;
+        $comment->phone = $request->phone;
+        $comment->save();
+
+        Session::flash('success','Message Submited Successfuly');
+
+        return redirect()->route('contactus');
+
+
+
+
     }
 
     /**
@@ -47,7 +70,8 @@ class ContactUsController extends Controller
      */
     public function show($id)
     {
-        //
+        $message = ContactUs::findOrFail($id);
+        return view('admin.contactus.show',compact('message'));
     }
 
     /**
@@ -81,6 +105,41 @@ class ContactUsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $message = ContactUs::findOrFail($id);
+        $message->delete();
+        Session::flash('success','Message Deleted Successfuly');
+
+        return redirect()->route('contactus.manage');
     }
+
+    public function manage(){
+        $messages = ContactUs::paginate(10);
+        return view('admin.contactus.manage',compact('messages'));
+    }
+
+    public function subscription(Request $request){
+         $subscription = new Subscriptions();
+        $this->validate($request,['email'=>'required|email']);
+
+         $subscription->email = $request->email;
+         $subscription->save();
+          Session::flash('success','Congratulation ,you have subscribed to DME');
+         return redirect()->route('home');
+
+
+    }
+
+    public function manage_subscription(){
+      $subscriptions = Subscriptions::paginate(10);
+        return view('admin.contactus.manage_subscription',compact('subscriptions'));   
+    }
+    public function subscription_delete($id){
+
+        $subscriptions = Subscriptions::findOrFail($id);
+        $subscriptions->delete();
+        Session::flash('success','Subscriptions Email Deleted Successfuly');
+
+        return redirect()->route('subscription.manage');
+    }
+
 }

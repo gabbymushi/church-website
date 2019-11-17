@@ -75,13 +75,13 @@
                         <li class="nav-item">
                             <a href="javascript:void(0);" class="nav-link">
                                 <i class="nav-link-icon fa fa-database"> </i>
-                                Statistics
+                                Subscriptions &nbsp;<span class="badge badge-warning">{{App\Subscriptions::all()->count()}}</span>
                             </a>
                         </li>
                         <li class="btn-group nav-item">
                             <a href="javascript:void(0);" class="nav-link">
-                                <i class="nav-link-icon fa fa-edit"></i>
-                                Projects
+                                <i class="nav-link-icon fa fa-envelope"></i>
+                                Messeges &nbsp;<span class="badge badge-success">{{App\ContactUs::all()->count()}}</span>
                             </a>
                         </li>
                         <li class="dropdown nav-item">

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateContactUsTable extends Migration
+class AddColumnImgCaptionOnProjects extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,8 @@ class CreateContactUsTable extends Migration
      */
     public function up()
     {
-        Schema::create('contact_us', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            
-            $table->timestamps();
+        Schema::table('projects', function (Blueprint $table) {
+            $table->text('img_caption')->nullable()->after('featured');
         });
     }
 
@@ -27,6 +25,8 @@ class CreateContactUsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('contact_us');
+        Schema::table('projects', function (Blueprint $table) {
+            $table->dropColumn('img_caption');
+        });
     }
 }

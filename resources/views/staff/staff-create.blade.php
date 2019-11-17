@@ -51,6 +51,8 @@
                         <option value="Mwinjilisti">Mwinjilisti</option>
                         <option value="Msaidizi wa Askofu">Msaidizi wa Askofu</option>
                         <option value="Mtunza Hazina">Mtunza Hazina</option>
+                        <option value="Afisa Rasilimali Watu">Afisa Rasilimali Watu</option>
+                        <option value="Human Resource">Human Resource</option>
                     </select>
                 </div>
                     </div>
