@@ -13,6 +13,22 @@
                 <div class="card-body"><h5 class="card-title">New Staff</h5>
                                        <form method="post" action="{{route('update.staff',['id'=>$staff->id])}}" enctype="multipart/form-data">
                                         {{csrf_field()}}
+                                        <div class="position-relative row form-group"><label for="exampleEmail" class="col-sm-2 col-form-label">Title<span class="text-danger">*</span></label>
+                                          <div class="col-sm-10">
+                                          <select class="form-control" name="title" id="">
+                                            <option selected="" disabled="">Select Title</option>
+                                           <option value="Ask." {{$staff->title == "Ask." ? 'selected':''}}>Ask.</option>
+                                           <option value="Mr." {{$staff->title == "Mr." ? 'selected':''}}>Mr.</option>
+                                           <option value="Mch." {{$staff->title == "Mch." ? 'selected':''}}>Mch.</option>
+                                            <option value="Miss." {{$staff->title == "Miss." ? 'selected':''}}>Miss.</option>
+                                            <option value="Mrs." {{$staff->title == "Mrs." ? 'selected':''}}>Mrs</option>
+                                            <option value="Mwinj." {{$staff->title == "Mwinj." ? 'selected':''}}>Mwinj.</option>
+                                            <option value="Mh." {{$staff->title == "Mh." ? 'selected':''}}>Mh.</option>
+                                            <option value="Bi." {{$staff->title == "Bi." ? 'selected':''}}>Bi</option>
+                                            <option value="Ndg." {{$staff->title == "Ndg." ? 'selected':''}}>Ndg.</option>
+                                            </select>
+                                              </div>
+                                              </div>
                                             <div class="position-relative row form-group"><label for="exampleEmail" class="col-sm-2 col-form-label">First Name<span class="text-danger">*</span></label>
                                                 <div class="col-sm-10"><input name="fname" id="title" value="{{$staff->fname}}" placeholder="First Name" type="text" class="form-control"></div>
                                             </div>

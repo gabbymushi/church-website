@@ -26,7 +26,9 @@
             <div class="post-content">
               @if(isset($department->featured))
               <img src="{{asset($department->featured)}}" alt="Department" class="img-thumbnail">
-              
+              <div style="font-size: 90%;
+                  font-family: Verdana, Arial, sans-serif;
+                  text-align: center; border-collapse: collapse; padding: 5px; background-color: #ccc; color: #000; ">{{$department->img_caption}}</div>
               @else
               <img src="http://placehold.it/1280x635&amp;text=IMAGE+PLACEHOLDER" alt="Department" class="img-thumbnail">
               @endif

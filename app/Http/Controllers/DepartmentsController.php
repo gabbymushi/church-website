@@ -52,6 +52,8 @@ class DepartmentsController extends Controller
             $image->move('assets/departments',$new_image);
             $new_image = 'assets/departments/'.$new_image;
             $department->featured =  $new_image;
+            $department->img_caption = $request->img_caption;
+
             
 
         }
@@ -118,6 +120,7 @@ class DepartmentsController extends Controller
             $image->move('assets/departments',$new_image);
             $new_image = 'assets/departments/'.$new_image;
             $department->featured =  $new_image;
+            $department->img_caption = $request->img_caption;
             
 
         }

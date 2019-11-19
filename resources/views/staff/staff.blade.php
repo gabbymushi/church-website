@@ -31,27 +31,33 @@
       <div class="container">
         <div class="row">
           @if(isset($staffs))
-          
+     
           @foreach($staffs as $staff)
+         
+
           <div class="col-md-3 col-sm-3">
             <div class="grid-item staff-item">
               <div class="grid-item-inner">
                 <div class="media-box" style="text-align: center;"> 
                 @if(isset($staff->photo))
+
                   <img style="max-height: 200px; max-width: 200px;" height="300" src="{{asset($staff->photo)}}" alt="">
                   @else
                    <img src="http://placehold.it/500x300&amp;text=IMAGE+PLACEHOLDER" alt="">
                   @endif 
                 </div>
                 <div class="grid-content staff-name text-center">
-                  <p style="font-weight: bold;">{{$staff->fname}}&nbsp;{{$staff->lname}}</p>
+                  <p style="font-weight: bold;">{{$staff->title}}&nbsp;{{$staff->fname}}&nbsp;{{$staff->mname}} &nbsp;{{$staff->lname}}</p>
                   <p><?php echo ucfirst($staff->designation) ?></p>
                 </div>
               </div>
             </div>
           </div>
+          
 
          @endforeach
+        
+
       
 
          @endif

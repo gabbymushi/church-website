@@ -96,6 +96,13 @@
                                 </div>
                                 
                             </div>
+                              <br>
+                                <div class="position-relative form-group">
+                                <label for="description" class="">Image Caption </label>
+                                <textarea name="img_caption" id="" class="form-control">
+                                    {{$department->img_caption}}
+                                </textarea>
+                            </div>
                             <button class="mt-1 btn btn-primary">Update Department</button>
                         </form>
                     </div>
