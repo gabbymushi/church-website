@@ -17,16 +17,17 @@
                      <!-- LAYER NR. 1 -->
                       <div class="tp-caption large_text randomrotate tp-resizeme" 
                            data-x="100" 
-                           data-y="200"  
-                          data-speed="300" 
+                           data-y="200" 
+                          data-delay="10000"
+                          data-speed="1000" 
                           data-start="500" 
-                          data-easing="Power3.easeInOut" 
+                          data-easing="Power2.easeInOut" 
                           data-splitin="none" 
                           data-splitout="none" 
-                          data-elementdelay="0.1" 
-                          data-endelementdelay="0.1" 
-                           data-end="3000" 
-               data-endspeed="300" 
+                          data-elementdelay="0.9" 
+                          data-endelementdelay="0.9" 
+                           data-end="5000" 
+               data-endspeed="1000" 
               
                           style="z-index: 5; max-width: auto; max-height: auto; white-space: nowrap; font-size: 30px;">Baba Askofu Mh. Elias K. Nasari akiwa Misioni 
                       </div>
@@ -36,7 +37,8 @@
                       <div class="tp-caption large_text randomrotate tp-resizeme" 
                            data-x="100" 
                            data-y="259"  
-                          data-speed="300" 
+                          data-speed="1000" 
+                          data-delay="10000"
                           data-start="800" 
                           data-easing="Power3.easeInOut" 
                           data-splitin="none" 
@@ -44,7 +46,7 @@
                           data-elementdelay="0.1" 
                           data-endelementdelay="0.1" 
                            data-end="4000" 
-               data-endspeed="300" 
+               data-endspeed="1000" 
               
                           style="z-index: 6; max-width: auto; max-height: auto; white-space: nowrap;font-size: 30px;">Usharika wa Mkuru Jimbo la Kaskazini
                       </div>
@@ -55,15 +57,16 @@
                            data-x="100" 
                            data-y="330"  
                            data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" 
-                          data-speed="300" 
+                          data-speed="1000" 
                           data-start="1100" 
+                          data-delay="10000"
                           data-easing="Power3.easeInOut" 
                           data-splitin="none" 
                           data-splitout="none" 
                           data-elementdelay="0.1" 
                           data-endelementdelay="0.1" 
                            data-end="5000" 
-                          data-endspeed="300" 
+                          data-endspeed="1000" 
               
                           style="z-index: 7; max-width: auto; max-height: auto; white-space: nowrap;"><a href='/all_events' class='btn btn-primary btn-lg' style="color:#fff;">More Events</a> 
                       </div>
@@ -83,15 +86,16 @@
                       <div class="tp-caption large_text randomrotate tp-resizeme" 
                            data-x="100" 
                            data-y="200"  
-                          data-speed="300" 
+                          data-speed="1000" 
+                          data-delay="10000"
                           data-start="500" 
                           data-easing="Power3.easeInOut" 
                           data-splitin="none" 
                           data-splitout="none" 
                           data-elementdelay="0.1" 
                           data-endelementdelay="0.1" 
-                           data-end="3000" 
-               data-endspeed="300" 
+                           data-end="5000" 
+               data-endspeed="1000" 
               
                           style="z-index: 5; max-width: auto; max-height: auto; white-space: nowrap; font-size: 30px;">Wakuu wa Majimbo na Wachungaji 
                       </div>
@@ -101,7 +105,8 @@
                       <div class="tp-caption large_text randomrotate tp-resizeme" 
                            data-x="100" 
                            data-y="259"  
-                          data-speed="300" 
+                          data-speed="1000" 
+                          data-delay="10000"
                           data-start="800" 
                           data-easing="Power3.easeInOut" 
                           data-splitin="none" 
@@ -109,7 +114,7 @@
                           data-elementdelay="0.1" 
                           data-endelementdelay="0.1" 
                            data-end="4000" 
-               data-endspeed="300" 
+               data-endspeed="1000" 
               
                           style="z-index: 6; max-width: auto; max-height: auto; white-space: nowrap;font-size: 30px;">Wakati wa Mkutano mkuu DME
                       </div>
@@ -120,15 +125,16 @@
                            data-x="100" 
                            data-y="330"  
                            data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" 
-                          data-speed="300" 
+                          data-speed="1000" 
                           data-start="1100" 
+                          data-delay="10000"
                           data-easing="Power3.easeInOut" 
                           data-splitin="none" 
                           data-splitout="none" 
                           data-elementdelay="0.1" 
                           data-endelementdelay="0.1" 
                            data-end="5000" 
-                          data-endspeed="300" 
+                          data-endspeed="1000" 
               
                           style="z-index: 7; max-width: auto; max-height: auto; white-space: nowrap;"><a href='/all_events' class='btn btn-primary btn-lg' style="color:#fff;">More Events</a> 
                       </div>
@@ -143,7 +149,8 @@
                       <div class="tp-caption large_text randomrotate tp-resizeme" 
                            data-x="100" 
                            data-y="200"  
-                          data-speed="300" 
+                          data-speed="1000"
+                          data-delay="10000" 
                           data-start="500" 
                           data-easing="Power3.easeInOut" 
                           data-splitin="none" 
@@ -151,7 +158,7 @@
                           data-elementdelay="0.1" 
                           data-endelementdelay="0.1" 
                            data-end="3000" 
-               data-endspeed="300" 
+               data-endspeed="1000" 
               
                           style="z-index: 5; max-width: auto; max-height: auto; white-space: nowrap;font-size: 30px;">Mh. Baba Askofu Elias Nasari na Wachungaji wa DME .
                       </div>
@@ -160,7 +167,8 @@
                       <div class="tp-caption large_text randomrotate tp-resizeme" 
                            data-x="100" 
                            data-y="259"  
-                          data-speed="300" 
+                          data-speed="1000" 
+                          data-delay="10000"
                           data-start="800" 
                           data-easing="Power3.easeInOut" 
                           data-splitin="none" 
@@ -168,7 +176,7 @@
                           data-elementdelay="0.1" 
                           data-endelementdelay="0.1" 
                            data-end="4000" 
-               data-endspeed="300" 
+               data-endspeed="1000" 
               
                           style="z-index: 6; max-width: auto; max-height: auto; white-space: nowrap;font-size: 30px;">Mara Baada ya Kikao cha Kiutendaji .
                       </div>
@@ -178,15 +186,16 @@
                            data-x="100" 
                            data-y="330"  
                            data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" 
-                          data-speed="300" 
+                          data-speed="1000" 
                           data-start="1100" 
                           data-easing="Power3.easeInOut" 
+                          data-delay="10000"
                           data-splitin="none" 
                           data-splitout="none" 
                           data-elementdelay="0.1" 
                           data-endelementdelay="0.1" 
                            data-end="5000" 
-               data-endspeed="300" 
+               data-endspeed="1000" 
               
                           style="z-index: 7; max-width: auto; max-height: auto; white-space: nowrap;"><!-- <a href='sermons.html' class='btn btn-primary btn-lg' style="color:#fff;">Our Sermons</a>  -->
                       </div>
@@ -202,7 +211,8 @@
                       <div class="tp-caption large_text randomrotate tp-resizeme" 
                            data-x="100" 
                            data-y="200"  
-                          data-speed="300" 
+                          data-speed="1000" 
+                          data-delay="10000"
                           data-start="500" 
                           data-easing="Power3.easeInOut" 
                           data-splitin="none" 
@@ -210,7 +220,7 @@
                           data-elementdelay="0.1" 
                           data-endelementdelay="0.1" 
                            data-end="3000" 
-               data-endspeed="300" 
+               data-endspeed="1000" 
               
                           style="z-index: 5; max-width: auto; max-height: auto; white-space: nowrap;font-size: 30px;">Kusimikwa Msaidizi wa Askofu KKKT-DME
                       </div>
@@ -219,7 +229,8 @@
                       <div class="tp-caption large_text randomrotate tp-resizeme" 
                            data-x="100" 
                            data-y="259"  
-                          data-speed="300" 
+                          data-speed="1000" 
+                          data-delay="10000"
                           data-start="800" 
                           data-easing="Power3.easeInOut" 
                           data-splitin="none" 
@@ -227,7 +238,7 @@
                           data-elementdelay="0.1" 
                           data-endelementdelay="0.1" 
                            data-end="4000" 
-               data-endspeed="300" 
+               data-endspeed="1000" 
               
                           style="z-index: 6; max-width: auto; max-height: auto; white-space: nowrap;font-size: 30px;">Mchungaji Ndelekwa Kuwawei Pallangyo . 
                       </div>
@@ -237,15 +248,16 @@
                            data-x="100" 
                            data-y="330"  
                            data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" 
-                          data-speed="300" 
+                          data-speed="1000" 
                           data-start="1100" 
                           data-easing="Power3.easeInOut" 
+                          data-delay="10000"
                           data-splitin="none" 
                           data-splitout="none" 
                           data-elementdelay="0.1" 
                           data-endelementdelay="0.1" 
                            data-end="5000" 
-               data-endspeed="300" 
+               data-endspeed="1000" 
               
                           style="z-index: 7; max-width: auto; max-height: auto; white-space: nowrap;"><!-- <a href='sermons.html' class='btn btn-primary btn-lg' style="color:#fff;">Our Sermons</a> --> 
                       </div>

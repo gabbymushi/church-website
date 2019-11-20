@@ -15,15 +15,17 @@
                     {{csrf_field()}}
                      <div class="position-relative row form-group"><label for="exampleEmail" class="col-sm-2 col-form-label">Title<span class="text-danger">*</span></label>
                         <div class="col-sm-10">
-                        <select class="form-control" name="designation" id="">
-                          <option selected="" value="" disabled="">Select Title</option>
-                         <option value="Bishop">Bishop</option>
-                         <option value="Mr">Mr.</option>
-                         <option value="Mchungaji">Pastor</option>
-                          <option value="Miss">Miss</option>
+                        <select class="form-control" name="title" id="">
+                          <option selected="" disabled="">Select Title</option>
+                         <option value="Ask.">Ask.</option>
+                         <option value="Mr.">Mr.</option>
+                         <option value="Mch.">Mch.</option>
+                          <option value="Miss.">Miss.</option>
                           <option value="Mrs">Mrs</option>
-                          <option value="Mwinjilisti">Mwinj</option>
-                          <option value="Bi">Bi</option>
+                          <option value="Mwinj.">Mwinj.</option>
+                          <option value="Mh.">Mh.</option>
+                          <option value="Bi.">Bi</option>
+                          <option value="Ndg.">Ndg.</option>
                           </select>
                             </div>
                             </div>

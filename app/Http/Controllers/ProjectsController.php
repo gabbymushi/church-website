@@ -50,6 +50,7 @@ class ProjectsController extends Controller
             $image->move('assets/projects',$new_image);
             $new_image = 'assets/projects/'.$new_image;
             $project->featured =  $new_image;
+            $project->img_caption = $request->img_caption;
 
         }
           
@@ -57,7 +58,7 @@ class ProjectsController extends Controller
       $project->name = $request->name;
       $project->slug = str_slug($request->name);
       $project->description = $request->description;
-      $project->img_caption = $request->img_caption;
+      
       $project->save();
 
 
@@ -115,6 +116,7 @@ class ProjectsController extends Controller
             $image->move('assets/projects',$new_image);
             $new_image = 'assets/projects/'.$new_image;
             $project->featured =  $new_image;
+            $project->img_caption = $request->img_caption;
             
 
         }
